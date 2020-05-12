@@ -7,10 +7,11 @@ on:
 
 jobs:
   build:
+    name: Deploy to gh-pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Build
+      - name: Install and build
         run: |
           npm ci
           npm run build
@@ -18,7 +19,7 @@ jobs:
         run: npm test
         env:
           CI: true
-      - name: Deploy to gh-pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
