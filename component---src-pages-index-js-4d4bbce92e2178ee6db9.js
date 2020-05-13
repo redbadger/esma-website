@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{RXBc:function(e,t,b){"use strict";b.r(t);b("q1tI");var c=b("Wbzz"),n=b("qKvR"),o=b("Bl7J"),s=b("vrFN"),a={name:"974dwi",styles:"color:#2d3748;"};t.default=function(){return Object(n.b)(o.a,null,Object(n.b)(s.a,{title:"Home"}),Object(n.b)("h1",{css:a},"Hi esma-website!"),Object(n.b)(c.Link,{to:"/page-2/"},"Go to page 2"))}}}]);
+//# sourceMappingURL=component---src-pages-index-js-4d4bbce92e2178ee6db9.js.map
