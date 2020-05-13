@@ -1,15 +1,21 @@
 import React from "react"
 import { Link } from "gatsby"
+import { css } from "@emotion/core"
+import tw from "twin.macro"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+const pStyle = css`
+  ${tw`italic`}
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi esma-website</h1>
-    <p>Welcome to your new Gatsby site.</p>
+    <h1>Hi esma-website!</h1>
+    <p css={pStyle}>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />

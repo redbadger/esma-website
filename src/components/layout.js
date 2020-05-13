@@ -8,8 +8,24 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { Global, css } from "@emotion/core"
+import tw from "twin.macro"
 
 import Header from "./header"
+
+const globalStyles = css`
+  html {
+    font-family: Helvetica, Arial;
+  }
+
+  a {
+    ${tw`underline text-blue-600`}
+  }
+
+  h1 {
+    ${tw`text-2xl font-bold my-4`}
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +41,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
+      <Global styles={globalStyles} />
       <div
         style={{
           margin: `0 auto`,
