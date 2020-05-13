@@ -5,13 +5,13 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { Global, css } from "@emotion/core"
-import tw from "twin.macro"
+import React from "react";
+import PropTypes from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
+import { Global, css } from "@emotion/core";
+import tw from "twin.macro";
 
-import Header from "./header"
+import Header from "./header";
 
 const globalStyles = css`
   html {
@@ -19,13 +19,23 @@ const globalStyles = css`
   }
 
   a {
-    ${tw`underline text-blue-600`}
+    ${tw`underline`}
   }
+`;
 
-  h1 {
-    ${tw`text-2xl font-bold my-4`}
-  }
-`
+const containerStyles = css`
+  ${tw`container mx-auto`}
+`;
+
+const pageStyles = css`
+  ${tw`my-4`}
+  background: #ddd;
+`;
+
+const footerStyles = css`
+  ${tw`container mx-auto`}
+  background: #eee;
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -36,32 +46,22 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Global styles={globalStyles} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <div css={containerStyles}>
+        <main css={pageStyles}>{children}</main>
       </div>
+      <footer css={footerStyles}>Bye now.</footer>
     </>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

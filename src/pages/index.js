@@ -1,27 +1,21 @@
-import React from "react"
-import { Link } from "gatsby"
-import { css } from "@emotion/core"
-import tw from "twin.macro"
+import React from "react";
+import { Link } from "gatsby";
+import { css } from "@emotion/core";
+import tw from "twin.macro";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
-const pStyle = css`
-  ${tw`italic`}
-`
+const h1Style = css`
+  ${tw`text-gray-800`}
+`;
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi esma-website!</h1>
-    <p css={pStyle}>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
+    <h1 css={h1Style}>Hi esma-website!</h1>
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
