@@ -43,10 +43,18 @@ const issues = [
 ];
 
 const IndexPage = ({ data }) => {
+  const content = data.contentfulHomepageCopy;
+  console.log(content);
   return (
     <Layout>
       <SEO title="Home" />
-      <p>{data.contentfulHomepageCopy.introText.content[0].content[0].value}</p>
+      <h1>{content.title}</h1>
+      <p>{content.introText.content[0].content[0].value}</p>
+      <img
+        src={content.picture.file.url}
+        alt="test"
+        style={{ width: "200px" }}
+      />
       <h1>Chronology of issues</h1>
       <div css={cardContainerStyles}>
         {issues.map((issue, i) => (
@@ -67,6 +75,11 @@ export const query = graphql`
           content {
             value
           }
+        }
+      }
+      picture {
+        file {
+          url
         }
       }
     }
