@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "esma-website",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "ESMA website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Red Badger",
   "dependencies": {
     "dotenv": "^8.2.0",
     "gatsby": "^2.21.22",
