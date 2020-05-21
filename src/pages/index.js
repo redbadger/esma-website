@@ -49,7 +49,9 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <h1>{content.title}</h1>
-      <p>{content.introText.content[0].content[0].value}</p>
+      {content.introText.content.map(node => (
+        <p>{node.content[0].value}</p>
+      ))}
       <img
         src={content.picture.file.url}
         alt="test"
