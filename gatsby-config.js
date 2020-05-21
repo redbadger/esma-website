@@ -2,6 +2,19 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const contentfulConfig = {
+  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+};
+
+// if you want to use the preview API please define
+// CONTENTFUL_HOST in your environment config
+// the `host` property should map to `preview.contentful.com`
+if (process.env.CONTENTFUL_HOST) {
+  contentfulConfig.host = process.env.CONTENTFUL_HOST;
+}
+
+const { spaceId, accessToken } = contentfulConfig;
 module.exports = {
   pathPrefix: "/esma-website",
   siteMetadata: {
@@ -35,12 +48,7 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `1odohnig5ert`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-        host: `preview.contentful.com`,
-      },
+      options: contentfulConfig,
     },
     //
     // this (optional) plugin enables Progressive Web App + Offline functionality
