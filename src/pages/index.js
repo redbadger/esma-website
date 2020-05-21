@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -41,17 +42,33 @@ const issues = [
   },
 ];
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <p>This is some intro text to explain what this website is about.</p>
-    <h1>Chronology of issues</h1>
-    <div css={cardContainerStyles}>
-      {issues.map((issue, i) => (
-        <IssueCard key={i} css={issueCardStyles} {...issue} />
-      ))}
-    </div>
-  </Layout>
-);
+const IndexPage = ({ data }) => {
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <p>{data.contentfulHomepageCopy.introText.content[0].content[0].value}</p>
+      <h1>Chronology of issues</h1>
+      <div css={cardContainerStyles}>
+        {issues.map((issue, i) => (
+          <IssueCard key={i} css={issueCardStyles} {...issue} />
+        ))}
+      </div>
+    </Layout>
+  );
+};
 
 export default IndexPage;
+export const query = graphql`
+  query HomePageQuery {
+    contentfulHomepageCopy {
+      title
+      introText {
+        content {
+          content {
+            value
+          }
+        }
+      }
+    }
+  }
+`;
