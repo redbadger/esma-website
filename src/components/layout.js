@@ -17,10 +17,6 @@ const globalStyles = css`
   html {
     font-family: Helvetica, Arial;
   }
-
-  a {
-    ${tw`underline`}
-  }
 `;
 
 const containerStyles = css`
@@ -29,12 +25,13 @@ const containerStyles = css`
 
 const pageStyles = css`
   ${tw`my-4`}
-  background: #ddd;
-`;
+  h1 {
+    ${tw`text-2xl mb-8 mt-4`}
+  }
 
-const footerStyles = css`
-  ${tw`container mx-auto`}
-  background: #eee;
+  h2 {
+    ${tw`text-xl`}
+  }
 `;
 
 const Layout = ({ children }) => {
@@ -50,12 +47,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
       <Global styles={globalStyles} />
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div css={containerStyles}>
         <main css={pageStyles}>{children}</main>
       </div>
-      <footer css={footerStyles}>Bye now.</footer>
+      {
+        //<footer css={footerStyles}>&nbsp;</footer>
+      }
     </>
   );
 };
