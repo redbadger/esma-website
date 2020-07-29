@@ -15,7 +15,7 @@ import Header from "./header";
 
 const globalStyles = css`
   html {
-    font-family: Helvetica, Arial;
+    font-family: Montserrat, Helvetica, Arial;
   }
 `;
 
