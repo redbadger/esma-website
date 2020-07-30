@@ -3,14 +3,23 @@ import PropTypes from "prop-types";
 import React from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
+import Navigation from "./navigation";
 
 const headerStyles = css`
-  ${tw`container mx-auto py-4 px-4 bg-gray-300`}
+  ${tw`py-3 bg-ebony`}
+  
+  h1 {
+    ${tw`mx-3 md:mx-20`}
+  }
 
   h1 > a {
-    ${tw`no-underline font-bold`}
+    ${tw`no-underline text-white text-double float-left`}
   }
 `;
+
+const clearBoth = css`
+  ${tw`clear-both`}
+`
 
 const headerContainer = css``;
 
@@ -20,6 +29,8 @@ const Header = ({ siteTitle }) => (
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
+      <Navigation></Navigation>
+      <div css={clearBoth}></div>
     </div>
   </header>
 );
