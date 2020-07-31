@@ -7,10 +7,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const destinations = [
   {
-    label: "Home",
-    path: "/",
-  },
-  {
     label: "About",
     path: "/",
   },
@@ -56,12 +52,20 @@ const Navigation = () => {
 
   return (
     <>
-      <div css={menuIconStyles} onClick={toggleNavBar}>
+      <div
+        role="button"
+        tabIndex={0}
+        css={menuIconStyles}
+        onClick={toggleNavBar}
+        onKeyDown={toggleNavBar}
+      >
         <FontAwesomeIcon icon={faBars} />
       </div>
       <div css={navbarExpanded ? navStylesExpanded : navStylesCollapsed}>
         {destinations.map((entry, i) => (
-          <Link key={i} to={entry.path}>{entry.label}</Link>
+          <Link key={i} to={entry.path}>
+            {entry.label}
+          </Link>
         ))}
       </div>
     </>

@@ -1,21 +1,10 @@
 import React from "react";
-import { css } from "@emotion/core";
-import tw from "twin.macro";
 import { graphql } from "gatsby";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/common/layout";
+import SEO from "../components/common/seo";
 
-import IssueCard from "../components/issue-card";
-
-const cardContainerStyles = css`
-  ${tw`flex`}
-`;
-
-const issueCardStyles = css`
-  ${tw`flex-grow mx-2`}
-`;
-const issues = [];
+import Hero from "../components/hero/hero";
 
 const IndexPage = ({ data }) => {
   const content = data.contentfulHomepageCopy;
@@ -23,13 +12,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>{content.title}</h1>
-      <h1>Chronology of issues</h1>
-      <div css={cardContainerStyles}>
-        {issues.map((issue, i) => (
-          <IssueCard key={i} css={issueCardStyles} {...issue} />
-        ))}
-      </div>
+      <Hero/>
     </Layout>
   );
 };

@@ -51,10 +51,10 @@ module.exports = {
       options: contentfulConfig,
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Montserrat']
+          families: [`Montserrat:300,400,700`]
         }
       }
     }

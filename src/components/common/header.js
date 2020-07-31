@@ -6,20 +6,20 @@ import tw from "twin.macro";
 import Navigation from "./navigation";
 
 const headerStyles = css`
-  ${tw`py-3 bg-ebony`}
-  
+  ${tw`py-3 bg-midnight`}
+
   h1 {
     ${tw`mx-3 md:mx-20`}
   }
 
   h1 > a {
-    ${tw`no-underline text-white text-double float-left`}
+    ${tw`no-underline text-white text-double float-left font-normal`}
   }
 `;
 
 const clearBoth = css`
   ${tw`clear-both`}
-`
+`;
 
 const headerContainer = css``;
 

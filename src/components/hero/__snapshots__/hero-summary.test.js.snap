@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroSummary renders correctly 1`] = `
+<div
+  css={
+    Object {
+      "map": undefined,
+      "name": "bg87e5",
+      "next": undefined,
+      "styles": "
+  display:flex;justify-content:center;width:100%;@media (min-width: 1024px){flex-direction:column;height:100%;width:42rem;}
+
+  > div {
+    width:22rem;margin-top:2rem;@media (min-width: 768px){width:44rem;margin-top:4rem;}@media (min-width: 1024px){margin-top:0;margin-left:10rem;}
+  }
+
+  .summaryText {
+    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));font-size:1.25rem;line-height:1.75rem;margin-bottom:2rem;@media (min-width: 768px){font-size:2rem;line-height:2.75rem;margin-bottom:3rem;}
+  }
+",
+      "toString": [Function],
+    }
+  }
+>
+  <div>
+    <div
+      className="summaryText"
+    >
+      We are ESMA and we’re tackling social mobility by providing you with a centralised platform to house statistics, events, case studies and much more.
+    </div>
+    <button
+      css={
+        Object {
+          "map": undefined,
+          "name": "vxeuw9",
+          "next": undefined,
+          "styles": "
+  height:3rem;width:22rem;--bg-opacity:1;background-color:rgba(45, 49, 66, var(--bg-opacity));--text-opacity:1;color:rgba(255, 255, 255, var(--text-opacity));font-weight:700;
+",
+          "toString": [Function],
+        }
+      }
+      onClick={[Function]}
+    >
+      What are the issues?
+    </button>
+  </div>
+</div>
+`;
