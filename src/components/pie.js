@@ -49,16 +49,18 @@ const paths = stats.map(stat => {
   ].join(" ");
 
   return (
-    <a href={stat.label}>
+    <a href={"#" + stat.label}>
       <path key={stat.label} d={pathData} fill={stat.colour}></path>
     </a>
   );
 });
 
 const pathStyles = css`
-  path:hover {
-    fill: black;
+  a:hover {
     cursor: pointer;
+  }
+  a:hover path {
+    fill: grey;
   }
 `;
 
