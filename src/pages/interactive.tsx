@@ -4,31 +4,41 @@ import { css } from "@emotion/core";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import InteractivePie from "../components/pie";
-import CircularBar from "../components/circular-bar";
 import SplitCircularBar, {
   SplitCircularBarStat,
 } from "../components/split-circular-bar";
 
-const stats: any[] = [
-  {
-    label: "2018",
-    number: 51,
-    colour: "#c2d4ff",
-  },
-  {
-    label: "2019",
-    number: 31,
-    colour: "#c2d4ff",
-  },
-  {
-    label: "2020",
-    number: 61,
-    colour: "#c2d4ff",
-  },
-];
-
 const splitStats: SplitCircularBarStat[] = [
+  {
+    label: "2016",
+    innerStats: [
+      {
+        label: "No University-educated parent at home",
+        percent: 0.35,
+        colour: "#c2d4ff",
+      },
+      {
+        label: "University-educated parent at home",
+        percent: 0.6,
+        colour: "#ffeab4",
+      },
+    ],
+  },
+  {
+    label: "2017",
+    innerStats: [
+      {
+        label: "No University-educated parent at home",
+        percent: 0.35,
+        colour: "#c2d4ff",
+      },
+      {
+        label: "University-educated parent at home",
+        percent: 0.57,
+        colour: "#ffeab4",
+      },
+    ],
+  },
   {
     label: "2018",
     innerStats: [
@@ -59,21 +69,6 @@ const splitStats: SplitCircularBarStat[] = [
       },
     ],
   },
-  {
-    label: "2020",
-    innerStats: [
-      {
-        label: "No University-educated parent at home",
-        percent: 0.35,
-        colour: "#c2d4ff",
-      },
-      {
-        label: "University-educated parent at home",
-        percent: 0.57,
-        colour: "#ffeab4",
-      },
-    ],
-  },
 ];
 
 const hero = css`
@@ -83,6 +78,7 @@ const hero = css`
   .highlight {
     text-decoration: underline;
   }
+  p,
   svg {
     flex-basis: 500px;
   }

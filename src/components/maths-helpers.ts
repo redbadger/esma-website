@@ -1,4 +1,4 @@
-type CartesianCoordinate = {
+export type CartesianCoordinate = {
   x: number;
   y: number;
 };

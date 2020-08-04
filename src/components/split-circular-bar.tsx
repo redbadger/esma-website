@@ -2,8 +2,8 @@ import React from "react";
 import { css } from "@emotion/core";
 import {
   getPathDataForCircularBar,
-  getArc,
   getCartesianCoordinate,
+  CartesianCoordinate,
 } from "./maths-helpers";
 import { CircularBarStat } from "./circular-bar";
 
@@ -37,20 +37,44 @@ const statToCircularBarPart = (
   );
 };
 
+const tooltipCss = css`
+  .tooltip {
+    display: none;
+  }
+  &:hover .tooltip {
+    display: block;
+  }
+`;
+
+const getLabelForBar = (
+  label: string,
+  index: number,
+  arrayLength: number
+): JSX.Element => {
+  const coords = getCartesianCoordinate((index + 0.5) / arrayLength, 1);
+  const distance = Math.max(Math.abs(coords.x), Math.abs(coords.y));
+  const adjustedCoordinates: CartesianCoordinate = {
+    x: (0.9 * coords.x) / distance,
+    y: (0.9 * coords.y) / distance,
+  };
+  return (
+    <text
+      y={-adjustedCoordinates.x}
+      x={adjustedCoordinates.y - 0.08}
+      css={css`
+        transform: rotate(0.25turn);
+      `}
+    >
+      {label}
+    </text>
+  );
+};
+
 const getPathsFromStats = (stats: SplitCircularBarStat[]) =>
   stats.map((splitStat, index, array) => {
-    const label = getCartesianCoordinate((index + 0.5) / array.length, 1);
     return (
-      <g id={splitStat.label}>
-        <text
-          y={-label.x}
-          x={label.y - 0.08}
-          css={css`
-            transform: rotate(0.25turn);
-          `}
-        >
-          {splitStat.label}
-        </text>
+      <g id={splitStat.label} css={tooltipCss}>
+        {getLabelForBar(splitStat.label, index, array.length)}
         {splitStat.innerStats
           .sort((a, b) => b.percent - a.percent)
           .map(stat => {
