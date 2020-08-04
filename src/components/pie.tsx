@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
+import { getPathDataForCircularBar } from "./maths-helpers";
 
 let cumulativePercent = 0;
 
@@ -9,30 +10,21 @@ export type Stat = {
   label: string;
 };
 
-const getCoordinatesForPercent = percent => {
-  console.log(percent);
-  const x = Math.cos(2 * Math.PI * percent);
-  const y = Math.sin(2 * Math.PI * percent);
-
-  return [x, y];
-};
-
 const innerRatio = 0.5;
 
 const statToPiePart = (stat: Stat, total: number) => {
   const statPercent = stat.number / total;
-  const [startX, startY] = getCoordinatesForPercent(cumulativePercent);
-  const [innerStartX, innerStartY] = [startX * innerRatio, startY * innerRatio];
+  const startTheta = cumulativePercent;
   cumulativePercent += statPercent;
-  const [endX, endY] = getCoordinatesForPercent(cumulativePercent);
-  const [innerEndX, innerEndY] = [endX * innerRatio, endY * innerRatio];
-  const largeArcFlag = statPercent > 0.5 ? 1 : 0;
-  const pathData = [
-    `M ${startX} ${startY}`, // Move
-    `A 1 1 0 ${largeArcFlag} 1 ${endX} ${endY}`, // Arc Clockwise
-    `L ${innerEndX} ${innerEndY}`, // Line
-    `A ${innerRatio} ${innerRatio} 0 ${largeArcFlag} 0 ${innerStartX} ${innerStartY}`, // Inner Arc Anti-Clockwise
-  ].join(" ");
+  const endTheta = cumulativePercent;
+
+  const pathData = getPathDataForCircularBar(
+    innerRatio,
+    1,
+    startTheta,
+    endTheta,
+    1
+  );
 
   return (
     <a href={"#" + stat.label}>
@@ -52,7 +44,7 @@ const pathStyles = css`
     cursor: pointer;
   }
   a:hover path {
-    fill: grey;
+    fill: #3772ff;
   }
 `;
 
