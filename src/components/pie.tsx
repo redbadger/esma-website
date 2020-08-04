@@ -1,32 +1,13 @@
 import React from "react";
-import { Link } from "gatsby";
 import { css } from "@emotion/core";
-import tw from "twin.macro";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-const stats = [
-  {
-    label: "2018",
-    number: 51,
-    colour: "Green",
-  },
-  {
-    label: "2019",
-    number: 60,
-    colour: "CornflowerBlue",
-  },
-  {
-    label: "2020",
-    number: 60,
-    colour: "Red",
-  },
-];
-
-const total = stats.reduce((a, x) => a + x.number, 0);
-console.log(total);
 
 let cumulativePercent = 0;
+
+export type Stat = {
+  number: number;
+  colour: string;
+  label: string;
+};
 
 const getCoordinatesForPercent = percent => {
   console.log(percent);
@@ -36,16 +17,21 @@ const getCoordinatesForPercent = percent => {
   return [x, y];
 };
 
-const paths = stats.map(stat => {
+const innerRatio = 0.5;
+
+const statToPiePart = (stat: Stat, total: number) => {
   const statPercent = stat.number / total;
   const [startX, startY] = getCoordinatesForPercent(cumulativePercent);
+  const [innerStartX, innerStartY] = [startX * innerRatio, startY * innerRatio];
   cumulativePercent += statPercent;
   const [endX, endY] = getCoordinatesForPercent(cumulativePercent);
+  const [innerEndX, innerEndY] = [endX * innerRatio, endY * innerRatio];
   const largeArcFlag = statPercent > 0.5 ? 1 : 0;
   const pathData = [
     `M ${startX} ${startY}`, // Move
-    `A 1 1 0 ${largeArcFlag} 1 ${endX} ${endY}`, // Arc
-    `L 0 0`, // Line
+    `A 1 1 0 ${largeArcFlag} 1 ${endX} ${endY}`, // Arc Clockwise
+    `L ${innerEndX} ${innerEndY}`, // Line
+    `A ${innerRatio} ${innerRatio} 0 ${largeArcFlag} 0 ${innerStartX} ${innerStartY}`, // Inner Arc Anti-Clockwise
   ].join(" ");
 
   return (
@@ -53,7 +39,13 @@ const paths = stats.map(stat => {
       <path key={stat.label} d={pathData} fill={stat.colour}></path>
     </a>
   );
-});
+};
+
+const getPathsFromStats = (stats: Stat[]) => {
+  const total = stats.reduce((a, x) => a + x.number, 0);
+
+  return stats.map(stat => statToPiePart(stat, total));
+};
 
 const pathStyles = css`
   a:hover {
@@ -64,7 +56,7 @@ const pathStyles = css`
   }
 `;
 
-const Pie = () => {
+const Pie = ({ stats }) => {
   return (
     <>
       <svg
@@ -72,7 +64,7 @@ const Pie = () => {
         style={{ transform: "rotate(-0.25turn)" }}
         css={pathStyles}
       >
-        {paths}
+        {getPathsFromStats(stats)}
       </svg>
     </>
   );
