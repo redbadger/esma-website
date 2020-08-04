@@ -5,8 +5,9 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 import InteractivePie, { Stat } from "../components/pie";
+import CircularBar, { CircularBarStat } from "../components/circular-bar";
 
-const stats: Stat[] = [
+const stats: any[] = [
   {
     label: "2018",
     number: 51,
@@ -14,12 +15,12 @@ const stats: Stat[] = [
   },
   {
     label: "2019",
-    number: 60,
+    number: 31,
     colour: "CornflowerBlue",
   },
   {
     label: "2020",
-    number: 60,
+    number: 61,
     colour: "Red",
   },
 ];
@@ -45,6 +46,11 @@ const InteractiveHeroPage = () => {
           and much more.
         </p>
         <InteractivePie stats={stats} />
+        <CircularBar
+          stats={stats.map(({ label, number, colour }) => {
+            return { label, percent: number / 100, colour };
+          })}
+        />
       </section>
     </Layout>
   );

@@ -56,7 +56,7 @@ const pathStyles = css`
   }
 `;
 
-const Pie = ({ stats }) => {
+const Pie = ({ stats }: { stats: Stat[] }) => {
   return (
     <>
       <svg
