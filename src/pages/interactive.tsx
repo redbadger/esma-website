@@ -26,7 +26,12 @@ const stats: Stat[] = [
 ];
 
 const hero = css`
-  ${tw`flex`}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .highlight {
+    text-decoration: underline;
+  }
 `;
 
 const InteractiveHeroPage = () => {
@@ -34,6 +39,12 @@ const InteractiveHeroPage = () => {
     <Layout>
       <SEO title="Home" />
       <section id="interactive-hero" css={hero}>
+        <p>
+          We are ESMA and we’re tackling{" "}
+          <span className="highlight">social mobility</span> by providing you
+          with a centralised platform to house statistics, events, case studies
+          and much more.
+        </p>
         <InteractivePie stats={stats} />
       </section>
     </Layout>
