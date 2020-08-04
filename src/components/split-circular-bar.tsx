@@ -37,15 +37,6 @@ const statToCircularBarPart = (
   );
 };
 
-const tooltipCss = css`
-  .tooltip {
-    display: none;
-  }
-  &:hover .tooltip {
-    display: block;
-  }
-`;
-
 const getLabelForBar = (
   label: string,
   index: number,
@@ -73,7 +64,7 @@ const getLabelForBar = (
 const getPathsFromStats = (stats: SplitCircularBarStat[]) =>
   stats.map((splitStat, index, array) => {
     return (
-      <g id={splitStat.label} css={tooltipCss}>
+      <g id={splitStat.label}>
         {splitStat.innerStats
           .sort((a, b) => b.percent - a.percent)
           .map(stat => {
