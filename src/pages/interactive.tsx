@@ -99,12 +99,6 @@ const InteractiveHeroPage = () => {
           with a centralised platform to house statistics, events, case studies
           and much more.
         </p>
-        <InteractivePie stats={stats} />
-        <CircularBar
-          stats={stats.map(({ label, number, colour }) => {
-            return { label, percent: number / 100, colour };
-          })}
-        />
         <SplitCircularBar stats={splitStats} />
       </section>
     </Layout>

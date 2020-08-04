@@ -45,7 +45,7 @@ export const getArc = (
  * getCartesianCoordinate(0, 2) // {x: 2, y: 0}
  * ```
  */
-const getCartesianCoordinate = (
+export const getCartesianCoordinate = (
   theta: number,
   r: number
 ): CartesianCoordinate => {
