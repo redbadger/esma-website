@@ -39,30 +39,38 @@ const getPathsFromStats = (stats: CircularBarStat[]) =>
   );
 
 const pathStyles = css`
+  transform: rotate(-0.25turn);
+
   a:hover {
     cursor: pointer;
   }
   a:hover path {
     fill: #3772ff;
   }
+  .small {
+    font: italic 0.1px sans-serif;
+    transform: rotate(0.25turn);
+  }
 `;
 
 const CircularBar = ({ stats }) => {
   return (
     <>
-      <svg
-        viewBox="-1 -1 2 2"
-        style={{ transform: "rotate(-0.25turn)" }}
-        css={pathStyles}
-      >
+      <svg viewBox="-1 -1 2 2" css={pathStyles}>
+        {getPathsFromStats(stats)}
         <g id="axes">
           <path
             d={`M ${innerRatio} 0 L 1 0`}
             stroke="black"
             strokeWidth="0.01"
           ></path>
+          <text className="small" y={-(innerRatio + 0.01)} x="0.025">
+            0%
+          </text>
+          <text className="small" y={-0.91} x="0.025">
+            100%
+          </text>
         </g>
-        {getPathsFromStats(stats)}
       </svg>
     </>
   );
