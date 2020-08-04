@@ -40,6 +40,7 @@ const getPathsFromStats = (stats: CircularBarStat[]) =>
 
 const pathStyles = css`
   transform: rotate(-0.25turn);
+  flex-basis: 500px;
 
   a:hover {
     cursor: pointer;
@@ -47,9 +48,11 @@ const pathStyles = css`
   a:hover path {
     fill: #3772ff;
   }
-  .small {
-    font: italic 0.1px sans-serif;
-    transform: rotate(0.25turn);
+  text {
+    font-family: Montserrat, sans-serif;
+    font-size: 0.08px;
+    font-weight: 900;
+    color: #2d3142;
   }
 `;
 
@@ -58,16 +61,19 @@ const CircularBar = ({ stats }) => {
     <>
       <svg viewBox="-1 -1 2 2" css={pathStyles}>
         {getPathsFromStats(stats)}
-        <g id="axes">
+        <g id="axes" style={{ transform: "rotate(0.25turn)" }}>
           <path
-            d={`M ${innerRatio} 0 L 1 0`}
+            d={`M 0 -${innerRatio} L 0 -1`}
             stroke="black"
             strokeWidth="0.01"
           ></path>
-          <text className="small" y={-(innerRatio + 0.01)} x="0.025">
+          <text y={-(innerRatio + 0.01)} x="0.025">
             0%
           </text>
-          <text className="small" y={-0.91} x="0.025">
+          <text y={-(0.98 + innerRatio) / 2} x="0.025">
+            50%
+          </text>
+          <text y={-0.91} x="0.025">
             100%
           </text>
         </g>
