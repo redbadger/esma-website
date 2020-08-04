@@ -10,6 +10,21 @@ import SplitCircularBar, {
 
 const splitStats: SplitCircularBarStat[] = [
   {
+    label: "2015",
+    innerStats: [
+      {
+        label: "No University-educated parent at home",
+        percent: 0.55,
+        colour: "#c2d4ff",
+      },
+      {
+        label: "University-educated parent at home",
+        percent: 0.96,
+        colour: "#ffeab4",
+      },
+    ],
+  },
+  {
     label: "2016",
     innerStats: [
       {
@@ -34,7 +49,7 @@ const splitStats: SplitCircularBarStat[] = [
       },
       {
         label: "University-educated parent at home",
-        percent: 0.57,
+        percent: 0.97,
         colour: "#ffeab4",
       },
     ],

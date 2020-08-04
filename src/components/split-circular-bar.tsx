@@ -74,13 +74,13 @@ const getPathsFromStats = (stats: SplitCircularBarStat[]) =>
   stats.map((splitStat, index, array) => {
     return (
       <g id={splitStat.label} css={tooltipCss}>
-        {getLabelForBar(splitStat.label, index, array.length)}
         {splitStat.innerStats
           .sort((a, b) => b.percent - a.percent)
           .map(stat => {
             stat.label = splitStat.label + stat.label;
             return statToCircularBarPart(stat, index, array.length);
           })}
+        {getLabelForBar(splitStat.label, index, array.length)}
       </g>
     );
   });
