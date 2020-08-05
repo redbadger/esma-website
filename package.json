@@ -22,16 +22,30 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-test-renderer": "^16.13.1"
   },
   "devDependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@types/jest": "^25.1.1",
+    "@types/node": "^12.12.7",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "babel-jest": "^26.2.2",
+    "babel-preset-gatsby": "^0.5.5",
+    "cypress": "^3.8.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
     "gatsby-plugin-emotion": "^4.3.1",
+    "jest": "^26.2.2",
     "lorem-ipsum": "^2.0.3",
     "prettier": "2.0.5",
     "tailwindcss": "^1.4.6",
-    "twin.macro": "^1.0.0-alpha.10"
+    "ts-jest": "^26.1.4",
+    "twin.macro": "^1.0.0-alpha.10",
+    "typescript": "^3.7.5"
   },
   "keywords": [
     "gatsby"
@@ -44,7 +58,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
