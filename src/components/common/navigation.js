@@ -11,11 +11,7 @@ const destinations = [
     path: "/",
   },
   {
-    label: "Statistics",
-    path: "/",
-  },
-  {
-    label: "Contact us",
+    label: "Get involved",
     path: "/",
   },
 ];
@@ -32,7 +28,7 @@ const navStylesCollapsed = css`
   ${tw`hidden md:flex float-right justify-between mx-20`}
 
   a {
-    ${tw`text-white text-base font-bold leading-12 mx-4`}
+    ${tw`text-white text-base font-semibold leading-12 mx-4`}
   }
 `;
 
@@ -40,7 +36,7 @@ const navStylesExpanded = css`
   ${tw`md:flex clear-left`}
 
   a {
-    ${tw`float-none  text-left block text-white text-base font-bold leading-12 mx-4`}
+    ${tw`float-none text-left block text-white text-base font-semibold leading-12 mx-4`}
   }
 `;
 

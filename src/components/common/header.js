@@ -6,14 +6,14 @@ import tw from "twin.macro";
 import Navigation from "./navigation";
 
 const headerStyles = css`
-  ${tw`py-3 bg-midnight`}
+  ${tw`py-3 bg-midnight h-17`}
 
   h1 {
     ${tw`mx-3 md:mx-20`}
   }
 
   h1 > a {
-    ${tw`no-underline text-white text-double float-left font-normal`}
+    ${tw`pt-2.5 no-underline text-white text-xl leading-6 float-left font-semibold`}
   }
 `;
 
@@ -21,15 +21,13 @@ const clearBoth = css`
   ${tw`clear-both`}
 `;
 
-const headerContainer = css``;
-
 const Header = ({ siteTitle }) => (
   <header css={headerStyles}>
-    <div css={headerContainer}>
+    <div>
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
-      <Navigation></Navigation>
+      <Navigation/>
       <div css={clearBoth}></div>
     </div>
   </header>

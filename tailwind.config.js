@@ -11,11 +11,16 @@ module.exports = {
       fontSize: {
         double: "2rem",
       },
+      fontWeight: {
+        semibold: 600
+      },
       lineHeight: {
         "11": "2.75rem",
         "12": "3rem",
       },
       spacing: {
+        "2.5": "0.625rem",
+        "17": "4.25rem",
         "44": "11rem",
         "88": "22rem",
         "112": "28rem",

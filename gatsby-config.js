@@ -18,7 +18,7 @@ const { spaceId, accessToken } = contentfulConfig;
 module.exports = {
   pathPrefix: "/esma-website",
   siteMetadata: {
-    title: `ESMA`,
+    title: `Employer Social Mobility Alliance`,
     description: ``,
     author: ``,
   },
@@ -54,7 +54,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: [`Montserrat:300,400,700`]
+          families: [`Montserrat:300,400,600,700`]
         }
       }
     }
