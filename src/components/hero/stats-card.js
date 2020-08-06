@@ -6,15 +6,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { PropTypes } from "prop-types";
 
 const statsCardStyles = css`
-  ${tw`h-56 bg-white border-t-8 border-cobalt`}
+  ${tw`h-56 bg-white`}
 
   div {
-    ${tw`ml-3 md:ml-6 text-left`}
+    ${tw`text-midnight`}
   }
 `;
 
 const headingStyles = css`
-  ${tw`text-5xl mt-3 md:mt-6 mb-3 font-light`}
+  ${tw`ml-3 md:ml-6 text-5xl mb-3 font-light float-left`}
 `;
 
 const carouselStyles = css`
@@ -27,21 +27,37 @@ const carouselStyles = css`
   }
 `;
 
+const resourceStyles = css`
+  ${tw`mt-3 mr-6 float-right font-light `}
+`;
+
+const textStyles = css`
+  ${tw`ml-3 md:ml-6 text-left`}
+`;
+
+const emphasisStyles = css`
+  ${tw`font-bold`}
+`
+
+const clearBoth = css`
+  ${tw`clear-both`}
+`;
+
 const stats = [
   {
-    heading: "24%",
-    text:
-      "People from a working class background earn 24% less a year than someone with a professional background",
+    heading: "51%",
+    text: <div>Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to <span css={emphasisStyles}>71% of all other pupils</span> in 2019.</div>,
+    resource: "State of the Nation",
   },
   {
-    heading: "42%",
-    text:
-      "People from a working class background earn 42% less a year than someone with a professional background",
+    heading: "2%",
+    text: <div>Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with <span css={emphasisStyles}>11%</span> of students from the same social group from Inner London.</div>,
+    resource: "Department for Education",
   },
   {
-    heading: "64%",
-    text:
-      "People from a working class background earn 64% less a year than someone with a professional background",
+    heading: "27%",
+    text: <div>Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of <span css={emphasisStyles}>£1,100</span> a month and <span css={emphasisStyles}>£885</span> in Manchester.</div>,
+    resource: "Mobility Manifesto 2019",
   },
 ];
 
@@ -62,7 +78,9 @@ const StatsCard = ({ styles }) => {
         {stats.map((entry, i) => (
           <div key={i} css={statsCardStyles}>
             <div css={headingStyles}>{entry.heading}</div>
-            <div>{entry.text}</div>
+            <div css={resourceStyles}>- {entry.resource}</div>
+            <div css={clearBoth} />
+            <div css={textStyles}>{entry.text}</div>
           </div>
         ))}
       </Carousel>
