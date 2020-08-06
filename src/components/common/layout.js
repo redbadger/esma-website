@@ -14,17 +14,13 @@ import tw from "twin.macro";
 import Header from "./header";
 
 const globalStyles = css`
-  html {
+  body {
     font-family: Montserrat, Helvetica, Arial;
+    font-size: 100%;
   }
 `;
 
-const containerStyles = css`
-  ${tw`container mx-auto`}
-`;
-
 const pageStyles = css`
-  ${tw`my-4`}
   h1 {
     ${tw`text-2xl mb-8 mt-4`}
   }
@@ -49,9 +45,7 @@ const Layout = ({ children }) => {
     <>
       <Global styles={globalStyles} />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div css={containerStyles}>
-        <main css={pageStyles}>{children}</main>
-      </div>
+      <main css={pageStyles}>{children}</main>
       {
         //<footer css={footerStyles}>&nbsp;</footer>
       }
