@@ -13,19 +13,22 @@ const heroSummaryStyles = css`
   .summaryText {
     ${tw`text-midnight text-xl md:text-double leading-7 md:leading-11 mb-8 md:mb-12`}
   }
+
+  span.highlight {
+    ${tw`bg-yellow font-semibold`}
+  }
 `;
 
 const HeroSummary = () => (
   <div css={heroSummaryStyles}>
     <div>
       <div className="summaryText">
-        We are ESMA and we’re tackling social mobility by providing you with a
-        centralised platform to house statistics, events, case studies and much
-        more.
+        <span className="highlight">Social inequality</span> is persistent and systematic. Often where you start in
+        life is where you’ll end up. Together we can change this
       </div>
       <Button
         variant="dark"
-        label="What are the issues?"
+        label="Find out how"
         onClick={() => console.log("Hero button clicked")}
       />
     </div>

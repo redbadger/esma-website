@@ -5,7 +5,7 @@ exports[`HeroSummary renders correctly 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "bg87e5",
+      "name": "10u028w",
       "next": undefined,
       "styles": "
   display:flex;justify-content:center;width:100%;@media (min-width: 1024px){flex-direction:column;height:100%;width:42rem;}
@@ -17,6 +17,10 @@ exports[`HeroSummary renders correctly 1`] = `
   .summaryText {
     --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));font-size:1.25rem;line-height:1.75rem;margin-bottom:2rem;@media (min-width: 768px){font-size:2rem;line-height:2.75rem;margin-bottom:3rem;}
   }
+
+  span.highlight {
+    --bg-opacity:1;background-color:rgba(255, 186, 8, var(--bg-opacity));font-weight:600;
+  }
 ",
       "toString": [Function],
     }
@@ -26,7 +30,12 @@ exports[`HeroSummary renders correctly 1`] = `
     <div
       className="summaryText"
     >
-      We are ESMA and we’re tackling social mobility by providing you with a centralised platform to house statistics, events, case studies and much more.
+      <span
+        className="highlight"
+      >
+        Social inequality
+      </span>
+       is persistent and systematic. Often where you start in life is where you’ll end up. Together we can change this
     </div>
     <button
       css={
@@ -42,7 +51,7 @@ exports[`HeroSummary renders correctly 1`] = `
       }
       onClick={[Function]}
     >
-      What are the issues?
+      Find out how
     </button>
   </div>
 </div>
