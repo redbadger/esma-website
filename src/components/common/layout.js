@@ -14,9 +14,9 @@ import tw from "twin.macro";
 import Header from "./header";
 
 const globalStyles = css`
-  html {
+  body {
     font-family: Montserrat, Helvetica, Arial;
-    font-size: 16px;
+    font-size: 100%;
   }
 `;
 
