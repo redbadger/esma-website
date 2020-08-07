@@ -5,13 +5,13 @@ exports[`HeroSummary renders correctly 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "10u028w",
+      "name": "i9tchg",
       "next": undefined,
       "styles": "
   display:flex;justify-content:center;width:100%;@media (min-width: 1024px){flex-direction:column;height:100%;width:42rem;}
 
   > div {
-    width:22rem;margin-top:2rem;@media (min-width: 768px){width:44rem;margin-top:4rem;}@media (min-width: 1024px){margin-top:0;margin-left:10rem;}
+    width:22rem;margin-top:2rem;@media (min-width: 768px){width:44rem;margin-top:4rem;}@media (min-width: 1024px){width:28rem;margin-top:0;margin-left:5rem;}@media (min-width: 1280px){width:44rem;margin-left:10rem;}
   }
 
   .summaryText {
@@ -35,7 +35,10 @@ exports[`HeroSummary renders correctly 1`] = `
       >
         Social inequality
       </span>
-       is persistent and systematic. Often where you start in life is where you’ll end up. Together we can change this
+       is persistent and systematic. Often where you start in life is where you’ll end up.
+      <br />
+      <br />
+       Together we can change this
     </div>
     <button
       css={

@@ -17,10 +17,10 @@ const destinations = [
 ];
 
 const menuIconStyles = css`
-  ${tw`float-right md:hidden mx-3 text-3xl`}
+  ${tw`float-right md:hidden mx-3 text-3xl focus:outline-none`}
 
   svg {
-    ${tw`text-white`}
+    ${tw`text-white focus:outline-none`}
   }
 `;
 
@@ -33,7 +33,7 @@ const navStylesCollapsed = css`
 `;
 
 const navStylesExpanded = css`
-  ${tw`md:flex clear-left`}
+  ${tw`md:flex clear-left bg-midnight relative z-10`}
 
   a {
     ${tw`float-none text-left block text-white text-base font-semibold leading-12 mx-4`}

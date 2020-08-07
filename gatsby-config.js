@@ -18,7 +18,7 @@ const { spaceId, accessToken } = contentfulConfig;
 module.exports = {
   pathPrefix: "/esma-website",
   siteMetadata: {
-    title: `Employer Social Mobility Alliance`,
+    title: `ESMA`,
     description: ``,
     author: ``,
   },

@@ -7,7 +7,7 @@ const heroSummaryStyles = css`
   ${tw`flex justify-center lg:flex-col lg:h-full w-full lg:w-168`}
 
   > div {
-    ${tw`w-88 md:w-176 mt-8 md:mt-16 lg:mt-0 lg:ml-40 `}
+    ${tw`w-88 md:w-176 lg:w-7 xl:w-176 mt-8 md:mt-16 lg:mt-0 lg:ml-20 xl:ml-40 `}
   }
 
   .summaryText {
@@ -24,7 +24,7 @@ const HeroSummary = () => (
     <div>
       <div className="summaryText">
         <span className="highlight">Social inequality</span> is persistent and systematic. Often where you start in
-        life is where you’ll end up. Together we can change this
+        life is where you’ll end up.<br/><br/> Together we can change this
       </div>
       <Button
         variant="dark"
