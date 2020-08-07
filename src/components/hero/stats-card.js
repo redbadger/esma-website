@@ -14,7 +14,7 @@ const statsCardStyles = css`
 `;
 
 const headingStyles = css`
-  ${tw`ml-3 md:ml-6 text-5xl mb-3 font-light float-left`}
+  ${tw`text-left font-light ml-3 md:ml-6 text-5xl mb-1`}
 `;
 
 const carouselStyles = css`
@@ -28,35 +28,31 @@ const carouselStyles = css`
 `;
 
 const resourceStyles = css`
-  ${tw`mt-3 mr-6 float-right font-light `}
+  ${tw`font-light underline`}
 `;
 
 const textStyles = css`
-  ${tw`ml-3 md:ml-6 text-left`}
+  ${tw`mx-3 md:mx-6 text-left`}
 `;
 
 const emphasisStyles = css`
-  ${tw`font-bold`}
+  ${tw`font-semibold`}
 `
-
-const clearBoth = css`
-  ${tw`clear-both`}
-`;
 
 const stats = [
   {
     heading: "51%",
-    text: <div>Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to <span css={emphasisStyles}>71% of all other pupils</span> in 2019.</div>,
+    text: <span>Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to <span css={emphasisStyles}>71% of all other pupils</span> in 2019.</span>,
     resource: "State of the Nation",
   },
   {
     heading: "2%",
-    text: <div>Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with <span css={emphasisStyles}>11%</span> of students from the same social group from Inner London.</div>,
+    text: <span>Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with <span css={emphasisStyles}>11%</span> of students from the same social group from Inner London.</span>,
     resource: "Department for Education",
   },
   {
     heading: "27%",
-    text: <div>Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of <span css={emphasisStyles}>£1,100</span> a month and <span css={emphasisStyles}>£885</span> in Manchester.</div>,
+    text: <span>Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of <span css={emphasisStyles}>£1,100</span> a month and <span css={emphasisStyles}>£885</span> in Manchester.</span>,
     resource: "Mobility Manifesto 2019",
   },
 ];
@@ -78,9 +74,7 @@ const StatsCard = ({ styles }) => {
         {stats.map((entry, i) => (
           <div key={i} css={statsCardStyles}>
             <div css={headingStyles}>{entry.heading}</div>
-            <div css={resourceStyles}>- {entry.resource}</div>
-            <div css={clearBoth} />
-            <div css={textStyles}>{entry.text}</div>
+            <div css={textStyles}>{entry.text} <span css={resourceStyles}>- {entry.resource}</span></div>
           </div>
         ))}
       </Carousel>

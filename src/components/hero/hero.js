@@ -10,7 +10,7 @@ const heroStyles = css`
 `;
 
 const imageContainerStyles = css`
-  ${tw`absolute lg:w-112 bottom-0 lg:right-0 w-full h-48 md:h-88 lg:h-full`}
+  ${tw`absolute bottom-0 lg:right-0 w-full lg:w-136 h-48 md:h-88 lg:h-full`}
 `;
 
 const heroImageStyles = css`
@@ -20,7 +20,7 @@ const heroImageStyles = css`
 `;
 
 const statsCardStyles = css`
-  ${tw`shadow-xl lg:border lg:shadow-none absolute w-88 -bottom-30 right-1/2 -mr-44 md:w-176 md:-mr-88 lg:w-112 lg:bottom-0 lg:right-0 lg:mr-0`}
+  ${tw`absolute shadow-xl lg:shadow-none lg:border w-88 md:w-176 lg:w-136 -bottom-30 lg:bottom-0 right-1/2 lg:right-0 -mr-44  md:-mr-88 lg:mr-0`}
 `;
 
 const Hero = () => (
