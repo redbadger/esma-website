@@ -7,27 +7,19 @@ module.exports = {
         taupe: "#f7f5f4",
         cobalt: "#3772ff",
         "light-grey": "#d3d3d3",
-        yellow: "#ffba08"
       },
       fontSize: {
         double: "2rem",
-      },
-      fontWeight: {
-        semibold: 600
       },
       lineHeight: {
         "11": "2.75rem",
         "12": "3rem",
       },
       spacing: {
-        "2.5": "0.625rem",
-        "7": "28rem",
-        "17": "4.25rem",
         "44": "11rem",
         "88": "22rem",
         "112": "28rem",
         "128": "32rem",
-        "136": "34rem",
         "144": "36rem",
         "160": "40rem",
         "168": "42rem",

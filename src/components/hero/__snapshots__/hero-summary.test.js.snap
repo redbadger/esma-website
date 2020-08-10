@@ -5,25 +5,17 @@ exports[`HeroSummary renders correctly 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "1exchyt",
+      "name": "bg87e5",
       "next": undefined,
       "styles": "
   display:flex;justify-content:center;width:100%;@media (min-width: 1024px){flex-direction:column;height:100%;width:42rem;}
 
   > div {
-    width:22rem;margin-top:2rem;@media (min-width: 768px){width:44rem;margin-top:4rem;}@media (min-width: 1024px){width:28rem;margin-top:0;margin-left:5rem;}@media (min-width: 1280px){width:36rem;margin-left:10rem;}
+    width:22rem;margin-top:2rem;@media (min-width: 768px){width:44rem;margin-top:4rem;}@media (min-width: 1024px){margin-top:0;margin-left:10rem;}
   }
 
   .summaryText {
     --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));font-size:1.25rem;line-height:1.75rem;margin-bottom:2rem;@media (min-width: 768px){font-size:2rem;line-height:2.75rem;margin-bottom:3rem;}
-
-    p:first-child {
-      margin-bottom: 2.75rem
-    }
-  }
-
-  span.highlight {
-    --bg-opacity:1;background-color:rgba(255, 186, 8, var(--bg-opacity));font-weight:600;
   }
 ",
       "toString": [Function],
@@ -34,17 +26,7 @@ exports[`HeroSummary renders correctly 1`] = `
     <div
       className="summaryText"
     >
-      <p>
-        <span
-          className="highlight"
-        >
-          Social inequality
-        </span>
-         is persistent and systematic. Often where you start in life is where you’ll end up.
-      </p>
-      <p>
-        Together we can change this.
-      </p>
+      We are ESMA and we’re tackling social mobility by providing you with a centralised platform to house statistics, events, case studies and much more.
     </div>
     <button
       css={
@@ -60,7 +42,7 @@ exports[`HeroSummary renders correctly 1`] = `
       }
       onClick={[Function]}
     >
-      Find out how
+      What are the issues?
     </button>
   </div>
 </div>
