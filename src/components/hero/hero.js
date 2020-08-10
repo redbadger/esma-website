@@ -7,10 +7,10 @@ import HeroSummary from "./hero-summary";
 
 const heroStyles = css`
   ${tw`bg-taupe relative h-128 md:h-192 lg:h-144`}
+`;
 
-  .imageContainer {
-    ${tw`absolute lg:w-144 bottom-0 lg:right-0 w-full h-48 md:h-88 lg:h-full`}
-  }
+const imageContainerStyles = css`
+  ${tw`absolute bottom-0 lg:right-0 w-full lg:w-136 h-48 md:h-88 lg:h-full`}
 `;
 
 const heroImageStyles = css`
@@ -20,13 +20,13 @@ const heroImageStyles = css`
 `;
 
 const statsCardStyles = css`
-  ${tw`shadow-xl absolute w-88 -bottom-30 right-1/2 -mr-44 md:w-176 md:-mr-88 lg:w-112 lg:bottom-16 lg:right-48 lg:mr-0`}
+  ${tw`absolute shadow-xl lg:shadow-none lg:border w-88 md:w-176 lg:w-136 -bottom-30 lg:bottom-0 right-1/2 lg:right-0 -mr-44  md:-mr-88 lg:mr-0`}
 `;
 
 const Hero = () => (
   <div css={[heroStyles, heroImageStyles]}>
     <HeroSummary />
-    <div className="imageContainer">
+    <div css={imageContainerStyles}>
       <HeroImage />
     </div>
     <StatsCard styles={statsCardStyles} />

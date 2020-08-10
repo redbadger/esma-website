@@ -11,20 +11,16 @@ const destinations = [
     path: "/",
   },
   {
-    label: "Statistics",
-    path: "/",
-  },
-  {
-    label: "Contact us",
+    label: "Get involved",
     path: "/",
   },
 ];
 
 const menuIconStyles = css`
-  ${tw`float-right md:hidden mx-3 text-3xl`}
+  ${tw`float-right md:hidden mx-3 text-3xl focus:outline-none`}
 
   svg {
-    ${tw`text-white`}
+    ${tw`text-white focus:outline-none`}
   }
 `;
 
@@ -32,15 +28,15 @@ const navStylesCollapsed = css`
   ${tw`hidden md:flex float-right justify-between mx-20`}
 
   a {
-    ${tw`text-white text-base font-bold leading-12 mx-4`}
+    ${tw`text-white text-base font-semibold leading-12 mx-4`}
   }
 `;
 
 const navStylesExpanded = css`
-  ${tw`md:flex clear-left`}
+  ${tw`md:flex clear-left bg-midnight relative z-10`}
 
   a {
-    ${tw`float-none  text-left block text-white text-base font-bold leading-12 mx-4`}
+    ${tw`float-none text-left block text-white text-base font-semibold leading-12 mx-4`}
   }
 `;
 

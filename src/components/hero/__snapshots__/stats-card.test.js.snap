@@ -47,13 +47,13 @@ exports[`StatsCard renders correctly 1`] = `
             css={
               Object {
                 "map": undefined,
-                "name": "fmlnap",
+                "name": "mlu2ts",
                 "next": undefined,
                 "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));border-top-width:8px;--border-opacity:1;border-color:rgba(55, 114, 255, var(--border-opacity));
+  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
 
   div {
-    margin-left:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;}
+    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
   }
 ",
                 "toString": [Function],
@@ -64,19 +64,68 @@ exports[`StatsCard renders correctly 1`] = `
               css={
                 Object {
                   "map": undefined,
-                  "name": "1xwz4nc",
+                  "name": "lurvm6",
                   "next": undefined,
                   "styles": "
-  font-size:3rem;margin-top:0.75rem;margin-bottom:0.75rem;font-weight:300;@media (min-width: 768px){margin-top:1.5rem;}
+  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
 ",
                   "toString": [Function],
                 }
               }
             >
-              64%
+              27%
             </div>
-            <div>
-              People from a working class background earn 64% less a year than someone with a professional background
+            <div
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "ehtxm1",
+                  "next": undefined,
+                  "styles": "
+  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
+",
+                  "toString": [Function],
+                }
+              }
+            >
+              Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of 
+              <strong>
+                £1,100
+              </strong>
+               a month and 
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "111drvy",
+                    "next": undefined,
+                    "styles": "
+  font-weight:600;
+",
+                    "toString": [Function],
+                  }
+                }
+              >
+                £885
+              </span>
+               in Manchester.
+               
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "spzrvh",
+                    "next": undefined,
+                    "styles": "
+  font-weight:300;text-decoration:underline;
+",
+                    "toString": [Function],
+                  }
+                }
+              >
+                - 
+                Mobility Manifesto 2019
+              </span>
             </div>
           </div>
         </li>
@@ -88,13 +137,13 @@ exports[`StatsCard renders correctly 1`] = `
             css={
               Object {
                 "map": undefined,
-                "name": "fmlnap",
+                "name": "mlu2ts",
                 "next": undefined,
                 "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));border-top-width:8px;--border-opacity:1;border-color:rgba(55, 114, 255, var(--border-opacity));
+  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
 
   div {
-    margin-left:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;}
+    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
   }
 ",
                 "toString": [Function],
@@ -105,19 +154,52 @@ exports[`StatsCard renders correctly 1`] = `
               css={
                 Object {
                   "map": undefined,
-                  "name": "1xwz4nc",
+                  "name": "lurvm6",
                   "next": undefined,
                   "styles": "
-  font-size:3rem;margin-top:0.75rem;margin-bottom:0.75rem;font-weight:300;@media (min-width: 768px){margin-top:1.5rem;}
+  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
 ",
                   "toString": [Function],
                 }
               }
             >
-              24%
+              51%
             </div>
-            <div>
-              People from a working class background earn 24% less a year than someone with a professional background
+            <div
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "ehtxm1",
+                  "next": undefined,
+                  "styles": "
+  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
+",
+                  "toString": [Function],
+                }
+              }
+            >
+              Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to 
+              <strong>
+                71% of all other pupils
+              </strong>
+               in 2019.
+               
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "spzrvh",
+                    "next": undefined,
+                    "styles": "
+  font-weight:300;text-decoration:underline;
+",
+                    "toString": [Function],
+                  }
+                }
+              >
+                - 
+                State of the Nation
+              </span>
             </div>
           </div>
         </li>
@@ -129,13 +211,13 @@ exports[`StatsCard renders correctly 1`] = `
             css={
               Object {
                 "map": undefined,
-                "name": "fmlnap",
+                "name": "mlu2ts",
                 "next": undefined,
                 "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));border-top-width:8px;--border-opacity:1;border-color:rgba(55, 114, 255, var(--border-opacity));
+  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
 
   div {
-    margin-left:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;}
+    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
   }
 ",
                 "toString": [Function],
@@ -146,19 +228,52 @@ exports[`StatsCard renders correctly 1`] = `
               css={
                 Object {
                   "map": undefined,
-                  "name": "1xwz4nc",
+                  "name": "lurvm6",
                   "next": undefined,
                   "styles": "
-  font-size:3rem;margin-top:0.75rem;margin-bottom:0.75rem;font-weight:300;@media (min-width: 768px){margin-top:1.5rem;}
+  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
 ",
                   "toString": [Function],
                 }
               }
             >
-              42%
+              2%
             </div>
-            <div>
-              People from a working class background earn 42% less a year than someone with a professional background
+            <div
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "ehtxm1",
+                  "next": undefined,
+                  "styles": "
+  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
+",
+                  "toString": [Function],
+                }
+              }
+            >
+              Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with 
+              <strong>
+                11%
+              </strong>
+               of students from the same social group from Inner London.
+               
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "spzrvh",
+                    "next": undefined,
+                    "styles": "
+  font-weight:300;text-decoration:underline;
+",
+                    "toString": [Function],
+                  }
+                }
+              >
+                - 
+                Department for Education
+              </span>
             </div>
           </div>
         </li>
@@ -170,13 +285,13 @@ exports[`StatsCard renders correctly 1`] = `
             css={
               Object {
                 "map": undefined,
-                "name": "fmlnap",
+                "name": "mlu2ts",
                 "next": undefined,
                 "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));border-top-width:8px;--border-opacity:1;border-color:rgba(55, 114, 255, var(--border-opacity));
+  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
 
   div {
-    margin-left:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;}
+    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
   }
 ",
                 "toString": [Function],
@@ -187,19 +302,68 @@ exports[`StatsCard renders correctly 1`] = `
               css={
                 Object {
                   "map": undefined,
-                  "name": "1xwz4nc",
+                  "name": "lurvm6",
                   "next": undefined,
                   "styles": "
-  font-size:3rem;margin-top:0.75rem;margin-bottom:0.75rem;font-weight:300;@media (min-width: 768px){margin-top:1.5rem;}
+  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
 ",
                   "toString": [Function],
                 }
               }
             >
-              64%
+              27%
             </div>
-            <div>
-              People from a working class background earn 64% less a year than someone with a professional background
+            <div
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "ehtxm1",
+                  "next": undefined,
+                  "styles": "
+  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
+",
+                  "toString": [Function],
+                }
+              }
+            >
+              Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of 
+              <strong>
+                £1,100
+              </strong>
+               a month and 
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "111drvy",
+                    "next": undefined,
+                    "styles": "
+  font-weight:600;
+",
+                    "toString": [Function],
+                  }
+                }
+              >
+                £885
+              </span>
+               in Manchester.
+               
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "spzrvh",
+                    "next": undefined,
+                    "styles": "
+  font-weight:300;text-decoration:underline;
+",
+                    "toString": [Function],
+                  }
+                }
+              >
+                - 
+                Mobility Manifesto 2019
+              </span>
             </div>
           </div>
         </li>
@@ -211,13 +375,13 @@ exports[`StatsCard renders correctly 1`] = `
             css={
               Object {
                 "map": undefined,
-                "name": "fmlnap",
+                "name": "mlu2ts",
                 "next": undefined,
                 "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));border-top-width:8px;--border-opacity:1;border-color:rgba(55, 114, 255, var(--border-opacity));
+  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
 
   div {
-    margin-left:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;}
+    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
   }
 ",
                 "toString": [Function],
@@ -228,19 +392,52 @@ exports[`StatsCard renders correctly 1`] = `
               css={
                 Object {
                   "map": undefined,
-                  "name": "1xwz4nc",
+                  "name": "lurvm6",
                   "next": undefined,
                   "styles": "
-  font-size:3rem;margin-top:0.75rem;margin-bottom:0.75rem;font-weight:300;@media (min-width: 768px){margin-top:1.5rem;}
+  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
 ",
                   "toString": [Function],
                 }
               }
             >
-              24%
+              51%
             </div>
-            <div>
-              People from a working class background earn 24% less a year than someone with a professional background
+            <div
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "ehtxm1",
+                  "next": undefined,
+                  "styles": "
+  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
+",
+                  "toString": [Function],
+                }
+              }
+            >
+              Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to 
+              <strong>
+                71% of all other pupils
+              </strong>
+               in 2019.
+               
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "spzrvh",
+                    "next": undefined,
+                    "styles": "
+  font-weight:300;text-decoration:underline;
+",
+                    "toString": [Function],
+                  }
+                }
+              >
+                - 
+                State of the Nation
+              </span>
             </div>
           </div>
         </li>
