@@ -42,17 +42,17 @@ const emphasisStyles = css`
 const stats = [
   {
     heading: "51%",
-    text: <span>Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to <span css={emphasisStyles}>71% of all other pupils</span> in 2019.</span>,
+    innerHtml: <>Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to <strong>71% of all other pupils</strong> in 2019.</>,
     resource: "State of the Nation",
   },
   {
     heading: "2%",
-    text: <span>Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with <span css={emphasisStyles}>11%</span> of students from the same social group from Inner London.</span>,
+    innerHtml: <>Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with <strong>11%</strong> of students from the same social group from Inner London.</>,
     resource: "Department for Education",
   },
   {
     heading: "27%",
-    text: <span>Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of <span css={emphasisStyles}>£1,100</span> a month and <span css={emphasisStyles}>£885</span> in Manchester.</span>,
+    innerHtml: <>Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of <strong>£1,100</strong> a month and <span css={emphasisStyles}>£885</span> in Manchester.</>,
     resource: "Mobility Manifesto 2019",
   },
 ];
@@ -74,7 +74,7 @@ const StatsCard = ({ styles }) => {
         {stats.map((entry, i) => (
           <div key={i} css={statsCardStyles}>
             <div css={headingStyles}>{entry.heading}</div>
-            <div css={textStyles}>{entry.text} <span css={resourceStyles}>- {entry.resource}</span></div>
+            <div css={textStyles}>{entry.innerHtml} <span css={resourceStyles}>- {entry.resource}</span></div>
           </div>
         ))}
       </Carousel>

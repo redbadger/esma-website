@@ -12,6 +12,10 @@ const heroSummaryStyles = css`
 
   .summaryText {
     ${tw`text-midnight text-xl md:text-double leading-7 md:leading-11 mb-8 md:mb-12`}
+
+    p:first-child {
+      margin-bottom: 2.75rem
+    }
   }
 
   span.highlight {
@@ -23,8 +27,11 @@ const HeroSummary = () => (
   <div css={heroSummaryStyles}>
     <div>
       <div className="summaryText">
-        <span className="highlight">Social inequality</span> is persistent and systematic. Often where you start in
-        life is where you’ll end up.<br/><br/> Together we can change this.
+        <p>
+          <span className="highlight">Social inequality</span> is persistent and
+          systematic. Often where you start in life is where you’ll end up.
+        </p>
+        <p>Together we can change this.</p>
       </div>
       <Button
         variant="dark"

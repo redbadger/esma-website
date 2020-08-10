@@ -88,41 +88,27 @@ exports[`StatsCard renders correctly 1`] = `
                 }
               }
             >
-              <span>
-                Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of 
-                <span
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "111drvy",
-                      "next": undefined,
-                      "styles": "
+              Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of 
+              <strong>
+                £1,100
+              </strong>
+               a month and 
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "111drvy",
+                    "next": undefined,
+                    "styles": "
   font-weight:600;
 ",
-                      "toString": [Function],
-                    }
+                    "toString": [Function],
                   }
-                >
-                  £1,100
-                </span>
-                 a month and 
-                <span
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "111drvy",
-                      "next": undefined,
-                      "styles": "
-  font-weight:600;
-",
-                      "toString": [Function],
-                    }
-                  }
-                >
-                  £885
-                </span>
-                 in Manchester.
+                }
+              >
+                £885
               </span>
+               in Manchester.
                
               <span
                 css={
@@ -192,25 +178,11 @@ exports[`StatsCard renders correctly 1`] = `
                 }
               }
             >
-              <span>
-                Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to 
-                <span
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "111drvy",
-                      "next": undefined,
-                      "styles": "
-  font-weight:600;
-",
-                      "toString": [Function],
-                    }
-                  }
-                >
-                  71% of all other pupils
-                </span>
-                 in 2019.
-              </span>
+              Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to 
+              <strong>
+                71% of all other pupils
+              </strong>
+               in 2019.
                
               <span
                 css={
@@ -280,25 +252,11 @@ exports[`StatsCard renders correctly 1`] = `
                 }
               }
             >
-              <span>
-                Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with 
-                <span
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "111drvy",
-                      "next": undefined,
-                      "styles": "
-  font-weight:600;
-",
-                      "toString": [Function],
-                    }
-                  }
-                >
-                  11%
-                </span>
-                 of students from the same social group from Inner London.
-              </span>
+              Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with 
+              <strong>
+                11%
+              </strong>
+               of students from the same social group from Inner London.
                
               <span
                 css={
@@ -368,41 +326,27 @@ exports[`StatsCard renders correctly 1`] = `
                 }
               }
             >
-              <span>
-                Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of 
-                <span
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "111drvy",
-                      "next": undefined,
-                      "styles": "
+              Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of 
+              <strong>
+                £1,100
+              </strong>
+               a month and 
+              <span
+                css={
+                  Object {
+                    "map": undefined,
+                    "name": "111drvy",
+                    "next": undefined,
+                    "styles": "
   font-weight:600;
 ",
-                      "toString": [Function],
-                    }
+                    "toString": [Function],
                   }
-                >
-                  £1,100
-                </span>
-                 a month and 
-                <span
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "111drvy",
-                      "next": undefined,
-                      "styles": "
-  font-weight:600;
-",
-                      "toString": [Function],
-                    }
-                  }
-                >
-                  £885
-                </span>
-                 in Manchester.
+                }
+              >
+                £885
               </span>
+               in Manchester.
                
               <span
                 css={
@@ -472,25 +416,11 @@ exports[`StatsCard renders correctly 1`] = `
                 }
               }
             >
-              <span>
-                Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to 
-                <span
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "111drvy",
-                      "next": undefined,
-                      "styles": "
-  font-weight:600;
-",
-                      "toString": [Function],
-                    }
-                  }
-                >
-                  71% of all other pupils
-                </span>
-                 in 2019.
-              </span>
+              Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to 
+              <strong>
+                71% of all other pupils
+              </strong>
+               in 2019.
                
               <span
                 css={
