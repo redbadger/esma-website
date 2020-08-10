@@ -35,10 +35,6 @@ const textStyles = css`
   ${tw`mx-3 md:mx-6 text-left`}
 `;
 
-const emphasisStyles = css`
-  ${tw`font-semibold`}
-`
-
 const stats = [
   {
     heading: "51%",
