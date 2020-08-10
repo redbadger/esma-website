@@ -48,7 +48,7 @@ const stats = [
   },
   {
     heading: "27%",
-    innerHtml: <>Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of <strong>£1,100</strong> a month and <span css={emphasisStyles}>£885</span> in Manchester.</>,
+    innerHtml: <>Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of <strong>£1,100</strong> a month and <strong>£885</strong> in Manchester.</>,
     resource: "Mobility Manifesto 2019",
   },
 ];

@@ -93,21 +93,9 @@ exports[`StatsCard renders correctly 1`] = `
                 £1,100
               </strong>
                a month and 
-              <span
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "111drvy",
-                    "next": undefined,
-                    "styles": "
-  font-weight:600;
-",
-                    "toString": [Function],
-                  }
-                }
-              >
+              <strong>
                 £885
-              </span>
+              </strong>
                in Manchester.
                
               <span
@@ -331,21 +319,9 @@ exports[`StatsCard renders correctly 1`] = `
                 £1,100
               </strong>
                a month and 
-              <span
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "111drvy",
-                    "next": undefined,
-                    "styles": "
-  font-weight:600;
-",
-                    "toString": [Function],
-                  }
-                }
-              >
+              <strong>
                 £885
-              </span>
+              </strong>
                in Manchester.
                
               <span
