@@ -4,6 +4,10 @@ import ukSvg from "./uk.svg";
 
 const keyStatsCss = css`
   position: relative;
+  /* necessary to clear the hero hanging
+  - ideally, the hero should clear its own space
+  */
+  top: 8rem;
 
   .articleContainer {
     position: absolute;
