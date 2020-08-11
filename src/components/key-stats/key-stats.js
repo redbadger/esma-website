@@ -99,6 +99,20 @@ const keyStatsCss = css`
       font-size: 0.875rem;
     }
   }
+
+  .key li {
+    ::before {
+      content: "–";
+      font-weight: bold;
+      padding: 0 0.5rem;
+      font-size: 2rem;
+      line-height: 1rem;
+      vertical-align: text-bottom;
+    }
+    &:first-of-type::before {
+      color: #7dcfb6;
+    }
+  }
 `;
 
 const KeyStats = () => {
@@ -194,6 +208,7 @@ const KeyStats = () => {
             <a
               href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/798404/SMC_State_of_the_Nation_Report_2018-19.pdf"
               target="_blank"
+              rel="noreferrer"
             >
               State of the nation 2018/19
             </a>
@@ -217,9 +232,7 @@ const KeyStats = () => {
           </div>
           <p className="reference"></p>
         </article>
-        <article
-          className={statToView === "businesses" ? "active" : "inactive"}
-        >
+        <article className={statClasses("businesses")}>
           <h3>Job growth in the UK since 2012</h3>
           <div className="key">
             <ul>
