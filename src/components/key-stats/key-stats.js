@@ -29,7 +29,8 @@ const keyStatsCss = css`
     margin-right: 1rem;
   }
 
-  p {
+  p,
+  h4 {
     margin: 1rem 0.75rem;
   }
 
@@ -81,6 +82,22 @@ const keyStatsCss = css`
   }
   article.move {
     left: -100vw;
+  }
+  .reference {
+    text-align: left;
+  }
+  .reference a {
+    text-decoration: underline;
+  }
+  .summary {
+    border: 1px solid #cfd3da;
+    margin: 0.75rem;
+    text-align: left;
+    h4 {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
   }
 `;
 
@@ -173,8 +190,11 @@ const KeyStats = () => {
             </p>
           </div>
           <p className="reference">
-            Reference -
-            <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/798404/SMC_State_of_the_Nation_Report_2018-19.pdf">
+            Reference -{" "}
+            <a
+              href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/798404/SMC_State_of_the_Nation_Report_2018-19.pdf"
+              target="_blank"
+            >
               State of the nation 2018/19
             </a>
           </p>
