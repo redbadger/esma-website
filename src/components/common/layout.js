@@ -14,6 +14,9 @@ import tw from "twin.macro";
 import Header from "./header";
 
 const globalStyles = css`
+  :root {
+    --midnight: #2d3142;
+  }
   body {
     font-family: Montserrat, Helvetica, Arial;
     font-size: 100%;

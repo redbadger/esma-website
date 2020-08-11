@@ -7,11 +7,48 @@ const keyStatsCss = css`
   /* necessary to clear the hero hanging
   - ideally, the hero should clear its own space
   */
-  top: 8rem;
+  top: 7rem;
+  padding: 0;
+  text-align: center;
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    font-weight: 600;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 0.75rem;
+    margin-top: 2.25rem;
+  }
+
+  p {
+    margin: 1rem 0.75rem;
+  }
 
   .articleContainer {
     position: absolute;
     width: 300vw;
+  }
+  ul.switcher {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.75rem;
+  }
+  ul.switcher > li {
+    padding: 0.75rem;
+    border: 1px var(--midnight) solid;
+    border-collapse: collapse;
+    font-weight: 700;
+
+    &.active {
+      background: var(--midnight);
+      color: white;
+    }
+
+    > input {
+      display: none;
+    }
   }
   article {
     display: block;
@@ -55,14 +92,14 @@ const KeyStats = () => {
       <header>
         <h2>The national picture</h2>
         <p>
-          Social mobility is about ensuring that a person’ occupation and income
-          are not tied to where they started in life. It’s about fairness and
-          equal opportunities for all.
+          Social mobility is about ensuring that a person&apos;s occupation and
+          income are not tied to where they started in life. It&apos;s about
+          fairness and equal opportunities for all.
         </p>
         <p>When this doesn’t happen, it affects everyone in the UK.</p>
       </header>
       <ul className="switcher">
-        <li>
+        <li className={statToView === "individual" ? "active" : "inactive"}>
           <input
             type="radio"
             name="statToView"
@@ -73,7 +110,7 @@ const KeyStats = () => {
           />
           <label htmlFor="individual">Individual</label>
         </li>
-        <li>
+        <li className={statToView === "society" ? "active" : "inactive"}>
           <input
             type="radio"
             name="statToView"
@@ -84,7 +121,7 @@ const KeyStats = () => {
           />
           <label htmlFor="society">Society</label>
         </li>
-        <li>
+        <li className={statToView === "businesses" ? "active" : "inactive"}>
           <input
             type="radio"
             name="statToView"
