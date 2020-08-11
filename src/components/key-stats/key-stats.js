@@ -11,14 +11,22 @@ const keyStatsCss = css`
   padding: 0;
   text-align: center;
 
-  h2 {
+  h2,
+  h3 {
     font-size: 1.25rem;
     line-height: 1.3;
     font-weight: 600;
-    width: 100vw;
-    text-align: center;
     margin-bottom: 0.75rem;
     margin-top: 2.25rem;
+  }
+  h2 {
+    width: 100vw;
+    text-align: center;
+  }
+  h3 {
+    text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   p {
@@ -36,7 +44,7 @@ const keyStatsCss = css`
     padding: 0.75rem;
   }
   ul.switcher > li {
-    padding: 0.75rem;
+    padding: 0;
     border: 1px var(--midnight) solid;
     border-collapse: collapse;
     font-weight: 700;
@@ -49,11 +57,17 @@ const keyStatsCss = css`
     > input {
       display: none;
     }
+    > label {
+      display: block;
+      width: 100%;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
   }
   article {
     display: block;
     outline: 2px solid green;
-    transition: 0.5s all ease-in-out;
+    transition: left 0.5s ease-in-out;
     width: 100vw;
     position: absolute;
     background: white;
