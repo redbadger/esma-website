@@ -17,15 +17,15 @@ const KeyStats = () => (
     </header>
     <ul className="switcher">
       <li>
-        <input type="radio" name="individual" id="individual" checked />
+        <input type="radio" name="statToView" id="individual" checked />
         <label htmlFor="individual">Individual</label>
       </li>
       <li>
-        <input type="radio" name="society" id="society" />
+        <input type="radio" name="statToView" id="society" />
         <label htmlFor="society">Society</label>
       </li>
       <li>
-        <input type="radio" name="businesses" id="businesses" />
+        <input type="radio" name="statToView" id="businesses" />
         <label htmlFor="businesses">Businesses</label>
       </li>
     </ul>
