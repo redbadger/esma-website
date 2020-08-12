@@ -1,8 +1,8 @@
 import React from "react";
 import { css } from "@emotion/core";
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from "../components/common/layout";
+import SEO from "../components/common/seo";
 
 import SplitCircularBar, {
   SplitCircularBarStat,

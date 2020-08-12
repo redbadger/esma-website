@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
-import ukSvg from "./uk.svg";
+const ukSvg = require("./uk.svg") as string;
+import KeyStatsIndividuals from "./key-stats-individuals";
 
 const keyStatsCss = css`
   position: relative;
@@ -115,17 +116,25 @@ const keyStatsCss = css`
   }
 `;
 
+enum KeyStatsCategories {
+  Individual = "individual",
+  Society = "society",
+  Businesses = "businesses",
+}
+
 const KeyStats = () => {
-  let [statToView, setStatToView] = React.useState("individual");
-  let [statToMove, setStatToMove] = React.useState("");
-  function changeViewStat(event) {
+  let [statToView, setStatToView] = React.useState(
+    KeyStatsCategories.Individual
+  );
+  let [statToMove, setStatToMove] = React.useState(KeyStatsCategories[""]);
+
+  function changeViewStat(stat: KeyStatsCategories) {
     // Move the current one
     setStatToMove(statToView);
-    console.log(event.target.value);
-    setStatToView(event.target.value);
+    setStatToView(stat);
   }
 
-  function statClasses(statName) {
+  function statClasses(statName: KeyStatsCategories) {
     return [
       statToView === statName ? "active" : "inactive",
       statToMove === statName ? "move" : "",
@@ -144,77 +153,27 @@ const KeyStats = () => {
         <p>When this doesn’t happen, it affects everyone in the UK.</p>
       </header>
       <ul className="switcher">
-        <li className={statToView === "individual" ? "active" : "inactive"}>
-          <input
-            type="radio"
-            name="statToView"
-            id="individual"
-            value="individual"
-            checked={statToView === "individual"}
-            onChange={changeViewStat}
-          />
-          <label htmlFor="individual">Individual</label>
-        </li>
-        <li className={statToView === "society" ? "active" : "inactive"}>
-          <input
-            type="radio"
-            name="statToView"
-            id="society"
-            value="society"
-            checked={statToView === "society"}
-            onChange={changeViewStat}
-          />
-          <label htmlFor="society">Society</label>
-        </li>
-        <li className={statToView === "businesses" ? "active" : "inactive"}>
-          <input
-            type="radio"
-            name="statToView"
-            id="businesses"
-            value="businesses"
-            checked={statToView === "businesses"}
-            onChange={changeViewStat}
-          />
-          <label htmlFor="businesses">Businesses</label>
-        </li>
+        {Object.keys(KeyStatsCategories).map(stat => (
+          <li
+            className={
+              statToView === KeyStatsCategories[stat] ? "active" : "inactive"
+            }
+            key={stat}
+          >
+            <input
+              type="radio"
+              name="statToView"
+              id={stat}
+              checked={statToView === stat}
+              onChange={() => changeViewStat(KeyStatsCategories[stat])}
+            />
+            <label htmlFor={stat}>{stat}</label>
+          </li>
+        ))}
       </ul>
       <div className="articleContainer">
-        <article className={statClasses("individual")}>
-          <h3>
-            Percentage of individuals from different socio-economic backgrounds
-            in a professional occupation
-          </h3>
-          <div className="key">
-            <ul>
-              <li>Working class background</li>
-              <li>Intermediate background</li>
-              <li>Professional background</li>
-            </ul>
-          </div>
-          <picture>
-            <img src={ukSvg} alt="a blank map of the UK" />
-          </picture>
-          <div className="summary">
-            <h4>Barriers to Success</h4>
-            <p>
-              Individuals who are <strong>"upwardly mobile"</strong> face
-              considerable obstacles in getting in and getting on Britain’s
-              professions, and high status professions remain dominated from
-              higher socio-economic backgrounds.
-            </p>
-          </div>
-          <p className="reference">
-            Reference -{" "}
-            <a
-              href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/798404/SMC_State_of_the_Nation_Report_2018-19.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              State of the nation 2018/19
-            </a>
-          </p>
-        </article>
-        <article className={statClasses("society")}>
+        <KeyStatsIndividuals statClasses={statClasses} ukSvg={ukSvg} />
+        <article className={statClasses(KeyStatsCategories.Society)}>
           <h3>Performance levels of local authorities in each region</h3>
           <div className="key">
             <ul>
@@ -232,7 +191,7 @@ const KeyStats = () => {
           </div>
           <p className="reference"></p>
         </article>
-        <article className={statClasses("businesses")}>
+        <article className={statClasses(KeyStatsCategories.Businesses)}>
           <h3>Job growth in the UK since 2012</h3>
           <div className="key">
             <ul>
