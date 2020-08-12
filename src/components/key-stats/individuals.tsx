@@ -3,6 +3,7 @@ import { ArticleProps, KeyStatsCategories } from "./types";
 import { NorthEast } from "./individuals-stats";
 import Pie from "../pie";
 import { css } from "@emotion/core";
+import PieOverlay from "./pie-overlay";
 
 const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
   <article className={statClasses(KeyStatsCategories.Individual)}>
@@ -26,16 +27,7 @@ const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
       <picture>
         <img src={ukSvg} alt="a blank map of the UK" />
       </picture>
-      <picture
-        css={css`
-          position: absolute;
-          top: 50%;
-          left: 55%;
-          width: 10%;
-        `}
-      >
-        <Pie stats={NorthEast} />
-      </picture>
+      <PieOverlay stats={NorthEast} />
     </div>
     <div className="summary">
       <h4>Barriers to Success</h4>

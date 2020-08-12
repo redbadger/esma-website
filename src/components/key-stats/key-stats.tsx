@@ -98,7 +98,7 @@ const keyStatsCss = css`
     text-decoration: underline;
   }
   .summary {
-    border: 1px solid #cfd3da;
+    border: 1px solid var(--colour-secondary-gray);
     margin: 0.75rem;
     text-align: left;
     h4 {
