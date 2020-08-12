@@ -1,7 +1,12 @@
 import React from "react";
 import { css } from "@emotion/core";
+
+import IndividualArticle from "./individuals";
+import SocietyArticle from "./society";
+import BusinessArticle from "./businesses";
+import { KeyStatsCategories } from "./types";
+
 const ukSvg = require("./uk.svg") as string;
-import KeyStatsIndividuals from "./key-stats-individuals";
 
 const keyStatsCss = css`
   position: relative;
@@ -116,12 +121,6 @@ const keyStatsCss = css`
   }
 `;
 
-enum KeyStatsCategories {
-  Individual = "individual",
-  Society = "society",
-  Businesses = "businesses",
-}
-
 const KeyStats = () => {
   let [statToView, setStatToView] = React.useState(
     KeyStatsCategories.Individual
@@ -172,43 +171,9 @@ const KeyStats = () => {
         ))}
       </ul>
       <div className="articleContainer">
-        <KeyStatsIndividuals statClasses={statClasses} ukSvg={ukSvg} />
-        <article className={statClasses(KeyStatsCategories.Society)}>
-          <h3>Performance levels of local authorities in each region</h3>
-          <div className="key">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-          <picture>
-            <img src={ukSvg} alt="a blank map of the UK" />
-          </picture>
-          <div className="summary">
-            <h4></h4>
-            <p></p>
-          </div>
-          <p className="reference"></p>
-        </article>
-        <article className={statClasses(KeyStatsCategories.Businesses)}>
-          <h3>Job growth in the UK since 2012</h3>
-          <div className="key">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-          <picture>
-            <svg></svg>
-          </picture>
-          <div className="summary">
-            <h4></h4>
-            <p></p>
-          </div>
-          <p className="reference"></p>
-        </article>
+        <IndividualArticle statClasses={statClasses} ukSvg={ukSvg} />
+        <SocietyArticle statClasses={statClasses} ukSvg={ukSvg} />
+        <BusinessArticle statClasses={statClasses} ukSvg={ukSvg} />
       </div>
     </section>
   );

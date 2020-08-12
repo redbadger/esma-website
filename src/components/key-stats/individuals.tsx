@@ -1,15 +1,8 @@
 import React from "react";
+import { ArticleProps, KeyStatsCategories } from "./types";
 
-type KeyStatsIndividualsProps = {
-  statClasses: any;
-  ukSvg: string;
-};
-
-const KeyStatsIndividuals = ({
-  statClasses,
-  ukSvg,
-}: KeyStatsIndividualsProps) => (
-  <article className={statClasses("individual")}>
+const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
+  <article className={statClasses(KeyStatsCategories.Individual)}>
     <h3>
       Percentage of individuals from different socio-economic backgrounds in a
       professional occupation
@@ -46,4 +39,4 @@ const KeyStatsIndividuals = ({
   </article>
 );
 
-export default KeyStatsIndividuals;
+export default IndividualsArticle;
