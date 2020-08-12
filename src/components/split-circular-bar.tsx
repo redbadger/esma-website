@@ -105,7 +105,7 @@ const makeAxisAtTurn = (numerator: number, denominator: number) => {
   );
 };
 
-const SplitCircularBar = ({ stats }) => {
+const SplitCircularBar = ({ stats }: { stats: SplitCircularBarStat[] }) => {
   return (
     <>
       <svg viewBox="-1 -1 2 2" css={pathStyles}>

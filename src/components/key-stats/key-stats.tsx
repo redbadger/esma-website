@@ -6,6 +6,8 @@ import SocietyArticle from "./society";
 import BusinessArticle from "./businesses";
 import { KeyStatsCategories } from "./types";
 
+const colours = require("./colours.css");
+
 const ukSvg = require("./uk.svg") as string;
 
 const keyStatsCss = css`
@@ -116,8 +118,12 @@ const keyStatsCss = css`
       vertical-align: text-bottom;
     }
     &:first-of-type::before {
-      color: #7dcfb6;
+      color: var(--colour-secondary-aqua);
     }
+  }
+  picture > img {
+    width: 100%;
+    height: auto;
   }
 `;
 
@@ -141,7 +147,7 @@ const KeyStats = () => {
   }
 
   return (
-    <section css={keyStatsCss}>
+    <section css={[keyStatsCss, colours]}>
       <header>
         <h2>The national picture</h2>
         <p>

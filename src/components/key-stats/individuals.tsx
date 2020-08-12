@@ -1,5 +1,8 @@
 import React from "react";
 import { ArticleProps, KeyStatsCategories } from "./types";
+import { NorthEast } from "./individuals-stats";
+import Pie from "../pie";
+import { css } from "@emotion/core";
 
 const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
   <article className={statClasses(KeyStatsCategories.Individual)}>
@@ -14,9 +17,26 @@ const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
         <li>Professional background</li>
       </ul>
     </div>
-    <picture>
-      <img src={ukSvg} alt="a blank map of the UK" />
-    </picture>
+    <div
+      css={css`
+        position: relative;
+        width: 100%;
+      `}
+    >
+      <picture>
+        <img src={ukSvg} alt="a blank map of the UK" />
+      </picture>
+      <picture
+        css={css`
+          position: absolute;
+          top: 50%;
+          left: 55%;
+          width: 10%;
+        `}
+      >
+        <Pie stats={NorthEast} />
+      </picture>
+    </div>
     <div className="summary">
       <h4>Barriers to Success</h4>
       <p>
