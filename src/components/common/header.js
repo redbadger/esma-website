@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => (
       <h1>
         <Link to="/">{siteTitle}</Link>
       </h1>
-      <Navigation/>
+      <Navigation />
       <div css={clearBoth}></div>
     </div>
   </header>

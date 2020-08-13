@@ -1,7 +1,8 @@
 {
+  "compilerOptions": {
+    "jsx": "react"
+  },
   "typeAcquisition": {
-      "include": [
-          "jest"
-      ]
+    "include": ["jest"]
   }
 }

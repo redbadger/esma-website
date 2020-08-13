@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineHeading renders correctly 1`] = `
+<div
+  css={
+    Object {
+      "map": undefined,
+      "name": "nsdht3",
+      "next": undefined,
+      "styles": "
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    color: #2d3142;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: #2d3142;
+    font-size: 1rem;
+    line-height: 1.875rem;
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    p {
+      width: 56rem;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+",
+      "toString": [Function],
+    }
+  }
+>
+  <h1>
+    A lifetime of social inequality
+  </h1>
+  <p>
+    We’ve commissioned research from
+     
+    <a
+      href="https://www.thebridgegroup.org.uk"
+    >
+      The Bridge Group
+    </a>
+     to build the evidence base needed to make change happen. This research highlights some of the significant ways in which socio-economic background can intersect with other protected characteristics during someones lifetime to contribute to weak social mobility in the UK.
+  </p>
+</div>
+`;
