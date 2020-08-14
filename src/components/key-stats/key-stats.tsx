@@ -75,7 +75,6 @@ const keyStatsCss = css`
   }
   article {
     display: block;
-    outline: 2px solid green;
     transition: left 0.5s ease-in-out;
     width: 100vw;
     position: absolute;

@@ -27,9 +27,12 @@ const statToPiePart = (stat: Stat, total: number) => {
   );
 
   return (
-    <a href={"#" + stat.label} key={stat.label}>
+    <g>
+      <title>
+        {stat.label}, {stat.number}
+      </title>
       <path key={stat.label} d={pathData} fill={stat.colour}></path>
-    </a>
+    </g>
   );
 };
 
@@ -72,7 +75,13 @@ const Pie = ({
       onMouseEnter={focus}
       onMouseLeave={blur}
     >
-      <g style={{ transform: "rotate(-0.25turn)", transformOrigin: "0 0" }}>
+      <g
+        style={{
+          transform: "rotate(-0.25turn)",
+          transformOrigin: "0 0",
+          cursor: "pointer",
+        }}
+      >
         {getPathsFromStats(stats)}
       </g>
     </svg>
