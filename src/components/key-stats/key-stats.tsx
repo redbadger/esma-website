@@ -121,7 +121,8 @@ const keyStatsCss = css`
       color: var(--colour-secondary-aqua);
     }
   }
-  picture > img {
+  picture > img,
+  picture > svg {
     width: 100%;
     height: auto;
   }

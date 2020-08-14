@@ -27,7 +27,7 @@ const statToPiePart = (stat: Stat, total: number) => {
   );
 
   return (
-    <a href={"#" + stat.label}>
+    <a href={"#" + stat.label} key={stat.label}>
       <path key={stat.label} d={pathData} fill={stat.colour}></path>
     </a>
   );
@@ -48,17 +48,22 @@ const pathStyles = css`
   }
 `;
 
-const Pie = ({ stats }: { stats: Stat[] }) => {
+const Pie = ({
+  stats,
+  position,
+}: {
+  stats: Stat[];
+  position: { x: number; y: number };
+}) => {
   return (
-    <>
-      <svg
-        viewBox="-1 -1 2 2"
-        style={{ transform: "rotate(-0.25turn)" }}
-        css={pathStyles}
-      >
-        {getPathsFromStats(stats)}
+    <g width="50" height="50" x={position.x} y={position.y}>
+      <svg viewBox="-1 -1 2 2" css={pathStyles}>
+        <g style={{ transform: "rotate(-0.25turn)", transformOrigin: "0 0" }}>
+          {getPathsFromStats(stats)}
+        </g>
+        <rect width="3" height="3" x="1" y="1" />
       </svg>
-    </>
+    </g>
   );
 };
 

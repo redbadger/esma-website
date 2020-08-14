@@ -18,17 +18,12 @@ const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
         <li>Professional background</li>
       </ul>
     </div>
-    <div
-      css={css`
-        position: relative;
-        width: 100%;
-      `}
-    >
-      <picture>
+
+    {/* <picture>
         <img src={ukSvg} alt="a blank map of the UK" />
-      </picture>
-      <PieOverlay stats={NorthEast} name="North East" />
-    </div>
+      </picture> */}
+    <PieOverlay stats={NorthEast} name="North East" />
+
     <div className="summary">
       <h4>Barriers to Success</h4>
       <p>
