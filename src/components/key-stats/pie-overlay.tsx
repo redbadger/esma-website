@@ -6,6 +6,8 @@ import { PieMapOverlayProps } from "./types";
 
 const pieCss = css`
   position: relative;
+  order: 2;
+
   aside.active {
     display: block;
   }

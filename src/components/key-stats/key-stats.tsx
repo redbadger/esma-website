@@ -82,6 +82,27 @@ const keyStatsCss = css`
     background: white;
     height: 100%;
   }
+  @media screen and (min-width: 500px) {
+    article {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      min-height: 500px;
+      > * {
+        max-width: 50%;
+      }
+    }
+
+    ul.switcher {
+      flex-direction: row;
+      justify-content: center;
+      li {
+        flex-shrink: 1;
+        flex-basis: 16%;
+      }
+    }
+  }
   article.inactive {
     left: 100vw;
   }

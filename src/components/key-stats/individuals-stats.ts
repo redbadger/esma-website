@@ -1,4 +1,3 @@
-import { CircularBarStat } from "../circular-bar";
 import { Stat } from "../pie";
 import { PieMapOverlayProps } from "./types";
 
