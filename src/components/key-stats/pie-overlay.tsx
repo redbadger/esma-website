@@ -1,15 +1,21 @@
 import React from "react";
 import { css } from "@emotion/core";
-import Pie, { Stat } from "../pie";
+import Pie from "../pie";
 import UkOverlay from "./uk-overlay";
-import { getPathDataForCircularBar } from "../maths-helpers";
+import { PieMapOverlayProps } from "./types";
 
 const pieCss = css`
   position: relative;
+  aside.active {
+    display: block;
+  }
+  aside.hidden {
+    display: none;
+  }
   aside {
     position: absolute;
-    top: 32%;
-    left: 32%;
+    top: 0;
+    right: 0;
     text-align: left;
     background: white;
     border: 1px solid var(--colour-secondary-gray);
@@ -31,36 +37,50 @@ const pieCss = css`
   }
 `;
 
-const PieOverlay = ({ stats, name }: { stats: Stat[]; name: string }) => (
-  <div css={pieCss}>
-    <picture>
-      <UkOverlay>
-        <g>
-          <Pie stats={stats} position={{ x: 40, y: 50 }} />
-        </g>
-      </UkOverlay>
-    </picture>
-    <aside>
-      <h4>{name}</h4>
-      <ul>
-        {stats.map(stat => (
-          <li key={stat.label}>
-            <span
-              css={css`
-                width: ${stat.number}%;
-                height: 0.5em;
-                background: ${stat.colour};
-              `}
-              title={stat.label}
-            >
-              &nbsp;
-            </span>
-            <span>{stat.number}%</span>
-          </li>
-        ))}
-      </ul>
-    </aside>
-  </div>
-);
+const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
+  const [currentStat, setCurrentStat] = React.useState("");
+
+  return (
+    <div css={pieCss}>
+      <picture>
+        <UkOverlay>
+          <g onClick={() => console.log("hi")}>
+            {stats.map(stat => (
+              <Pie
+                stats={stat.pieStats}
+                position={stat.position}
+                key={stat.name}
+                focus={() => setCurrentStat(stat.name)}
+                blur={() => setCurrentStat("")}
+              />
+            ))}
+          </g>
+        </UkOverlay>
+      </picture>
+      {stats.map(s => (
+        <aside className={currentStat === s.name ? "active" : "hidden"}>
+          <h4>{s.name}</h4>
+          <ul>
+            {s.pieStats.map(stat => (
+              <li key={stat.label}>
+                <span
+                  css={css`
+                    width: ${stat.number}%;
+                    height: 0.5em;
+                    background: ${stat.colour};
+                  `}
+                  title={stat.label}
+                >
+                  &nbsp;
+                </span>
+                <span>{stat.number}%</span>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      ))}
+    </div>
+  );
+};
 
 export default PieOverlay;

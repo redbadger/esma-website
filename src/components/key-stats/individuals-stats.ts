@@ -1,7 +1,8 @@
 import { CircularBarStat } from "../circular-bar";
 import { Stat } from "../pie";
+import { PieMapOverlayProps } from "./types";
 
-export const NorthEast: Stat[] = [
+const northEastStats: Stat[] = [
   {
     label: "No University-educated parent at home",
     number: 37,
@@ -19,10 +20,32 @@ export const NorthEast: Stat[] = [
   },
 ];
 
-export const London: CircularBarStat[] = [
+const londonStats: Stat[] = [
   {
-    label: "University-educated parent at home",
-    percent: 0.96,
-    colour: "#ffeab4",
+    label: "No University-educated parent at home",
+    number: 67,
+    colour: "var(--colour-secondary-aqua)",
+  },
+  {
+    label: "Two",
+    number: 13,
+    colour: "var(--colour-secondary-cobalt)",
+  },
+  {
+    label: "Three",
+    number: 89,
+    colour: "var(--colour-secondary-yellow)",
   },
 ];
+
+export const London: PieMapOverlayProps = {
+  pieStats: londonStats,
+  name: "London",
+  position: { x: 240, y: 450 },
+};
+
+export const NorthEast: PieMapOverlayProps = {
+  pieStats: northEastStats,
+  name: "North East",
+  position: { x: 240, y: 300 },
+};

@@ -1,11 +1,9 @@
 import React from "react";
 import { ArticleProps, KeyStatsCategories } from "./types";
-import { NorthEast } from "./individuals-stats";
-import Pie from "../pie";
-import { css } from "@emotion/core";
+import { NorthEast, London } from "./individuals-stats";
 import PieOverlay from "./pie-overlay";
 
-const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
+const IndividualsArticle = ({ statClasses }: ArticleProps) => (
   <article className={statClasses(KeyStatsCategories.Individual)}>
     <h3>
       Percentage of individuals from different socio-economic backgrounds in a
@@ -18,12 +16,7 @@ const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
         <li>Professional background</li>
       </ul>
     </div>
-
-    {/* <picture>
-        <img src={ukSvg} alt="a blank map of the UK" />
-      </picture> */}
-    <PieOverlay stats={NorthEast} name="North East" />
-
+    <PieOverlay stats={[NorthEast, London]} />
     <div className="summary">
       <h4>Barriers to Success</h4>
       <p>

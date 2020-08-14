@@ -51,9 +51,13 @@ const pathStyles = css`
 const Pie = ({
   stats,
   position,
+  focus,
+  blur,
 }: {
   stats: Stat[];
   position: { x: number; y: number };
+  focus: () => void;
+  blur: () => void;
 }) => {
   return (
     <svg
@@ -63,11 +67,14 @@ const Pie = ({
       height="50"
       x={position.x}
       y={position.y}
+      onClick={focus}
+      onBlur={blur}
+      onMouseEnter={focus}
+      onMouseLeave={blur}
     >
       <g style={{ transform: "rotate(-0.25turn)", transformOrigin: "0 0" }}>
         {getPathsFromStats(stats)}
       </g>
-      <rect width="3" height="3" x="1" y="1" />
     </svg>
   );
 };
