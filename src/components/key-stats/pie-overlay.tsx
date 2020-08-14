@@ -2,44 +2,52 @@ import React from "react";
 import { css } from "@emotion/core";
 import Pie, { Stat } from "../pie";
 
-const PieOverlay = ({ stats }: { stats: Stat[] }) => (
-  <>
-    <picture
-      css={css`
-        position: absolute;
-        top: 50%;
-        left: 55%;
-        width: 10%;
-      `}
-    >
+const pieCss = css`
+  position: absolute;
+  top: 50%;
+  left: 55%;
+
+  width: 60%;
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 10%;
+  }
+
+  aside {
+    position: absolute;
+    top: 32%;
+    left: 32%;
+    text-align: left;
+    background: white;
+    border: 1px solid var(--colour-secondary-gray);
+    width: 40%;
+    h4 {
+      text-align: left;
+      margin: 0;
+      font-weight: 600;
+    }
+    li {
+      display: flex;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        padding: 0.1rem;
+      }
+    }
+  }
+`;
+
+const PieOverlay = ({ stats, name }: { stats: Stat[]; name: string }) => (
+  <div css={pieCss}>
+    <picture>
       <Pie stats={stats} />
     </picture>
-    <div
-      css={css`
-        position: absolute;
-        top: 32%;
-        left: 32%;
-        text-align: left;
-        background: white;
-        border: 1px solid var(--colour-secondary-gray);
-        width: 40%;
-        h4 {
-          text-align: left;
-          margin: 0;
-          font-weight: 600;
-        }
-        li {
-          display: flex;
-          align-items: center;
-
-          span {
-            display: inline-block;
-            padding: 0.1rem;
-          }
-        }
-      `}
-    >
-      <h4>North East</h4>
+    <aside>
+      <h4>{name}</h4>
       <ul>
         {stats.map(stat => (
           <li>
@@ -57,8 +65,8 @@ const PieOverlay = ({ stats }: { stats: Stat[] }) => (
           </li>
         ))}
       </ul>
-    </div>
-  </>
+    </aside>
+  </div>
 );
 
 export default PieOverlay;

@@ -27,7 +27,7 @@ const IndividualsArticle = ({ statClasses, ukSvg }: ArticleProps) => (
       <picture>
         <img src={ukSvg} alt="a blank map of the UK" />
       </picture>
-      <PieOverlay stats={NorthEast} />
+      <PieOverlay stats={NorthEast} name="North East" />
     </div>
     <div className="summary">
       <h4>Barriers to Success</h4>
