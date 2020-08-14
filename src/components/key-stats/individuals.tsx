@@ -1,6 +1,6 @@
 import React from "react";
 import { ArticleProps, KeyStatsCategories } from "./types";
-import { NorthEast, London } from "./individuals-stats";
+import { NorthEast, London, Key } from "./individuals-stats";
 import PieOverlay from "./pie-overlay";
 
 const IndividualsArticle = ({ statClasses }: ArticleProps) => (
@@ -11,9 +11,12 @@ const IndividualsArticle = ({ statClasses }: ArticleProps) => (
     </h3>
     <div className="key">
       <ul>
-        <li>Working class background</li>
-        <li>Intermediate background</li>
-        <li>Professional background</li>
+        {Key.map(key => (
+          <li key={key.label}>
+            <span style={{ color: key.colour }}>&ndash;</span>
+            {key.label}
+          </li>
+        ))}
       </ul>
     </div>
     <PieOverlay stats={[NorthEast, London]} />

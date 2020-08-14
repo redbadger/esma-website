@@ -11,6 +11,12 @@ const colours = {};
 colours[Background.WorkingClass] = "var(--colour-secondary-aqua)";
 colours[Background.Intermediate] = "var(--colour-secondary-cobalt)";
 colours[Background.Professional] = "var(--colour-secondary-yellow)";
+
+export const Key = Object.keys(colours).map(key => ({
+  colour: colours[key],
+  label: key,
+}));
+
 const dictToStat = (dict: { [x: string]: number }): Stat[] =>
   Object.keys(dict).map(key => ({
     label: key,

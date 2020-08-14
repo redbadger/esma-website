@@ -131,17 +131,19 @@ const keyStatsCss = css`
     }
   }
 
-  .key li {
-    ::before {
-      content: "–";
-      font-weight: bold;
-      padding: 0 0.5rem;
-      font-size: 2rem;
-      line-height: 1rem;
-      vertical-align: text-bottom;
+  .key {
+    ul {
+      text-align: left;
     }
-    &:first-of-type::before {
-      color: var(--colour-secondary-aqua);
+    li {
+      span {
+        font-weight: bold;
+        padding: 0.25rem;
+        font-size: 2rem;
+        line-height: 1rem;
+        vertical-align: text-bottom;
+        display: inline-block;
+      }
     }
   }
   picture > img,

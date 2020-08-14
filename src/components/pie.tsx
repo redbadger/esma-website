@@ -71,9 +71,9 @@ const Pie = ({
       x={position.x}
       y={position.y}
       onClick={focus}
-      onBlur={blur}
+      // onBlur={blur}
       onMouseEnter={focus}
-      onMouseLeave={blur}
+      // onMouseLeave={blur}
     >
       <g
         style={{
