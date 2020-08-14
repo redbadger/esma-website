@@ -56,14 +56,19 @@ const Pie = ({
   position: { x: number; y: number };
 }) => {
   return (
-    <g width="50" height="50" x={position.x} y={position.y}>
-      <svg viewBox="-1 -1 2 2" css={pathStyles}>
-        <g style={{ transform: "rotate(-0.25turn)", transformOrigin: "0 0" }}>
-          {getPathsFromStats(stats)}
-        </g>
-        <rect width="3" height="3" x="1" y="1" />
-      </svg>
-    </g>
+    <svg
+      viewBox="-1 -1 2 2"
+      css={pathStyles}
+      width="50"
+      height="50"
+      x={position.x}
+      y={position.y}
+    >
+      <g style={{ transform: "rotate(-0.25turn)", transformOrigin: "0 0" }}>
+        {getPathsFromStats(stats)}
+      </g>
+      <rect width="3" height="3" x="1" y="1" />
+    </svg>
   );
 };
 
