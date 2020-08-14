@@ -47,7 +47,7 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
     <div css={pieCss}>
       <picture>
         <UkOverlay>
-          <g onClick={() => console.log("hi")}>
+          <g>
             {stats.map(stat => (
               <Pie
                 stats={stat.pieStats}

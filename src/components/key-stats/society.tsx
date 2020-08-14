@@ -24,7 +24,16 @@ const SocietyArticle = ({ statClasses, ukSvg }: ArticleProps) => (
         worse for their disadvantaged children than places that are much poorer.
       </p>
     </div>
-    <p className="reference"></p>
+    <p className="reference">
+      Reference -{" "}
+      <a
+        href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/496103/Social_Mobility_Index.pdf"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Social Mobility Index
+      </a>
+    </p>
   </article>
 );
 

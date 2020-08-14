@@ -124,6 +124,9 @@ const keyStatsCss = css`
     h4 {
       text-transform: uppercase;
       font-weight: 600;
+    }
+    h4,
+    p {
       font-size: 0.875rem;
     }
   }

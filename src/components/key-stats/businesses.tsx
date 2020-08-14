@@ -1,22 +1,31 @@
 import React from "react";
 import { KeyStatsCategories, ArticleProps } from "./types";
+import PieOverlay from "./pie-overlay";
+import { NorthEast, London } from "./individuals-stats";
 
-const BusinessArticle = ({ statClasses, ukSvg }: ArticleProps) => (
+const BusinessArticle = ({ statClasses }: ArticleProps) => (
   <article className={statClasses(KeyStatsCategories.Businesses)}>
     <h3>Job growth in the UK since 2012</h3>
     <div className="key">
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>All jobs</li>
+        <li>Professional jobs</li>
       </ul>
     </div>
-    <picture>
-      <img src={ukSvg} alt="a blank map of the UK" />
-    </picture>
+    <PieOverlay stats={[NorthEast, London]} />
     <div className="summary">
-      <h4></h4>
-      <p></p>
+      <h4>Inequality In The Uk</h4>
+      <p>
+        The UK is one of the most unequal countries in Europe, with levels of
+        socio-economic inequality comparable to the USA. The richest half
+        receive 80% of all incomes in the UK. Leaving the poorest half who
+        receive the remaining 20%.
+      </p>
+      <p>
+        Studies show that should British businesses attain even average levels
+        of social mobility, the economy would be boosted by around £170 billion
+        in total.
+      </p>
     </div>
     <p className="reference">
       Reference -{" "}
