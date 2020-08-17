@@ -12,7 +12,7 @@ const pieCss = css`
   aside.active {
     display: block;
   }
-  aside.hidden {
+  aside.inactive {
     display: none;
   }
   aside {
@@ -43,6 +43,9 @@ const pieCss = css`
 const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
   const [currentStat, setCurrentStat] = React.useState("");
 
+  const statClass = (statName: string): string =>
+    currentStat === statName ? "active" : "inactive";
+
   return (
     <div css={pieCss}>
       <picture>
@@ -53,6 +56,7 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
                 stats={stat.pieStats}
                 position={stat.position}
                 key={stat.name}
+                className={statClass(stat.name)}
                 focus={() => setCurrentStat(stat.name)}
                 blur={() => setCurrentStat("")}
               />
@@ -61,10 +65,7 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
         </UkOverlay>
       </picture>
       {stats.map(s => (
-        <aside
-          key={s.name}
-          className={currentStat === s.name ? "active" : "hidden"}
-        >
+        <aside key={s.name} className={statClass(s.name)}>
           <h4>{s.name}</h4>
           <ul>
             {s.pieStats.map(stat => (

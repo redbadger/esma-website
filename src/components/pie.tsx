@@ -49,6 +49,12 @@ const pathStyles = css`
   a:hover path {
     fill: #3772ff;
   }
+  &.active {
+    filter: drop-shadow(0 0 0.5rem rgba(184, 108, 305, 0.8));
+  }
+  &.inactive {
+    filter: opacity(0.5);
+  }
 `;
 
 const Pie = ({
@@ -56,11 +62,13 @@ const Pie = ({
   position,
   focus,
   blur,
+  className,
 }: {
   stats: Stat[];
   position: { x: number; y: number };
   focus: () => void;
   blur: () => void;
+  className: string;
 }) => {
   return (
     <svg
@@ -74,6 +82,7 @@ const Pie = ({
       // onBlur={blur}
       onMouseEnter={focus}
       // onMouseLeave={blur}
+      className={className}
     >
       <g
         style={{
