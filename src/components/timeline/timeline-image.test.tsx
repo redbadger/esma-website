@@ -5,7 +5,9 @@ import { PureTimelineImage as TimelineImage } from "./timeline-image";
 
 describe("TimelineImage", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<TimelineImage data={testData} objectPosition="center"/>).toJSON();
+    const tree = renderer
+      .create(<TimelineImage data={testData} objectPosition="center" />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
@@ -22,5 +24,5 @@ const testData = {
         originalName: "test-image.jpg",
       },
     },
-  }
+  },
 };

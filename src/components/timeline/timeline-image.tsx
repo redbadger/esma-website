@@ -61,7 +61,9 @@ const TimelineImage = ({ imageName }: Props) => {
       image.node.childImageSharp.fluid.originalName === imageName
   );
 
-  return <PureTimelineImage data={img} objectPosition="center"></PureTimelineImage>;
+  return (
+    <PureTimelineImage data={img} objectPosition="center"></PureTimelineImage>
+  );
 };
 
 export default TimelineImage;

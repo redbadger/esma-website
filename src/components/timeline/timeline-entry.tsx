@@ -127,7 +127,8 @@ const TimelineEntry = ({ title, imageName, description, icon }: Props) => {
         <div className="separator" />
         <p>{description}</p>
         <div className="read-more">
-          Read more<span className="arrow"/>
+          Read more
+          <span className="arrow" />
         </div>
       </div>
     </a>

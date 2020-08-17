@@ -4,11 +4,7 @@ import TimelineEntryAdditional from "./timeline-entry-additional";
 
 describe("TimelineEntryAdditional", () => {
   it("renders correctly", () => {
-    const tree = renderer
-      .create(
-        <TimelineEntryAdditional />
-      )
-      .toJSON();
+    const tree = renderer.create(<TimelineEntryAdditional />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
