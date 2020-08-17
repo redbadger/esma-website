@@ -1,14 +1,9 @@
 import { Stat as PieStat } from "../pie";
 import { PieMapOverlayProps, LegendProps } from "./types";
-const Locations: { [x: string]: Location } = require("./locations.json");
+import { UkRegions } from "./uk-regions";
 const Society: {
   [x: string]: SocietyStat;
 } = require("./society.json");
-
-type Location = {
-  position: { x: number; y: number };
-  name: string;
-};
 
 type SocietyStat = {
   [key in Pentile]: number;
@@ -43,7 +38,7 @@ const dictToStat = (dict: SocietyStat): PieStat[] =>
   }));
 
 const output = Object.keys(Society).map(key => {
-  const location = Locations[key];
+  const location = UkRegions[key];
   const keyOutput: PieMapOverlayProps = {
     pieStats: dictToStat(Society[key]),
     ...location,
