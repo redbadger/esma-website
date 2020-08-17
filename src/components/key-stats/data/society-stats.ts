@@ -1,5 +1,5 @@
-import { Stat as PieStat } from "../pie";
-import { PieMapOverlayProps, LegendProps } from "./types";
+import { Stat as PieStat } from "../../pie";
+import { PieMapOverlayProps, LegendProps } from "../types";
 import { UkRegions } from "./uk-regions";
 const Society: {
   [x: string]: SocietyStat;

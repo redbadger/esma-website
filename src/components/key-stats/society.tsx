@@ -1,10 +1,10 @@
 import React from "react";
 import { KeyStatsCategories, ArticleProps } from "./types";
-import { SocietyStats, Key } from "./society-stats";
 import PieOverlay from "./pie-overlay";
 import Legend from "./legend";
+import { SocietyStats, Key } from "./data/society-stats";
 
-const SocietyArticle = ({ statClasses, ukSvg }: ArticleProps) => (
+const SocietyArticle = ({ statClasses }: ArticleProps) => (
   <article className={statClasses(KeyStatsCategories.Society)}>
     <h3>Performance levels of local authorities in each region</h3>
     <Legend legendDetails={Key} />

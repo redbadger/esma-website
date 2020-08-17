@@ -27,7 +27,7 @@ const statToPiePart = (stat: Stat, total: number) => {
   );
 
   return (
-    <g>
+    <g key={stat.label}>
       <title>
         {stat.label}, {stat.number}
       </title>

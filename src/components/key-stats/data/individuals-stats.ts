@@ -1,5 +1,5 @@
-import { Stat } from "../pie";
-import { PieMapOverlayProps, LegendProps } from "./types";
+import { Stat } from "../../pie";
+import { PieMapOverlayProps, LegendProps } from "../types";
 
 enum Background {
   WorkingClass = "Working class background",
@@ -45,3 +45,5 @@ export const NorthEast: PieMapOverlayProps = {
   name: "North East",
   position: { x: 240, y: 300 },
 };
+
+export const IndividualStats = [NorthEast, London];

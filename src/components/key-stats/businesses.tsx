@@ -1,18 +1,14 @@
 import React from "react";
 import { KeyStatsCategories, ArticleProps } from "./types";
 import PieOverlay from "./pie-overlay";
-import { NorthEast, London } from "./individuals-stats";
+import Legend from "./legend";
+import { IndividualStats, Key } from "./data/individuals-stats";
 
 const BusinessArticle = ({ statClasses }: ArticleProps) => (
   <article className={statClasses(KeyStatsCategories.Businesses)}>
     <h3>Job growth in the UK since 2012</h3>
-    <div className="key">
-      <ul>
-        <li>All jobs</li>
-        <li>Professional jobs</li>
-      </ul>
-    </div>
-    <PieOverlay stats={[NorthEast, London]} />
+    <Legend legendDetails={Key} />
+    <PieOverlay stats={IndividualStats} />
     <div className="summary">
       <h4>Inequality In The Uk</h4>
       <p>

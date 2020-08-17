@@ -7,8 +7,7 @@ export enum KeyStatsCategories {
 }
 
 export type ArticleProps = {
-  statClasses: any;
-  ukSvg: string;
+  statClasses: (x: string) => string;
 };
 
 /// PieProps

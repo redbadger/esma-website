@@ -1,6 +1,6 @@
 import React from "react";
 import { ArticleProps, KeyStatsCategories } from "./types";
-import { NorthEast, London, Key } from "./individuals-stats";
+import { IndividualStats, Key } from "./data/individuals-stats";
 import PieOverlay from "./pie-overlay";
 import Legend from "./legend";
 
@@ -11,7 +11,7 @@ const IndividualsArticle = ({ statClasses }: ArticleProps) => (
       professional occupation
     </h3>
     <Legend legendDetails={Key} />
-    <PieOverlay stats={[NorthEast, London]} />
+    <PieOverlay stats={IndividualStats} />
     <div className="summary">
       <h4>Barriers to Success</h4>
       <p>

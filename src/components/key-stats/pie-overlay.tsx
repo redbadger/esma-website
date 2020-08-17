@@ -61,7 +61,10 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
         </UkOverlay>
       </picture>
       {stats.map(s => (
-        <aside className={currentStat === s.name ? "active" : "hidden"}>
+        <aside
+          key={s.name}
+          className={currentStat === s.name ? "active" : "hidden"}
+        >
           <h4>{s.name}</h4>
           <ul>
             {s.pieStats.map(stat => (

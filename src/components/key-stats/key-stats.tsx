@@ -205,9 +205,9 @@ const KeyStats = () => {
         ))}
       </ul>
       <div className="articleContainer">
-        <IndividualArticle statClasses={statClasses} ukSvg={ukSvg} />
-        <SocietyArticle statClasses={statClasses} ukSvg={ukSvg} />
-        <BusinessArticle statClasses={statClasses} ukSvg={ukSvg} />
+        <IndividualArticle statClasses={statClasses} />
+        {/* <SocietyArticle statClasses={statClasses} ukSvg={ukSvg} /> */}
+        <BusinessArticle statClasses={statClasses} />
       </div>
     </section>
   );
