@@ -76,7 +76,7 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
                 >
                   &nbsp;
                 </span>
-                <span>{stat.number}%</span>
+                <span>{stat.number}</span>
               </li>
             ))}
           </ul>

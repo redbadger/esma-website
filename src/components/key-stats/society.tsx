@@ -1,20 +1,13 @@
 import React from "react";
 import { KeyStatsCategories, ArticleProps } from "./types";
-import { NorthEast, London } from "./individuals-stats";
+import { NorthEast, London, Key } from "./society-stats";
 import PieOverlay from "./pie-overlay";
+import Legend from "./legend";
 
 const SocietyArticle = ({ statClasses, ukSvg }: ArticleProps) => (
   <article className={statClasses(KeyStatsCategories.Society)}>
     <h3>Performance levels of local authorities in each region</h3>
-    <div className="key">
-      <ul>
-        <li>Bottom 20% of rankings</li>
-        <li>20-40%</li>
-        <li>40-60%</li>
-        <li>60%-80%</li>
-        <li>Top 20%</li>
-      </ul>
-    </div>
+    <Legend legendDetails={Key} />
     <PieOverlay stats={[NorthEast, London]} />
     <div className="summary">
       <h4>Social Mobility Cold Spots</h4>

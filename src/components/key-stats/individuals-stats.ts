@@ -1,5 +1,5 @@
 import { Stat } from "../pie";
-import { PieMapOverlayProps } from "./types";
+import { PieMapOverlayProps, LegendProps } from "./types";
 
 enum Background {
   WorkingClass = "Working class background",
@@ -12,7 +12,7 @@ colours[Background.WorkingClass] = "var(--colour-secondary-aqua)";
 colours[Background.Intermediate] = "var(--colour-secondary-cobalt)";
 colours[Background.Professional] = "var(--colour-secondary-yellow)";
 
-export const Key = Object.keys(colours).map(key => ({
+export const Key: LegendProps = Object.keys(colours).map(key => ({
   colour: colours[key],
   label: key,
 }));

@@ -19,3 +19,8 @@ export type PieMapOverlayProps = {
   pieStats: PieStat[];
   name: string;
 };
+
+export type LegendProps = {
+  label: string;
+  colour: string;
+}[];

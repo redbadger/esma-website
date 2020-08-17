@@ -2,6 +2,7 @@ import React from "react";
 import { ArticleProps, KeyStatsCategories } from "./types";
 import { NorthEast, London, Key } from "./individuals-stats";
 import PieOverlay from "./pie-overlay";
+import Legend from "./legend";
 
 const IndividualsArticle = ({ statClasses }: ArticleProps) => (
   <article className={statClasses(KeyStatsCategories.Individual)}>
@@ -9,16 +10,7 @@ const IndividualsArticle = ({ statClasses }: ArticleProps) => (
       Percentage of individuals from different socio-economic backgrounds in a
       professional occupation
     </h3>
-    <div className="key">
-      <ul>
-        {Key.map(key => (
-          <li key={key.label}>
-            <span style={{ color: key.colour }}>&ndash;</span>
-            {key.label}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Legend legendDetails={Key} />
     <PieOverlay stats={[NorthEast, London]} />
     <div className="summary">
       <h4>Barriers to Success</h4>
