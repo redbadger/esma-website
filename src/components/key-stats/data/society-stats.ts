@@ -3,9 +3,7 @@ import { PieMapOverlayProps, LegendProps } from "../types";
 import { UkRegions } from "./uk-regions";
 const Society: {
   colours: { [key in Pentile]: string };
-  stats: {
-    [key in Pentile]: SocietyStat;
-  };
+  stats: SocietyStat;
 } = require("./society.json");
 
 type SocietyStat = {

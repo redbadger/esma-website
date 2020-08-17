@@ -1,6 +1,10 @@
 import { Stat } from "../../pie";
 import { PieMapOverlayProps, LegendProps } from "../types";
 import { UkRegions } from "./uk-regions";
+const Individual: {
+  colours: { [key in Background]: string };
+  stats: { [x: string]: IndividualStat };
+} = require("./individuals.json");
 
 enum Background {
   WorkingClass = "Working class background",
@@ -8,44 +12,31 @@ enum Background {
   Professional = "Professional background",
 }
 
-const colours = {};
-colours[Background.WorkingClass] = "var(--colour-secondary-aqua)";
-colours[Background.Intermediate] = "var(--colour-secondary-cobalt)";
-colours[Background.Professional] = "var(--colour-secondary-yellow)";
+type IndividualStat = {
+  [key in Background]: number;
+};
+
+const colours = Individual.colours;
 
 export const Key: LegendProps = Object.keys(colours).map(key => ({
   colour: colours[key],
   label: key,
 }));
 
-const dictToStat = (dict: { [x: string]: number }): Stat[] =>
-  Object.keys(dict).map(key => ({
+const dictToStat = (dict: IndividualStat): Stat[] =>
+  Object.keys(dict).map((key: Background) => ({
     label: key,
     number: dict[key],
     colour: colours[key],
   }));
 
-const northEast = {};
-northEast[Background.WorkingClass] = 37;
-northEast[Background.Intermediate] = 20;
-northEast[Background.Professional] = 43;
+const output = Object.keys(Individual.stats).map(key => {
+  const location = UkRegions[key];
+  const keyOutput: PieMapOverlayProps = {
+    pieStats: dictToStat(Individual.stats[key]),
+    ...location,
+  };
+  return keyOutput;
+});
 
-const london = {};
-london[Background.WorkingClass] = 67;
-london[Background.Intermediate] = 13;
-london[Background.Professional] = 89;
-
-export const London: PieMapOverlayProps = {
-  pieStats: dictToStat(london),
-  name: "London",
-  position: { x: 240, y: 450 },
-};
-
-console.log({ UkRegions });
-
-export const NorthEast: PieMapOverlayProps = {
-  pieStats: dictToStat(northEast),
-  ...UkRegions["northEast"],
-};
-
-export const IndividualStats = [NorthEast, London];
+export const IndividualStats = output;

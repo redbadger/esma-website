@@ -1,0 +1,54 @@
+{
+  "colours": {
+    "Working class background": "var(--colour-secondary-aqua)",
+    "Intermediate background": "var(--colour-secondary-cobalt)",
+    "Professional background": "var(--colour-secondary-yellow)"
+  },
+  "stats": {
+    "london": {
+      "Working class background": 67,
+      "Intermediate background": 13,
+      "Professional background": 89
+    },
+    "northEast": {
+      "Working class background": 37,
+      "Intermediate background": 20,
+      "Professional background": 43
+    },
+    "eastMidlands": {
+      "Working class background": 37,
+      "Intermediate background": 20,
+      "Professional background": 43
+    },
+    "eastOfEngland": {
+      "Working class background": 67,
+      "Intermediate background": 13,
+      "Professional background": 89
+    },
+    "northWest": {
+      "Working class background": 67,
+      "Intermediate background": 13,
+      "Professional background": 89
+    },
+    "southEast": {
+      "Working class background": 67,
+      "Intermediate background": 13,
+      "Professional background": 89
+    },
+    "southWest": {
+      "Working class background": 67,
+      "Intermediate background": 13,
+      "Professional background": 89
+    },
+    "westMidlands": {
+      "Working class background": 67,
+      "Intermediate background": 13,
+      "Professional background": 89
+    },
+    "yorkshire": {
+      "Working class background": 67,
+      "Intermediate background": 13,
+      "Professional background": 89
+    }
+  }
+}
