@@ -1,0 +1,44 @@
+{
+  "colours": {
+    "Professional jobs": "var(--colour-secondary-yellow)",
+    "Other jobs": "var(--colour-secondary-cobalt)"
+  },
+  "stats": {
+    "london": {
+      "Professional jobs": 89000,
+      "Other jobs": 13000
+    },
+    "northEast": {
+      "Professional jobs": 43000,
+      "Other jobs": 20000
+    },
+    "eastMidlands": {
+      "Professional jobs": 43000,
+      "Other jobs": 20000
+    },
+    "eastOfEngland": {
+      "Professional jobs": 89000,
+      "Other jobs": 13000
+    },
+    "northWest": {
+      "Professional jobs": 89000,
+      "Other jobs": 13000
+    },
+    "southEast": {
+      "Professional jobs": 89000,
+      "Other jobs": 13000
+    },
+    "southWest": {
+      "Professional jobs": 89000,
+      "Other jobs": 13000
+    },
+    "westMidlands": {
+      "Professional jobs": 89000,
+      "Other jobs": 13000
+    },
+    "yorkshire": {
+      "Professional jobs": 89000,
+      "Other jobs": 13000
+    }
+  }
+}
