@@ -1,5 +1,6 @@
 import { Stat } from "../../pie";
 import { PieMapOverlayProps, LegendProps } from "../types";
+import { UkRegions } from "./uk-regions";
 
 enum Background {
   WorkingClass = "Working class background",
@@ -40,10 +41,11 @@ export const London: PieMapOverlayProps = {
   position: { x: 240, y: 450 },
 };
 
+console.log({ UkRegions });
+
 export const NorthEast: PieMapOverlayProps = {
   pieStats: dictToStat(northEast),
-  name: "North East",
-  position: { x: 240, y: 300 },
+  ...UkRegions["northEast"],
 };
 
 export const IndividualStats = [NorthEast, London];
