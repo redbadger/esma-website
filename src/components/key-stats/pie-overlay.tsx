@@ -40,6 +40,37 @@ const pieCss = css`
   }
 `;
 
+const PieLegend = ({
+  s,
+  statClass,
+}: {
+  s: PieMapOverlayProps;
+  statClass: (statName: string) => string;
+}) => {
+  return (
+    <aside key={s.name} className={statClass(s.name)}>
+      <h4>{s.name}</h4>
+      <ul>
+        {s.pieStats.map(stat => (
+          <li key={stat.label}>
+            <span
+              css={css`
+                width: ${stat.number}%;
+                height: 0.5em;
+                background: ${stat.colour};
+              `}
+              title={stat.label}
+            >
+              &nbsp;
+            </span>
+            <span>{stat.number}</span>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
+};
+
 const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
   const [currentStat, setCurrentStat] = React.useState("");
 
@@ -64,28 +95,7 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
           </g>
         </UkOverlay>
       </picture>
-      {stats.map(s => (
-        <aside key={s.name} className={statClass(s.name)}>
-          <h4>{s.name}</h4>
-          <ul>
-            {s.pieStats.map(stat => (
-              <li key={stat.label}>
-                <span
-                  css={css`
-                    width: ${stat.number}%;
-                    height: 0.5em;
-                    background: ${stat.colour};
-                  `}
-                  title={stat.label}
-                >
-                  &nbsp;
-                </span>
-                <span>{stat.number}</span>
-              </li>
-            ))}
-          </ul>
-        </aside>
-      ))}
+      {stats.map(s => PieLegend({ s, statClass }))}
     </div>
   );
 };
