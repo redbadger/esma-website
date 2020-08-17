@@ -2,7 +2,10 @@ import { Stat as PieStat } from "../../pie";
 import { PieMapOverlayProps, LegendProps } from "../types";
 import { UkRegions } from "./uk-regions";
 const Society: {
-  [x: string]: SocietyStat;
+  colours: { [key in Pentile]: string };
+  stats: {
+    [key in Pentile]: SocietyStat;
+  };
 } = require("./society.json");
 
 type SocietyStat = {
@@ -18,12 +21,7 @@ enum Pentile {
   Fifth = "Top 20%",
 }
 
-let colours = {};
-colours[Pentile.First] = "#00007f";
-colours[Pentile.Second] = "#6565ff";
-colours[Pentile.Third] = "#fdeada";
-colours[Pentile.Fourth] = "#d99694";
-colours[Pentile.Fifth] = "#953734";
+const colours = Society.colours;
 
 export const Key: LegendProps = Object.keys(colours).map(key => ({
   colour: colours[key],
@@ -37,10 +35,10 @@ const dictToStat = (dict: SocietyStat): PieStat[] =>
     colour: colours[key],
   }));
 
-const output = Object.keys(Society).map(key => {
+const output = Object.keys(Society.stats).map(key => {
   const location = UkRegions[key];
   const keyOutput: PieMapOverlayProps = {
-    pieStats: dictToStat(Society[key]),
+    pieStats: dictToStat(Society.stats[key]),
     ...location,
   };
   return keyOutput;
