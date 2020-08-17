@@ -1,0 +1,35 @@
+{
+  "london": { "position": { "x": 260, "y": 465 }, "name": "London" },
+  "northEast": {
+    "position": { "x": 220, "y": 280 },
+    "name": "North East"
+  },
+  "southWest": {
+    "position": { "x": 130, "y": 520 },
+    "name": "South West"
+  },
+  "eastMidlands": {
+    "position": { "x": 245, "y": 400 },
+    "name": "East Midlands"
+  },
+  "eastOfEngland": {
+    "position": { "x": 310, "y": 420 },
+    "name": "East of England"
+  },
+  "northWest": {
+    "position": { "x": 180, "y": 340 },
+    "name": "North West"
+  },
+  "southEast": {
+    "position": { "x": 300, "y": 500 },
+    "name": "South East"
+  },
+  "westMidlands": {
+    "position": { "x": 200, "y": 430 },
+    "name": "West Midlands"
+  },
+  "yorkshire": {
+    "position": { "x": 245, "y": 340 },
+    "name": "Yorkshire and the Humber"
+  }
+}

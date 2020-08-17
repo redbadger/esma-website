@@ -139,10 +139,12 @@ const keyStatsCss = css`
       span {
         font-weight: bold;
         padding: 0.25rem;
+        margin-right: 0.5rem;
         font-size: 2rem;
         line-height: 1rem;
         vertical-align: text-bottom;
         display: inline-block;
+        background-color: currentColor;
       }
     }
   }
