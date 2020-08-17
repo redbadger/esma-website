@@ -8,8 +8,6 @@ import { KeyStatsCategories } from "./types";
 
 const colours = require("./colours.css");
 
-const ukSvg = require("./uk.svg") as string;
-
 const keyStatsCss = css`
   position: relative;
   /* necessary to clear the hero hanging
@@ -206,7 +204,7 @@ const KeyStats = () => {
       </ul>
       <div className="articleContainer">
         <IndividualArticle statClasses={statClasses} />
-        {/* <SocietyArticle statClasses={statClasses} ukSvg={ukSvg} /> */}
+        <SocietyArticle statClasses={statClasses} />
         <BusinessArticle statClasses={statClasses} />
       </div>
     </section>
