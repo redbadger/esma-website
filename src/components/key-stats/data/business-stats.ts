@@ -33,12 +33,13 @@ const getPieStat = (businessStat: BusinessStat): PieStat[] => {
       label: JobType.Professional,
       number: businessStat[JobTypeRaw.Pro],
       colour: Business.colours[JobType.Professional],
+      metric: "jobs",
     },
-
     {
       label: JobType.Other,
       number: businessStat[JobTypeRaw.All] - businessStat[JobTypeRaw.Pro],
       colour: Business.colours[JobType.Other],
+      metric: "jobs",
     },
   ];
 };

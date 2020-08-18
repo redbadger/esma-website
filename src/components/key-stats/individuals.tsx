@@ -30,6 +30,7 @@ const IndividualsArticle = ({ statClasses }: ArticleProps) => (
       >
         State of the nation 2018/19
       </a>
+      , Figure 6.13
     </p>
   </article>
 );

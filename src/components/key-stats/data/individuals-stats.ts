@@ -28,6 +28,7 @@ const dictToStat = (dict: IndividualStat): Stat[] =>
     label: key,
     number: dict[key],
     colour: colours[key],
+    metric: "%",
   }));
 
 const output = Object.keys(Individual.stats).map(key => {

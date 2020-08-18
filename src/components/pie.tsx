@@ -8,6 +8,7 @@ export type Stat = {
   number: number;
   colour: string;
   label: string;
+  metric: string;
 };
 
 const innerRatio = 0.5;

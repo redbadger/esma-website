@@ -31,6 +31,7 @@ const dictToStat = (dict: SocietyStat): PieStat[] =>
     label: key,
     number: dict[key],
     colour: colours[key],
+    metric: "authorities",
   }));
 
 const output = Object.keys(Society.stats).map(key => {

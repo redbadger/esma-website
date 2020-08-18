@@ -21,7 +21,7 @@ const pieCss = css`
     text-align: left;
     background: white;
     border: 1px solid var(--colour-secondary-gray);
-    width: 40%;
+    width: 20em;
     h4 {
       text-align: left;
       margin: 0;
@@ -30,6 +30,10 @@ const pieCss = css`
     li {
       display: flex;
       align-items: center;
+
+      span:first-of-type {
+        height: 0.625rem;
+      }
 
       span {
         display: inline-block;
@@ -46,6 +50,7 @@ const PieLegend = ({
   s: PieMapOverlayProps;
   statClass: (statName: string) => string;
 }) => {
+  const max = Math.max(...s.pieStats.map(x => x.number));
   return (
     <aside key={s.name} className={statClass(s.name)}>
       <h4>{s.name}</h4>
@@ -54,15 +59,16 @@ const PieLegend = ({
           <li key={stat.label}>
             <span
               css={css`
-                width: ${stat.number}%;
-                height: 0.5em;
+                width: ${(stat.number / max) * 15}rem;
                 background: ${stat.colour};
               `}
               title={stat.label}
             >
               &nbsp;
             </span>
-            <span>{stat.number}</span>
+            <span>
+              {stat.number}&nbsp;{stat.metric}
+            </span>
           </li>
         ))}
       </ul>
