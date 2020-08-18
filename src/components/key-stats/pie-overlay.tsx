@@ -21,7 +21,8 @@ const pieCss = css`
     text-align: left;
     background: white;
     border: 1px solid var(--colour-secondary-gray);
-    width: 20em;
+    width: 20rem;
+    padding: 0.75rem;
     h4 {
       text-align: left;
       margin: 0;
@@ -33,6 +34,7 @@ const pieCss = css`
 
       span:first-of-type {
         height: 0.625rem;
+        margin-right: 0.5rem;
       }
 
       span {
