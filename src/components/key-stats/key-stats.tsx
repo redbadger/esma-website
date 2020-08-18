@@ -88,16 +88,16 @@ const keyStatsCss = css`
     background: white;
     height: 100%;
   }
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 40rem) {
     article {
       display: flex;
       align-items: flex-start;
       align-content: center;
       flex-direction: column;
       flex-wrap: wrap;
-      min-height: 600px;
+      min-height: 44rem;
       > * {
-        max-width: 50%;
+        max-width: 45%;
       }
     }
 
@@ -180,7 +180,9 @@ const KeyStats = () => {
 
   function changeViewStat(stat: KeyStatsCategories) {
     // Move the current one
-    setStatToMove(statToView);
+    if (statToView !== stat) {
+      setStatToMove(statToView);
+    }
     setStatToView(stat);
   }
 
