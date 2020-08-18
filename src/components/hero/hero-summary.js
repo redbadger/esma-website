@@ -13,8 +13,8 @@ const heroSummaryStyles = css`
   .summaryText {
     ${tw`text-midnight text-xl md:text-double leading-7 md:leading-11 mb-8 md:mb-12`}
 
-    p:first-child {
-      margin-bottom: 2.75rem
+    p:first-of-type {
+      margin-bottom: 2.75rem;
     }
   }
 
