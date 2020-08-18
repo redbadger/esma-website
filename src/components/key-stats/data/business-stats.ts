@@ -1,4 +1,4 @@
-import { Stat } from "../../pie";
+import { Stat as PieStat } from "../../pie";
 import { PieMapOverlayProps, LegendProps } from "../types";
 import { UkRegions } from "./uk-regions";
 const Business: {
@@ -11,28 +11,42 @@ enum JobType {
   Other = "Other jobs",
 }
 
+enum JobTypeRaw {
+  Pro = "pro",
+  All = "all",
+}
+
 type BusinessStat = {
-  [key in JobType]: number;
+  [key in JobTypeRaw]: number;
 };
 
-const colours = Business.colours;
-
-export const Key: LegendProps = Object.keys(colours).map(key => ({
-  colour: colours[key],
-  label: key,
+export const Key: LegendProps = Object.keys(JobType).map(key => ({
+  colour: Business.colours[JobType[key]],
+  label: JobType[key],
 }));
 
-const dictToStat = (dict: BusinessStat): Stat[] =>
-  Object.keys(dict).map((key: JobType) => ({
-    label: key,
-    number: dict[key],
-    colour: colours[key],
-  }));
+console.log({ Key });
 
-const output = Object.keys(Business.stats).map(key => {
-  const location = UkRegions[key];
+const getPieStat = (businessStat: BusinessStat): PieStat[] => {
+  return [
+    {
+      label: JobType.Professional,
+      number: businessStat[JobTypeRaw.Pro],
+      colour: Business.colours[JobType.Professional],
+    },
+
+    {
+      label: JobType.Other,
+      number: businessStat[JobTypeRaw.All] - businessStat[JobTypeRaw.Pro],
+      colour: Business.colours[JobType.Other],
+    },
+  ];
+};
+
+const output = Object.keys(Business.stats).map(region => {
+  const location = UkRegions[region];
   const keyOutput: PieMapOverlayProps = {
-    pieStats: dictToStat(Business.stats[key]),
+    pieStats: getPieStat(Business.stats[region]),
     ...location,
   };
   return keyOutput;

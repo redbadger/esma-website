@@ -5,40 +5,48 @@
   },
   "stats": {
     "london": {
-      "Professional jobs": 89000,
-      "Other jobs": 13000
-    },
-    "northEast": {
-      "Professional jobs": 43000,
-      "Other jobs": 20000
-    },
-    "eastMidlands": {
-      "Professional jobs": 43000,
-      "Other jobs": 20000
-    },
-    "eastOfEngland": {
-      "Professional jobs": 89000,
-      "Other jobs": 13000
-    },
-    "northWest": {
-      "Professional jobs": 89000,
-      "Other jobs": 13000
+      "all": 772600,
+      "pro": 379400
     },
     "southEast": {
-      "Professional jobs": 89000,
-      "Other jobs": 13000
+      "all": 275200,
+      "pro": 174800
     },
     "southWest": {
-      "Professional jobs": 89000,
-      "Other jobs": 13000
+      "all": 230000,
+      "pro": 112400
     },
     "westMidlands": {
-      "Professional jobs": 89000,
-      "Other jobs": 13000
+      "all": 224900,
+      "pro": 94400
+    },
+    "northWest": {
+      "all": 213300,
+      "pro": 105100
     },
     "yorkshire": {
-      "Professional jobs": 89000,
-      "Other jobs": 13000
+      "all": 206200,
+      "pro": 101800
+    },
+    "eastOfEngland": {
+      "all": 176800,
+      "pro": 74600
+    },
+    "scotland": {
+      "all": 131300,
+      "pro": 69800
+    },
+    "eastMidlands": {
+      "all": 99900,
+      "pro": 49900
+    },
+    "wales": {
+      "all": 82700,
+      "pro": 26700
+    },
+    "northEast": {
+      "all": 59300,
+      "pro": 41300
     }
   }
 }
