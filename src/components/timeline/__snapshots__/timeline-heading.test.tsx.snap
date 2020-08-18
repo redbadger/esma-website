@@ -5,7 +5,7 @@ exports[`TimelineHeading renders correctly 1`] = `
   css={
     Object {
       "map": undefined,
-      "name": "nsdht3",
+      "name": "1j12ok1",
       "next": undefined,
       "styles": "
   text-align: center;
@@ -27,7 +27,7 @@ exports[`TimelineHeading renders correctly 1`] = `
     margin-left: 2.5rem;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     p {
       width: 56rem;
     }

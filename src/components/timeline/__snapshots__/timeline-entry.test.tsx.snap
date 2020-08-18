@@ -8,7 +8,7 @@ exports[`TimelineEntry renders correctly 1`] = `
     css={
       Object {
         "map": undefined,
-        "name": "1lm0iwy",
+        "name": "y6qnwg",
         "next": undefined,
         "styles": "
   transition: all 0.333s ease-out 0s;
@@ -30,7 +30,7 @@ exports[`TimelineEntry renders correctly 1`] = `
     height: 25rem;
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
     h2 {
       max-width: 60%;
     }
