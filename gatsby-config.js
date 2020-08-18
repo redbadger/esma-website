@@ -54,9 +54,17 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: [`Montserrat:300,400,600,700`]
-        }
-      }
-    }
+          families: [`Montserrat:300,400,600,700`],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /\.svg$/,
+        },
+      },
+    },
   ],
 };
