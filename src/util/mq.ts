@@ -13,5 +13,5 @@ const screenSizes = {
 };
 
 export const mq = (size: BreakPoint) => {
-  return `@media (min-width: ${screenSizes[size]}px)`;
+  return `@media screen and (min-width: ${screenSizes[size]}px)`;
 };
