@@ -1,0 +1,74 @@
+{
+  "colours": {
+    "Top 20% of rankings": "#b5261d",
+    "60-80%": "#db7656",
+    "40-60%": "var(--colour-secondary-yellow)",
+    "20-40%": "var(--colour-secondary-aqua)",
+    "Bottom 20%": "var(--colour-secondary-cobalt)"
+  },
+  "stats": {
+    "london": {
+      "Bottom 20%": 0,
+      "20-40%": 0,
+      "40-60%": 0,
+      "60-80%": 2,
+      "Top 20% of rankings": 30
+    },
+    "northEast": {
+      "Bottom 20%": 3,
+      "20-40%": 0,
+      "40-60%": 6,
+      "60-80%": 3,
+      "Top 20% of rankings": 0
+    },
+    "eastMidlands": {
+      "Bottom 20%": 17,
+      "20-40%": 10,
+      "40-60%": 4,
+      "60-80%": 5,
+      "Top 20% of rankings": 4
+    },
+    "eastOfEngland": {
+      "Bottom 20%": 12,
+      "20-40%": 6,
+      "40-60%": 9,
+      "60-80%": 11,
+      "Top 20% of rankings": 9
+    },
+    "northWest": {
+      "Bottom 20%": 4,
+      "20-40%": 15,
+      "40-60%": 8,
+      "60-80%": 7,
+      "Top 20% of rankings": 5
+    },
+    "southEast": {
+      "Bottom 20%": 5,
+      "20-40%": 14,
+      "40-60%": 16,
+      "60-80%": 17,
+      "Top 20% of rankings": 15
+    },
+    "southWest": {
+      "Bottom 20%": 5,
+      "20-40%": 8,
+      "40-60%": 13,
+      "60-80%": 8,
+      "Top 20% of rankings": 2
+    },
+    "westMidlands": {
+      "Bottom 20%": 12,
+      "20-40%": 6,
+      "40-60%": 4,
+      "60-80%": 8,
+      "Top 20% of rankings": 0
+    },
+    "yorkshire": {
+      "Bottom 20%": 7,
+      "20-40%": 5,
+      "40-60%": 5,
+      "60-80%": 4,
+      "Top 20% of rankings": 0
+    }
+  }
+}
