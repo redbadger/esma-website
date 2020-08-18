@@ -7,13 +7,13 @@ module.exports = {
         taupe: "#f7f5f4",
         cobalt: "#3772ff",
         "light-grey": "#d3d3d3",
-        yellow: "#ffba08"
+        yellow: "#ffba08",
       },
       fontSize: {
         double: "2rem",
       },
       fontWeight: {
-        semibold: 600
+        semibold: 600,
       },
       lineHeight: {
         "11": "2.75rem",
