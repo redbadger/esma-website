@@ -17,27 +17,36 @@ const keyStatsCss = css`
   padding: 0;
   text-align: center;
 
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   h2,
   h3 {
-    font-size: 1.25rem;
     line-height: 1.3;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    margin-top: 2.25rem;
   }
   h2 {
-    width: 100vw;
+    font-size: 2rem;
+    max-width: 57.5rem;
     text-align: center;
+    margin-top: 2.25rem;
   }
   h3 {
+    font-size: 1.25rem;
     text-align: left;
-    margin-left: 1rem;
     margin-right: 1rem;
+    margin-top: 2.25rem;
+    margin-bottom: 2.25rem;
   }
 
-  p,
-  h4 {
-    margin: 1rem 0.75rem;
+  p {
+    font-size: 1.125rem;
+    font-weight: 300;
+    max-width: 57.5rem;
   }
 
   .articleContainer {
@@ -82,10 +91,11 @@ const keyStatsCss = css`
   @media screen and (min-width: 500px) {
     article {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+      align-content: center;
       flex-direction: column;
       flex-wrap: wrap;
-      min-height: 500px;
+      min-height: 600px;
       > * {
         max-width: 50%;
       }
@@ -117,7 +127,7 @@ const keyStatsCss = css`
   }
   .summary {
     border: 1px solid var(--colour-secondary-gray);
-    margin: 0.75rem;
+    margin: 0.75rem 0;
     text-align: left;
     h4 {
       text-transform: uppercase;
@@ -125,7 +135,7 @@ const keyStatsCss = css`
     }
     h4,
     p {
-      font-size: 0.875rem;
+      margin: 1rem 0.75rem;
     }
   }
 
@@ -144,6 +154,8 @@ const keyStatsCss = css`
       display: flex;
       align-items: center;
       font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.88;
       span {
         display: inline-block;
         height: 1.875rem;
@@ -186,9 +198,9 @@ const KeyStats = () => {
         <p>
           Social mobility is about ensuring that a person&apos;s occupation and
           income are not tied to where they started in life. It&apos;s about
-          fairness and equal opportunities for all.
+          fairness and equal opportunities for all. When this doesn’t happen, it
+          affects everyone in the UK.
         </p>
-        <p>When this doesn’t happen, it affects everyone in the UK.</p>
       </header>
       <ul className="switcher">
         {Object.keys(KeyStatsCategories).map(stat => (
