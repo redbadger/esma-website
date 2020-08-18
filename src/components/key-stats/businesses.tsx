@@ -13,14 +13,13 @@ const BusinessArticle = ({ statClasses }: ArticleProps) => (
       <h4>Inequality In The Uk</h4>
       <p>
         The UK is one of the most unequal countries in Europe, with levels of
-        socio-economic inequality comparable to the USA. The richest half
-        receive 80% of all incomes in the UK. Leaving the poorest half who
-        receive the remaining 20%.
+        socio-economic inequality comparable to the USA.
       </p>
       <p>
-        Studies show that should British businesses attain even average levels
-        of social mobility, the economy would be boosted by around £170 billion
-        in total.
+        The richest half receive 80% of all incomes in the UK. Leaving the
+        poorest half who receive the remaining 20%. Studies show that should
+        British businesses attain even average levels of social mobility, the
+        economy would be boosted by around £170 billion in total.
       </p>
     </div>
     <p className="reference">
