@@ -1,33 +1,33 @@
 import React from "react";
 import { KeyStatsCategories, ArticleProps } from "./types";
-import PieOverlay from "./pie-overlay";
-import Legend from "./legend";
+import KeyStatArticle from "./key-stat-article";
 import { SocietyStats, Key } from "./data/society-stats";
 
 const SocietyArticle = ({ statClasses }: ArticleProps) => (
-  <article className={statClasses(KeyStatsCategories.Society)}>
-    <h3>Performance levels of local authorities in each region</h3>
-    <Legend legendDetails={Key} />
-    <PieOverlay stats={SocietyStats} />
-    <div className="summary">
-      <h4>Social Mobility Cold Spots</h4>
-      <p>
-        England&apos;s major cities are failing to be the places of opportunity
-        that they should be. Many of the richest places in England are doing
-        worse for their disadvantaged children than places that are much poorer.
-      </p>
-    </div>
-    <p className="reference">
-      Reference -{" "}
-      <a
-        href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/496103/Social_Mobility_Index.pdf"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Social Mobility Index
-      </a>
-    </p>
-  </article>
+  <KeyStatArticle
+    statClasses={statClasses}
+    stats={SocietyStats}
+    legendKey={Key}
+    category={KeyStatsCategories.Society}
+    h3="Performance levels of local authorities in each region"
+    h4="Social Mobility Cold Spots"
+    summaryMain={
+      <>
+        <p>
+          England&apos;s major cities are failing to be the places of
+          opportunity that they should be. Many of the richest places in England
+          are doing worse for their disadvantaged children than places that are
+          much poorer.
+        </p>
+      </>
+    }
+    reference={{
+      href:
+        "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/496103/Social_Mobility_Index.pdf",
+      name: "Social Mobility Index",
+      figure: "Figure 4",
+    }}
+  />
 );
 
 export default SocietyArticle;

@@ -80,27 +80,7 @@ const keyStatsCss = css`
       cursor: pointer;
     }
   }
-  article {
-    display: block;
-    transition: left 0.5s ease-in-out;
-    width: 100vw;
-    position: absolute;
-    background: white;
-    height: 100%;
-  }
   @media screen and (min-width: 40rem) {
-    article {
-      display: flex;
-      align-items: flex-start;
-      align-content: center;
-      flex-direction: column;
-      flex-wrap: wrap;
-      min-height: 44rem;
-      > * {
-        max-width: 45%;
-      }
-    }
-
     ul.switcher {
       flex-direction: row;
       justify-content: center;
@@ -110,15 +90,7 @@ const keyStatsCss = css`
       }
     }
   }
-  article.inactive {
-    left: 100vw;
-  }
-  article.active {
-    left: 0vw;
-  }
-  article.move {
-    left: -100vw;
-  }
+
   .reference {
     text-align: left;
   }
@@ -140,6 +112,7 @@ const keyStatsCss = css`
   }
 
   .key {
+    grid-column: 1;
     text-align: left;
     width: 100%;
     p {

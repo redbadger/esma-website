@@ -6,10 +6,20 @@ import { PieMapOverlayProps } from "./types";
 
 const pieCss = css`
   position: relative;
-  order: 2;
+
+  @media screen and (min-width: 40rem) {
+    grid-row-start: 1;
+    grid-column: 2;
+    grid-row-end: 5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
   aside.active {
     display: block;
+    grid-row-start: 1;
+    grid-row-end: 1;
   }
   aside.inactive {
     display: none;
