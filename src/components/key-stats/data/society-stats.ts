@@ -2,21 +2,21 @@ import { Stat as PieStat } from "../../pie";
 import { PieMapOverlayProps, LegendProps } from "../types";
 import { UkRegions } from "./uk-regions";
 const Society: {
-  colours: { [key in Pentile]: string };
+  colours: { [key in Quintile]: string };
   stats: SocietyStat;
 } = require("./society.json");
 
 type SocietyStat = {
-  [key in Pentile]: number;
+  [key in Quintile]: number;
 };
 
-// Pentile: like Percentile or Decile, but for fifths
-enum Pentile {
-  First = "Bottom 20% of rankings",
+// Quintile: like Percentile or Decile, but for fifths
+enum Quintile {
+  First = "Bottom 20%",
   Second = "20-40%",
   Third = "40-60%",
   Fourth = "60-80%",
-  Fifth = "Top 20%",
+  Fifth = "Top 20% of rankings",
 }
 
 const colours = Society.colours;
