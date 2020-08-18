@@ -130,18 +130,25 @@ const keyStatsCss = css`
   }
 
   .key {
+    text-align: left;
+    width: 100%;
+    p {
+      text-transform: uppercase;
+      font-weight: 600;
+      margin: 0.25rem 0;
+    }
     ul {
       text-align: left;
     }
     li {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
       span {
-        font-weight: bold;
-        padding: 0.25rem;
-        margin-right: 0.5rem;
-        font-size: 2rem;
-        line-height: 1rem;
-        vertical-align: text-bottom;
         display: inline-block;
+        height: 1.875rem;
+        width: 0.75rem;
+        margin-right: 0.5rem;
         background-color: currentColor;
       }
     }
