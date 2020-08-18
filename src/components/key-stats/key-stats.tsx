@@ -126,7 +126,7 @@ const keyStatsCss = css`
     li {
       display: flex;
       align-items: center;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1rem;
       line-height: 1.88;
       span {
