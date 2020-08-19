@@ -62,6 +62,7 @@ const keyStatArticleCss = css`
 
   .reference {
     text-align: left;
+    color: var(--midnight);
   }
   .reference a {
     text-decoration: underline;
@@ -76,7 +77,7 @@ const keyStatArticleCss = css`
     }
     h4,
     p {
-      margin: 1rem 0.75rem;
+      margin: 0.75rem;
     }
   }
 `;
