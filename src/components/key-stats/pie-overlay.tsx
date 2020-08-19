@@ -73,7 +73,7 @@ const PieLegend = ({
             <li key={stat.label}>
               <span
                 css={css`
-                  width: ${(stat.number / max) * 15}rem;
+                  width: ${(stat.number / max) * 10}rem;
                   background: ${stat.colour};
                 `}
                 title={stat.label}
