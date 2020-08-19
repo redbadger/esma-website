@@ -1,14 +1,11 @@
 import React from "react";
-import { KeyStatsCategories, ArticleProps } from "./types";
 import KeyStatArticle from "./key-stat-article";
 import { BusinessStats, Key } from "./data/business-stats";
 
-const BusinessArticle = ({ statClasses }: ArticleProps) => (
+const BusinessArticle = () => (
   <KeyStatArticle
-    statClasses={statClasses}
     stats={BusinessStats}
     legendKey={Key}
-    category={KeyStatsCategories.Businesses}
     h3="Job growth in the UK since 2012"
     h4="Inequality In The Uk"
     summaryMain={

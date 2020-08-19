@@ -61,14 +61,14 @@ const numberWithCommas = (x: number) => {
 
 const PieLegend = ({
   s,
-  statClass,
+  isActive,
 }: {
   s: PieMapOverlayProps;
-  statClass: (statName: string) => string;
+  isActive: boolean;
 }) => {
   const max = Math.max(...s.pieStats.map(x => x.number));
   return (
-    <aside key={s.name} className={statClass(s.name)}>
+    <aside key={s.name} className={isActive ? "active" : "inactive"}>
       <h4>{s.name}</h4>
       <ul>
         {s.pieStats
@@ -97,8 +97,7 @@ const PieLegend = ({
 const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
   const [currentStat, setCurrentStat] = React.useState(stats[0].name);
 
-  const statClass = (statName: string): string =>
-    currentStat === statName ? "active" : "inactive";
+  const isCurrentStat = (statName: string): boolean => currentStat === statName;
 
   return (
     <div css={pieCss}>
@@ -110,7 +109,7 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
                 stats={stat.pieStats}
                 position={stat.position}
                 key={stat.name}
-                isActive={statClass(stat.name) === "active"}
+                isActive={isCurrentStat(stat.name)}
                 focus={() => setCurrentStat(stat.name)}
                 blur={() => setCurrentStat("")}
               />
@@ -118,7 +117,7 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
           </g>
         </UkOverlay>
       </picture>
-      {stats.map(s => PieLegend({ s, statClass }))}
+      {stats.map(s => PieLegend({ s, isActive: isCurrentStat(s.name) }))}
     </div>
   );
 };
