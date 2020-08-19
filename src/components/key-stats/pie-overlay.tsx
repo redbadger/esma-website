@@ -55,6 +55,10 @@ const pieCss = css`
   }
 `;
 
+const numberWithCommas = (x: number) => {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
 const PieLegend = ({
   s,
   statClass,
@@ -81,7 +85,7 @@ const PieLegend = ({
                 &nbsp;
               </span>
               <span>
-                {stat.number}&nbsp;{stat.metric}
+                {numberWithCommas(stat.number)}&nbsp;{stat.metric}
               </span>
             </li>
           ))}
@@ -91,7 +95,7 @@ const PieLegend = ({
 };
 
 const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
-  const [currentStat, setCurrentStat] = React.useState("");
+  const [currentStat, setCurrentStat] = React.useState(stats[0].name);
 
   const statClass = (statName: string): string =>
     currentStat === statName ? "active" : "inactive";
@@ -106,7 +110,7 @@ const PieOverlay = ({ stats }: { stats: PieMapOverlayProps[] }) => {
                 stats={stat.pieStats}
                 position={stat.position}
                 key={stat.name}
-                className={statClass(stat.name)}
+                isActive={statClass(stat.name) === "active"}
                 focus={() => setCurrentStat(stat.name)}
                 blur={() => setCurrentStat("")}
               />
