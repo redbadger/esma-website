@@ -3,6 +3,7 @@ import { KeyStatArticleProps } from "./types";
 import PieOverlay from "./pie-overlay";
 import Legend from "./legend";
 import { css } from "@emotion/core";
+import { mq, BreakPoint } from "../../util/mq";
 
 const keyStatArticleCss = css`
   display: flex;
@@ -10,6 +11,11 @@ const keyStatArticleCss = css`
   justify-content: center;
   background: white;
   height: 100%;
+  padding: 0 0.75rem;
+
+  ${mq(BreakPoint.md)} {
+    padding: 0 2.5rem;
+  }
 
   article {
     display: grid;
@@ -26,7 +32,7 @@ const keyStatArticleCss = css`
     }
   }
 
-  @media screen and (min-width: 40rem) {
+  ${mq(BreakPoint.sm)} {
     article {
       grid-template-columns: auto auto;
     }
