@@ -24,23 +24,14 @@ const keyStatsCss = css`
     align-items: center;
   }
 
-  h2,
-  h3 {
-    line-height: 1.3;
-    font-weight: 600;
-    margin-top: 2.25rem;
-  }
   h2 {
-    font-size: 2rem;
     max-width: 57.5rem;
     text-align: center;
     margin-bottom: 0.75rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-    text-align: left;
-    margin-right: 1rem;
-    margin-bottom: 2.25rem;
+    margin-top: 2.25rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
   }
 
   p {
@@ -59,7 +50,6 @@ const keyStatsCss = css`
     padding: 0;
     border: 1px var(--midnight) solid;
     border-collapse: collapse;
-    font-weight: 700;
 
     &.active {
       background: var(--midnight);
@@ -70,6 +60,8 @@ const keyStatsCss = css`
       display: none;
     }
     > label {
+      font-weight: 700;
+      font-size: 1.125rem;
       display: block;
       width: 100%;
       padding: 0.75rem;
@@ -80,60 +72,14 @@ const keyStatsCss = css`
     ul.switcher {
       flex-direction: row;
       justify-content: center;
+      margin-top: 2.25rem;
       li {
         flex-shrink: 1;
-        flex-basis: 16%;
+        flex-basis: 10rem;
       }
     }
   }
 
-  .reference {
-    text-align: left;
-  }
-  .reference a {
-    text-decoration: underline;
-  }
-  .summary {
-    border: 1px solid var(--colour-secondary-gray);
-    margin: 0.75rem 0;
-    text-align: left;
-    h4 {
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-    h4,
-    p {
-      margin: 1rem 0.75rem;
-    }
-  }
-
-  .key {
-    grid-column: 1;
-    text-align: left;
-    width: 100%;
-    p {
-      text-transform: uppercase;
-      font-weight: 600;
-      margin: 0.25rem 0;
-    }
-    ul {
-      text-align: left;
-    }
-    li {
-      display: flex;
-      align-items: center;
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 1.88;
-      span {
-        display: inline-block;
-        height: 1.875rem;
-        width: 0.75rem;
-        margin-right: 0.5rem;
-        background-color: currentColor;
-      }
-    }
-  }
   picture > img,
   picture > svg {
     width: 100%;
@@ -159,6 +105,7 @@ const KeyStats = () => {
       display: flex;
       width: 300vw;
       transform: translateX(${-100 * screenNumberForCategory[statToView]}vw);
+      margin-top: 2.25rem;
       transition: transform 0.75s ease-in-out;
     }
   `;
