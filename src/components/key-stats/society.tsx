@@ -1,14 +1,11 @@
 import React from "react";
-import { KeyStatsCategories, ArticleProps } from "./types";
 import KeyStatArticle from "./key-stat-article";
 import { SocietyStats, Key } from "./data/society-stats";
 
-const SocietyArticle = ({ statClasses }: ArticleProps) => (
+const SocietyArticle = () => (
   <KeyStatArticle
-    statClasses={statClasses}
     stats={SocietyStats}
     legendKey={Key}
-    category={KeyStatsCategories.Society}
     h3="Performance levels of local authorities in each region"
     h4="Social Mobility Cold Spots"
     summaryMain={

@@ -14,6 +14,7 @@ const keyStatsCss = css`
   - ideally, the hero should clear its own space
   */
   top: 7rem;
+  margin-bottom: 7rem;
   padding: 0;
   text-align: center;
 
@@ -27,19 +28,18 @@ const keyStatsCss = css`
   h3 {
     line-height: 1.3;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-top: 2.25rem;
   }
   h2 {
     font-size: 2rem;
     max-width: 57.5rem;
     text-align: center;
-    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
   }
   h3 {
     font-size: 1.25rem;
     text-align: left;
     margin-right: 1rem;
-    margin-top: 2.25rem;
     margin-bottom: 2.25rem;
   }
 
@@ -49,10 +49,6 @@ const keyStatsCss = css`
     max-width: 57.5rem;
   }
 
-  .articleContainer {
-    position: absolute;
-    width: 300vw;
-  }
   ul.switcher {
     display: flex;
     flex-direction: column;
@@ -145,11 +141,27 @@ const keyStatsCss = css`
   }
 `;
 
+const screenNumberForCategory: { [key in KeyStatsCategories]: number } = {
+  individual: 0,
+  society: 1,
+  businesses: 2,
+};
+
 const KeyStats = () => {
   let [statToView, setStatToView] = React.useState(
     KeyStatsCategories.Individual
   );
   let [statToMove, setStatToMove] = React.useState(KeyStatsCategories[""]);
+
+  let articleContainerCss = css`
+    .articleContainer {
+      position: relative;
+      display: flex;
+      width: 300vw;
+      transform: translateX(${-100 * screenNumberForCategory[statToView]}vw);
+      transition: transform 0.75s ease-in-out;
+    }
+  `;
 
   function changeViewStat(stat: KeyStatsCategories) {
     // Move the current one
@@ -159,15 +171,8 @@ const KeyStats = () => {
     setStatToView(stat);
   }
 
-  function statClasses(statName: KeyStatsCategories) {
-    return [
-      statToView === statName ? "active" : "inactive",
-      statToMove === statName ? "move" : "",
-    ].join(" ");
-  }
-
   return (
-    <section css={[keyStatsCss, colours]}>
+    <section css={[keyStatsCss, colours, articleContainerCss]}>
       <header>
         <h2>The national picture</h2>
         <p>
@@ -197,9 +202,9 @@ const KeyStats = () => {
         ))}
       </ul>
       <div className="articleContainer">
-        <IndividualArticle statClasses={statClasses} />
-        <SocietyArticle statClasses={statClasses} />
-        <BusinessArticle statClasses={statClasses} />
+        <IndividualArticle />
+        <SocietyArticle />
+        <BusinessArticle />
       </div>
     </section>
   );

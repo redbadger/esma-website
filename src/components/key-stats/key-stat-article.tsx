@@ -8,10 +8,8 @@ const keyStatArticleCss = css`
   display: flex;
   width: 100vw;
   justify-content: center;
-  position: absolute;
   background: white;
   height: 100%;
-  transition: left 0.5s ease-in-out;
 
   article {
     display: grid;
@@ -24,20 +22,9 @@ const keyStatArticleCss = css`
       grid-template-columns: auto auto;
     }
   }
-  &.inactive {
-    left: 100vw;
-  }
-  &.active {
-    left: 0vw;
-  }
-  &.move {
-    left: -100vw;
-  }
 `;
 
 const KeyStatArticle = ({
-  statClasses,
-  category,
   stats,
   h3,
   h4,
@@ -45,7 +32,7 @@ const KeyStatArticle = ({
   legendKey,
   reference,
 }: KeyStatArticleProps) => (
-  <div css={keyStatArticleCss} className={statClasses(category)}>
+  <div css={keyStatArticleCss}>
     <article>
       <h3>{h3}</h3>
       <Legend legendDetails={legendKey} />

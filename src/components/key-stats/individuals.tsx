@@ -1,18 +1,11 @@
 import React from "react";
-import { KeyStatsCategories } from "./types";
 import KeyStatArticle from "./key-stat-article";
 import { IndividualStats, Key } from "./data/individuals-stats";
 
-const IndividualsArticle = ({
-  statClasses,
-}: {
-  statClasses: (x: KeyStatsCategories) => string;
-}) => (
+const IndividualsArticle = () => (
   <KeyStatArticle
-    statClasses={statClasses}
     stats={IndividualStats}
     legendKey={Key}
-    category={KeyStatsCategories.Individual}
     h3="Percentage of individuals from different socio-economic backgrounds in a
     professional occupation"
     h4="Barriers to Success"
