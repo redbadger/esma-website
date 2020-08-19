@@ -123,10 +123,10 @@ const KeyStats = () => {
       <header>
         <h2>The national picture</h2>
         <p>
-          Social mobility is about ensuring that a person&apos;s occupation and
-          income are not tied to where they started in life. It&apos;s about
-          fairness and equal opportunities for all. When this doesn’t happen, it
-          affects everyone in the UK.
+          Social mobility is about ensuring that a person&apos;s occupation,
+          income, and social status are not tied to where they started in life.
+          It&apos;s about fairness and equal opportunities for all. When this
+          doesn’t happen, it affects everyone in the UK.
         </p>
       </header>
       <ul className="switcher">

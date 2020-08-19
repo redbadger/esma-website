@@ -1,7 +1,7 @@
 {
   "colours": {
     "Professional jobs": "var(--colour-secondary-yellow)",
-    "Other jobs": "var(--colour-secondary-cobalt)"
+    "All other jobs": "var(--colour-secondary-cobalt)"
   },
   "stats": {
     "london": {

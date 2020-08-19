@@ -8,7 +8,7 @@ const Business: {
 
 enum JobType {
   Professional = "Professional jobs",
-  Other = "Other jobs",
+  Other = "All other jobs",
 }
 
 enum JobTypeRaw {
