@@ -67,22 +67,24 @@ const PieLegend = ({
     <aside key={s.name} className={statClass(s.name)}>
       <h4>{s.name}</h4>
       <ul>
-        {s.pieStats.map(stat => (
-          <li key={stat.label}>
-            <span
-              css={css`
-                width: ${(stat.number / max) * 15}rem;
-                background: ${stat.colour};
-              `}
-              title={stat.label}
-            >
-              &nbsp;
-            </span>
-            <span>
-              {stat.number}&nbsp;{stat.metric}
-            </span>
-          </li>
-        ))}
+        {s.pieStats
+          .filter(x => x.number > 0)
+          .map(stat => (
+            <li key={stat.label}>
+              <span
+                css={css`
+                  width: ${(stat.number / max) * 15}rem;
+                  background: ${stat.colour};
+                `}
+                title={stat.label}
+              >
+                &nbsp;
+              </span>
+              <span>
+                {stat.number}&nbsp;{stat.metric}
+              </span>
+            </li>
+          ))}
       </ul>
     </aside>
   );
