@@ -6,13 +6,7 @@ export enum KeyStatsCategories {
   Businesses = "businesses",
 }
 
-export type ArticleProps = {
-  statClasses: (x: KeyStatsCategories) => string;
-};
-
 export type KeyStatArticleProps = {
-  statClasses: (x: KeyStatsCategories) => string;
-  category: KeyStatsCategories;
   stats: PieMapOverlayProps[];
   h3: string;
   h4: string;

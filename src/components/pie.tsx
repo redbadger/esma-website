@@ -1,5 +1,4 @@
 import React from "react";
-import { css } from "@emotion/core";
 import { getPathDataForCircularBar } from "./maths-helpers";
 
 let cumulativePercent = 0;
@@ -43,54 +42,51 @@ const getPathsFromStats = (stats: Stat[]) => {
   return stats.map(stat => statToPiePart(stat, total));
 };
 
-const pathStyles = css`
-  a:hover {
-    cursor: pointer;
-  }
-  a:hover path {
-    fill: #3772ff;
-  }
-  &.active {
-    filter: drop-shadow(0 0 0.5rem rgba(184, 108, 305, 0.8));
-  }
-  &.inactive {
-    filter: opacity(0.5);
-  }
-`;
-
 const Pie = ({
   stats,
   position,
   focus,
   blur,
-  className,
+  isActive,
 }: {
   stats: Stat[];
   position: { x: number; y: number };
   focus: () => void;
   blur: () => void;
-  className: string;
+  isActive: boolean;
 }) => {
   return (
     <svg
-      viewBox="-1 -1 2 2"
-      css={pathStyles}
-      width="50"
-      height="50"
-      x={position.x}
-      y={position.y}
+      viewBox="-2 -2 4 4"
+      width="100"
+      height="100"
+      x={position.x - 25}
+      y={position.y - 25}
       onClick={focus}
-      // onBlur={blur}
       onMouseEnter={focus}
+      // onBlur={blur}
       // onMouseLeave={blur}
-      className={className}
+      style={{
+        transform: isActive ? "translateY(-0.0625rem)" : null,
+      }}
     >
+      <filter id="shadow">
+        <feDropShadow
+          dx="-0.1"
+          dy="0"
+          stdDeviation="0.1"
+          radius="0.5rem"
+          color="rgba(184, 108, 305, 0.8)"
+        />
+      </filter>
       <g
         style={{
           transform: "rotate(-0.25turn)",
           transformOrigin: "0 0",
           cursor: "pointer",
+          filter: isActive ? "url(#shadow)" : "none",
         }}
+        opacity={isActive ? "1" : "0.7"}
       >
         {getPathsFromStats(stats)}
       </g>

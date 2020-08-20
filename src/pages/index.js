@@ -13,6 +13,7 @@ const IndexPage = () => {
       <Hero />
       <Timeline />
       <KeyStats />
+      <p>A future footer.</p>
     </Layout>
   );
 };
