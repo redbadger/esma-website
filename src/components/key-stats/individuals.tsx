@@ -8,13 +8,14 @@ const IndividualsArticle = () => (
     legendKey={Key}
     h3="Percentage of individuals from different socio-economic backgrounds in a
     professional occupation"
-    h4="Barriers to Success"
+    h4="Move Out To Move Up"
     summaryMain={
       <p>
-        Individuals who are <strong>"upwardly mobile"</strong> face considerable
-        obstacles in getting in and getting on Britain’s professions, and high
-        status professions remain dominated from higher socio-economic
-        backgrounds.
+        Those from more privileged backgrounds are much more likely to move
+        region to take up opportunities. Despite the disproportionate number of
+        opportunities London offers, it is the least accessible due to the high
+        costs associated with moving to London. People from less privileged
+        backgrounds are less able to move to access those opportunities.
       </p>
     }
     reference={{
