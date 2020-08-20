@@ -17,6 +17,7 @@ const keyStatsCss = css`
   margin-bottom: 7rem;
   padding: 0;
   text-align: center;
+  overflow: hidden;
 
   header {
     display: flex;
@@ -97,7 +98,6 @@ const KeyStats = () => {
   let [statToView, setStatToView] = React.useState(
     KeyStatsCategories.Individual
   );
-  let [statToMove, setStatToMove] = React.useState(KeyStatsCategories[""]);
 
   let articleContainerCss = css`
     .articleContainer {
@@ -111,10 +111,6 @@ const KeyStats = () => {
   `;
 
   function changeViewStat(stat: KeyStatsCategories) {
-    // Move the current one
-    if (statToView !== stat) {
-      setStatToMove(statToView);
-    }
     setStatToView(stat);
   }
 
