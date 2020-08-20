@@ -25,8 +25,6 @@ export const Key: LegendProps = Object.keys(JobType).map(key => ({
   label: JobType[key],
 }));
 
-console.log({ Key });
-
 const getPieStat = (businessStat: BusinessStat): PieStat[] => {
   return [
     {

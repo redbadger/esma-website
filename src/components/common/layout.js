@@ -16,6 +16,13 @@ import Header from "./header";
 const globalStyles = css`
   :root {
     --midnight: #2d3142;
+    --white: #ffffff;
+    --taupe: #f7f5f4;
+    --cobalt: #3772ff;
+    --light-grey: #d3d3d3;
+    --yellow: #ffba08;
+    --denim: #424b71;
+    --error: #b5261d;
   }
   body {
     font-family: Montserrat, Helvetica, Arial;
