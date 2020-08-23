@@ -2,48 +2,7 @@
 
 exports[`TimelineEntryAdditional renders correctly 1`] = `
 <div
-  css={
-    Object {
-      "map": undefined,
-      "name": "sh8chy",
-      "next": undefined,
-      "styles": "
-  height: 43.75rem;
-  background: #f7f5f4;
-  border: 0.3125rem solid #FFFFFF;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 600;
-    color: #2d3142;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-
-  button {
-    margin-top: 1rem;
-    width: 10rem;
-    line-height: 1.875rem;
-  }
-
-  svg {
-    margin-bottom: 1.5rem;
-  }
-",
-      "toString": [Function],
-    }
-  }
+  className="css-17iig0m-timelineEntryAdditionalStyles"
 >
   <test-file-stub />
   <h2>
@@ -59,17 +18,7 @@ exports[`TimelineEntryAdditional renders correctly 1`] = `
     This has heightened the need for joined-up, cross-sector and collaborative approaches to respond to the scale of the challenge.
   </p>
   <button
-    css={
-      Object {
-        "map": undefined,
-        "name": "vxeuw9",
-        "next": undefined,
-        "styles": "
-  height:3rem;width:22rem;--bg-opacity:1;background-color:rgba(45, 49, 66, var(--bg-opacity));--text-opacity:1;color:rgba(255, 255, 255, var(--text-opacity));font-weight:700;
-",
-        "toString": [Function],
-      }
-    }
+    className="css-lmjzsp-darkStyles"
     onClick={[Function]}
   >
     Read research

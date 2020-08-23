@@ -2,7 +2,7 @@
 
 exports[`StatsCard renders correctly 1`] = `
 <div
-  className="carousel-root"
+  className="carousel-root css-zxvzsr-carouselStyles-StatsCard"
   tabIndex={0}
 >
   <div
@@ -44,49 +44,15 @@ exports[`StatsCard renders correctly 1`] = `
           onClick={[Function]}
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "mlu2ts",
-                "next": undefined,
-                "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
-
-  div {
-    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
-  }
-",
-                "toString": [Function],
-              }
-            }
+            className="css-o97d7w-statsCardStyles"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "lurvm6",
-                  "next": undefined,
-                  "styles": "
-  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-1liirwf-headingStyles"
             >
               27%
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "ehtxm1",
-                  "next": undefined,
-                  "styles": "
-  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-x1p5us-textStyles"
             >
               Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of
                
@@ -100,17 +66,7 @@ exports[`StatsCard renders correctly 1`] = `
                in Manchester.
                
               <span
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "spzrvh",
-                    "next": undefined,
-                    "styles": "
-  font-weight:300;text-decoration:underline;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="css-1g8y17g-resourceStyles"
               >
                 - 
                 Mobility Manifesto 2019
@@ -123,49 +79,15 @@ exports[`StatsCard renders correctly 1`] = `
           onClick={[Function]}
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "mlu2ts",
-                "next": undefined,
-                "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
-
-  div {
-    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
-  }
-",
-                "toString": [Function],
-              }
-            }
+            className="css-o97d7w-statsCardStyles"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "lurvm6",
-                  "next": undefined,
-                  "styles": "
-  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-1liirwf-headingStyles"
             >
               51%
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "ehtxm1",
-                  "next": undefined,
-                  "styles": "
-  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-x1p5us-textStyles"
             >
               Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to 
               <strong>
@@ -175,17 +97,7 @@ exports[`StatsCard renders correctly 1`] = `
               in 2019.
                
               <span
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "spzrvh",
-                    "next": undefined,
-                    "styles": "
-  font-weight:300;text-decoration:underline;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="css-1g8y17g-resourceStyles"
               >
                 - 
                 State of the Nation
@@ -198,49 +110,15 @@ exports[`StatsCard renders correctly 1`] = `
           onClick={[Function]}
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "mlu2ts",
-                "next": undefined,
-                "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
-
-  div {
-    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
-  }
-",
-                "toString": [Function],
-              }
-            }
+            className="css-o97d7w-statsCardStyles"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "lurvm6",
-                  "next": undefined,
-                  "styles": "
-  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-1liirwf-headingStyles"
             >
               2%
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "ehtxm1",
-                  "next": undefined,
-                  "styles": "
-  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-x1p5us-textStyles"
             >
               Of students in the North East from lower socio-economic backgrounds attended a selective university, in comparison with 
               <strong>
@@ -250,17 +128,7 @@ exports[`StatsCard renders correctly 1`] = `
               of students from the same social group from Inner London.
                
               <span
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "spzrvh",
-                    "next": undefined,
-                    "styles": "
-  font-weight:300;text-decoration:underline;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="css-1g8y17g-resourceStyles"
               >
                 - 
                 Department for Education
@@ -273,49 +141,15 @@ exports[`StatsCard renders correctly 1`] = `
           onClick={[Function]}
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "mlu2ts",
-                "next": undefined,
-                "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
-
-  div {
-    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
-  }
-",
-                "toString": [Function],
-              }
-            }
+            className="css-o97d7w-statsCardStyles"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "lurvm6",
-                  "next": undefined,
-                  "styles": "
-  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-1liirwf-headingStyles"
             >
               27%
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "ehtxm1",
-                  "next": undefined,
-                  "styles": "
-  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-x1p5us-textStyles"
             >
               Of graduates have completed an unpaid internship. A six-month unpaid internship will cost a person living in London a minimum of
                
@@ -329,17 +163,7 @@ exports[`StatsCard renders correctly 1`] = `
                in Manchester.
                
               <span
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "spzrvh",
-                    "next": undefined,
-                    "styles": "
-  font-weight:300;text-decoration:underline;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="css-1g8y17g-resourceStyles"
               >
                 - 
                 Mobility Manifesto 2019
@@ -352,49 +176,15 @@ exports[`StatsCard renders correctly 1`] = `
           onClick={[Function]}
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "mlu2ts",
-                "next": undefined,
-                "styles": "
-  height:14rem;--bg-opacity:1;background-color:rgba(255, 255, 255, var(--bg-opacity));
-
-  div {
-    --text-opacity:1;color:rgba(45, 49, 66, var(--text-opacity));
-  }
-",
-                "toString": [Function],
-              }
-            }
+            className="css-o97d7w-statsCardStyles"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "lurvm6",
-                  "next": undefined,
-                  "styles": "
-  text-align:left;font-weight:300;margin-left:0.75rem;font-size:3rem;margin-bottom:0.25rem;@media (min-width: 768px){margin-left:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-1liirwf-headingStyles"
             >
               51%
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "ehtxm1",
-                  "next": undefined,
-                  "styles": "
-  margin-left:0.75rem;margin-right:0.75rem;text-align:left;@media (min-width: 768px){margin-left:1.5rem;margin-right:1.5rem;}
-",
-                  "toString": [Function],
-                }
-              }
+              className="css-x1p5us-textStyles"
             >
               Of disadvantaged pupils reached the expected standard in all of reading, writing and maths, compared to 
               <strong>
@@ -404,17 +194,7 @@ exports[`StatsCard renders correctly 1`] = `
               in 2019.
                
               <span
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "spzrvh",
-                    "next": undefined,
-                    "styles": "
-  font-weight:300;text-decoration:underline;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="css-1g8y17g-resourceStyles"
               >
                 - 
                 State of the Nation
