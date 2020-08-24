@@ -2,7 +2,7 @@
 
 exports[`NewsletterSignUp renders correctly 1`] = `
 <section
-  className="css-1u5wuen-newsletterSignUpStyles"
+  className="css-1x36vd0-newsletterSignUpStyles"
 >
   <header>
     <h2>
@@ -17,7 +17,9 @@ exports[`NewsletterSignUp renders correctly 1`] = `
       onSubmit={[Function]}
     >
       <fieldset>
-        <section>
+        <section
+          className="css-usoz6a-newsletterInputFieldStyles"
+        >
           <label
             htmlFor="fullNameInput"
           >
@@ -36,7 +38,9 @@ exports[`NewsletterSignUp renders correctly 1`] = `
             Please enter your name.
           </p>
         </section>
-        <section>
+        <section
+          className="css-usoz6a-newsletterInputFieldStyles"
+        >
           <label
             htmlFor="emailInput"
           >

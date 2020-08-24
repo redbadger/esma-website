@@ -2,6 +2,7 @@ import React, { FormEvent, useState } from "react";
 import { css } from "@emotion/core";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import { mq, BreakPoint } from "../../util/mq";
+import NewsletterInputField from './newsletter-input-field';
 
 const newsletterSignUpStyles = css`
   padding: 4.5rem 0.75rem;
@@ -28,28 +29,11 @@ const newsletterSignUpStyles = css`
   }
 
   label {
-    display: block;
-    font-weight: 600;
     line-height: 2.125rem;
-    color: var(--midnight);
   }
 
   fieldset {
     display: contents;
-  }
-
-  input[type="text"],
-  input[type="email"] {
-    border: 1px solid var(--midnight);
-    border-radius: 3px;
-    width: 100%;
-    height: 3rem;
-    padding: 7px 18px 7px 10px;
-
-    &:focus {
-      outline: none;
-      border-color: var(--cobalt);
-    }
   }
 
   input[type="submit"] {
@@ -108,23 +92,6 @@ const newsletterSignUpStyles = css`
     font-weight: 600;
   }
 
-  input[type="text"].error,
-  input[type="email"].error {
-    border-color: var(--error);
-  }
-
-  .input-error {
-    color: var(--error);
-    line-height: 1.625rem;
-    margin-top: 0.75rem;
-    display: none;
-  }
-
-  input[type="text"].error + .input-error,
-  input[type="email"].error + .input-error {
-    display: block;
-  }
-
   p.response {
     display: none;
     margin-bottom: 1rem;
@@ -170,9 +137,13 @@ const NewsletterSignUp = () => {
     if (!email) setEmailError(true);
     if (!name || !email) return;
 
-    const response = await addToMailchimp(email, { FNAME: name });
-
-    handleResult(response.result, response.msg);
+    try {
+      const response = await addToMailchimp(email, { FNAME: name });
+      handleResult(response.result, response.msg);
+    } catch(e) {
+      setMcResponse({success: false, msg: "Something went wrong, please try again later."})
+      console.log(e)
+    }
   };
 
   const handleResult = (result: string, message: string) => {
@@ -202,34 +173,24 @@ const NewsletterSignUp = () => {
         <article>
           <form onSubmit={handleSubmit}>
             <fieldset>
-              <section>
-                <label htmlFor="fullNameInput">Full name</label>
-                <input
-                  type="text"
-                  name="fullName"
-                  id="fullNameInput"
-                  className={nameError ? "error" : ""}
-                  onChange={e => {
-                    setNameError(false);
-                    setName(e.target.value);
-                  }}
+              <NewsletterInputField
+                label="Full name"
+                type="text"
+                name="fullName"
+                error={nameError}
+                errorMessage="Please enter your name."
+                errorSetter={setNameError}
+                valueSetter={setName}
                 />
-                <p className="input-error">Please enter your name.</p>
-              </section>
-              <section>
-                <label htmlFor="emailInput">Email address</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="emailInput"
-                  className={emailError ? "error" : ""}
-                  onChange={e => {
-                    setEmailError(false);
-                    setEmail(e.target.value);
-                  }}
+              <NewsletterInputField
+                label="Email address"
+                type="email"
+                name="email"
+                error={emailError}
+                errorMessage="Please enter your email."
+                errorSetter={setEmailError}
+                valueSetter={setEmail}
                 />
-                <p className="input-error">Please enter your email.</p>
-              </section>
               <section className="submitSection">
                 <label htmlFor="submit">&nbsp;</label>
                 <input type="submit" value="Submit" id="submit" />

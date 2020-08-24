@@ -13,14 +13,14 @@ describe("NewsletterSignUp", () => {
     expect(component).toMatchSnapshot();
   });
 
-  it("Name and email errors are not visible on render", async () => {
+  it("hides submission errors on render", async () => {
     const { getByText } = render(<NewsletterSignUp />);
 
     expect(getByText("Please enter your name.")).not.toBeVisible();
     expect(getByText("Please enter your email.")).not.toBeVisible();
   });
 
-  it("Displays error name field is submitted blank", async () => {
+  it("displays name error message when blank email is submitted", async () => {
     const { container, getByText } = render(<NewsletterSignUp />);
 
     act(() => {
@@ -31,7 +31,7 @@ describe("NewsletterSignUp", () => {
     expect(getByText("Please enter your name.")).toBeVisible();
   });
 
-  it("Displays error email field is submitted blank", async () => {
+  it("displays email error message when blank email is submitted", async () => {
     const { container, getByText } = render(<NewsletterSignUp />);
 
     act(() => {
@@ -42,7 +42,7 @@ describe("NewsletterSignUp", () => {
     expect(getByText("Please enter your email.")).toBeVisible();
   });
 
-  it("Displays confirmation message if subscription was successful", async () => {
+  it("displays confirmation message if subscription was successful", async () => {
     const { container, getByText } = render(<NewsletterSignUp />);
 
     const promise = new Promise(resolve =>
@@ -81,7 +81,7 @@ describe("NewsletterSignUp", () => {
     await waitFor(() => getByText("Thank you for subscribing!"));
   });
 
-  it("Displays correct message if email is already subscribed", async () => {
+  it("warns the user if the email is already subscribed", async () => {
     const { container, getByText } = render(<NewsletterSignUp />);
 
     const promise = new Promise(resolve =>
@@ -120,7 +120,7 @@ describe("NewsletterSignUp", () => {
     await waitFor(() => getByText("This email has already been subscribed."));
   });
 
-  it("Displays generic error message if something went wrong", async () => {
+  it("displays generic error message if something went wrong", async () => {
     const { container, getByText } = render(<NewsletterSignUp />);
 
     const promise = new Promise(resolve =>
