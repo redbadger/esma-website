@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsletterSignUp renders correctly 1`] = `
+<section
+  className="css-1x36vd0-newsletterSignUpStyles"
+>
+  <header>
+    <h2>
+      Join our mission
+    </h2>
+    <p>
+      We’ve got bold ambitions and need impact focused leaders to join us on our journey. Sign up to our newsletter to be the first to hear about our events and stay up to date on our future plans.
+    </p>
+  </header>
+  <article>
+    <form
+      onSubmit={[Function]}
+    >
+      <fieldset>
+        <section
+          className="css-usoz6a-newsletterInputFieldStyles"
+        >
+          <label
+            htmlFor="fullNameInput"
+          >
+            Full name
+          </label>
+          <input
+            className=""
+            id="fullNameInput"
+            name="fullName"
+            onChange={[Function]}
+            type="text"
+          />
+          <p
+            className="input-error"
+          >
+            Please enter your name.
+          </p>
+        </section>
+        <section
+          className="css-usoz6a-newsletterInputFieldStyles"
+        >
+          <label
+            htmlFor="emailInput"
+          >
+            Email address
+          </label>
+          <input
+            className=""
+            id="emailInput"
+            name="email"
+            onChange={[Function]}
+            type="email"
+          />
+          <p
+            className="input-error"
+          >
+            Please enter your email.
+          </p>
+        </section>
+        <section
+          className="submitSection"
+        >
+          <label
+            htmlFor="submit"
+          >
+             
+          </label>
+          <input
+            id="submit"
+            type="submit"
+            value="Submit"
+          />
+        </section>
+        <section
+          className="full-span"
+        >
+          <p
+            className="response "
+          />
+          <p>
+            By clicking Subscribe you accept the
+             
+            <a
+              href="#"
+            >
+              Privacy Policy
+            </a>
+            . This will allow us to send you newsletter and event updates. Our Privacy Policy covers how we protect data. You can unsubscribe from this at any point.
+          </p>
+        </section>
+      </fieldset>
+    </form>
+  </article>
+</section>
+`;
