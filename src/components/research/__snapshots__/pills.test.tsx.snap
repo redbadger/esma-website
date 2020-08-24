@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pills renders correctly 1`] = `
+<div
+  className="css-jhavic-cssPills"
+>
+  <h2
+    className="css-ox4yge-cssContent"
+    onClick={[Function]}
+  >
+    Contents
+  </h2>
+  <ol
+    className="css-1h0dqjz-Pills"
+  >
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Executive Summary
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Early Years Foundation Stage
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Family Circumstances
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Social class and underachievement
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        School cultures
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Geographical educational inequality
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Type and quality of schooling
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Low aspirations
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Access to career advice
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Gaps in attainnment
+      </a>
+    </li>
+    <li
+      className="css-bxsrjg-cssPill"
+    >
+      <a
+        href="/"
+      >
+        Impact of COVID-19
+      </a>
+    </li>
+  </ol>
+</div>
+`;
