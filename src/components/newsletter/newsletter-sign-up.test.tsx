@@ -20,7 +20,7 @@ describe("NewsletterSignUp", () => {
     expect(getByText("Please enter your email.")).not.toBeVisible();
   });
 
-  it("displays name error message when blank email is submitted", async () => {
+  it("displays name error message when blank name is submitted", async () => {
     const { container, getByText } = render(<NewsletterSignUp />);
 
     act(() => {
