@@ -9,7 +9,6 @@ const headerStyles = css`
   top: 0;
   z-index: 2;
   width: 100%;
-
   background-color: var(--midnight);
 
   h1 {
@@ -17,10 +16,6 @@ const headerStyles = css`
     font-size: 1.25rem;
     line-height: 1.5rem;
     font-weight: 600;
-
-    > a {
-      text-decoration: none;
-    }
   }
 
   ul {
@@ -32,27 +27,55 @@ const headerStyles = css`
     align-items: center;
     padding: 0 0.75rem;
 
-    ${mq(BreakPoint.md)} {
-      padding: 0 5rem;
-      flex-direction: row;
-      ul {
-        padding: 0;
-        justify-content: flex-end;
-        justify-items: center;
-        li {
-          padding: 0;
-          flex-grow: 0;
-          flex-shrink: 1;
-          width: unset;
-        }
-      }
-    }
     li {
       min-height: var(--fixed-header-height);
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-items: center;
+
+      &.active {
+        display: block;
+      }
+      &.inactive {
+        display: none;
+      }
+    }
+  }
+  ul.inner-navigation {
+    a {
+      display: block;
+      text-align: left;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 3rem;
+      width: 100%;
+      margin: 0 1rem;
+    }
+  }
+
+  ${mq(BreakPoint.md)} {
+    ul {
+      padding: 0 5rem;
+      flex-direction: row;
+    }
+    ul.inner-navigation {
+      padding: 0;
+      justify-content: flex-end;
+      justify-items: center;
+      li {
+        padding: 0 0.75rem;
+        flex-grow: 0;
+        flex-shrink: 1;
+        width: unset;
+      }
+      a {
+        width: unset;
+      }
+    }
+    li.inactive {
+      display: block;
     }
   }
 `;
@@ -66,27 +89,14 @@ const Header = ({ siteTitle }: HeaderProps): JSX.Element => {
 
   return (
     <header css={headerStyles}>
-      <ul>
+      <ul className="navigation">
         <li>
           <h1>
             <Link to="/">{siteTitle}</Link>
           </h1>
           <NavToggle toggle={toggleNavBar} />
         </li>
-        <li
-          className={navOpen ? "active" : "inactive"}
-          css={css`
-            &.active {
-              display: block;
-            }
-            &.inactive {
-              display: none;
-              ${mq(BreakPoint.md)} {
-                display: block;
-              }
-            }
-          `}
-        >
+        <li className={navOpen ? "active" : "inactive"} css={css``}>
           <Navigation />
         </li>
       </ul>
