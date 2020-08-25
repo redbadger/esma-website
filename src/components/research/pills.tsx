@@ -19,8 +19,19 @@ const cssPills = css`
     }
 `
 
-const Pill = ({ name, href }, key, css) => (
-    <li css={css} key={key}><a href={href}>{name}</a></li>
+const cssListItem = css`
+    line-height: 2.5em;
+    border-top: solid 1px var(--light-grey);
+    display: block;
+
+    ${mq(BreakPoint.md)} {
+        border: none;
+        display: inline-block;
+    }
+`
+
+const Pill = ({ name, href }, key, cssPill) => (
+    <li css={cssListItem} key={key}><a css={cssPill} href={href}>{name}</a></li>
 )
 
 const Pills = ({ pills, colorActive }) => {
@@ -46,16 +57,15 @@ const Pills = ({ pills, colorActive }) => {
     `
     let cssPill = css`
         ${withPrefixes`user-select: none;`}
-        padding: 8px 12px;
+        padding: 0 12px;
         background-color: var(--white);
-        border-top: solid 1px var(--light-grey);
 
         ${mq(BreakPoint.md)} {
-            display: inline-block;
             border-radius: 9999px;
             border: solid 1px ${colorActive};
+            display: inline-block;
+            height: 100%;
             margin: 4px;
-            padding: 8px;
         }
     `
 
@@ -76,7 +86,7 @@ const Pills = ({ pills, colorActive }) => {
     return <div css={cssPills}>
         <div css={cssContent} onClick={() => setOpen(!isOpen)}>Contents<span className="icon"><FontAwesomeIcon icon={icon} /></span></div>
         <ol css={cssList}>
-            {pills.map((p, i) => Pill(p, i, [p.isActive && cssActive, cssPill] ))}
+            {pills.map((pill, idx) => Pill(pill, idx, [pill.isActive && cssActive, cssPill] ))}
         </ol>
     </div>
 };
