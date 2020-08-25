@@ -43,7 +43,7 @@ const pageStyles = css`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, includeResearchNavigation }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -57,7 +57,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <Global styles={globalStyles} />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        includeResearchNavigation={includeResearchNavigation}
+      />
       <main css={pageStyles}>{children}</main>
       {
         //<footer css={footerStyles}>&nbsp;</footer>
@@ -68,6 +71,11 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  includeResearchNavigation: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  includeResearchNavigation: false,
 };
 
 export default Layout;

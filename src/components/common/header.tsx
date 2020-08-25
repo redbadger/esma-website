@@ -3,6 +3,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import Navigation, { NavToggle } from "./navigation";
 import { BreakPoint, mq } from "../../util/mq";
+import ResearchNavigation from "./research-navigation";
 
 const headerStyles = css`
   position: fixed;
@@ -80,7 +81,10 @@ const headerStyles = css`
   }
 `;
 
-const Header = ({ siteTitle }: HeaderProps): JSX.Element => {
+const Header = ({
+  siteTitle,
+  includeResearchNavigation,
+}: HeaderProps): JSX.Element => {
   const [navOpen, setNavOpen] = React.useState(false);
 
   const toggleNavBar = () => {
@@ -100,12 +104,14 @@ const Header = ({ siteTitle }: HeaderProps): JSX.Element => {
           <Navigation />
         </li>
       </ul>
+      {includeResearchNavigation ? <ResearchNavigation /> : <></>}
     </header>
   );
 };
 
 type HeaderProps = {
   siteTitle: string;
+  includeResearchNavigation: boolean;
 };
 
 Header.defaultProps = {
