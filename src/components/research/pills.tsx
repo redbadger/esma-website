@@ -1,16 +1,25 @@
 import React, { useState } from "react";
 import { css } from "@emotion/core";
-import tw from "twin.macro";
 import PropTypes from "prop-types";
-import { Colors } from "../../util/colors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { mq, BreakPoint } from "../../util/mq";
 
-const cssPills = css`
-    ${tw`container`}
+const withPrefixes = (style) => `
+    ${style}
+    -webkit-${style}
+    -moz-${style}
+    -ms-${style}
 `
 
-const Pill = ({ name, href, isActive }, key, css) => (
+const cssPills = css`
+    ${withPrefixes`box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);`}
+    ${mq(BreakPoint.md)} {
+        ${withPrefixes`box-shadow: none;`}
+    }
+`
+
+const Pill = ({ name, href }, key, css) => (
     <li css={css} key={key}><a href={href}>{name}</a></li>
 )
 
@@ -24,24 +33,50 @@ const Pills = ({ pills, colorActive }) => {
             float: right;
             padding: 0 0.5em;
         }
-        ${tw`md:hidden select-none`}
+        font-size: 1.25em;
+        font-weight: 600;
+        color: var(--midnight);
+        padding: 12px;
+
+        ${mq(BreakPoint.md)} {
+            display: none;
+            ${withPrefixes`user-select: none;`}
+            padding: 12px 0;
+        }
     `
     let cssPill = css`
-        font-size: 16px;
-        font-weight: 600;
-        border-color: ${colorActive};
-        ${tw`md:inline-block md:rounded-full md:border md:border-solid md:m-1 md:p-2`}
-        ${tw`border-0 select-none bg-white`}
+        ${withPrefixes`user-select: none;`}
+        padding: 8px 12px;
+        background-color: var(--white);
+        border-top: solid 1px var(--light-grey);
+
+        ${mq(BreakPoint.md)} {
+            display: inline-block;
+            border-radius: 9999px;
+            border: solid 1px ${colorActive};
+            margin: 4px;
+            padding: 8px;
+        }
     `
 
     let cssActive = css`
-        background-color: ${colorActive};
+        ${mq(BreakPoint.md)} {
+            background-color: ${colorActive};
+        }
+    `
+
+    let cssList = css`
+        display: ${isOpen ? "block" : "none"};
+
+        ${mq(BreakPoint.md)} {
+            display: block;
+        }
     `
 
     return <div css={cssPills}>
-        <h2 css={cssContent} onClick={() => setOpen(!isOpen)}>Contents<span className="icon"><FontAwesomeIcon icon={icon} /></span></h2>
-        <ol css={[!isOpen && tw`hidden`, tw`md:block`]}>
-            {pills.map((p, i) => Pill(p, i, [cssPill, p.isActive && cssActive] ))}
+        <div css={cssContent} onClick={() => setOpen(!isOpen)}>Contents<span className="icon"><FontAwesomeIcon icon={icon} /></span></div>
+        <ol css={cssList}>
+            {pills.map((p, i) => Pill(p, i, [p.isActive && cssActive, cssPill] ))}
         </ol>
     </div>
 };
