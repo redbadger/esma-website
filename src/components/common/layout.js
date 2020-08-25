@@ -23,10 +23,13 @@ const globalStyles = css`
     --yellow: #ffba08;
     --denim: #424b71;
     --error: #b5261d;
+
+    --fixed-header-height: 4.25rem;
   }
   body {
     font-family: Montserrat, Helvetica, Arial;
     font-size: 100%;
+    padding-top: var(--fixed-header-height);
   }
 `;
 

@@ -4,6 +4,7 @@ import { css } from "@emotion/core";
 import tw from "twin.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { mq, BreakPoint } from "../../util/mq";
 
 const destinations = [
   {
@@ -25,7 +26,7 @@ const menuIconStyles = css`
 `;
 
 const navStylesCollapsed = css`
-  ${tw`hidden md:flex float-right justify-between mx-20`}
+  display: none;
 
   a {
     ${tw`text-white text-base font-semibold leading-12 mx-4`}
@@ -35,36 +36,40 @@ const navStylesCollapsed = css`
 const navStylesExpanded = css`
   ${tw`md:flex clear-left bg-midnight relative z-10`}
 
+  ${mq(BreakPoint.md)} {
+    flex-direction: row;
+  }
+
   a {
     ${tw`float-none text-left block text-white text-base font-semibold leading-12 mx-4`}
   }
 `;
 
-const Navigation = () => {
-  const [navbarExpanded, setNavbarExpanded] = React.useState(false);
-  const toggleNavBar = () => {
-    setNavbarExpanded(!navbarExpanded);
-  };
-
+export const NavToggle = ({ toggle }) => {
   return (
-    <>
-      <div
-        role="button"
-        tabIndex={0}
-        css={menuIconStyles}
-        onClick={toggleNavBar}
-        onKeyDown={toggleNavBar}
-      >
-        <FontAwesomeIcon icon={faBars} />
-      </div>
-      <div css={navbarExpanded ? navStylesExpanded : navStylesCollapsed}>
-        {destinations.map((entry, i) => (
+    <div
+      role="button"
+      tabIndex={0}
+      css={menuIconStyles}
+      onClick={toggle}
+      onKeyDown={toggle}
+    >
+      <FontAwesomeIcon icon={faBars} />
+    </div>
+  );
+};
+
+const Navigation = (): JSX.Element => {
+  return (
+    <ul css={navStylesExpanded}>
+      {destinations.map((entry, i) => (
+        <li>
           <Link key={i} to={entry.path}>
             {entry.label}
           </Link>
-        ))}
-      </div>
-    </>
+        </li>
+      ))}
+    </ul>
   );
 };
 
