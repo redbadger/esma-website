@@ -59,6 +59,9 @@ const headerStyles = css`
     ul {
       padding: 0 5rem;
       flex-direction: row;
+      li.inactive {
+        display: block;
+      }
     }
     ul.inner-navigation {
       padding: 0;
@@ -73,9 +76,6 @@ const headerStyles = css`
       a {
         width: unset;
       }
-    }
-    li.inactive {
-      display: block;
     }
   }
 `;
