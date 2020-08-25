@@ -23,15 +23,15 @@ export type ResearchPage = {
 
 export const pages: ResearchPage[] = [
   {
-    className: null,
+    className: "current-page",
     highlightColour: "var(--aqua)",
     faIcon: faShapes,
-    href: "/research/early",
+    href: "/research/early-years/executive-summary",
     name: "Early years",
     icon: EarlyDevIcon,
   },
   {
-    className: "current-page",
+    className: null,
     highlightColour: "var(--yellow)",
     faIcon: faPencilAlt,
     href: "/research/school",

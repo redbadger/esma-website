@@ -16,6 +16,8 @@ const cssPills = css`
   ${withPrefixes`box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);`}
   ${mq(BreakPoint.md)} {
     ${withPrefixes`box-shadow: none;`}
+    padding: 1.5rem 0;
+    background-color: var(--taupe);
   }
 `;
 
@@ -52,7 +54,7 @@ const cssListItem = css`
   }
 `;
 
-const Pill = ({ name, href, idx, cssPill }) => (
+const Pill = ({ name, href, cssPill }) => (
   <li css={cssListItem}>
     <a css={cssPill} href={href}>
       {name}
@@ -60,7 +62,18 @@ const Pill = ({ name, href, idx, cssPill }) => (
   </li>
 );
 
-const Pills = ({ pills, colorActive }) => {
+type PillData = {
+  name: string;
+  href: string;
+  isActive?: boolean;
+};
+
+type PillsProps = {
+  pills: Array<PillData>;
+  colorActive: string;
+};
+
+const Pills = ({ pills, colorActive }: PillsProps) => {
   const [isOpen, setOpen] = useState(false);
 
   let cssPill = css`
@@ -73,7 +86,9 @@ const Pills = ({ pills, colorActive }) => {
       border: solid 1px ${colorActive};
       display: inline-block;
       height: 100%;
-      margin: 4px;
+      margin: 0 0.25rem;
+
+      line-height: 2.75rem;
     }
   `;
 
@@ -97,6 +112,10 @@ const Pills = ({ pills, colorActive }) => {
     ${mq(BreakPoint.md)} {
       transform: scale(1);
       max-height: 40rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   `;
 
@@ -116,14 +135,6 @@ const Pills = ({ pills, colorActive }) => {
       </ol>
     </div>
   );
-};
-
-Pills.propTypes = {
-  pills: PropTypes.arrayOf(
-    PropTypes.shape({ name: PropTypes.string, href: PropTypes.string })
-      .isRequired
-  ),
-  colorActive: PropTypes.string.isRequired,
 };
 
 export default Pills;
