@@ -8,6 +8,7 @@ const researchNavigationCss = css`
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: var(--fixed-header-height);
 
   .scroll-help {
     display: block;
@@ -29,8 +30,8 @@ const researchNavigationCss = css`
   }
 
   ${mq(BreakPoint.md)} {
-    ul {
-      flex-direction: column;
+    .scroll-help {
+      display: none;
     }
   }
 

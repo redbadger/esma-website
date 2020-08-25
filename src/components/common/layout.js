@@ -25,11 +25,18 @@ const globalStyles = css`
     --error: #b5261d;
 
     --fixed-header-height: 4.25rem;
+    --body-skip-height: 4.25rem;
   }
   body {
     font-family: Montserrat, Helvetica, Arial;
     font-size: 100%;
-    padding-top: var(--fixed-header-height);
+    padding-top: var(--body-skip-height);
+  }
+`;
+
+const globalStylesDoubleHeader = css`
+  :root {
+    --body-skip-height: 8.5rem;
   }
 `;
 
@@ -56,7 +63,12 @@ const Layout = ({ children, includeResearchNavigation }) => {
 
   return (
     <>
-      <Global styles={globalStyles} />
+      <Global
+        styles={[
+          globalStyles,
+          includeResearchNavigation ? globalStylesDoubleHeader : "",
+        ]}
+      />
       <Header
         siteTitle={data.site.siteMetadata.title}
         includeResearchNavigation={includeResearchNavigation}
