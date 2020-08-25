@@ -4,7 +4,7 @@ import Pills from "./pills";
 
 describe("Pills", () => {
     const samplePills = [
-        { name: "Executive Summary", href: "/" },
+        { name: "Executive Summary", href: "/", isActive: true },
         { name: "Early Years Foundation Stage", href: "/" },
         { name: "Family Circumstances", href: "/" },
         { name: "Social class and underachievement", href: "/" },

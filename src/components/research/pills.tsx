@@ -10,8 +10,8 @@ const cssPills = css`
     ${tw`container`}
 `
 
-const Pill = (css) => ({ name, href }, idx) => (
-    <li css={css} key={idx}><a href={href}>{name}</a></li>
+const Pill = ({ name, href, isActive }, key, css) => (
+    <li css={css} key={key}><a href={href}>{name}</a></li>
 )
 
 const Pills = ({ pills, colorActive }) => {
@@ -26,18 +26,22 @@ const Pills = ({ pills, colorActive }) => {
         }
         ${tw`md:hidden select-none`}
     `
-    let StyledPill = Pill(css`
+    let cssPill = css`
         font-size: 16px;
         font-weight: 600;
         border-color: ${colorActive};
         ${tw`md:inline-block md:rounded-full md:border md:border-solid md:m-1 md:p-2`}
         ${tw`border-0 select-none bg-white`}
-    `)
+    `
+
+    let cssActive = css`
+        background-color: ${colorActive};
+    `
 
     return <div css={cssPills}>
         <h2 css={cssContent} onClick={() => setOpen(!isOpen)}>Contents<span className="icon"><FontAwesomeIcon icon={icon} /></span></h2>
         <ol css={[!isOpen && tw`hidden`, tw`md:block`]}>
-            {pills.map(StyledPill)}
+            {pills.map((p, i) => Pill(p, i, [cssPill, p.isActive && cssActive] ))}
         </ol>
     </div>
 };
