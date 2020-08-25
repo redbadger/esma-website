@@ -3,43 +3,48 @@ import { css } from "@emotion/core";
 import tw from "twin.macro";
 import PropTypes from "prop-types";
 import { Colors } from "../../util/colors";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const cssPills = css`
     ${tw`container`}
 `
-const cssPill = css`
-    background-color: ${Colors.taupe};
-    ${tw`md:rounded-full md:border-2 md:inline-block md:border-black md:border-solid md:m-1 px-2 py-1`}
-`
 
-const Pill = ({ name, href }, idx) => (
-    <li css={cssPill} key={idx}><a href={href}>{name}</a></li>
+const Pill = (css) => ({ name, href }, idx) => (
+    <li css={css} key={idx}><a href={href}>{name}</a></li>
 )
 
-const Pills = ({ pills }) => {
+const Pills = ({ pills, colorActive }) => {
     const [isOpen, setOpen] = useState(false);
 
-    const buttonChar = isOpen ? "↑" : "↓";
+    const icon = isOpen ? faChevronUp : faChevronDown;
 
     const cssContent = css`
-        ::after {
-            content: "${buttonChar}";
-            position: absolute;
-            right: 0;
+        .icon {
+            float: right;
+            padding: 0 0.5em;
         }
-        ${tw`md:hidden`}
+        ${tw`md:hidden select-none`}
     `
+    let StyledPill = Pill(css`
+        font-size: 16px;
+        font-weight: 600;
+        border-color: ${colorActive};
+        ${tw`md:inline-block md:rounded-full md:border md:border-solid md:m-1 md:p-2`}
+        ${tw`border-0 select-none bg-white`}
+    `)
 
     return <div css={cssPills}>
-        <h2 css={cssContent} onClick={() => setOpen(!isOpen)}>Contents</h2>
+        <h2 css={cssContent} onClick={() => setOpen(!isOpen)}>Contents<span className="icon"><FontAwesomeIcon icon={icon} /></span></h2>
         <ol css={[!isOpen && tw`hidden`, tw`md:block`]}>
-            {pills.map(Pill)}
+            {pills.map(StyledPill)}
         </ol>
     </div>
 };
 
 Pills.propTypes = {
   pills: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string, href: PropTypes.string }).isRequired),
+  colorActive: PropTypes.string.isRequired
 };
 
 export default Pills;

@@ -17,10 +17,11 @@ describe("Pills", () => {
         { name: "Impact of COVID-19", href: "/" }
     ];
 
+  const colorActive = "yellow";
 
   it("renders correctly", () => {
     const tree = renderer
-      .create(<Pills pills={samplePills} />)
+      .create(<Pills pills={samplePills} colorActive={colorActive} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -19,10 +19,12 @@ const PillsPage = () => {
     { name: "Impact of COVID-19", href: "/" }
   ];
 
+  const colorActive = "orange";
+
   return (
     <Layout>
       <SEO title="Home" />
-      <Pills pills={samplePills}></Pills>
+      <Pills pills={samplePills} colorActive={colorActive}></Pills>
       <p>A future footer.</p>
     </Layout>
   );
