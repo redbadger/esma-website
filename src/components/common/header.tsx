@@ -11,6 +11,7 @@ const headerStyles = css`
   z-index: 2;
   width: 100%;
   background-color: var(--midnight);
+  font-size: 1.125rem;
 
   h1 {
     color: var(--white);
@@ -48,7 +49,6 @@ const headerStyles = css`
       display: block;
       text-align: left;
       color: var(--white);
-      font-size: 1rem;
       font-weight: 600;
       line-height: 3rem;
       width: 100%;

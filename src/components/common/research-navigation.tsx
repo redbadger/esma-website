@@ -1,6 +1,14 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBriefcase,
+  faPencilAlt,
+  faBookOpen,
+  faGraduationCap,
+  faShapes,
+} from "@fortawesome/free-solid-svg-icons";
 
 const researchNavigationCss = css`
   background-color: var(--white);
@@ -9,6 +17,7 @@ const researchNavigationCss = css`
   flex-direction: row;
   align-items: center;
   height: var(--fixed-header-height);
+  color: var(--midnight);
 
   .scroll-help {
     display: block;
@@ -19,9 +28,17 @@ const researchNavigationCss = css`
     cursor: pointer;
   }
 
+  li > svg {
+    color: var(--highlight-colour);
+  }
+  li > span {
+    padding: 0 0.5rem;
+  }
+
   ul {
     overflow-x: scroll;
     flex-direction: row;
+    justify-content: flex-start;
     padding: 0;
     li {
       flex-shrink: 0;
@@ -30,6 +47,7 @@ const researchNavigationCss = css`
   }
 
   ${mq(BreakPoint.md)} {
+    padding: 0 5rem;
     .scroll-help {
       display: none;
     }
@@ -42,15 +60,14 @@ const researchNavigationCss = css`
     &:hover,
     &:focus,
     &:active {
-      border-color: blue;
+      border-color: var(--highlight-colour);
     }
     transition: 1s border-color ease;
   }
-  li:hover {
-  }
 
   li.current-page {
-    border-bottom: 0.5rem solid black;
+    border-bottom: 0.5rem solid var(--highlight-colour);
+    font-weight: 800;
   }
 `;
 
@@ -83,11 +100,35 @@ const ResearchNavigation = (): JSX.Element => {
         <p>&lt;</p>
       </div>
       <ul ref={el => (thingToScroll = el)}>
-        <li>Early years</li>
-        <li className="current-page">School years</li>
-        <li>Further Education</li>
-        <li>Higher Education</li>
-        <li>Working life</li>
+        <li
+          css={css`
+            --highlight-colour: var(--colour-secondary-aqua);
+          `}
+        >
+          <FontAwesomeIcon icon={faShapes} />
+          <span>Early years</span>
+        </li>
+        <li
+          className="current-page"
+          css={css`
+            --highlight-colour: var(--yellow);
+          `}
+        >
+          <FontAwesomeIcon icon={faPencilAlt} />
+          <span>School years</span>
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faBookOpen} />
+          <span>Further Education</span>
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faGraduationCap} />
+          <span>Higher Education</span>
+        </li>
+        <li>
+          <FontAwesomeIcon icon={faBriefcase} />
+          <span>Working life</span>
+        </li>
       </ul>
       <div
         className="scroll-help right"
