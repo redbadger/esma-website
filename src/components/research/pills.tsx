@@ -19,6 +19,23 @@ const cssPills = css`
     }
 `
 
+const cssContent = css`
+    .icon {
+        float: right;
+        padding: 0 0.5em;
+    }
+    font-size: 1.25em;
+    font-weight: 600;
+    color: var(--midnight);
+    padding: 12px;
+
+    ${mq(BreakPoint.md)} {
+        display: none;
+        ${withPrefixes`user-select: none;`}
+        padding: 12px 0;
+    }
+`
+
 const cssListItem = css`
     line-height: 2.5em;
     border-top: solid 1px var(--light-grey);
@@ -30,8 +47,8 @@ const cssListItem = css`
     }
 `
 
-const Pill = ({ name, href }, key, cssPill) => (
-    <li css={cssListItem} key={key}><a css={cssPill} href={href}>{name}</a></li>
+const Pill = ({ name, href, idx, cssPill }) => (
+    <li css={cssListItem}><a css={cssPill} href={href}>{name}</a></li>
 )
 
 const Pills = ({ pills, colorActive }) => {
@@ -39,22 +56,6 @@ const Pills = ({ pills, colorActive }) => {
 
     const icon = isOpen ? faChevronUp : faChevronDown;
 
-    const cssContent = css`
-        .icon {
-            float: right;
-            padding: 0 0.5em;
-        }
-        font-size: 1.25em;
-        font-weight: 600;
-        color: var(--midnight);
-        padding: 12px;
-
-        ${mq(BreakPoint.md)} {
-            display: none;
-            ${withPrefixes`user-select: none;`}
-            padding: 12px 0;
-        }
-    `
     let cssPill = css`
         ${withPrefixes`user-select: none;`}
         padding: 0 12px;
@@ -86,7 +87,10 @@ const Pills = ({ pills, colorActive }) => {
     return <div css={cssPills}>
         <div css={cssContent} onClick={() => setOpen(!isOpen)}>Contents<span className="icon"><FontAwesomeIcon icon={icon} /></span></div>
         <ol css={cssList}>
-            {pills.map((pill, idx) => Pill(pill, idx, [pill.isActive && cssActive, cssPill] ))}
+            {pills.map((pill, idx) => {
+                const cssPillInstance = [pill.isActive && cssActive, cssPill];
+                return <Pill {...pill} key={idx} cssPill={cssPillInstance} />
+            })}
         </ol>
     </div>
 };

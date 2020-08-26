@@ -38,7 +38,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-1sjfmej-cssActive-cssPill"
+        className="css-1x7lved-cssActive-cssPill"
         href="/"
       >
         Executive Summary
