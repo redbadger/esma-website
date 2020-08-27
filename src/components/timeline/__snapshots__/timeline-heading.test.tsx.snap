@@ -2,7 +2,7 @@
 
 exports[`TimelineHeading renders correctly 1`] = `
 <div
-  className="css-f1r4fi-timelineHeadingStyles"
+  className="css-1s92ovj-timelineHeadingStyles"
 >
   <h1>
     A lifetime of social inequality
