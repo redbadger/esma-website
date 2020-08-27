@@ -2,13 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBriefcase,
-  faPencilAlt,
-  faBookOpen,
-  faGraduationCap,
-  faShapes,
-} from "@fortawesome/free-solid-svg-icons";
+import { pages, ResearchPage } from "./research-pages";
 
 const researchNavigationCss = css`
   background-color: var(--white);
@@ -28,11 +22,14 @@ const researchNavigationCss = css`
     cursor: pointer;
   }
 
-  li > svg {
-    color: var(--highlight-colour);
-  }
-  li > span {
-    padding: 0 0.5rem;
+  li > a {
+    height: 100%;
+    > svg {
+      color: var(--highlight-colour);
+    }
+    > span {
+      padding: 0 0.5rem;
+    }
   }
 
   ul {
@@ -50,6 +47,9 @@ const researchNavigationCss = css`
     padding: 0 5rem;
     .scroll-help {
       display: none;
+    }
+    ul {
+      overflow-x: visible;
     }
   }
 
@@ -71,21 +71,43 @@ const researchNavigationCss = css`
   }
 `;
 
+const ResearchNavigationLink = ({
+  className,
+  highlightColour,
+  faIcon,
+  href,
+  name,
+}: ResearchPage): JSX.Element => {
+  return (
+    <li
+      className={className}
+      css={css`
+        --highlight-colour: ${highlightColour};
+      `}
+    >
+      <a href={href}>
+        <FontAwesomeIcon icon={faIcon} />
+        <span>{name}</span>
+      </a>
+    </li>
+  );
+};
+
 const ResearchNavigation = (): JSX.Element => {
-  const ratioToScroll = 0.8;
-  let thingToScroll;
+  const widthScrollRatio = 0.8;
+  let listElement: HTMLUListElement;
 
   const scrollLeft = () => {
-    thingToScroll.scrollBy({
-      left: -thingToScroll.clientWidth * ratioToScroll,
+    listElement.scrollBy({
+      left: -listElement.clientWidth * widthScrollRatio,
       behavior: "smooth",
     });
   };
 
   const scrollRight = () => {
-    console.log(thingToScroll.clientWidth);
-    thingToScroll.scrollBy({
-      left: thingToScroll.clientWidth * ratioToScroll,
+    console.log(listElement.clientWidth);
+    listElement.scrollBy({
+      left: listElement.clientWidth * widthScrollRatio,
       behavior: "smooth",
     });
   };
@@ -99,36 +121,10 @@ const ResearchNavigation = (): JSX.Element => {
       >
         <p>&lt;</p>
       </div>
-      <ul ref={el => (thingToScroll = el)}>
-        <li
-          css={css`
-            --highlight-colour: var(--aqua);
-          `}
-        >
-          <FontAwesomeIcon icon={faShapes} />
-          <span>Early years</span>
-        </li>
-        <li
-          className="current-page"
-          css={css`
-            --highlight-colour: var(--yellow);
-          `}
-        >
-          <FontAwesomeIcon icon={faPencilAlt} />
-          <span>School years</span>
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faBookOpen} />
-          <span>Further Education</span>
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faGraduationCap} />
-          <span>Higher Education</span>
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faBriefcase} />
-          <span>Working life</span>
-        </li>
+      <ul ref={el => (listElement = el)}>
+        {pages.map(page => (
+          <ResearchNavigationLink {...page} key={page.name} />
+        ))}
       </ul>
       <div
         className="scroll-help right"

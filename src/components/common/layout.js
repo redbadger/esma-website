@@ -25,6 +25,7 @@ const globalStyles = css`
 
     --aqua: #7dcfb6;
     --gray: #cfd3da;
+    --copperfield: #df886c;
 
     --fixed-header-height: 4.25rem;
     --body-skip-height: 4.25rem;
