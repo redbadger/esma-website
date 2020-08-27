@@ -54,6 +54,16 @@ const pageStyles = css`
 `;
 
 const Layout = ({ children, includeResearchNavigation }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+
   return (
     <>
       <Global
@@ -63,7 +73,7 @@ const Layout = ({ children, includeResearchNavigation }) => {
         ]}
       />
       <Header
-        siteTitle="Employers Social Mobility Alliance"
+        siteTitle={data.site.siteMetadata.title}
         includeResearchNavigation={includeResearchNavigation}
       />
       <main css={pageStyles}>{children}</main>
