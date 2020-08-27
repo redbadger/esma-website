@@ -74,7 +74,7 @@ const keyStatArticleCss = css`
     text-decoration: underline;
   }
   .summary {
-    border: 1px solid var(--colour-secondary-gray);
+    border: 1px solid var(--gray);
     margin: auto 0;
     text-align: left;
     h4 {

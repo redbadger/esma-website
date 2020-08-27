@@ -4,7 +4,7 @@
     "60-80%": "#8c3f67",
     "40-60%": "#6e509b",
     "20-40%": "#5362ce",
-    "Bottom 20%": "var(--colour-secondary-cobalt)"
+    "Bottom 20%": "var(--cobalt)"
   },
   "stats": {
     "london": {

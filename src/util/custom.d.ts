@@ -1,4 +1,4 @@
 declare module "*.svg" {
-  const content: any;
+  const content: React.ElementType;
   export default content;
 }

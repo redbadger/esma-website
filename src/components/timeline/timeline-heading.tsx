@@ -1,6 +1,5 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { Colors } from "../../util/colors";
 import { mq, BreakPoint } from "../../util/mq";
 
 const timelineHeadingStyles = css`
@@ -9,14 +8,14 @@ const timelineHeadingStyles = css`
   flex-direction: column;
   align-items: center;
   h1 {
-    color: ${Colors.midnight};
+    color: var(--midnight);
     font-size: 2rem;
     line-height: 2.75rem;
     font-weight: 600;
   }
 
   p {
-    color: ${Colors.midnight};
+    color: var(--midnight);
     font-size: 1rem;
     line-height: 1.875rem;
     margin-right: 2.5rem;

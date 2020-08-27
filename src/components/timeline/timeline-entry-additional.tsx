@@ -2,12 +2,11 @@ import React from "react";
 import { css } from "@emotion/core";
 import Button from "../common/button";
 import BulbIcon from "../../svg/lightbulb.svg";
-import { Colors } from "../../util/colors";
 
 const timelineEntryAdditionalStyles = css`
   height: 43.75rem;
-  background: ${Colors.taupe};
-  border: 0.3125rem solid ${Colors.white};
+  background: var(--taupe);
+  border: 0.3125rem solid var(--white);
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: flex;
@@ -18,7 +17,7 @@ const timelineEntryAdditionalStyles = css`
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 600;
-    color: ${Colors.midnight};
+    color: var(--midnight);
     margin-bottom: 1rem;
   }
 

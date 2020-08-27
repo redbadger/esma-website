@@ -1,12 +1,11 @@
 import React from "react";
 import TimelineHeading from "./timeline-heading";
 import { css } from "@emotion/core";
-import { Colors } from "../../util/colors";
 import TimelineGrid from "./timeline-grid";
 import { mq, BreakPoint } from "../../util/mq";
 
 const timelineStyles = css`
-  background-color: ${Colors.taupe};
+  background-color: var(--taupe);
   padding-top: 9rem;
   ${mq(BreakPoint.lg)} {
     padding-top: 4.5rem;

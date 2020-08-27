@@ -3,6 +3,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import Navigation, { NavToggle } from "./navigation";
 import { BreakPoint, mq } from "../../util/mq";
+import ResearchNavigation from "./research-navigation";
 
 const headerStyles = css`
   position: fixed;
@@ -10,6 +11,7 @@ const headerStyles = css`
   z-index: 2;
   width: 100%;
   background-color: var(--midnight);
+  font-size: 1.125rem;
 
   h1 {
     color: var(--white);
@@ -47,7 +49,6 @@ const headerStyles = css`
       display: block;
       text-align: left;
       color: var(--white);
-      font-size: 1rem;
       font-weight: 600;
       line-height: 3rem;
       width: 100%;
@@ -80,7 +81,10 @@ const headerStyles = css`
   }
 `;
 
-const Header = ({ siteTitle }: HeaderProps): JSX.Element => {
+const Header = ({
+  siteTitle,
+  includeResearchNavigation,
+}: HeaderProps): JSX.Element => {
   const [navOpen, setNavOpen] = React.useState(false);
 
   const toggleNavBar = () => {
@@ -100,12 +104,14 @@ const Header = ({ siteTitle }: HeaderProps): JSX.Element => {
           <Navigation />
         </li>
       </ul>
+      {includeResearchNavigation ? <ResearchNavigation /> : <></>}
     </header>
   );
 };
 
 type HeaderProps = {
   siteTitle: string;
+  includeResearchNavigation: boolean;
 };
 
 Header.defaultProps = {

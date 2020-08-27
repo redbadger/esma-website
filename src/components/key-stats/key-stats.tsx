@@ -6,8 +6,6 @@ import SocietyArticle from "./society";
 import BusinessArticle from "./businesses";
 import { KeyStatsCategories } from "./types";
 
-const colours = require("./colours.css");
-
 const keyStatsCss = css`
   position: relative;
   /* necessary to clear the hero hanging
@@ -115,7 +113,7 @@ const KeyStats = () => {
   }
 
   return (
-    <section css={[keyStatsCss, colours, articleContainerCss]}>
+    <section css={[keyStatsCss, articleContainerCss]}>
       <header>
         <h2>The national picture</h2>
         <p>

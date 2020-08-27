@@ -7,7 +7,6 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 import { Global, css } from "@emotion/core";
 import tw from "twin.macro";
 
@@ -24,12 +23,23 @@ const globalStyles = css`
     --denim: #424b71;
     --error: #b5261d;
 
+    --aqua: #7dcfb6;
+    --gray: #cfd3da;
+    --copperfield: #df886c;
+
     --fixed-header-height: 4.25rem;
+    --body-skip-height: 4.25rem;
   }
   body {
     font-family: Montserrat, Helvetica, Arial;
     font-size: 100%;
-    padding-top: var(--fixed-header-height);
+    padding-top: var(--body-skip-height);
+  }
+`;
+
+const globalStylesDoubleHeader = css`
+  :root {
+    --body-skip-height: 8.5rem;
   }
 `;
 
@@ -43,7 +53,7 @@ const pageStyles = css`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, includeResearchNavigation }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -56,8 +66,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Global styles={globalStyles} />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Global
+        styles={[
+          globalStyles,
+          includeResearchNavigation ? globalStylesDoubleHeader : "",
+        ]}
+      />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        includeResearchNavigation={includeResearchNavigation}
+      />
       <main css={pageStyles}>{children}</main>
       {
         //<footer css={footerStyles}>&nbsp;</footer>
@@ -68,6 +86,11 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  includeResearchNavigation: PropTypes.bool,
+};
+
+Layout.defaultProps = {
+  includeResearchNavigation: false,
 };
 
 export default Layout;
