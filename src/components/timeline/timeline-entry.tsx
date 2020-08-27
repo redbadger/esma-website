@@ -1,7 +1,6 @@
 import React from "react";
 import TimelineImage from "./timeline-image";
 import { css } from "@emotion/core";
-import { Colors } from "../../util/colors";
 import { mq, BreakPoint } from "../../util/mq";
 
 const timelineEntryStyles = css`
@@ -15,8 +14,8 @@ const timelineEntryStyles = css`
   }
 
   height: 43.75rem;
-  background: ${Colors.white};
-  color: ${Colors.midnight};
+  background: var(--white);
+  color: var(--midnight);
   margin-bottom: 1.875rem;
   position: relative;
 
@@ -74,8 +73,8 @@ const timelineEntryStyles = css`
     width: 2rem;
 
     &::after {
-      border-right: 0.125rem solid ${Colors.midnight};
-      border-top: 0.125rem solid ${Colors.midnight};
+      border-right: 0.125rem solid var(--midnight);
+      border-top: 0.125rem solid var(--midnight);
       content: "";
       display: block;
       height: 0.625rem;
@@ -87,7 +86,7 @@ const timelineEntryStyles = css`
     }
 
     &::before {
-      border-bottom: 0.125rem solid ${Colors.midnight};
+      border-bottom: 0.125rem solid var(--midnight);
       content: "";
       left: 0;
       position: absolute;

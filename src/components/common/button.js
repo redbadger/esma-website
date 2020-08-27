@@ -2,7 +2,6 @@ import React from "react";
 import { css } from "@emotion/core";
 import tw from "twin.macro";
 import PropTypes from "prop-types";
-import { Colors } from "../../util/colors";
 
 const darkStyles = css`
   ${tw`h-12 w-88 bg-midnight text-white font-bold`}
@@ -17,8 +16,8 @@ const lightBlueStyles = css`
 `;
 
 const borderlessStyles = css`
-  background: ${Colors.white};
-  color: ${Colors.midnight};
+  background: var(--white);
+  color: var(--midnight);
   width: 7.875rem;
 `;
 
