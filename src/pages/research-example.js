@@ -20,6 +20,7 @@ const samplePills = [
 
 const colorActive = "orange";
 
+// TODO: remove this page when we have the real one
 const IndexPage = () => {
   return (
     <Layout includeResearchNavigation={true}>
