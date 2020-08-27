@@ -23,6 +23,9 @@ const globalStyles = css`
     --denim: #424b71;
     --error: #b5261d;
 
+    --aqua: #7dcfb6;
+    --gray: #cfd3da;
+
     --fixed-header-height: 4.25rem;
     --body-skip-height: 4.25rem;
   }

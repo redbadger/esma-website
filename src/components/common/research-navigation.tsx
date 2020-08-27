@@ -102,7 +102,7 @@ const ResearchNavigation = (): JSX.Element => {
       <ul ref={el => (thingToScroll = el)}>
         <li
           css={css`
-            --highlight-colour: var(--colour-secondary-aqua);
+            --highlight-colour: var(--aqua);
           `}
         >
           <FontAwesomeIcon icon={faShapes} />

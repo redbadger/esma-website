@@ -1,8 +1,8 @@
 {
   "colours": {
-    "Working class background": "var(--colour-secondary-aqua)",
-    "Intermediate background": "var(--colour-secondary-cobalt)",
-    "Professional background": "var(--colour-secondary-yellow)"
+    "Working class background": "var(--aqua)",
+    "Intermediate background": "var(--cobalt)",
+    "Professional background": "var(--yellow)"
   },
   "stats": {
     "london": {

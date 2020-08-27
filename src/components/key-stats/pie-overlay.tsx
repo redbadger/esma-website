@@ -30,7 +30,7 @@ const pieCss = css`
     right: 0;
     text-align: left;
     background: white;
-    border: 1px solid var(--colour-secondary-gray);
+    border: 1px solid var(--gray);
     width: 20rem;
     padding: 0.75rem;
     h4 {
