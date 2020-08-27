@@ -3,6 +3,10 @@ import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { pages, ResearchPage } from "./research-pages";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const researchNavigationCss = css`
   background-color: var(--white);
@@ -26,6 +30,9 @@ const researchNavigationCss = css`
     height: 100%;
     > svg {
       color: var(--highlight-colour);
+      display: inline-block;
+      height: 1.5rem;
+      vertical-align: bottom;
     }
     > span {
       padding: 0 0.5rem;
@@ -74,10 +81,11 @@ const researchNavigationCss = css`
 const ResearchNavigationLink = ({
   className,
   highlightColour,
-  faIcon,
   href,
   name,
+  icon,
 }: ResearchPage): JSX.Element => {
+  const Icon = icon;
   return (
     <li
       className={className}
@@ -86,7 +94,7 @@ const ResearchNavigationLink = ({
       `}
     >
       <a href={href}>
-        <FontAwesomeIcon icon={faIcon} />
+        <Icon />
         <span>{name}</span>
       </a>
     </li>
@@ -105,7 +113,6 @@ const ResearchNavigation = (): JSX.Element => {
   };
 
   const scrollRight = () => {
-    console.log(listElement.clientWidth);
     listElement.scrollBy({
       left: listElement.clientWidth * widthScrollRatio,
       behavior: "smooth",
@@ -119,7 +126,7 @@ const ResearchNavigation = (): JSX.Element => {
         onClick={scrollLeft}
         onKeyDown={scrollRight}
       >
-        <p>&lt;</p>
+        <FontAwesomeIcon icon={faChevronLeft} />
       </div>
       <ul ref={el => (listElement = el)}>
         {pages.map(page => (
@@ -131,7 +138,7 @@ const ResearchNavigation = (): JSX.Element => {
         onClick={scrollRight}
         onKeyDown={scrollRight}
       >
-        <p>&gt;</p>
+        <FontAwesomeIcon icon={faChevronRight} />
       </div>
     </nav>
   );

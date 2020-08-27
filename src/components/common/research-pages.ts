@@ -6,6 +6,11 @@ import {
   faShapes,
 } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import EarlyDevIcon from "../../svg/blocks.svg";
+import SchoolYearsIcon from "../../svg/pencil.svg";
+import FurtherEduIcon from "../../svg/book.svg";
+import HigherEduIcon from "../../svg/cap.svg";
+import WorkingLifeIcon from "../../svg/briefcase.svg";
 
 export type ResearchPage = {
   className: string;
@@ -13,6 +18,7 @@ export type ResearchPage = {
   faIcon: IconProp;
   href: string;
   name: string;
+  icon: React.ElementType;
 };
 
 export const pages: ResearchPage[] = [
@@ -22,6 +28,7 @@ export const pages: ResearchPage[] = [
     faIcon: faShapes,
     href: "/research/early",
     name: "Early years",
+    icon: EarlyDevIcon,
   },
   {
     className: "current-page",
@@ -29,6 +36,7 @@ export const pages: ResearchPage[] = [
     faIcon: faPencilAlt,
     href: "/research/school",
     name: "School years",
+    icon: SchoolYearsIcon,
   },
   {
     className: null,
@@ -36,6 +44,7 @@ export const pages: ResearchPage[] = [
     faIcon: faBookOpen,
     href: "/research/further",
     name: "Further education",
+    icon: FurtherEduIcon,
   },
   {
     className: null,
@@ -43,6 +52,7 @@ export const pages: ResearchPage[] = [
     faIcon: faGraduationCap,
     href: "/research/higher",
     name: "Higher education",
+    icon: HigherEduIcon,
   },
   {
     className: null,
@@ -50,5 +60,6 @@ export const pages: ResearchPage[] = [
     faIcon: faBriefcase,
     href: "/research/working",
     name: "Working life",
+    icon: WorkingLifeIcon,
   },
 ];
