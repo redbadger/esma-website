@@ -43,13 +43,13 @@ const researchNavigationCss = css`
     }
   }
 
-  ${mq(BreakPoint.md)} {
-    padding: 0 5rem;
+  ${mq(BreakPoint.lg)} {
     .scroll-help {
       display: none;
     }
     ul {
       overflow-x: visible;
+      justify-content: center;
     }
   }
 
