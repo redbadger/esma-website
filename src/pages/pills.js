@@ -16,7 +16,7 @@ const PillsPage = () => {
     { name: "Low aspirations", href: "/" },
     { name: "Access to career advice", href: "/" },
     { name: "Gaps in attainnment", href: "/" },
-    { name: "Impact of COVID-19", href: "/" }
+    { name: "Impact of COVID-19", href: "/" },
   ];
 
   const colorActive = "orange";
