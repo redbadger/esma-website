@@ -10,7 +10,7 @@ import {
 
 const researchNavigationCss = css`
   background-color: var(--white);
-  box-shadow: rgba(0, 0, 0, 0.15) 0rem 1rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.25rem 0.375rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,7 +22,6 @@ const researchNavigationCss = css`
     width: 2rem;
     text-align: center;
     font-size: 3rem;
-    box-shadow: rgba(0, 0, 0, 0.15) 0rem 0rem 1rem;
     cursor: pointer;
   }
 
@@ -50,30 +49,31 @@ const researchNavigationCss = css`
     }
   }
 
-  ${mq(BreakPoint.lg)} {
+  ${mq(BreakPoint.xl)} {
     .scroll-help {
       display: none;
     }
     ul {
+      padding: 0 4rem;
       overflow-x: visible;
-      justify-content: center;
     }
   }
 
   li {
     margin-left: 1rem;
     margin-right: 1rem;
-    border-bottom: 0.5rem solid rgba(255, 255, 255, 0);
+    border-bottom: 0.375rem solid transparent;
+    border-top: 0.375rem solid transparent;
     &:hover,
     &:focus,
     &:active {
-      border-color: var(--highlight-colour);
+      border-bottom-color: var(--highlight-colour);
     }
-    transition: 1s border-color ease;
+    transition: 0.6s border-color ease;
   }
 
   li.current-page {
-    border-bottom: 0.5rem solid var(--highlight-colour);
+    border-bottom-color: var(--highlight-colour);
     font-weight: 800;
   }
 `;

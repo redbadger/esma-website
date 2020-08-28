@@ -52,7 +52,6 @@ const headerStyles = css`
       font-weight: 600;
       line-height: 3rem;
       width: 100%;
-      margin: 0 1rem;
     }
   }
 
