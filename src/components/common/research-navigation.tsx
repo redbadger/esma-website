@@ -19,10 +19,15 @@ const researchNavigationCss = css`
 
   .scroll-help {
     display: block;
-    width: 2rem;
+    width: 3rem;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    &.can-scroll {
+      opacity: 1;
+    }
   }
 
   li > a {
@@ -102,6 +107,8 @@ const ResearchNavigationLink = ({
 };
 
 const ResearchNavigation = (): JSX.Element => {
+  const [canScrollLeft, setCanScrollLeft] = React.useState(true);
+  const [canScrollRight, setCanScrollRight] = React.useState(true);
   const widthScrollRatio = 0.8;
   let listElement: HTMLUListElement;
 
@@ -119,12 +126,41 @@ const ResearchNavigation = (): JSX.Element => {
     });
   };
 
+  const updateScrollers = overflowElement => {
+    if (!overflowElement) {
+      return;
+    }
+    setCanScrollLeft(overflowElement.scrollLeft > 0);
+    // Firefox gives us a really nice API feature, 'scrollLeftMax'
+    // for other browsers, there's the classic.
+    const scrollLeftMax =
+      overflowElement.scrollLeftMax ||
+      overflowElement.scrollWidth - overflowElement.clientWidth;
+    setCanScrollRight(overflowElement.scrollLeft < scrollLeftMax);
+  };
+
+  const updateCanScroll = target => {
+    // We request an animation frame so that the scrolling finishes before we
+    // attempt to make any update to the current state.
+    // The 'scroll' event has a rapid fire rate, and we only need to change anything
+    // when the scrolling is finished.
+    window.requestAnimationFrame(() => updateScrollers(target));
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("resize", () => updateCanScroll(listElement));
+    listElement.addEventListener("scroll", event =>
+      updateCanScroll(event.target)
+    );
+    updateScrollers(listElement);
+  });
+
   return (
     <nav css={researchNavigationCss}>
       <div
-        className="scroll-help left"
+        className={`scroll-help left ${canScrollLeft ? "can-scroll" : ""}`}
         onClick={scrollLeft}
-        onKeyDown={scrollRight}
+        onKeyDown={scrollLeft}
       >
         <FontAwesomeIcon icon={faChevronLeft} />
       </div>
@@ -134,7 +170,7 @@ const ResearchNavigation = (): JSX.Element => {
         ))}
       </ul>
       <div
-        className="scroll-help right"
+        className={`scroll-help right ${canScrollRight ? "can-scroll" : ""}`}
         onClick={scrollRight}
         onKeyDown={scrollRight}
       >
