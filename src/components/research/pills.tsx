@@ -62,7 +62,7 @@ const cssList = css`
   transform: scale(1, 0);
   max-height: 0;
   transform-origin: 0 0;
-  transition: transform 0.6s ease-in, max-height 0.6s ease-in;
+  transition: transform 0.6s linear, max-height 0.6s linear;
 
   &.open {
     transform: scale(1);
@@ -74,7 +74,6 @@ const cssList = css`
     a {
       ${withPrefixes`user-select: none;`}
       padding: 0 12px;
-      background-color: var(--white);
 
       ${mq(BreakPoint.md)} {
         border-radius: 9999px;
@@ -99,7 +98,6 @@ const cssList = css`
 
     li a {
       transition: background-color 0.6s ease;
-      background-color: transparent;
     }
 
     li a.current-page,
@@ -111,6 +109,8 @@ const cssList = css`
 
 const cssPills = css`
   ${withPrefixes`box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);`}
+  z-index: 1;
+  position: relative;
 
   .dropdown {
     ${dropdownCssMobile}
