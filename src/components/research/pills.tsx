@@ -97,7 +97,13 @@ const cssList = css`
     align-items: center;
     padding-left: 1.5rem 5rem;
 
-    li a.current-page {
+    li a {
+      transition: background-color 0.6s ease;
+      background-color: transparent;
+    }
+
+    li a.current-page,
+    li a:hover {
       background-color: var(--highlight-color);
     }
   }
@@ -112,7 +118,7 @@ const cssPills = css`
 
   ${mq(BreakPoint.md)} {
     ${withPrefixes`box-shadow: none;`}
-    padding: 1.5rem 0;
+    padding: 1.5rem 4.5rem;
     background-color: var(--taupe);
 
     .dropdown {
