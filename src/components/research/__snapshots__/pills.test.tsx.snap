@@ -2,7 +2,7 @@
 
 exports[`Pills renders correctly 1`] = `
 <div
-  className="css-ns3tyf-cssPills"
+  className="css-k7t418-cssPills"
 >
   <div
     className="css-40leom-cssContent"
@@ -32,13 +32,13 @@ exports[`Pills renders correctly 1`] = `
     </span>
   </div>
   <ol
-    className=" css-vyf68w-cssList"
+    className=" css-1luu7lt-cssList"
   >
     <li
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-10jrpho-cssActive-cssPill"
+        className="css-bvgj3n-cssActive-cssPill"
         href="/"
       >
         Executive Summary
@@ -48,7 +48,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Early Years Foundation Stage
@@ -58,7 +58,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Family Circumstances
@@ -68,7 +68,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Social class and underachievement
@@ -78,7 +78,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         School cultures
@@ -88,7 +88,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Geographical educational inequality
@@ -98,7 +98,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Type and quality of schooling
@@ -108,7 +108,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Low aspirations
@@ -118,7 +118,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Access to career advice
@@ -128,7 +128,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Gaps in attainnment
@@ -138,7 +138,7 @@ exports[`Pills renders correctly 1`] = `
       className="css-j5ezsg-cssListItem"
     >
       <a
-        className="css-19ihlv-cssPill"
+        className="css-1c796n1-cssPill"
         href="/"
       >
         Impact of COVID-19
