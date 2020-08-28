@@ -48,12 +48,19 @@ const researchNavigationCss = css`
     flex-direction: row;
     justify-content: flex-start;
     padding: 0;
-    scrollbar-width: thin;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    /* TODO - decide whether we want a scrollbar
+    
+    scrollbar-width: none;
     scrollbar-color: transparent transparent;
     transition: scrollbar-color 0.5s linear;
     &:hover {
       scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
     }
+    */
     li {
       flex-shrink: 0;
       width: unset;
