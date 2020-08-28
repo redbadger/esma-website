@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pills renders correctly 1`] = `
-<div
-  className="css-k7t418-cssPills"
+<nav
+  className="css-15dfcdf-dropdownCssMobile-cssListItem-cssList-cssPills-highlightColorCss-Pills"
 >
   <div
-    className="css-40leom-cssContent"
+    className="dropdown"
     onClick={[Function]}
   >
     Contents
@@ -32,118 +32,96 @@ exports[`Pills renders correctly 1`] = `
     </span>
   </div>
   <ol
-    className=" css-1luu7lt-cssList"
+    className="pill-list"
   >
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-bvgj3n-cssActive-cssPill"
+        className="current-page"
         href="/"
       >
         Executive Summary
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Early Years Foundation Stage
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Family Circumstances
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Social class and underachievement
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         School cultures
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Geographical educational inequality
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Type and quality of schooling
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Low aspirations
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Access to career advice
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Gaps in attainnment
       </a>
     </li>
-    <li
-      className="css-j5ezsg-cssListItem"
-    >
+    <li>
       <a
-        className="css-1c796n1-cssPill"
+        className={null}
         href="/"
       >
         Impact of COVID-19
       </a>
     </li>
   </ol>
-</div>
+</nav>
 `;
