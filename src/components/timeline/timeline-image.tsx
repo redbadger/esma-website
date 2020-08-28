@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 
 interface Props {
   imageName: string;
+  objectPosition: string;
 }
 
 interface Fluid {
@@ -37,7 +38,7 @@ export const PureTimelineImage = ({ data, objectPosition }) => {
   );
 };
 
-const TimelineImage = ({ imageName }: Props) => {
+const TimelineImage = ({ imageName, objectPosition }: Props) => {
   const data = useStaticQuery(graphql`
     query {
       images: allFile(filter: {relativePath: {regex: "/timeline/.*\\.jpg/"}}) {
@@ -62,8 +63,12 @@ const TimelineImage = ({ imageName }: Props) => {
   );
 
   return (
-    <PureTimelineImage data={img} objectPosition="center"></PureTimelineImage>
+    <PureTimelineImage  data={img} objectPosition={objectPosition}></PureTimelineImage>
   );
+};
+
+TimelineImage.defaultProps = {
+  objectPosition: "center",
 };
 
 export default TimelineImage;

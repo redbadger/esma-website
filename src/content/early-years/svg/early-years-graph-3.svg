@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="446px" height="202px" viewBox="0 0 446 202" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 21</title>
+    <defs>
+        <polygon id="path-1" points="0 0.463195097 149.70632 0.463195097 149.70632 188.118256 0 188.118256"></polygon>
+        <polygon id="path-3" points="0.698134169 0.463195097 94.9792356 0.463195097 94.9792356 170.192891 0.698134169 170.192891"></polygon>
+    </defs>
+    <g id="Home-&gt;-Research-&gt;-Timeline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop/Timeline/Impact-of-Covid-19" transform="translate(-164.000000, -730.000000)">
+            <g id="Group-21" transform="translate(164.000000, 730.000000)">
+                <g id="Group-14">
+                    <g id="Group-13">
+                        <g id="Group-3" transform="translate(0.000000, 0.459230)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-2"></g>
+                            <path d="M94.2892559,94.2871751 L149.70632,170.192891 C107.581048,200.650528 48.6195684,191.357117 18.0134183,149.436255 C-12.5936584,107.514471 -3.25493242,48.8400177 38.8712655,18.3823811 C55.7213739,6.1989576 73.4601348,0.463195097 94.2892559,0.463195097 L94.2892559,94.2871751 Z" id="Fill-1" fill="#EFEFEF" mask="url(#mask-2)"></path>
+                        </g>
+                        <g id="Group-6" transform="translate(93.591122, 0.459230)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <g id="Clip-5"></g>
+                            <path d="M0.698134169,94.2871751 L0.698134169,0.463195097 C52.7681571,0.463195097 94.9796063,42.4698172 94.9796063,94.2871751 C94.9796063,125.378328 81.3903607,151.918678 56.115198,170.192891 L0.698134169,94.2871751 Z" id="Fill-4" fill="#FFBA08" mask="url(#mask-4)"></path>
+                        </g>
+                        <path d="M93.7146435,94.7473271 L34.6243598,128.697139 C15.7828917,96.2218423 26.9647141,54.6947373 59.5992896,35.9437736 C70.4660529,29.7017516 81.16602,26.8477026 93.7146435,26.8477026 L93.7146435,94.7473271 Z" id="Fill-7" fill="#D3D3D3"></path>
+                        <path d="M93.7146435,94.7473271 L152.804,128.697139 C133.962532,161.172437 92.2329385,172.300922 59.5992896,153.550881 C48.7315998,147.306092 40.8995982,139.512095 34.6243598,128.697139 L93.7146435,94.7473271 Z" id="Fill-9" fill="#D3D3D3"></path>
+                        <path d="M93.7146435,94.7473271 L93.7146435,26.8477026 C131.396653,26.8477026 161.945351,57.2472439 161.945351,94.7473271 C161.945351,107.23506 159.078312,117.883106 152.804,128.697139 L93.7146435,94.7473271 Z" id="Fill-11" fill="#3772FF"></path>
+                    </g>
+                    <ellipse id="Oval" fill="#FFFFFF" cx="94.035533" cy="94.520202" rx="34.2385787" ry="34.0656566"></ellipse>
+                </g>
+                <text id="A-third-of-Early-Yea" font-family="Montserrat-Regular, Montserrat" font-size="16" font-weight="normal" line-spacing="26" fill="#2D3142">
+                    <tspan x="231" y="113">A third of Early Years </tspan>
+                    <tspan x="231" y="139">providers in financially </tspan>
+                    <tspan x="231" y="165">deprived areas may have </tspan>
+                    <tspan x="231" y="191">to close within a year</tspan>
+                </text>
+                <text id="Over-40%-are-likely" font-family="Montserrat-Regular, Montserrat" font-size="16" font-weight="normal" line-spacing="26" fill="#2D3142">
+                    <tspan x="231" y="15">Over 40% are likely to </tspan>
+                    <tspan x="231" y="41">make redundancies in the </tspan>
+                    <tspan x="231" y="67">coming year.</tspan>
+                </text>
+                <line x1="197" y1="112.5" x2="217" y2="112.5" id="Line-3" stroke="#3772FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="197" y1="14.5" x2="217" y2="14.5" id="Line-3-Copy" stroke="#FFBA08" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>
