@@ -29,7 +29,17 @@ interface LifeStageImage {
   node: Node;
 }
 
-export const PureLifeStageImage = ({ data, objectPosition, classNames }) => {
+interface PureLifeStageImage {
+  data: LifeStageImage;
+  objectPosition: string;
+  classNames: string[];
+}
+
+export const PureLifeStageImage = ({
+  data,
+  objectPosition,
+  classNames,
+}: PureLifeStageImage) => {
   return (
     <Img
       imgStyle={{ objectPosition }}
@@ -58,7 +68,7 @@ const LifeStageImage = ({ imageName, objectPosition, classNames }: Props) => {
     
   `);
 
-  const img = data.images.edges.find(
+  const img: LifeStageImage = data.images.edges.find(
     (image: LifeStageImage) =>
       image.node.childImageSharp.fluid.originalName === imageName
   );

@@ -14,8 +14,8 @@ const samplePills = [
   { name: "Type and quality of schooling", href: "/" },
   { name: "Low aspirations", href: "/" },
   { name: "Access to career advice", href: "/" },
-  { name: "Gaps in attainnment", href: "/" },
-  { name: "Impact of COVID-19", href: "/" },
+  { name: "Gaps in attainment", href: "/" },
+  { name: "Impact of Covid-19", href: "/" },
 ];
 
 const colorActive = "orange";
