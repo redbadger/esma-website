@@ -5,23 +5,23 @@
         <polygon id="path-1" points="0 0.463195097 149.70632 0.463195097 149.70632 188.118256 0 188.118256"></polygon>
         <polygon id="path-3" points="0.698134169 0.463195097 94.9792356 0.463195097 94.9792356 170.192891 0.698134169 170.192891"></polygon>
     </defs>
-    <g id="Home-&gt;-Research-&gt;-Timeline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop/Timeline/Impact-of-Covid-19" transform="translate(-164.000000, -730.000000)">
-            <g id="Group-21" transform="translate(164.000000, 730.000000)">
-                <g id="Group-14">
-                    <g id="Group-13">
-                        <g id="Group-3" transform="translate(0.000000, 0.459230)">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-164.000000, -730.000000)">
+            <g transform="translate(164.000000, 730.000000)">
+                <g>
+                    <g>
+                        <g transform="translate(0.000000, 0.459230)">
                             <mask id="mask-2" fill="white">
                                 <use xlink:href="#path-1"></use>
                             </mask>
-                            <g id="Clip-2"></g>
+                            <g></g>
                             <path d="M94.2892559,94.2871751 L149.70632,170.192891 C107.581048,200.650528 48.6195684,191.357117 18.0134183,149.436255 C-12.5936584,107.514471 -3.25493242,48.8400177 38.8712655,18.3823811 C55.7213739,6.1989576 73.4601348,0.463195097 94.2892559,0.463195097 L94.2892559,94.2871751 Z" id="Fill-1" fill="#EFEFEF" mask="url(#mask-2)"></path>
                         </g>
-                        <g id="Group-6" transform="translate(93.591122, 0.459230)">
+                        <g transform="translate(93.591122, 0.459230)">
                             <mask id="mask-4" fill="white">
                                 <use xlink:href="#path-3"></use>
                             </mask>
-                            <g id="Clip-5"></g>
+                            <g></g>
                             <path d="M0.698134169,94.2871751 L0.698134169,0.463195097 C52.7681571,0.463195097 94.9796063,42.4698172 94.9796063,94.2871751 C94.9796063,125.378328 81.3903607,151.918678 56.115198,170.192891 L0.698134169,94.2871751 Z" id="Fill-4" fill="#FFBA08" mask="url(#mask-4)"></path>
                         </g>
                         <path d="M93.7146435,94.7473271 L34.6243598,128.697139 C15.7828917,96.2218423 26.9647141,54.6947373 59.5992896,35.9437736 C70.4660529,29.7017516 81.16602,26.8477026 93.7146435,26.8477026 L93.7146435,94.7473271 Z" id="Fill-7" fill="#D3D3D3"></path>

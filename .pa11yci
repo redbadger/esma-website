@@ -1,0 +1,16 @@
+{
+  "defaults": {
+    "timeout": 10000,
+    "standard": "Section508"
+  },
+  "urls": [
+    {
+      "url": "http://localhost:3000",
+      "screenCapture": "pa11y-screenshots/home.png"
+    },
+    {
+      "url": "http://localhost:3000/research/early-years/executive-summary",
+      "screenCapture": "pa11y-screenshots/research/early-years/executive-summary.png"
+    }
+  ]
+}
