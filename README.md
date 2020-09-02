@@ -31,5 +31,8 @@ npm run start
 then run
 
 ```sh
-npm run test-e2e
+npx cypress run
 ```
+
+If you want to run against a local optimised build, run `npm run build` then `npm run test-e2e`.
+This mirrors what our Continuous Integration does.
