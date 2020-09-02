@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import { PillsProps } from "./types";
+import Arrow, { arrowHoverCss } from "../common/arrow";
 
 const withPrefixes = style => `
     ${style}
@@ -88,7 +89,6 @@ const cssList = css`
 `;
 
 const prevNextCss = css`
-  ${withPrefixes`box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);`}
   z-index: 1;
   position: relative;
   padding: 4.5rem 0;
@@ -105,12 +105,26 @@ const prevNextCss = css`
     ${withPrefixes`box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.2);`}
     height: 7rem;
     width: 32rem;
+    color: var(--midnight);
+    padding: 1.5rem;
+
+    :hover {
+      transform: translate3d(0px, -1px, 0px);
+      box-shadow: rgba(0, 0, 0, 0.15) 0rem 1rem 1rem;
+      /* ${withPrefixes`box-shadow: 0 0 0.25rem 0.25rem rgba(0,0,0,0.2);`} */
+      .arrow {
+        ${arrowHoverCss}
+      }
+    }
+    .label {
+      text-transform: uppercase;
+    }
   }
 
   ${mq(BreakPoint.md)} {
     ${withPrefixes`box-shadow: none;`}
     padding: 4.5rem 0;
-    background-color: var(--taupe);
+    background-color: var(--white);
 
     .dropdown {
       display: none;
@@ -155,7 +169,10 @@ const PrevNextLink = ({
   return (
     <a href={pills[index].href}>
       <div className="prev-next-box">
-        <p>{label}</p>
+        <h4 className="label">
+          {label}
+          <Arrow />
+        </h4>
         <p>{pills[index].name}</p>
       </div>
     </a>
