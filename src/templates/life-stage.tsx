@@ -141,7 +141,6 @@ const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
   );
 };
 
-const currentPillIndex = 0;
 const samplePills = [
   {
     name: "Executive Summary",
@@ -171,6 +170,9 @@ const colorActive = "orange";
 const shortcodes = { Link, FootnoteLink };
 
 const PageTemplate = ({ data: { mdx } }) => {
+  const currentPillIndex = samplePills.findIndex(
+    pill => pill.name === mdx.frontmatter.title
+  );
   const bgImage = mdx.frontmatter.bgImageName;
   return (
     <>
