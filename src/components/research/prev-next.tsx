@@ -72,6 +72,18 @@ const prevNextCss = css`
   }
 
   ${mq(BreakPoint.md)} {
+    .mobile-arrow .arrow {
+      display: none;
+    }
+    h4 .arrow {
+      display: block;
+    }
+    p .page-title {
+      font-size: 1.25rem;
+    }
+  }
+
+  ${mq(BreakPoint.lg)} {
     ${withPrefixes`box-shadow: none;`}
     padding: 4.5rem 0;
     background-color: var(--white);
@@ -86,16 +98,6 @@ const prevNextCss = css`
       svg {
         height: 1.5rem;
       }
-    }
-    p .page-title {
-      font-size: 1.25rem;
-    }
-
-    .mobile-arrow .arrow {
-      display: none;
-    }
-    h4 .arrow {
-      display: block;
     }
   }
 `;
