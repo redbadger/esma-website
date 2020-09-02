@@ -1,8 +1,10 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { css, SerializedStyles } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import { PillsProps } from "./types";
 import Arrow, { arrowHoverCss } from "../common/arrow";
+import EarlyDevIcon from "../../svg/blocks.svg";
+import WorkingLifeIcon from "../../svg/briefcase.svg";
 
 const withPrefixes = style => `
     ${style}
@@ -116,8 +118,22 @@ const prevNextCss = css`
         ${arrowHoverCss}
       }
     }
-    .label {
-      text-transform: uppercase;
+    h4, p {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      height: 2rem;
+      .label {
+        text-transform: uppercase;
+      }
+      margin: 0.25rem 0;
+    }
+    .page-title {
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    .icon svg {
+      height: 1.5rem;
     }
   }
 
@@ -151,11 +167,19 @@ const PrevNextLink = ({
   let index: number;
   let isValid: boolean;
   let label: string;
+  let customCss: SerializedStyles;
+
   switch (type) {
     case PrevNextType.Previous:
       index = currentPillIndex - 1;
       isValid = index >= 0;
       label = "Previous";
+      customCss = css`
+        .arrow {
+          transform: scaleX(-1);
+          order: -1;
+        }
+      `;
       break;
     case PrevNextType.Next:
       index = currentPillIndex + 1;
@@ -169,11 +193,16 @@ const PrevNextLink = ({
   return (
     <a href={pills[index].href}>
       <div className="prev-next-box">
-        <h4 className="label">
-          {label}
+        <h4 css={customCss}>
+          <span className="label">{label}</span>
           <Arrow />
         </h4>
-        <p>{pills[index].name}</p>
+        <p>
+          <span className="icon">
+            <EarlyDevIcon />
+          </span>
+          <span className="page-title">{pills[index].name}</span>
+        </p>
       </div>
     </a>
   );
