@@ -25,15 +25,14 @@ const prevNextCss = css`
     justify-content: space-around;
     flex: 1;
     background-color: var(--white);
-    border: 0.0625rem solid var(--midnight);
-    ${withPrefixes`box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,0.2);`}
+    ${withPrefixes`box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.2);`}
     min-height: 7rem;
     color: var(--midnight);
     padding: 1.5rem;
 
     :hover {
       transform: translate3d(0px, -1px, 0px);
-      ${withPrefixes`box-shadow: rgba(0, 0, 0, 0.2) 0rem 1rem 1rem;`}
+      ${withPrefixes`box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);`}
       .arrow {
         ${arrowHoverCss}
       }
