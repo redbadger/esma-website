@@ -9,6 +9,7 @@ import TimelineImage from "../components/timeline/timeline-image";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../util/mq";
 import Pills from "../components/research/pills";
+import PrevNext from "../components/research/prev-next";
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -16,16 +17,16 @@ const layoutStyles = css`
   }
 
   ${mq(BreakPoint.md)} {
-    height: 20rem;
-
     .timeline-image-wrapper {
       display: block;
-      height: 100%;
+      height: 20rem;
     }
   }
 
   ${mq(BreakPoint.lg)} {
-    height: 25rem;
+    .timeline-image-wrapper {
+      height: 25rem;
+    }
   }
 
   position: relative;
@@ -140,11 +141,27 @@ const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
 };
 
 const samplePills = [
-  { name: "Executive Summary", href: "/research/early-years/executive-summary", isActive: true },
-  { name: "Family environment", href: "/research/early-years/family-environment" },
-  { name: "Housing and the neighbourhood", href: "/research/early-years/housing-and-neighbourhood" },
-  { name: "Early years provision", href: "/research/early-years/early-years-provision" },
-  { name: "Impact of Covid-19", href: "/research/early-years/impact-of-covid-19" },
+  {
+    name: "Executive Summary",
+    href: "/research/early-years/executive-summary",
+    isActive: true,
+  },
+  {
+    name: "Family environment",
+    href: "/research/early-years/family-environment",
+  },
+  {
+    name: "Housing and the neighbourhood",
+    href: "/research/early-years/housing-and-neighbourhood",
+  },
+  {
+    name: "Early years provision",
+    href: "/research/early-years/early-years-provision",
+  },
+  {
+    name: "Impact of Covid-19",
+    href: "/research/early-years/impact-of-covid-19",
+  },
 ];
 
 const colorActive = "orange";
@@ -191,6 +208,7 @@ const PageTemplate = ({ data: { mdx } }) => {
             </div>
           </div>
         </section>
+        <PrevNext pills={samplePills} colorActive={colorActive} />
       </Layout>
     </>
   );
