@@ -39,7 +39,7 @@ exports[`Pills renders correctly 1`] = `
         className="current-page"
         href="/"
       >
-        Executive summary
+        Life stage overview
       </a>
     </li>
     <li>

@@ -5,7 +5,7 @@ import Hero from "../components/hero/hero";
 import Pills from "../components/research/pills";
 
 const samplePills = [
-  { name: "Executive summary", href: "/", isActive: true },
+  { name: "Life stage overview", href: "/", isActive: true },
   { name: "Early Years Foundation Stage", href: "/" },
   { name: "Family Circumstances", href: "/" },
   { name: "Social class and underachievement", href: "/" },

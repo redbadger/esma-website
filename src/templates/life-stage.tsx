@@ -144,7 +144,7 @@ const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
 
 const samplePills = [
   {
-    name: "Executive summary",
+    name: "Life stage overview",
     href: "/research/early-years/executive-summary",
   },
   {

@@ -5,7 +5,7 @@ import { PillData } from "./types";
 
 describe("Pills", () => {
   const samplePills: PillData[] = [
-    { name: "Executive summary", href: "/" },
+    { name: "Life stage overview", href: "/" },
     { name: "Early Years Foundation Stage", href: "/" },
     { name: "Family Circumstances", href: "/" },
     { name: "Social class and underachievement", href: "/" },
