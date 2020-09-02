@@ -51,7 +51,6 @@ jobs:
           path: cypress/videos
 
       - name: Accessibility check
-        working-directory: medicines/web
         run: npm run a11y
         env:
           ROOT_URL_DOMAIN: localhost
