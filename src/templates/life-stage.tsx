@@ -10,6 +10,7 @@ import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../util/mq";
 import Pills from "../components/research/pills";
 import PrevNext from "../components/research/prev-next";
+import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -140,11 +141,11 @@ const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
   );
 };
 
+const currentPillIndex = 0;
 const samplePills = [
   {
     name: "Executive Summary",
     href: "/research/early-years/executive-summary",
-    isActive: true,
   },
   {
     name: "Family environment",
@@ -174,7 +175,11 @@ const PageTemplate = ({ data: { mdx } }) => {
   return (
     <>
       <Layout includeResearchNavigation={true}>
-        <Pills pills={samplePills} colorActive={colorActive} />
+        <Pills
+          pills={samplePills}
+          colorActive={colorActive}
+          currentPillIndex={currentPillIndex}
+        />
         <SEO title={`${mdx.frontmatter.parent} - ${mdx.frontmatter.title}`} />
         <section css={layoutStyles}>
           {bgImage && (
@@ -208,7 +213,12 @@ const PageTemplate = ({ data: { mdx } }) => {
             </div>
           </div>
         </section>
-        <PrevNext pills={samplePills} colorActive={colorActive} />
+        <PrevNext
+          pills={samplePills}
+          colorActive={colorActive}
+          currentPillIndex={currentPillIndex}
+        />
+        <NewsletterSignUp />
       </Layout>
     </>
   );

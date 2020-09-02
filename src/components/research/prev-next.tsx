@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
+import { PillsProps } from "./types";
 
 const withPrefixes = style => `
     ${style}
@@ -36,17 +37,6 @@ const cssListItem = css`
     display: inline-block;
   }
 `;
-
-type PillData = {
-  name: string;
-  href: string;
-  isActive?: boolean;
-};
-
-type PillsProps = {
-  pills: Array<PillData>;
-  colorActive: string;
-};
 
 const cssList = css`
   transform: scale(1, 0);
@@ -97,18 +87,29 @@ const cssList = css`
   }
 `;
 
-const cssPills = css`
+const prevNextCss = css`
   ${withPrefixes`box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);`}
   z-index: 1;
   position: relative;
+  padding: 4.5rem 0;
+  display: flex;
+  justify-content: space-between;
 
   .dropdown {
     ${dropdownCssMobile}
   }
 
+  .prev-next-box {
+    background-color: var(--white);
+    border: 0.0625rem solid var(--midnight);
+    ${withPrefixes`box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.2);`}
+    height: 7rem;
+    width: 32rem;
+  }
+
   ${mq(BreakPoint.md)} {
     ${withPrefixes`box-shadow: none;`}
-    padding: 1.5rem 4.5rem;
+    padding: 4.5rem 0;
     background-color: var(--taupe);
 
     .dropdown {
@@ -123,25 +124,58 @@ const cssPills = css`
   }
 `;
 
-const Next = ({ pills, colorActive }: PillsProps) => {
+enum PrevNextType {
+  Previous = "Previous",
+  Next = "Next Up",
+}
+
+const PrevNextLink = ({
+  pills,
+  currentPillIndex,
+  type,
+}: PillsProps & { type: PrevNextType }) => {
+  let index: number;
+  let isValid: boolean;
+  let label: string;
+  switch (type) {
+    case PrevNextType.Previous:
+      index = currentPillIndex - 1;
+      isValid = index >= 0;
+      label = "Previous";
+      break;
+    case PrevNextType.Next:
+      index = currentPillIndex + 1;
+      isValid = index < pills.length;
+      label = "Next";
+      break;
+  }
+  if (!isValid) {
+    return <></>;
+  }
+  return (
+    <a href={pills[index].href}>
+      <div className="prev-next-box">
+        <p>{label}</p>
+        <p>{pills[index].name}</p>
+      </div>
+    </a>
+  );
+};
+
+const PrevNext = (props: PillsProps) => {
   const highlightColorCss = css`
-    --highlight-color: ${colorActive};
+    --highlight-color: ${props.colorActive};
   `;
 
   return (
-    <nav css={[cssPills, highlightColorCss]}>
-      <a href="family-environment">
-        <div>
-          <p>Previous</p>
-        </div>
-      </a>
-      <a href="housing-and-neighbourhood">
-        <div>
-          <p>Next</p>
-        </div>
-      </a>
+    <nav css={[prevNextCss, highlightColorCss]}>
+      <PrevNextLink {...props} type={PrevNextType.Previous} />
+      <div aria-hidden="true">
+        {/* This is here as a spacer to force Next to the right-hand side, and Prev to the left-hand side */}
+      </div>
+      <PrevNextLink {...props} type={PrevNextType.Next} />
     </nav>
   );
 };
 
-export default Next;
+export default PrevNext;

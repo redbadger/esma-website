@@ -3,6 +3,7 @@ import { css } from "@emotion/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { mq, BreakPoint } from "../../util/mq";
+import { PillsProps, PillData } from "./types";
 
 const withPrefixes = style => `
     ${style}
@@ -39,24 +40,13 @@ const cssListItem = css`
   }
 `;
 
-const Pill = ({ name, href, isActive }: PillData) => (
+const Pill = ({ name, href, isActive }: PillData & { isActive: boolean }) => (
   <li>
     <a className={isActive ? "current-page" : null} href={href}>
       {name}
     </a>
   </li>
 );
-
-type PillData = {
-  name: string;
-  href: string;
-  isActive?: boolean;
-};
-
-type PillsProps = {
-  pills: Array<PillData>;
-  colorActive: string;
-};
 
 const cssList = css`
   transform: scale(1, 0);
@@ -108,7 +98,7 @@ const cssList = css`
 `;
 
 const cssPills = css`
-  ${withPrefixes`box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);`}
+  ${withPrefixes`box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.2);`}
   z-index: 1;
   position: relative;
 
@@ -133,7 +123,7 @@ const cssPills = css`
   }
 `;
 
-const Pills = ({ pills, colorActive }: PillsProps) => {
+const Pills = ({ pills, colorActive, currentPillIndex }: PillsProps) => {
   const [isOpen, setOpen] = useState(false);
 
   const highlightColorCss = css`
@@ -151,7 +141,9 @@ const Pills = ({ pills, colorActive }: PillsProps) => {
       <ol className={isOpen ? "open pill-list" : "pill-list"}>
         {pills.map((pill, idx) => {
           // const cssPillInstance = [pill.isActive && cssActive, cssPill];
-          return <Pill {...pill} key={idx} />;
+          return (
+            <Pill {...pill} key={idx} isActive={idx === currentPillIndex} />
+          );
         })}
       </ol>
     </nav>
