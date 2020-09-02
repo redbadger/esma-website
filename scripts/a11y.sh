@@ -1,9 +1,9 @@
 #!/bin/bash
-port=4000
+port=3000
 npm run serve -- -p $port &
 npx wait-on http://localhost:$port
 server_pid=$!
-npx cypress run --config baseUrl=http://localhost:$port
+npx pa11y-ci
 test_exit_code=$?
 kill $server_pid
 exit $test_exit_code
