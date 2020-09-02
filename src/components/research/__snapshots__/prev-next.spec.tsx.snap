@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrevNext renders correctly 1`] = `
+<nav
+  className="css-98r2c1-arrowHoverCss-prevNextCss-highlightColorCss-PrevNext"
+>
+  <div
+    aria-hidden="true"
+    className="spacer"
+  />
+  <a
+    className="prev-next-box css-g9z6el-PrevNextLink"
+    href="/research/early-years/family-environment"
+  >
+    <h4>
+      <span
+        className="label"
+      >
+        Next Up
+      </span>
+      <span
+        className="arrow css-84es3n-arrowCss"
+      />
+    </h4>
+    <p>
+      <span
+        className="icon"
+      >
+        <test-file-stub />
+      </span>
+      <span
+        className="page-title"
+      >
+        Family environment
+      </span>
+    </p>
+    <div
+      className="mobile-arrow"
+    >
+      <span
+        className="arrow css-84es3n-arrowCss"
+      />
+    </div>
+  </a>
+</nav>
+`;

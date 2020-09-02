@@ -5,7 +5,7 @@ exports[`TimelineEntry renders correctly 1`] = `
   href="#"
 >
   <div
-    className="css-16wnxp6-timelineEntryStyles"
+    className="css-1ubqytx-arrowHoverCss-timelineEntryStyles"
   >
     <div
       className="timeline-image-wrapper gatsby-image-wrapper"
@@ -95,7 +95,7 @@ exports[`TimelineEntry renders correctly 1`] = `
     >
       Read more
       <span
-        className="arrow"
+        className="arrow css-84es3n-arrowCss"
       />
     </div>
   </div>

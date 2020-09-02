@@ -2,6 +2,7 @@ import React from "react";
 import TimelineImage from "./timeline-image";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
+import Arrow, { arrowHoverCss } from "../common/arrow";
 
 const timelineEntryStyles = css`
   transition: all 0.333s ease-out 0s;
@@ -9,7 +10,7 @@ const timelineEntryStyles = css`
     transform: translate3d(0px, -1px, 0px);
     box-shadow: rgba(0, 0, 0, 0.15) 0rem 1rem 1rem;
     .arrow {
-      width: 2.5rem;
+      ${arrowHoverCss}
     }
   }
 
@@ -55,47 +56,6 @@ const timelineEntryStyles = css`
     clear: both;
   }
 
-  span {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .arrow {
-    display: inline-block;
-    height: 0.75rem;
-    margin-left: 0.5rem;
-    position: relative;
-    transition: width 0.2s ease;
-    vertical-align: middle;
-    width: 2rem;
-
-    &::after {
-      border-right: 0.125rem solid var(--midnight);
-      border-top: 0.125rem solid var(--midnight);
-      content: "";
-      display: block;
-      height: 0.625rem;
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%) rotate(45deg);
-      width: 0.625rem;
-    }
-
-    &::before {
-      border-bottom: 0.125rem solid var(--midnight);
-      content: "";
-      left: 0;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 100%;
-    }
-  }
-
   .read-more {
     cursor: pointer;
     font-weight: 600;
@@ -127,7 +87,7 @@ const TimelineEntry = ({ title, imageName, description, icon }: Props) => {
         <p>{description}</p>
         <div className="read-more">
           Read more
-          <span className="arrow" />
+          <Arrow />
         </div>
       </div>
     </a>

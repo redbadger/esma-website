@@ -69,8 +69,12 @@ const LifeStageImage = ({ imageName, objectPosition, classNames }: Props) => {
   `);
 
   const img: LifeStageImage = data.images.edges.find(
-    (image: LifeStageImage) =>
-      image.node.childImageSharp.fluid.originalName === imageName
+    (image: LifeStageImage) => {
+      if (image.node.childImageSharp.fluid) {
+        return image.node.childImageSharp.fluid.originalName === imageName;
+      }
+      return false;
+    }
   );
 
   return (

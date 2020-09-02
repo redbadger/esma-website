@@ -2,7 +2,7 @@
 
 exports[`Pills renders correctly 1`] = `
 <nav
-  className="css-15dfcdf-dropdownCssMobile-cssListItem-cssList-cssPills-highlightColorCss-Pills"
+  className="css-uec49b-dropdownCssMobile-cssListItem-cssList-cssPills-highlightColorCss-Pills"
 >
   <div
     className="dropdown"
@@ -39,7 +39,7 @@ exports[`Pills renders correctly 1`] = `
         className="current-page"
         href="/"
       >
-        Executive Summary
+        Life stage overview
       </a>
     </li>
     <li>
@@ -111,7 +111,7 @@ exports[`Pills renders correctly 1`] = `
         className={null}
         href="/"
       >
-        Gaps in attainnment
+        Gaps in attainment
       </a>
     </li>
     <li>
@@ -119,7 +119,7 @@ exports[`Pills renders correctly 1`] = `
         className={null}
         href="/"
       >
-        Impact of COVID-19
+        Impact of Covid-19
       </a>
     </li>
   </ol>
