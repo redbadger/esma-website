@@ -11,6 +11,7 @@ import { mq, BreakPoint } from "../util/mq";
 import Pills from "../components/research/pills";
 import PrevNext from "../components/research/prev-next";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
+import EarlyDevIcon from "../svg/blocks.svg";
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -164,7 +165,7 @@ const samplePills = [
   },
 ];
 
-const colorActive = "orange";
+const colorActive = "var(--aqua)";
 
 // This makes <Link/> and <FootnoteLink/> component available in all mdx files without import
 const shortcodes = { Link, FootnoteLink };
@@ -219,6 +220,7 @@ const PageTemplate = ({ data: { mdx } }) => {
           pills={samplePills}
           colorActive={colorActive}
           currentPillIndex={currentPillIndex}
+          icon={EarlyDevIcon}
         />
         <NewsletterSignUp />
       </Layout>
