@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="445px" height="62px" viewBox="0 0 445 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <title>Group 11</title>
-    <g id="Home-&gt;-Research-&gt;-Timeline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop/Timeline/Impact-of-Covid-19" transform="translate(-164.000000, -992.000000)">
-            <g id="Group-11" transform="translate(165.000000, 992.000000)">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-164.000000, -992.000000)">
+            <g transform="translate(165.000000, 992.000000)">
                 <text id="of-eligible-children" font-family="Montserrat-Regular, Montserrat" font-size="18" font-weight="normal" line-spacing="30" fill="#2D3142">
                     <tspan x="188.438" y="18">of eligible children accessed </tspan>
                     <tspan x="192.155" y="48">child care during lockdown</tspan>
