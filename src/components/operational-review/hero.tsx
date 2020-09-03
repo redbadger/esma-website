@@ -46,7 +46,7 @@ const headerCss = css`
 `;
 
 const Hero = () => (
-  <div css={headerCss}>
+  <header css={headerCss}>
     <HeroBackgroundImage className="header">
       <div className="container">
         <p>Home &gt; Operational Review</p>
@@ -54,7 +54,7 @@ const Hero = () => (
         <p className="highlight">Coming September 2021</p>
       </div>
     </HeroBackgroundImage>
-  </div>
+  </header>
 );
 
 export default Hero;

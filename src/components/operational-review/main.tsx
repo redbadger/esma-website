@@ -30,7 +30,7 @@ const mainCss = css`
 `;
 
 const Main = () => (
-  <div css={mainCss}>
+  <main css={mainCss}>
     <p className="intro">
       Following the construction of the Social Mobility Activity Map the Study
       Segment teams will:
@@ -60,7 +60,7 @@ const Main = () => (
       in September 2021
     </p>
     <ReliefImage />
-  </div>
+  </main>
 );
 
 export default Main;
