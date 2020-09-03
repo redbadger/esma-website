@@ -45,8 +45,79 @@ const business: PanelSection = {
 
 const publicSector: PanelSection = {
   name: "Public Bodies & Education",
-  members: [],
+  members: [
+    {
+      name: "Steve Holliday",
+      role:
+        "Board Member, Careers and Enterprise Company, Chairman of Zenobe, the President of the Energy Institute and Chairman of the Board of Trustees at Crisis",
+    },
+    {
+      name: "Nigel Boardman",
+      role:
+        "Non-executive Director at the Department for Business, Energy and Industrial Strategy & Vice President of Save the Children",
+    },
+    {
+      name: "Simon Levine",
+      role: "CEO, DLA Piper & Office for Students Board Member",
+    },
+    {
+      name: "Paul Cleal",
+      role:
+        "Former Social Mobility Commissioner, Vice Chair, Kingston University and NCS Trustee",
+    },
+    {
+      name: "Aimee Higgins",
+      role: "Executive Director, Careers and Enterprise Company",
+    },
+    {
+      name: "Clare Hutchinson",
+      role: "Executive Director, Careers and Enterprise Company",
+    },
+    { name: "Laura Rawstorne", role: "Social Mobility Lead, DfE" },
+    { name: "Paul Botton", role: "Senior Teacher, Westminster School" },
+    {
+      name: "David Willis",
+      role: "Chair, Paradigm Trust and SRA Board Member",
+    },
+    {
+      name: "Likhon Muhammed",
+      role: "Head of College, Headteacher at Bourne End E-ACT Academy",
+    },
+    { name: "Naim Moukarzel", role: "Director of Programme, NCS" },
+    { name: "Dr Trevor Richards", role: "Head of All Hallows School" },
+    {
+      name: "Kirsty Watt",
+      role: "Head of Academy Ambassadors, New Schools Network",
+    },
+    {
+      name: "Michelle Lord",
+      role:
+        "Senior Arts Development Officer and Social Mobility Lead, Cambridge City Council",
+    },
+    {
+      name: "Professor Richard Moorhead",
+      role: "Head of Law, Exeter University",
+    },
+    {
+      name: "Professor Steven Vaughan",
+      role: "Law and Professional Ethics, UCL",
+    },
+    {
+      name: "Sue Williams QPM Commander",
+      role: "Head of Profession – Safeguarding, Metropolitan Police Service ",
+    },
+    {
+      name: "Professor Thom Brooks",
+      role: "Dean & Chair in Law and Government at Durham University",
+    },
+    {
+      name: "Sean Anstee",
+      role:
+        "Executive Director for Advisory, Public Affairs & PR, Cratus and former Leader of Trafford Council",
+    },
+  ],
 };
+
 const socialMobilityAlliance: PanelSection = {
   name: "Social Mobility Scheme Alliance Representatives",
   members: [],
