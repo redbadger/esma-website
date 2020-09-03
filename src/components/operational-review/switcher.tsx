@@ -70,6 +70,9 @@ const switcherCss = css`
       transition: all 0.75s ease-in-out;
     }
   }
+  ${mq(BreakPoint.lg)} {
+    max-width: 22.5rem;
+  }
 `;
 
 const Switcher = ({

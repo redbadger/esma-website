@@ -38,6 +38,7 @@ const panelCss = css`
   ${mq(BreakPoint.md)} {
     header {
       display: block;
+      margin-top: 1.5rem;
     }
 
     .panel-members {
@@ -45,6 +46,13 @@ const panelCss = css`
       align-items: flex-start;
       justify-content: space-between;
       justify-items: flex-start;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+      display: block;
     }
   }
 `;
