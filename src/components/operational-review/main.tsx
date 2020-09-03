@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
+import ReliefImage from "./relief-image";
 
 const mainCss = css`
   padding: 0.75rem;
@@ -22,7 +23,8 @@ const mainCss = css`
     width: 1rem;
     content: "";
   }
-  li {
+  li,
+  p {
     padding: 1rem 0;
   }
 `;
@@ -52,11 +54,12 @@ const Main = () => (
         and
       </li>
       <li>Highlight additional areas flagged for innovation focus.</li>
-      <p>
-        The Study Segment teams will then present their findings to the ESMA
-        panel in September 2021
-      </p>
     </ul>
+    <p>
+      The Study Segment teams will then present their findings to the ESMA panel
+      in September 2021
+    </p>
+    <ReliefImage />
   </div>
 );
 
