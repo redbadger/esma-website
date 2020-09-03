@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import Switcher from "./switcher";
+import panel from "./panel";
 
 const panelCss = css`
   color: var(--midnight);
@@ -52,51 +53,12 @@ const EsmaPanel = () => (
     </header>
     <Switcher />
     <ul>
-      <li>
-        <strong>Andrew Garard</strong>
-        Group General Counsel and Director of Corporate Affairs, Meggitt plc
-      </li>
-      <li>
-        <strong>David Ampaw</strong>
-        Partner, DLA Piper & PRIME Board member
-      </li>
-      <li>
-        <strong>Dr Tony Munton</strong>
-        Managing Director theRTK
-      </li>
-      <li>
-        <strong>Hollie Crompton</strong>
-        Social Mobility Operations Lead, PwC
-      </li>
-      <li>
-        <strong>Jeanie York</strong>
-        CTIO, Virgin Media
-      </li>
-      <li>
-        <strong>John Godfrey</strong>
-        Commercial Director, Red Badger
-      </li>
-      <li>
-        <strong>Joe Seddon</strong>
-        Founder and CEO, Zero Gravity Tech
-      </li>
-      <li>
-        <strong>Katherine Ainely</strong>
-        Managing Director Ventures, BT
-      </li>
-      <li>
-        <strong>Katie Perrior</strong>
-        former Downing Street Director of Communications
-      </li>
-      <li>
-        <strong>Kirsty Cooper</strong>
-        General Counsel and Company Secretary, Aviva Plc & Insurance and
-        Pensions Champion, Government Dormant Assets Scheme
-      </li>
-      <li>
-        <strong>Raphael Mokades</strong>
-        Founder & CEO, Rare Recruitment
-      </li>
+      {panel.business.map((panelMember, idx) => (
+        <li key={idx}>
+          <strong>{panelMember.name}</strong>
+          {panelMember.role}
+        </li>
+      ))}
     </ul>
     <p>
       Authored by Dr Catherine McGregor, the ESMA panel will also oversee the
