@@ -42,39 +42,47 @@ const panelCss = css`
   }
 `;
 
-const EsmaPanel = () => (
-  <section css={panelCss}>
-    <header>
-      <h2>ESMA Panel</h2>
+const EsmaPanel = () => {
+  const [panelSection, setPanelSection] = React.useState(Object.keys(panel)[0]);
+
+  return (
+    <section css={panelCss}>
+      <header>
+        <h2>ESMA Panel</h2>
+        <p>
+          The energy and interest for ESMA has been incredible attracting the
+          support of many senior and inspirational leaders on social mobility.
+        </p>
+      </header>
+      <Switcher
+        panel={panel}
+        setter={setPanelSection}
+        currentPanelSection={panel[panelSection]}
+      />
+      <ul>
+        {panel[panelSection].members.map((panelMember, idx) => (
+          <li key={idx}>
+            <strong>{panelMember.name}</strong>
+            {panelMember.role}
+          </li>
+        ))}
+      </ul>
       <p>
-        The energy and interest for ESMA has been incredible attracting the
-        support of many senior and inspirational leaders on social mobility.
+        Authored by Dr Catherine McGregor, the ESMA panel will also oversee the
+        production of a report which summarises the key thematic recommendations
+        identified by the Study Segment teams. Subject to funding, the ESMA
+        Panel will distribute the Incubator Fund to licence (on a commercial
+        basis) best practice materials from organisations identified by the SM
+        Operational Appraisal.
       </p>
-    </header>
-    <Switcher />
-    <ul>
-      {panel.business.map((panelMember, idx) => (
-        <li key={idx}>
-          <strong>{panelMember.name}</strong>
-          {panelMember.role}
-        </li>
-      ))}
-    </ul>
-    <p>
-      Authored by Dr Catherine McGregor, the ESMA panel will also oversee the
-      production of a report which summarises the key thematic recommendations
-      identified by the Study Segment teams. Subject to funding, the ESMA Panel
-      will distribute the Incubator Fund to licence (on a commercial basis) best
-      practice materials from organisations identified by the SM Operational
-      Appraisal.
-    </p>
-    <p>
-      These materials will be provided to other Social Mobility focussed
-      organisations on a Creative Commons basis, in turn, cross fertilising best
-      practice across the UK and enabling exemplar initiatives/organisations to
-      grow and increase impact.
-    </p>
-  </section>
-);
+      <p>
+        These materials will be provided to other Social Mobility focussed
+        organisations on a Creative Commons basis, in turn, cross fertilising
+        best practice across the UK and enabling exemplar
+        initiatives/organisations to grow and increase impact.
+      </p>
+    </section>
+  );
+};
 
 export default EsmaPanel;
