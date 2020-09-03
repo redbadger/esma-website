@@ -3,6 +3,7 @@ import { css } from "@emotion/core";
 import { Panel, PanelSection } from "./panel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { mq, BreakPoint } from "../../util/mq";
 
 const switcherCss = css`
   margin-top: 1.5rem;
@@ -45,6 +46,30 @@ const switcherCss = css`
   .icon.open {
     transform: rotate(-360deg);
   }
+
+  ${mq(BreakPoint.md)} {
+    box-shadow: none;
+    margin-top: 0;
+
+    .preview {
+      display: none;
+    }
+    ul {
+      display: block;
+      padding: 0 1rem;
+    }
+    li {
+      margin: 1rem 0;
+      border-radius: 100rem;
+      transition: all 0.75s 0.25s ease-in-out;
+    }
+    li.active,
+    li:hover {
+      background-color: var(--midnight);
+      color: var(--white);
+      transition: all 0.75s ease-in-out;
+    }
+  }
 `;
 
 const Switcher = ({
@@ -74,6 +99,9 @@ const Switcher = ({
               setter(key);
               setIsOpen(false);
             }}
+            className={
+              panel[key].name === currentPanelSection.name ? "active" : ""
+            }
           >
             {panel[key].name}
           </li>

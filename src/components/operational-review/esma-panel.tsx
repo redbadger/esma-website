@@ -39,6 +39,13 @@ const panelCss = css`
     header {
       display: block;
     }
+
+    .panel-members {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      justify-items: flex-start;
+    }
   }
 `;
 
@@ -54,19 +61,21 @@ const EsmaPanel = () => {
           support of many senior and inspirational leaders on social mobility.
         </p>
       </header>
-      <Switcher
-        panel={panel}
-        setter={setPanelSection}
-        currentPanelSection={panel[panelSection]}
-      />
-      <ul>
-        {panel[panelSection].members.map((panelMember, idx) => (
-          <li key={idx}>
-            <strong>{panelMember.name}</strong>
-            {panelMember.role}
-          </li>
-        ))}
-      </ul>
+      <div className="panel-members">
+        <Switcher
+          panel={panel}
+          setter={setPanelSection}
+          currentPanelSection={panel[panelSection]}
+        />
+        <ul>
+          {panel[panelSection].members.map((panelMember, idx) => (
+            <li key={idx}>
+              <strong>{panelMember.name}</strong>
+              {panelMember.role}
+            </li>
+          ))}
+        </ul>
+      </div>
       <p>
         Authored by Dr Catherine McGregor, the ESMA panel will also oversee the
         production of a report which summarises the key thematic recommendations
