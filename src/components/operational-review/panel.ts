@@ -120,7 +120,30 @@ const publicSector: PanelSection = {
 
 const socialMobilityAlliance: PanelSection = {
   name: "Social Mobility Scheme Alliance Representatives",
-  members: [],
+  members: [
+    { name: "Liberty King", role: "Positive Transformation Alumni" },
+    {
+      name: "Tarnpreet Bassi",
+      role: "Future Shoosmiths Trainee and SMBP Volunteer",
+    },
+    {
+      name: "Holly Moore",
+      role: "ITV Solicitor Apprentice and former SMBP Cluster Head",
+    },
+    { name: "Shama Aktar", role: "SMBP Alumni" },
+    { name: "Muhammad Gangat", role: "SMBP Alumni" },
+    { name: "Symran Gakhal", role: "SMBP Alumni" },
+    {
+      name: "James Hutchens",
+      role:
+        "Trainee Solicitor and Youth Advisory Board, Aspiring Solicitors and former SMBP Operations Manager",
+    },
+    { name: "Claud Williams", role: "Aleto Foundation" },
+    { name: "Deborah Igunma", role: "Aleto Foundation" },
+    { name: "Janira Borges", role: "Aleto Foundation" },
+    { name: "Maame Serwaah", role: "Aleto Foundation" },
+    { name: "Obi Okereke", role: "Aleto Foundation" },
+  ],
 };
 const thirdSector: PanelSection = {
   name: "Third Sector",
