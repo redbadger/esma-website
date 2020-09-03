@@ -7,13 +7,15 @@ import OperationalReviewMain from "../components/operational-review/main";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 import EsmaPanel from "../components/operational-review/esma-panel";
 
+import panel from "../components/operational-review/panel";
+
 const OperationalReview = () => {
   return (
     <Layout>
       <SEO title="Operational Review" />
       <OperationalReviewHero />
       <OperationalReviewMain />
-      <EsmaPanel />
+      <EsmaPanel panel={panel} />
       <NewsletterSignUp />
       <p>A future footer.</p>
     </Layout>

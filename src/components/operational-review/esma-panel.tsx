@@ -2,7 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import Switcher from "./switcher";
-import panel from "./panel";
+import { Panel } from "./panel";
 
 const panelCss = css`
   color: var(--midnight);
@@ -64,7 +64,7 @@ const panelCss = css`
   }
 `;
 
-const EsmaPanel = () => {
+const EsmaPanel = ({ panel }: { panel: Panel }) => {
   const [panelSection, setPanelSection] = React.useState(Object.keys(panel)[0]);
 
   return (

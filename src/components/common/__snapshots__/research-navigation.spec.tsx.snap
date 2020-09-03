@@ -2,7 +2,7 @@
 
 exports[`Research navigation renders correctly 1`] = `
 <nav
-  className="css-13jbmd0-researchNavigationCss"
+  className="css-gcbjdd-researchNavigationCss"
 >
   <div
     className="scroll-help left can-scroll"
