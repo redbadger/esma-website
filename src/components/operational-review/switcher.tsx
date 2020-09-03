@@ -46,6 +46,12 @@ const switcherCss = css`
   .icon.open {
     transform: rotate(-360deg);
   }
+  li.active,
+  li:hover {
+    background-color: var(--midnight);
+    color: var(--white);
+    transition: all 0.75s ease-in-out;
+  }
 
   ${mq(BreakPoint.md)} {
     box-shadow: none;
@@ -62,12 +68,6 @@ const switcherCss = css`
       margin: 1rem 0;
       border-radius: 100rem;
       transition: all 0.75s 0.25s ease-in-out;
-    }
-    li.active,
-    li:hover {
-      background-color: var(--midnight);
-      color: var(--white);
-      transition: all 0.75s ease-in-out;
     }
   }
   ${mq(BreakPoint.lg)} {

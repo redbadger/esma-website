@@ -8,6 +8,10 @@ const panelCss = css`
   color: var(--midnight);
   font-weight: 300;
 
+  a {
+    text-decoration: underline;
+  }
+
   ul {
     padding: 0.75rem;
     list-style: circle;
@@ -79,7 +83,9 @@ const EsmaPanel = () => {
           {panel[panelSection].members.map((panelMember, idx) => (
             <li key={idx}>
               <strong>{panelMember.name}</strong>
-              {panelMember.role}
+              <span
+                dangerouslySetInnerHTML={{ __html: panelMember.role }}
+              ></span>
             </li>
           ))}
         </ul>

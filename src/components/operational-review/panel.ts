@@ -12,7 +12,7 @@ export type Panel = {
   business: PanelSection;
   publicSector: PanelSection;
   socialMobilityAlliance: PanelSection;
-  education: PanelSection;
+  thirdSector: PanelSection;
 };
 
 const business: PanelSection = {
@@ -51,13 +51,46 @@ const socialMobilityAlliance: PanelSection = {
   name: "Social Mobility Scheme Alliance Representatives",
   members: [],
 };
-const education: PanelSection = { name: "Third Sector", members: [] };
+const thirdSector: PanelSection = {
+  name: "Third Sector",
+  members: [
+    {
+      name: "Martin Lewis OBE",
+      role: `SMBP Patron and Founder, <a href="https://www.moneyandmentalhealth.org/">The Money and Mental Health Policy Institute</a>`,
+    },
+    {
+      name: "Nick Newman",
+      role: "Founder and CEO, National Careers Week CIC",
+    },
+    { name: "Sherry Coutu CBE ", role: "Workfinder" },
+    {
+      name: "Paul Evans",
+      role: "CEO, Leadership Through Sport and Business",
+    },
+    { name: "John Shiels", role: "CEO, Manchester United Foundation" },
+    {
+      name: "Sharon Evans",
+      role: "Trustee, PTI and CEO, Dotcom Children’s Foundation",
+    },
+    {
+      name: "Mark Soden",
+      role: "SMBP Patron and Director, Cleartrack Performance",
+    },
+    { name: "Binda Patel", role: "Head of Innovation, The Sutton Trust" },
+    { name: "Nicholas Cheffings", role: "Chair, Making the Leap" },
+    {
+      name: "Sarah Horner",
+      role: "Head of Policy and Communications, Learning and Work Institute",
+    },
+    { name: "Debbie Forster", role: "CEO, Tech Talent Charter" },
+  ],
+};
 
 const panel: Panel = {
   business,
   publicSector,
   socialMobilityAlliance,
-  education,
+  thirdSector,
 };
 
 export default panel;
