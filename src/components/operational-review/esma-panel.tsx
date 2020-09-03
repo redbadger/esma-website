@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
+import Switcher from "./switcher";
 
 const panelCss = css`
   color: var(--midnight);
@@ -33,53 +34,12 @@ const panelCss = css`
     display: none;
   }
 
-  .switcher {
-    margin-top: 1.5rem;
-    width: 100%;
-    box-shadow: 0 0 0.25rem 0.0625rem rgba(0, 0, 0, 0.2);
-    font-weight: 600;
-    font-size: 1.125rem;
-    padding: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-
-    ul {
-      padding: 0;
-    }
-    li {
-      display: none;
-    }
-    li:first-of-type {
-      display: block;
-    }
-    li ::before {
-      display: none;
-    }
-
-    ::after {
-      content: "V";
-    }
-  }
-
   ${mq(BreakPoint.md)} {
     header {
       display: block;
     }
   }
 `;
-
-const Switcher = () => (
-  <div className="switcher">
-    <ul>
-      <li>Business</li>
-      <li>Public Bodies &amp; Education</li>
-      <li>Social Mobility Scheme Alliance Representatives</li>
-      <li>Third Sector</li>
-    </ul>
-  </div>
-);
 
 const EsmaPanel = () => (
   <section css={panelCss}>
