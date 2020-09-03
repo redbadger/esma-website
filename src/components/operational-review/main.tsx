@@ -40,6 +40,8 @@ const mainCss = css`
   }
   ${mq(BreakPoint.lg)} {
     display: flex;
+    padding: 4.5rem 10rem 0;
+    gap: 8rem;
 
     aside .hero-image-wrapper {
       width: 27.5rem;

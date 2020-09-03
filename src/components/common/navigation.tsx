@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "@reach/router";
 import { Link } from "gatsby";
 import { css } from "@emotion/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -60,8 +61,16 @@ const Navigation = (): JSX.Element => {
       <ul className="inner-navigation">
         {destinations.map((entry, i) => (
           <li>
-            <Link key={i} to={entry.path}>
-              {entry.label}
+            <Link
+              key={i}
+              to={entry.path}
+              getProps={({ isCurrent }) => {
+                return {
+                  className: isCurrent ? "active" : "",
+                };
+              }}
+            >
+              <span>{entry.label}</span>
             </Link>
           </li>
         ))}
