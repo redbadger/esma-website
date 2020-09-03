@@ -67,7 +67,7 @@ const headerStyles = css`
     }
   }
 
-  ${mq(BreakPoint.md)} {
+  ${mq(BreakPoint.lg)} {
     ul {
       padding: 0 5rem;
       flex-direction: row;

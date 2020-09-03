@@ -1,5 +1,4 @@
 import React from "react";
-import Router from "@reach/router";
 import { Link } from "gatsby";
 import { css } from "@emotion/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,7 +21,7 @@ const destinations = [
 ];
 
 const menuIconStyles = css`
-  ${mq(BreakPoint.md)} {
+  ${mq(BreakPoint.lg)} {
     display: none;
   }
 
