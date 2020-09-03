@@ -4,8 +4,7 @@ import ReliefImage from "./relief-image";
 import { BreakPoint, mq } from "../../util/mq";
 
 const mainCss = css`
-  padding: 0.75rem;
-  margin-top: 1.5rem;
+  padding: 1.5rem 0.75rem;
   color: var(--midnight);
   font-weight: 300;
   font-size: 1.125rem;
@@ -30,6 +29,8 @@ const mainCss = css`
   }
 
   ${mq(BreakPoint.md)} {
+    padding: 2rem 2.5rem;
+
     aside .hero-image-wrapper {
       height: 15rem;
 
@@ -40,7 +41,7 @@ const mainCss = css`
   }
   ${mq(BreakPoint.lg)} {
     display: flex;
-    padding: 4.5rem 10rem 0;
+    padding: 4.5rem 10rem 2rem;
     gap: 8rem;
 
     aside .hero-image-wrapper {

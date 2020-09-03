@@ -37,14 +37,20 @@ const headerCss = css`
 
   ${mq(BreakPoint.md)} {
     .header {
-      padding: 0 10rem;
-      height: 18.75rem;
+      padding: 0 2.5rem;
+      height: 16rem;
     }
     h2 {
       font-size: 2rem;
     }
     .highlight {
       font-size: 1.5rem;
+    }
+  }
+  ${mq(BreakPoint.lg)} {
+    .header {
+      padding: 0 10rem;
+      height: 18.75rem;
     }
   }
 `;

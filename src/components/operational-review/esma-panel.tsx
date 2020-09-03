@@ -40,6 +40,8 @@ const panelCss = css`
   }
 
   ${mq(BreakPoint.md)} {
+    padding: 0 2.5rem;
+
     header {
       display: block;
       margin-top: 1.5rem;
@@ -48,8 +50,6 @@ const panelCss = css`
     .panel-members {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
-      justify-items: flex-start;
     }
 
     h2 {
@@ -58,6 +58,9 @@ const panelCss = css`
       text-align: center;
       display: block;
     }
+  }
+  ${mq(BreakPoint.lg)} {
+    padding: 0 10rem;
   }
 `;
 
