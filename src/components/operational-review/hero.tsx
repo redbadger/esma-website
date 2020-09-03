@@ -1,22 +1,13 @@
 import React from "react";
 import { css } from "@emotion/core";
 import HeroBackgroundImage from "./hero-background-image";
+import { BreakPoint, mq } from "../../util/mq";
 
 const headerCss = css`
   font-weight: 600;
 
   .header {
     height: 12.5rem;
-  }
-
-  .background-image-filter {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
   }
 
   p {
@@ -42,6 +33,19 @@ const headerCss = css`
     justify-content: center;
     gap: 1rem;
     height: 100%;
+  }
+
+  ${mq(BreakPoint.md)} {
+    .header {
+      padding: 0 10rem;
+      height: 18.75rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    .highlight {
+      font-size: 1.5rem;
+    }
   }
 `;
 
