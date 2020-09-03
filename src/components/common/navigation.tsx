@@ -11,6 +11,10 @@ const destinations = [
     path: "/",
   },
   {
+    label: "Operational review",
+    path: "/operational-review",
+  },
+  {
     label: "Get involved",
     path: "/",
   },
