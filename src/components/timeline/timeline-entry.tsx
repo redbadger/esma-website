@@ -4,10 +4,11 @@ import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import Arrow, { arrowHoverCss } from "../common/arrow";
 import { Link } from "gatsby";
+import { TimelineEntryData } from "./types";
 
 const timelineEntryStyles = css`
   transition: all 0.333s ease-out 0s;
-  :hover {
+  :hover, :target {
     transform: translate3d(0px, -1px, 0px);
     box-shadow: rgba(0, 0, 0, 0.15) 0rem 1rem 1rem;
     .arrow {
@@ -69,18 +70,20 @@ const timelineEntryStyles = css`
   }
 `;
 
-interface Props {
-  title: string;
-  imageName: string;
-  description: string;
-  icon: React.ElementType;
-}
+type TimelineEntryProps = TimelineEntryData
 
-const TimelineEntry = ({ title, imageName, description, icon }: Props) => {
+const TimelineEntry = ({
+  title,
+  imageName,
+  description,
+  icon,
+  destination,
+  anchor
+}: TimelineEntryProps) => {
   const Icon = icon;
   return (
-    <Link to="#">
-      <div css={timelineEntryStyles}>
+    <Link to={destination}>
+      <div css={timelineEntryStyles} id={anchor}>
         <TimelineImage imageName={imageName} />
         <h2>{title}</h2>
         <Icon />

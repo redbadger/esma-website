@@ -5,7 +5,7 @@ export enum BreakPoint {
   xl,
 }
 
-const screenSizes = {
+export const screenSizes = {
   [BreakPoint.sm]: 640,
   [BreakPoint.md]: 768,
   [BreakPoint.lg]: 1024,

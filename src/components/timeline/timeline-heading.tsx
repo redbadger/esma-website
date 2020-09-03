@@ -4,47 +4,34 @@ import { mq, BreakPoint } from "../../util/mq";
 
 const timelineHeadingStyles = css`
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h1 {
-    color: var(--midnight);
-    font-size: 2rem;
-    line-height: 2.75rem;
-    font-weight: 600;
-  }
-
+  line-height: 2.125rem;
+  color: var(--midnight);
   p {
-    color: var(--midnight);
-    font-size: 1rem;
-    line-height: 1.875rem;
-    margin-right: 2.5rem;
-    margin-left: 2.5rem;
+    margin-top: 2.125rem;
   }
 
-  ${mq(BreakPoint.lg)} {
-    p {
-      width: 56rem;
-    }
+  ${mq(BreakPoint.xl)} {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
-  a {
-    text-decoration: underline;
-    font-weight: 600;
-  }
 `;
 
 const TimelineHeading = () => {
   return (
     <div css={timelineHeadingStyles}>
-      <h1>A lifetime of social inequality</h1>
       <p>
-        We’ve commissioned research from{" "}
-        <a href="https://www.thebridgegroup.org.uk">The Bridge Group</a> to
-        build the evidence base needed to make change happen. This research
-        highlights some of the significant ways in which socio-economic
-        background can intersect with other protected characteristics during
-        someones lifetime to contribute to weak social mobility in the UK.
+        ESMA has commissioned Nik Miller and Sarah Dauncey of The Bridge Group
+        to draw together all the academic research on issues which inhibit an
+        individual’s employability/career progression and plot against an
+        individual’s lifecycle from cradle to retirement. The research provides
+        give a holistic understanding of the all issues which impact on a
+        person’s employability and progression prospects caused by low income.
+      </p>
+      <p>
+        ESMA recognises that not every person follows the same path to and
+        through the world of work hence the Issues Chronology can be navigated
+        sequentially or by reference to a person’s stage in life.
       </p>
     </div>
   );

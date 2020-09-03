@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResizableGraph renders correctly 1`] = `
+<div
+  className="css-i5zxf-ResizableGraph"
+>
+  <p>
+    Sample heading
+  </p>
+  <test-file-stub />
+</div>
+`;

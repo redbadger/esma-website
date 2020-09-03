@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 
 const newsletterSignUpStyles = css`
   padding: 4.5rem 0.75rem;
+  background-color: var(--taupe);
 
   header {
     margin-bottom: 2.25rem;
@@ -168,9 +169,9 @@ const NewsletterSignUp = () => {
         <header>
           <h2>Join our mission</h2>
           <p>
-            We’ve got bold ambitions and need impact focused leaders to join us
-            on our journey. Sign up to our newsletter to be the first to hear
-            about our events and stay up to date on our future plans.
+            We’ve got bold ambitions and what you see today is just the
+            beginning. Sign up to our newsletter to be the first to hear about
+            our new features and stay up to date on everything ESMA.
           </p>
         </header>
 

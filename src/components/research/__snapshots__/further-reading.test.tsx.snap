@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FurtherReading renders correctly 1`] = `
+<div
+  className="further-reading-container css-h8ncal-furtherReadingStyles"
+  role="list"
+>
+  <ul>
+    <li>
+      Sample entry
+    </li>
+  </ul>
+</div>
+`;

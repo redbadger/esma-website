@@ -80,5 +80,14 @@ module.exports = {
         endpoint: process.env.MAILCHIMP_ENDPOINT,
       },
     },
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        useAutoGen: true,
+        exclude: [`/404/`, `/404.html`],
+        trailingSlashes: true,
+        usePathPrefix: "/esma-website",
+      },
+    },
   ],
 };

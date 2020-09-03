@@ -7,8 +7,8 @@ import { mq, BreakPoint } from "../../util/mq";
 
 const destinations = [
   {
-    label: "About",
-    path: "/",
+    label: "Issues Chronology",
+    path: "/issues-chronology",
   },
   {
     label: "Operational review",
@@ -60,7 +60,7 @@ const Navigation = (): JSX.Element => {
     <nav>
       <ul className="inner-navigation">
         {destinations.map((entry, i) => (
-          <li>
+          <li key={i}>
             <Link
               key={i}
               to={entry.path}

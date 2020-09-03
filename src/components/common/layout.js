@@ -78,9 +78,7 @@ const Layout = ({ children, includeResearchNavigation }) => {
         includeResearchNavigation={includeResearchNavigation}
       />
       <main css={pageStyles}>{children}</main>
-      {
-        //<footer css={footerStyles}>&nbsp;</footer>
-      }
+      <p>A future footer.</p>
     </>
   );
 };

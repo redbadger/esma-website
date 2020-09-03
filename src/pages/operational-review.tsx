@@ -17,7 +17,6 @@ const OperationalReview = () => {
       <OperationalReviewMain />
       <EsmaPanel panel={panel} />
       <NewsletterSignUp />
-      <p>A future footer.</p>
     </Layout>
   );
 };

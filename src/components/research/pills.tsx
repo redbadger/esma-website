@@ -85,7 +85,7 @@ const cssList = css`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-left: 1.5rem 5rem;
+    padding: 1.5rem 0rem;
 
     li a {
       transition: background-color 0.6s ease;
@@ -109,8 +109,6 @@ const cssPills = css`
 
   ${mq(BreakPoint.md)} {
     ${withPrefixes`box-shadow: none;`}
-    padding: 1.5rem 4.5rem;
-    background-color: var(--taupe);
 
     .dropdown {
       display: none;
