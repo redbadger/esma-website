@@ -16,7 +16,7 @@ const destinations = [
   },
   {
     label: "Get involved",
-    path: "/",
+    path: "/get-involved",
   },
 ];
 
