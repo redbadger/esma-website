@@ -3,6 +3,7 @@ describe("Operational review page", function () {
     cy.server();
     cy.visit("/");
     // gotta open the menu
+    cy.wait(100);
     cy.get('[aria-label="Navigation menu"]').click();
     cy.contains("Operational review").click();
     cy.contains("Coming September 2021");
@@ -13,6 +14,7 @@ describe("Operational review page", function () {
     cy.visit("/operational-review");
     cy.get("h2").contains("Operational Review");
     cy.contains("Andrew Garard");
+    cy.wait(100);
     cy.contains("Third Sector").click();
     cy.contains("Martin Lewis");
   });
