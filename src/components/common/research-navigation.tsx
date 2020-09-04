@@ -33,6 +33,8 @@ const researchNavigationCss = css`
 
   li > a {
     height: 100%;
+    display: flex;
+    align-items: center;
     > svg {
       color: var(--highlight-colour);
       display: inline-block;

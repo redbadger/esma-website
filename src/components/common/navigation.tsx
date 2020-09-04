@@ -11,13 +11,17 @@ const destinations = [
     path: "/",
   },
   {
+    label: "Operational review",
+    path: "/operational-review",
+  },
+  {
     label: "Get involved",
     path: "/",
   },
 ];
 
 const menuIconStyles = css`
-  ${mq(BreakPoint.md)} {
+  ${mq(BreakPoint.lg)} {
     display: none;
   }
 
@@ -39,6 +43,7 @@ const menuIconStyles = css`
 export const NavToggle = ({ toggle }) => {
   return (
     <div
+      aria-label="Navigation menu"
       role="button"
       tabIndex={0}
       css={menuIconStyles}
@@ -56,8 +61,16 @@ const Navigation = (): JSX.Element => {
       <ul className="inner-navigation">
         {destinations.map((entry, i) => (
           <li>
-            <Link key={i} to={entry.path}>
-              {entry.label}
+            <Link
+              key={i}
+              to={entry.path}
+              getProps={({ isCurrent }) => {
+                return {
+                  className: isCurrent ? "active" : "",
+                };
+              }}
+            >
+              <span>{entry.label}</span>
             </Link>
           </li>
         ))}

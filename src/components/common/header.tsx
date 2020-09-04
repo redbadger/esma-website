@@ -26,7 +26,7 @@ const headerStyles = css`
     flex-direction: column;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     padding: 0 0.75rem;
 
     li {
@@ -45,17 +45,29 @@ const headerStyles = css`
     }
   }
   ul.inner-navigation {
+    li {
+      align-items: stretch;
+    }
     a {
-      display: block;
-      text-align: left;
-      color: var(--white);
-      font-weight: 600;
-      line-height: 3rem;
+      display: flex;
       width: 100%;
+      padding: 0 0.75rem;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      font-weight: 600;
+      color: var(--white);
+      span {
+        line-height: 3rem;
+        width: 100%;
+      }
+    }
+    a.active {
+      background-color: var(--cobalt);
     }
   }
 
-  ${mq(BreakPoint.md)} {
+  ${mq(BreakPoint.lg)} {
     ul {
       padding: 0 5rem;
       flex-direction: row;
