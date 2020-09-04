@@ -2,7 +2,7 @@
 
 exports[`Pills renders correctly 1`] = `
 <nav
-  className="css-uec49b-dropdownCssMobile-cssListItem-cssList-cssPills-highlightColorCss-Pills"
+  className="css-1pufbqy-dropdownCssMobile-cssListItem-cssList-cssPills-highlightColorCss-Pills"
 >
   <div
     className="dropdown"

@@ -7,6 +7,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "gatsby";
 
 const researchNavigationCss = css`
   background-color: var(--white);
@@ -111,10 +112,10 @@ const ResearchNavigationLink = ({
         --highlight-colour: ${highlightColour};
       `}
     >
-      <a href={href}>
+      <Link to={href}>
         <Icon />
         <span>{name}</span>
-      </a>
+      </Link>
     </li>
   );
 };

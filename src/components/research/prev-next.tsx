@@ -4,6 +4,7 @@ import { mq, BreakPoint } from "../../util/mq";
 import { PillsProps } from "./types";
 import Arrow, { arrowHoverCss } from "../common/arrow";
 import EarlyDevIcon from "../../svg/blocks.svg";
+import { Link } from "gatsby";
 
 const withPrefixes = style => `
     ${style}
@@ -140,7 +141,7 @@ const PrevNextLink = ({
     return <></>;
   }
   return (
-    <a href={pills[index].href} className="prev-next-box" css={customCss}>
+    <Link to={pills[index].href} className="prev-next-box" css={customCss}>
       <h4>
         <span className="label">{type}</span>
         <Arrow />
@@ -154,7 +155,7 @@ const PrevNextLink = ({
       <div className="mobile-arrow">
         <Arrow />
       </div>
-    </a>
+    </Link>
   );
 };
 

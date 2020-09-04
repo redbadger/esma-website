@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { mq, BreakPoint } from "../../util/mq";
 import { PillsProps, PillData } from "./types";
+import { Link } from "gatsby";
 
 const withPrefixes = style => `
     ${style}
@@ -42,9 +43,9 @@ const cssListItem = css`
 
 const Pill = ({ name, href, isActive }: PillData & { isActive: boolean }) => (
   <li>
-    <a className={isActive ? "current-page" : null} href={href}>
+    <Link className={isActive ? "current-page" : null} to={href}>
       {name}
-    </a>
+    </Link>
   </li>
 );
 

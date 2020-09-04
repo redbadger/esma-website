@@ -2,7 +2,7 @@
 
 exports[`PrevNext renders correctly 1`] = `
 <nav
-  className="css-98r2c1-arrowHoverCss-prevNextCss-highlightColorCss-PrevNext"
+  className="css-ebx9bh-arrowHoverCss-prevNextCss-highlightColorCss-PrevNext"
 >
   <div
     aria-hidden="true"
