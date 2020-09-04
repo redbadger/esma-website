@@ -43,6 +43,7 @@ const menuIconStyles = css`
 export const NavToggle = ({ toggle }) => {
   return (
     <div
+      aria-label="Navigation menu"
       role="button"
       tabIndex={0}
       css={menuIconStyles}
