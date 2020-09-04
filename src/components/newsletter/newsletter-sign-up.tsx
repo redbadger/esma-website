@@ -2,7 +2,8 @@ import React, { FormEvent, useState } from "react";
 import { css } from "@emotion/core";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import { mq, BreakPoint } from "../../util/mq";
-import NewsletterInputField from './newsletter-input-field';
+import NewsletterInputField from "./newsletter-input-field";
+import { Link } from "gatsby";
 
 const newsletterSignUpStyles = css`
   padding: 4.5rem 0.75rem;
@@ -140,9 +141,12 @@ const NewsletterSignUp = () => {
     try {
       const response = await addToMailchimp(email, { FNAME: name });
       handleResult(response.result, response.msg);
-    } catch(e) {
-      setMcResponse({success: false, msg: "Something went wrong, please try again later."})
-      console.log(e)
+    } catch (e) {
+      setMcResponse({
+        success: false,
+        msg: "Something went wrong, please try again later.",
+      });
+      console.log(e);
     }
   };
 
@@ -181,7 +185,7 @@ const NewsletterSignUp = () => {
                 errorMessage="Please enter your name."
                 errorSetter={setNameError}
                 valueSetter={setName}
-                />
+              />
               <NewsletterInputField
                 label="Email address"
                 type="email"
@@ -190,7 +194,7 @@ const NewsletterSignUp = () => {
                 errorMessage="Please enter your email."
                 errorSetter={setEmailError}
                 valueSetter={setEmail}
-                />
+              />
               <section className="submitSection">
                 <label htmlFor="submit">&nbsp;</label>
                 <input type="submit" value="Submit" id="submit" />
@@ -209,9 +213,10 @@ const NewsletterSignUp = () => {
                 </p>
                 <p>
                   By clicking Subscribe you accept the{" "}
-                  <a href="#">Privacy Policy</a>. This will allow us to send you
-                  newsletter and event updates. Our Privacy Policy covers how we
-                  protect data. You can unsubscribe from this at any point.
+                  <Link to="/privacy">Privacy Policy</Link>. This will allow us
+                  to send you newsletter and event updates. Our Privacy Policy
+                  covers how we protect data. You can unsubscribe from this at
+                  any point.
                 </p>
               </section>
             </fieldset>

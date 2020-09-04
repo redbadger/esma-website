@@ -83,7 +83,7 @@ exports[`NewsletterSignUp renders correctly 1`] = `
             By clicking Subscribe you accept the
              
             <a
-              href="#"
+              href="/privacy"
             >
               Privacy Policy
             </a>

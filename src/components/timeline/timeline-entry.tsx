@@ -3,6 +3,7 @@ import TimelineImage from "./timeline-image";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import Arrow, { arrowHoverCss } from "../common/arrow";
+import { Link } from "gatsby";
 
 const timelineEntryStyles = css`
   transition: all 0.333s ease-out 0s;
@@ -78,7 +79,7 @@ interface Props {
 const TimelineEntry = ({ title, imageName, description, icon }: Props) => {
   const Icon = icon;
   return (
-    <a href="#">
+    <Link to="#">
       <div css={timelineEntryStyles}>
         <TimelineImage imageName={imageName} />
         <h2>{title}</h2>
@@ -90,7 +91,7 @@ const TimelineEntry = ({ title, imageName, description, icon }: Props) => {
           <Arrow />
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

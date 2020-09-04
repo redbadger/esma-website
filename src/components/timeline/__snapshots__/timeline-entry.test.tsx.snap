@@ -5,7 +5,7 @@ exports[`TimelineEntry renders correctly 1`] = `
   href="#"
 >
   <div
-    className="css-1ubqytx-arrowHoverCss-timelineEntryStyles"
+    className="css-gbs4w9-arrowHoverCss-timelineEntryStyles"
   >
     <div
       className="timeline-image-wrapper gatsby-image-wrapper"
