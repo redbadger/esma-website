@@ -21,6 +21,7 @@ const mainCss = css`
     color: var(--midnight);
     font-size: 1.25rem;
     font-weight: 600;
+    margin-bottom: 14px;
   }
 
   p {
@@ -61,6 +62,7 @@ const mainCss = css`
 
     h2 {
       margin-top: 26px;
+      margin-bottom: 4px ;
     }
   }
 
@@ -76,7 +78,6 @@ const mainCss = css`
   a {
     color: var(--midnight);
     text-decoration: underline;
-    font-weight: 600;
   }
 `;
 
