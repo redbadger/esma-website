@@ -191,12 +191,12 @@ const Main = () => (
           <div className="more-contact-item">
             <div className="image-placeholder" style={{backgroundColor: "pink", borderRadius: "9999px", width: "60px", height: "60px", float: "left", margin: "2.25em" }}></div>
             <h2>Barry Matthews</h2>
-            <a href="mailto:barry.matthews@meggitt.com">barry.matthews@meggitt.com</a>
+            <a href="mailto:barrymatthews@esma.community">barrymatthews@esma.community</a>
           </div>
           <div className="more-contact-item">
             <div className="image-placeholder" style={{backgroundColor: "pink", borderRadius: "9999px", width: "60px", height: "60px", float: "left", margin: "2.25em" }}></div>
             <h2>Barry Murphy</h2>
-            <a href="mailto:barry.murphy@pwc.com">barry.  murphy@pwc.com</a>
+            <a href="mailto:barrymurphy@esma.community">barrymurphy@esma.community</a>
           </div>
         </div>
       </div>
