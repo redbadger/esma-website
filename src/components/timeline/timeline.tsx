@@ -28,7 +28,7 @@ const timelineStyles = css`
   }
 `;
 
-const entries = [
+const lifeStages = [
   {
     title: "Early years",
     imageName: "timeline-early-development.jpg",
@@ -85,9 +85,9 @@ const Timeline = () => {
     <>
       <TimelineHero />
       <div css={timelineStyles}>
-        <TimelineLegend entries={entries} />
+        <TimelineLegend entries={lifeStages} />
         <TimelineHeading />
-        <TimelineGrid entries={entries} />
+        <TimelineGrid entries={lifeStages} />
       </div>
     </>
   );
