@@ -1,17 +1,21 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import { Link } from "gatsby";
 import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
-import TimelineImage from "../components/timeline/timeline-image";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../util/mq";
 import Pills from "../components/research/pills";
 import PrevNext from "../components/research/prev-next";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 import EarlyDevIcon from "../svg/blocks.svg";
+import FurtherReading from "../components/research/further-reading";
+import ResearchImage from "../components/research/research-image";
+import { FootNoteData } from "../components/research/types";
+import { ResearchPageMetaData, PillData } from "../components/research/types";
+import ResearchQuote from "../components/research/research-quote";
+import { Breadcrumb } from "gatsby-plugin-breadcrumb";
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -33,6 +37,26 @@ const layoutStyles = css`
 
   position: relative;
   color: var(--midnight);
+
+  .further-reading-container {
+    border-color: var(--highlight-colour);
+  }
+
+  .further-reading-bullet-point {
+    background: var(--highlight-colour);
+  }
+
+  .quote-mark {
+    color: var(--highlight-colour);
+  }
+
+  .footnote-link {
+    color: var(--highlight-colour);
+  }
+
+  ol li:before {
+    color: var(--highlight-colour);
+  }
 `;
 
 const contentContainerStyles = css`
@@ -46,13 +70,15 @@ const contentContainerStyles = css`
     width: 80%;
     left: 10%;
     top: -13.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   background-color: var(--white);
   position: relative;
-  padding-top: 7.8rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-top: 3.1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 
   h2 {
     margin-bottom: 2.25rem;
@@ -66,6 +92,10 @@ const contentContainerNoImageStyles = css`
   ${contentContainerStyles};
   ${mq(BreakPoint.sm)} {
     top: 0;
+  }
+  ${mq(BreakPoint.lg)} {
+    padding-left: 0;
+    padding-right: 0;
   }
 `;
 
@@ -94,7 +124,6 @@ const contentBodyStyles = css`
 
   .footnote-link {
     vertical-align: super;
-    color: var(--aqua);
     font-weight: 700;
     cursor: pointer;
   }
@@ -124,13 +153,36 @@ const footnoteStyles = css`
 
   ol li:before {
     content: counter(custom-counter);
-    color: var(--aqua);
     margin-right: 1.5rem;
   }
 `;
 
+const breadcrumbStyles = css`
+  .clear {
+    clear: both;
+  }
+
+  .breadcrumb__list {
+    list-style-type: none;
+  }
+
+  .breadcrumb__list__item {
+    float: left;
+  }
+
+  .breadcrumb__separator {
+    float: left;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .breadcrumb__link__active {
+    font-weight: 600;
+  }
+`;
+
 type FootnoteLinkProps = {
-  children: React.SVGProps<SVGElement>;
+  children: React.ReactNode;
   linkId: string;
 };
 
@@ -142,60 +194,84 @@ const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
   );
 };
 
-const samplePills = [
-  {
-    name: "Life stage overview",
-    href: "/research/early-years/executive-summary",
-  },
-  {
-    name: "Family environment",
-    href: "/research/early-years/family-environment",
-  },
-  {
-    name: "Housing and the neighbourhood",
-    href: "/research/early-years/housing-and-neighbourhood",
-  },
-  {
-    name: "Early years provision",
-    href: "/research/early-years/early-years-provision",
-  },
-  {
-    name: "Impact of Covid-19",
-    href: "/research/early-years/impact-of-covid-19",
-  },
-];
+const shortcodes = { FootnoteLink, FurtherReading, ResearchQuote };
 
-const colorActive = "var(--aqua)";
+export type MdxData = {
+  frontmatter: ResearchPageMetaData;
+  body: any;
+};
 
-// This makes <Link/> and <FootnoteLink/> component available in all mdx files without import
-const shortcodes = { Link, FootnoteLink };
+export type AllMdxData = {
+  pillsMapping: PillsMappingData[];
+};
 
-const PageTemplate = ({ data: { mdx } }) => {
-  const currentPillIndex = samplePills.findIndex(
+export type PillsMappingData = {
+  parent: string;
+  groups: MdxListEntry[];
+};
+
+export type MdxListEntry = {
+  fields: {
+    slug: string;
+  };
+  frontmatter: {
+    title: string;
+  };
+};
+
+type PageTemplateProps = {
+  data: {
+    mdx: MdxData;
+    allMdx: AllMdxData;
+  };
+  pageContext: PageContext;
+};
+
+type PageContext = {
+  breadcrumb: {
+    crumbs: {
+      pathname: string;
+      crumbLabel: string;
+    }[];
+  };
+};
+
+const PageTemplate = ({
+  data: { mdx, allMdx },
+  pageContext,
+}: PageTemplateProps) => {
+  const colorActive = `var(--${mdx.frontmatter.color})`;
+
+  const crumbs = getCrumbs(pageContext);
+
+  const pillsMap: PillData[] = getPills(allMdx, mdx);
+
+  const currentPillIndex = pillsMap.findIndex(
     pill => pill.name === mdx.frontmatter.title
   );
+
   const bgImage = mdx.frontmatter.bgImageName;
+
   return (
     <>
       <Layout includeResearchNavigation={true}>
-        <Pills
-          pills={samplePills}
-          colorActive={colorActive}
-          currentPillIndex={currentPillIndex}
-        />
         <SEO title={`${mdx.frontmatter.parent} - ${mdx.frontmatter.title}`} />
-        <section css={layoutStyles}>
-          {bgImage && (
-            <TimelineImage
-              imageName="timeline-early-development.jpg"
-              objectPosition="top"
-            />
-          )}
+        <section css={[layoutStyles, highlightColorOverride(colorActive)]}>
+          {bgImage && <ResearchImage imageName={bgImage} />}
           <div
             css={
               bgImage ? contentContainerStyles : contentContainerNoImageStyles
             }
           >
+            <div css={breadcrumbStyles}>
+              <Breadcrumb crumbs={crumbs} crumbSeparator=">" />
+              <div className="clear" />
+            </div>
+            <Pills
+              pills={pillsMap}
+              colorActive={colorActive}
+              currentPillIndex={currentPillIndex}
+            />
             <h2>{mdx.frontmatter.title}</h2>
             <div css={contentBodyStyles}>
               <MDXProvider components={shortcodes}>
@@ -203,21 +279,27 @@ const PageTemplate = ({ data: { mdx } }) => {
               </MDXProvider>
             </div>
             <div css={footnoteStyles}>
-              <h3>Footnotes</h3>
-              <ol>
-                {mdx.frontmatter.footnotes.map((entry, index) => (
-                  <li>
-                    <a key={index} href={entry.destination} id={entry.id}>
-                      {entry.text}
-                    </a>
-                  </li>
-                ))}
-              </ol>
+              {mdx.frontmatter.footnotes && (
+                <>
+                  <h3>Footnotes</h3>
+                  <ol>
+                    {mdx.frontmatter.footnotes.map(
+                      (entry: FootNoteData, index: number) => (
+                        <li key={index}>
+                          <a key={index} href={entry.destination} id={entry.id}>
+                            {entry.text}
+                          </a>
+                        </li>
+                      )
+                    )}
+                  </ol>
+                </>
+              )}
             </div>
           </div>
         </section>
         <PrevNext
-          pills={samplePills}
+          pills={pillsMap}
           colorActive={colorActive}
           currentPillIndex={currentPillIndex}
           icon={EarlyDevIcon}
@@ -226,6 +308,35 @@ const PageTemplate = ({ data: { mdx } }) => {
       </Layout>
     </>
   );
+};
+
+const highlightColorOverride = (colorActive: string) => {
+  return css`
+    --highlight-colour: ${colorActive};
+  `;
+};
+
+const getPills = (allMdx: AllMdxData, mdx: MdxData): PillData[] => {
+  return allMdx.pillsMapping
+    .find(pill => {
+      return pill.parent === mdx.frontmatter.parent;
+    })
+    .groups.map(pill => {
+      return { name: pill.frontmatter.title, href: pill.fields.slug };
+    });
+};
+
+const getCrumbs = (pageContext: PageContext) => {
+  return pageContext.breadcrumb.crumbs.map(entry => {
+    return {
+      pathname: entry.pathname,
+      crumbLabel: capitalize(entry.crumbLabel.replace(/-/g, " ")),
+    };
+  });
+};
+
+const capitalize = (input: string) => {
+  return `${input.charAt(0).toUpperCase()}${input.slice(1)}`;
 };
 
 export const pageQuery = graphql`
@@ -237,10 +348,25 @@ export const pageQuery = graphql`
         title
         parent
         bgImageName
+        color
         footnotes {
           id
           text
           destination
+        }
+      }
+    }
+
+    allMdx(sort: { fields: frontmatter___order }) {
+      pillsMapping: group(field: frontmatter___parent) {
+        parent: fieldValue
+        groups: nodes {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
         }
       }
     }

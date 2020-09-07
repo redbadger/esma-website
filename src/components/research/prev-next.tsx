@@ -3,7 +3,6 @@ import { css, SerializedStyles } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import { PillsProps } from "./types";
 import Arrow, { arrowHoverCss } from "../common/arrow";
-import EarlyDevIcon from "../../svg/blocks.svg";
 import { Link } from "gatsby";
 
 const withPrefixes = style => `

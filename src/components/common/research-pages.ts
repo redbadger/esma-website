@@ -6,11 +6,7 @@ import {
   faShapes,
 } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import EarlyDevIcon from "../../svg/blocks.svg";
-import SchoolYearsIcon from "../../svg/pencil.svg";
-import FurtherEduIcon from "../../svg/book.svg";
-import HigherEduIcon from "../../svg/cap.svg";
-import WorkingLifeIcon from "../../svg/briefcase.svg";
+import { timelineIcons } from './icons';
 
 export type ResearchPage = {
   className: string;
@@ -26,40 +22,40 @@ export const pages: ResearchPage[] = [
     className: "current-page",
     highlightColour: "var(--aqua)",
     faIcon: faShapes,
-    href: "/research/early-years/executive-summary",
+    href: "/issues-chronology/early-years",
     name: "Early years",
-    icon: EarlyDevIcon,
+    icon: timelineIcons.earlyYears,
   },
   {
     className: null,
     highlightColour: "var(--yellow)",
     faIcon: faPencilAlt,
-    href: "/research/school",
+    href: "/issues-chronology/school-years",
     name: "School years",
-    icon: SchoolYearsIcon,
+    icon: timelineIcons.schoolYears,
   },
   {
     className: null,
     highlightColour: "var(--midnight)",
     faIcon: faBookOpen,
-    href: "/research/further",
+    href: "/issues-chronology/further-education",
     name: "Further education",
-    icon: FurtherEduIcon,
+    icon: timelineIcons.furtherEducation,
   },
   {
     className: null,
     highlightColour: "var(--cobalt)",
     faIcon: faGraduationCap,
-    href: "/research/higher",
+    href: "/issues-chronology/higher-education",
     name: "Higher education",
-    icon: HigherEduIcon,
+    icon: timelineIcons.higherEducation,
   },
   {
     className: null,
     highlightColour: "var(--copperfield)",
     faIcon: faBriefcase,
-    href: "/research/working",
+    href: "/issues-chronology/working-life",
     name: "Working life",
-    icon: WorkingLifeIcon,
+    icon: timelineIcons.workingLife,
   },
 ];

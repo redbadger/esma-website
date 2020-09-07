@@ -75,10 +75,26 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-mailchimp",
+      resolve: `gatsby-plugin-mailchimp`,
       options: {
         endpoint: process.env.MAILCHIMP_ENDPOINT,
       },
     },
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        useAutoGen: true,
+        exclude: [`/404/`, `/404.html`],
+        trailingSlashes: true,
+        usePathPrefix: "/esma-website",
+      },
+    },
+    {
+      resolve: `gatsby-redirect-from`,
+      options: {
+        query: `allMdx`
+      }
+    },
+    `gatsby-plugin-meta-redirect`,
   ],
 };

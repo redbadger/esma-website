@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResearchQuote renders correctly 1`] = `
+<div
+  className="css-1ku0n93-containerStyles"
+>
+  <div
+    className="css-seia3h-researchQuoteStyles"
+  >
+    <span
+      className="opening-quote quote-mark"
+    />
+    <div
+      className="quote-content"
+    >
+      <p>
+        Sample quote
+      </p>
+      <span
+        className="closing-quote quote-mark"
+      />
+    </div>
+  </div>
+  <p
+    className="quote-source"
+  >
+    Sample source
+  </p>
+</div>
+`;

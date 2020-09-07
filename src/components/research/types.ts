@@ -8,3 +8,19 @@ export type PillsProps = {
   colorActive: string;
   currentPillIndex: number;
 };
+
+export type ResearchPageMetaData = {
+  order: number;
+  parent: string;
+  title: string;
+  color: string;
+  bgImageName: string;
+  footnotes: FootNoteData[];
+};
+
+export type FootNoteData = {
+  id: string;
+  text: string;
+  destination: string;
+};
+

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimelineLegend renders correctly 1`] = `
+<div
+  className="css-19s79zm-containerStyles"
+>
+  <div
+    className="css-1srnxw3-timelineLegendStyles"
+  >
+    <a
+      href="#early-years"
+    >
+      <div
+        className="css-awjpm8-entryWrapperStyles-TimelineLegend"
+      >
+        <test-file-stub />
+        <span>
+          test
+        </span>
+      </div>
+    </a>
+  </div>
+</div>
+`;
