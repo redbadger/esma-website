@@ -2,29 +2,27 @@
 
 exports[`ResearchQuote renders correctly 1`] = `
 <div
-  className="css-zy24jg-containerStyles"
+  className="css-1ku0n93-containerStyles"
 >
   <div
-    className="css-hxdw9r-researchQuoteStyles"
+    className="css-seia3h-researchQuoteStyles"
   >
     <span
-      className="quote-mark"
-      id="opening-quote"
+      className="opening-quote quote-mark"
     />
     <div
-      id="content"
+      className="quote-content"
     >
       <p>
         Sample quote
       </p>
       <span
-        className="quote-mark"
-        id="closing-quote"
+        className="closing-quote quote-mark"
       />
     </div>
   </div>
   <p
-    id="source"
+    className="quote-source"
   >
     Sample source
   </p>

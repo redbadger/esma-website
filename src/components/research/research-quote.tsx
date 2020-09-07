@@ -10,18 +10,18 @@ const researchQuoteStyles = css`
   padding-right: 10%;
   padding-top: 1.125rem;
 
-  #opening-quote {
+  .opening-quote {
     position: relative;
     right: 1.5rem;
   }
 
-  #opening-quote:before {
+  .opening-quote::before {
     content: open-quote;
     font-size: 2.5rem;
     font-weight: 700;
   }
 
-  #closing-quote::after {
+  .closing-quote::after {
     content: close-quote;
     font-size: 2.5rem;
     font-weight: 700;
@@ -29,7 +29,7 @@ const researchQuoteStyles = css`
     vertical-align: -1.1rem;
   }
 
-  #content {
+  .quote-content {
     margin-top: -3.45rem;
   }
 
@@ -45,7 +45,7 @@ const containerStyles = css`
   }
   color: var(--midnight);
 
-  #source {
+  .quote-source {
     margin-top: 0.75rem;
     margin-bottom: 0;
   }
@@ -60,13 +60,13 @@ const ResearchQuote = ({ children, source }: ResearchQuoteProps) => {
   return (
     <div css={containerStyles}>
       <div css={researchQuoteStyles}>
-        <span id="opening-quote" className="quote-mark" />
-        <div id="content">
+        <span className="opening-quote quote-mark" />
+        <div className="quote-content">
           {children}
-          <span id="closing-quote" className="quote-mark" />
+          <span className="closing-quote quote-mark" />
         </div>
       </div>
-      <p id="source">{source}</p>
+      <p className="quote-source">{source}</p>
     </div>
   );
 };
