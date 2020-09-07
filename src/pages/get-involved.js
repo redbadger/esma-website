@@ -1,4 +1,5 @@
 import React from "react";
+import { animateScroll as scroll } from 'react-scroll';
 import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
 import Button from "../components/common/button";
@@ -174,7 +175,7 @@ const Main = () => (
       <div className="contact-item">
         <h2>Newsletter</h2>
         <p>Sign up to our newsletter to stay up to date on the progress of our plans, events and research.</p>
-        <Button label="Sign up" variant="light-grey" onClick={() => {}} />
+        <Button label="Sign up" variant="light-grey" onClick={() => scroll.scrollToBottom() } />
       </div>
       <div className="contact-item">
         <h2>Connecting organisations</h2>
