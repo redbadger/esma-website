@@ -75,7 +75,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-mailchimp",
+      resolve: `gatsby-plugin-mailchimp`,
       options: {
         endpoint: process.env.MAILCHIMP_ENDPOINT,
       },
@@ -89,5 +89,12 @@ module.exports = {
         usePathPrefix: "/esma-website",
       },
     },
+    {
+      resolve: `gatsby-redirect-from`,
+      options: {
+        query: `allMdx`
+      }
+    },
+    `gatsby-plugin-meta-redirect`,
   ],
 };

@@ -30,7 +30,7 @@ const whenWeClickPrevious = () => {
 describe("Research page", function () {
   it("has hidden elements in navigation which can be found by clicking the scroller", function () {
     cy.server();
-    cy.visit("/research/early-years/overview");
+    cy.visit("/issues-chronology/early-years/overview");
     cy.contains("Working life").then(el => Cypress.dom.isHidden(el));
     cy.get(".scroll-help.right").click();
     cy.contains("Working life").then(el => !Cypress.dom.isHidden(el));
@@ -38,7 +38,7 @@ describe("Research page", function () {
 
   it("has Next Up button which takes the user to the next page", function () {
     cy.server();
-    cy.visit("/research/early-years/overview");
+    cy.visit("/issues-chronology/early-years/overview");
     thenWeSeeLifeStageOverview();
     whenWeClickNextUp();
     thenWeSeeFamilyEnvironment();
@@ -48,7 +48,7 @@ describe("Research page", function () {
 
   it("has Previous button which takes the user to the previous page", function () {
     cy.server();
-    cy.visit("/research/early-years/housing-and-neighbourhood");
+    cy.visit("/issues-chronology/early-years/housing-and-neighbourhood");
     thenWeSeeHousing();
     whenWeClickPrevious();
     thenWeSeeFamilyEnvironment();
@@ -58,7 +58,7 @@ describe("Research page", function () {
 
   it("has pills which takes the user to those pages", function () {
     cy.server();
-    cy.visit("/research/early-years/overview");
+    cy.visit("/issues-chronology/early-years/overview");
     thenWeSeeLifeStageOverview();
     cy.get("nav").contains("Housing and the neighbourhood").click();
     thenWeSeeHousing();

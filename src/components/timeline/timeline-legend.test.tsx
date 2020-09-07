@@ -18,7 +18,7 @@ const entries = [
     imageName: "test.jpg",
     description: "Test",
     icon: SchoolYearsIcon,
-    destination: "/research/early-years/overview",
+    destination: "/issues-chronology/early-years/overview",
     color: "aqua",
     anchor: "early-years",
   }]

@@ -32,7 +32,7 @@ exports[`Research navigation renders correctly 1`] = `
       className="current-page css-1j62vah-ResearchNavigationLink"
     >
       <a
-        href="/research/early-years/overview"
+        href="/issues-chronology/early-years/overview"
       >
         <test-file-stub />
         <span>
@@ -44,7 +44,7 @@ exports[`Research navigation renders correctly 1`] = `
       className="css-11cayae-ResearchNavigationLink"
     >
       <a
-        href="/research/school-years/overview"
+        href="/issues-chronology/school-years/overview"
       >
         <test-file-stub />
         <span>
@@ -56,7 +56,7 @@ exports[`Research navigation renders correctly 1`] = `
       className="css-f4i9ca-ResearchNavigationLink"
     >
       <a
-        href="/research/further-education/overview"
+        href="/issues-chronology/further-education/overview"
       >
         <test-file-stub />
         <span>
@@ -68,7 +68,7 @@ exports[`Research navigation renders correctly 1`] = `
       className="css-kwj661-ResearchNavigationLink"
     >
       <a
-        href="/research/higher-education/overview"
+        href="/issues-chronology/higher-education/overview"
       >
         <test-file-stub />
         <span>
@@ -80,7 +80,7 @@ exports[`Research navigation renders correctly 1`] = `
       className="css-xpwdr0-ResearchNavigationLink"
     >
       <a
-        href="/research/working-life/overview"
+        href="/issues-chronology/working-life/overview"
       >
         <test-file-stub />
         <span>

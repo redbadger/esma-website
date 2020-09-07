@@ -39,7 +39,7 @@ const entries = [
     description:
       "The time between birth and primary school is a critical time for a child’s social, emotional, cognitive and communication development.",
     icon: EarlyDevIcon,
-    destination: "/research/early-years/overview",
+    destination: "/issues-chronology/early-years/overview",
     color: "aqua",
     anchor: "early-years",
   },
@@ -49,7 +49,7 @@ const entries = [
     description:
       "The school system has been seen as a vital tool to support social mobility, enabling equality of opportunity amongst children and young people from lower socio-economic backgrounds.",
     icon: SchoolYearsIcon,
-    destination: "/research/school-years/overview",
+    destination: "/issues-chronology/school-years/overview",
     color: "yellow",
     anchor: "school-years",
   },
@@ -59,7 +59,7 @@ const entries = [
     description:
       "There has been a significant decline in adult participation in further education over the last ten years.",
     icon: FurtherEduIcon,
-    destination: "/research/further-education/overview",
+    destination: "/issues-chronology/further-education/overview",
     color: "midnight",
     anchor: "further-life",
   },
@@ -69,7 +69,7 @@ const entries = [
     description:
       "The higher education system has been perceived as an engine of social mobility, with graduates benefiting from higher salaries and career resilience.",
     icon: HigherEduIcon,
-    destination: "/research/higher-education/overview",
+    destination: "/issues-chronology/higher-education/overview",
     color: "cobalt",
     anchor: "higher-education",
   },
@@ -78,7 +78,7 @@ const entries = [
     imageName: "timeline-working-life.jpg",
     description: "Waiting on copy from The Bridge Group",
     icon: WorkingLifeIcon,
-    destination: "/research/working-life/overview",
+    destination: "/issues-chronology/working-life/overview",
     color: "copperfield",
     anchor: "working-life",
   },
