@@ -4,6 +4,8 @@ import Button from "../../components/common/button";
 import { BreakPoint, mq } from "../../util/mq";
 import { css } from "@emotion/core";
 import linkedInImage from "../../images/linkedin/blue-sq.png";
+import murphy from "../../images/barry/murphy.jpg";
+import matthews from "../../images/barry/matthews.jpg";
 
 const mainCss = css`
   display: flex;
@@ -88,10 +90,26 @@ const mainCss = css`
     margin-bottom: 6rem;
   }
 
-
   a {
     color: var(--midnight);
     text-decoration: underline;
+  }
+
+  .image-placeholder {
+    border-radius: 9999px;
+    width: 3.75rem;
+    height: 3.75rem;
+    float: left;
+    margin: 2.25em;
+    background-size: 3.75rem;
+  }
+
+  .image-placeholder.murphy {
+    background-image: url(${murphy});
+  }
+
+  .image-placeholder.matthews {
+    background-image: url(${matthews});
   }
 
   ${mq(BreakPoint.sm)} {
@@ -133,12 +151,12 @@ const Main = () => (
       <p>If you’d like to know more about the above you can email:</p>
       <div className="contact-panel">
         <div className="more-contact-item">
-          <div className="image-placeholder" style={{backgroundColor: "pink", borderRadius: "9999px", width: "60px", height: "60px", float: "left", margin: "2.25em" }}></div>
+          <div className="image-placeholder matthews"></div>
           <p className="contact-name">Barry Matthews <a className="linked-in" href="https://www.linkedin.com/in/barry-matthews-0970704/"><img alt="linked-in" src={linkedInImage} /></a></p>
           <a href="mailto:barrymatthews@esma.community">barrymatthews@esma.community</a>
         </div>
         <div className="more-contact-item">
-          <div className="image-placeholder" style={{backgroundColor: "pink", borderRadius: "9999px", width: "60px", height: "60px", float: "left", margin: "2.25em" }}></div>
+          <div className="image-placeholder murphy"></div>
           <p className="contact-name">Barry Murphy <a className="linked-in" href="https://www.linkedin.com/in/barry-murphy-2240a115"><img alt="linked-in" src={linkedInImage} /></a></p>
           <a href="mailto:barrymurphy@esma.community">barrymurphy@esma.community</a>
         </div>
