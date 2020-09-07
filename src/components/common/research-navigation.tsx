@@ -119,9 +119,9 @@ const ResearchNavigationLink = ({
     >
       <Link
         to={href}
-        getProps={({isCurrent}) => {
+        getProps={({isPartiallyCurrent}) => {
           return {
-            className: isCurrent ? "current-page" : "",
+            className: isPartiallyCurrent ? "current-page" : "",
           };
         }}
       >
