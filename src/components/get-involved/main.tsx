@@ -12,14 +12,14 @@ const mainCss = css`
   padding: 1.5rem 0.75rem;
   color: var(--midnight);
 
-  h1 {
-
+  h2 {
     font-size: 2rem;
     line-height: 2.75rem;
     font-weight: 600;
+    margin: 4.5rem 0 0.75rem;
   }
 
-  h2 {
+  h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.875rem;
@@ -45,14 +45,14 @@ const mainCss = css`
   .contact-item {
     margin-bottom: 2.25rem;
     p {
-      margin-bottom: 2.25rem;
+      margin-bottom: 1.25rem;
     }
   }
 
   .more-contact {
     p {
-      padding: 1.5rem 0;
-      text-align: center;
+      padding-top: 0.5rem;
+      text-align: left;
     }
   }
 
@@ -62,7 +62,9 @@ const mainCss = css`
     width: 27.5rem;
     margin: 0 6rem;
 
-    h2 {
+    p.contact-name {
+      font-weight: 600;
+      font-size: 1.25rem;
       margin-top: 1.625rem;
       margin-bottom: 0.25rem ;
     }
@@ -99,27 +101,27 @@ const mainCss = css`
 const Main = () => (
   <main css={mainCss}>
     <div className="heading">
-      <h1>Ways to get involved</h1>
+      <h2>Ways to get involved</h2>
       <p>
         Help us make the change. We have bold and ambitious plans and need help to execute them.
       </p>
     </div>
     <div className="contact-items">
       <div className="contact-item">
-        <h2>Newsletter</h2>
+        <h3>Newsletter</h3>
         <p>Sign up to our newsletter to stay up to date on the progress of our plans, events and research.</p>
         <Button label="Sign up" variant="light-grey" onClick={() => scroll.scrollToBottom() } />
       </div>
       <div className="contact-item">
-        <h2>Connecting organisations</h2>
+        <h3>Connecting organisations</h3>
         <p>Connect ESMA to organisations that are tackling social mobility to include on our platform for others to collaborate with.</p>
       </div>
       <div className="contact-item">
-        <h2>Funding community</h2>
+        <h3>Funding community</h3>
         <p>Connect ESMA to organisations that are tackling social mobility to include on our platform for others to collaborate with.</p>
       </div>
       <div className="contact-item">
-        <h2>Resources</h2>
+        <h3>Resources</h3>
         <p>Provide technology resources to continue to build out our platform services</p>
       </div>
     </div>
@@ -128,12 +130,12 @@ const Main = () => (
       <div className="contact-panel">
         <div className="more-contact-item">
           <div className="image-placeholder" style={{backgroundColor: "pink", borderRadius: "9999px", width: "60px", height: "60px", float: "left", margin: "2.25em" }}></div>
-          <h2>Barry Matthews <a className="linked-in" href="https://www.linkedin.com/in/barry-matthews-0970704/"><img alt="linked-in" src={linkedInImage} /></a></h2>
+          <p className="contact-name">Barry Matthews <a className="linked-in" href="https://www.linkedin.com/in/barry-matthews-0970704/"><img alt="linked-in" src={linkedInImage} /></a></p>
           <a href="mailto:barrymatthews@esma.community">barrymatthews@esma.community</a>
         </div>
         <div className="more-contact-item">
           <div className="image-placeholder" style={{backgroundColor: "pink", borderRadius: "9999px", width: "60px", height: "60px", float: "left", margin: "2.25em" }}></div>
-          <h2>Barry Murphy <a className="linked-in" href="https://www.linkedin.com/in/barry-murphy-2240a115"><img alt="linked-in" src={linkedInImage} /></a></h2>
+          <p className="contact-name">Barry Murphy <a className="linked-in" href="https://www.linkedin.com/in/barry-murphy-2240a115"><img alt="linked-in" src={linkedInImage} /></a></p>
           <a href="mailto:barrymurphy@esma.community">barrymurphy@esma.community</a>
         </div>
       </div>
