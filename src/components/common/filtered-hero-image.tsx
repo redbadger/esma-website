@@ -13,7 +13,8 @@ const backgroundCss = css`
     z-index: -1;
   }
 
-  ::after {
+  ::after,
+  ::before {
     transform: scaleX(-1);
   }
 `;
