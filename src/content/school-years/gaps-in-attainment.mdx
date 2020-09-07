@@ -39,12 +39,12 @@ footnotes:
 ---
 
 import ResearchImage from "../../components/research/research-image";
-import GapsInAttainment1Desktop from "./svg/school-years-gaps-in-attainment-graph-1-desktop.svg";
-import GapsInAttainment1Mobile from "./svg/school-years-gaps-in-attainment-graph-1-mobile.svg";
-import GapsInAttainment2Desktop from "./svg/school-years-gaps-in-attainment-graph-2-desktop.svg";
-import GapsInAttainment2Mobile from "./svg/school-years-gaps-in-attainment-graph-2-mobile.svg";
-import GapsInAttainment3Desktop from "./svg/school-years-gaps-in-attainment-graph-3-desktop.svg";
-import GapsInAttainment3Mobile from "./svg/school-years-gaps-in-attainment-graph-3-mobile.svg";
+import GapsInAttainmentExpectedStandardDesktop from "./svg/school-years-gaps-in-attainment-graph-1-desktop.svg";
+import GapsInAttainmentExpectedStandardMobile from "./svg/school-years-gaps-in-attainment-graph-1-mobile.svg";
+import GapsInAttainmentHigherStandardDesktop from "./svg/school-years-gaps-in-attainment-graph-2-desktop.svg";
+import GapsInAttainmentHigherStandardMobile from "./svg/school-years-gaps-in-attainment-graph-2-mobile.svg";
+import GapsInAttainmentMarginalReturnsDesktop from "./svg/school-years-gaps-in-attainment-graph-3-desktop.svg";
+import GapsInAttainmentMarginalReturnsMobile from "./svg/school-years-gaps-in-attainment-graph-3-mobile.svg";
 import ResizableGraph from "../../components/research/resizable-graph";
 
 <div>
@@ -106,9 +106,9 @@ import ResizableGraph from "../../components/research/resizable-graph";
 <div></div>
 
 <ResizableGraph
-  mobile={GapsInAttainment1Mobile}
-  tablet={GapsInAttainment1Desktop}
-  desktop={GapsInAttainment1Desktop}
+  mobile={GapsInAttainmentExpectedStandardMobile}
+  tablet={GapsInAttainmentExpectedStandardDesktop}
+  desktop={GapsInAttainmentExpectedStandardDesktop}
   fullSpan={false}
 >
   <p>
@@ -118,8 +118,8 @@ import ResizableGraph from "../../components/research/resizable-graph";
 
 <ResizableGraph
   mobile={GapsInAttainment2Mobile}
-  tablet={GapsInAttainment2Desktop}
-  desktop={GapsInAttainment2Desktop}
+  tablet={GapsInAttainmentHigherStandardDesktop}
+  desktop={GapsInAttainmentHigherStandardDesktop}
   fullSpan={false}
 >
   <p>
@@ -221,9 +221,9 @@ import ResizableGraph from "../../components/research/resizable-graph";
 </div>
 
 <ResizableGraph
-  mobile={GapsInAttainment3Mobile}
-  tablet={GapsInAttainment3Desktop}
-  desktop={GapsInAttainment3Desktop}
+  mobile={GapsInAttainmentMarginalReturnsMobile}
+  tablet={GapsInAttainmentMarginalReturnsDesktop}
+  desktop={GapsInAttainmentMarginalReturnsDesktop}
 >
   <p>
     **Marginal returns by age to five or more good GCSEs including English and Maths (male)**
