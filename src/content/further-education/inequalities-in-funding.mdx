@@ -1,6 +1,50 @@
 ---
-order: 
+order: 3
 parent: Further education
 title: Inequalities in funding
 color: midnight
+footnotes:
+  [
+    {
+      id: "footnote-1",
+      text: "Jack Britton et al. 2019 annual report on education spending in England. Institute for Fiscal Studies.",
+      destination: "/",
+    },
+  ]
 ---
+
+import ResearchImage from "../../components/research/research-image";
+import InequalitiesSpendingDesktop from "./svg/further-educations-inequalities-in-funding-desktop.svg"
+import InequalitiesSpendingMobile from "./svg/further-educations-inequalities-in-funding-mobile.svg"
+import InequalitiesSpendingTablet from "./svg/further-educations-inequalities-in-funding-tablet.svg"
+
+<div>
+
+According to the Institute for Fiscal Studies, available funding for further
+education is heavily restricted and compares badly with the higher education
+sector.<FootnoteLink linkId="footnote-1">1</FootnoteLink>School sixth forms have
+had to deal with budget cuts of 23% per
+student since 2010-11, and further education and sixth from college funding
+per student has fallen by about 12% over the same time period. Despite a
+further £300 million being allocated for 2020-21, spending per student in
+further education is over 7% down on 2010. Further education colleges and
+sixth forms have been subject to the largest cuts in recent years.
+
+The graph below shows the year on year comparison of spending per student per
+year at the different stages of education. The gap between further education and
+higher education funding increased quite dramatically after 2011-12 and has
+remained significant and persistent.
+
+</div>
+
+<ResearchImage imageName="inequalities-in-funding.jpg" />
+
+<ResizableGraph
+  mobile={InequalitiesSpendingMobile}
+  tablet={InequalitiesSpendingTablet}
+  desktop={InequalitiesSpendingDesktop}
+>
+  <p>
+    <strong>Spending per student per year at different stages of education</strong>
+  </p>
+</ResizableGraph>
