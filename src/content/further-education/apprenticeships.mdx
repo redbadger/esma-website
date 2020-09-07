@@ -3,4 +3,80 @@ order: 6
 parent: Further education
 title: Apprenticeships
 color: midnight
+footnotes:
+  [
+    {
+      id: "footnote-1",
+      text: "J Adcock. Apprenticeships: Do they work for everyone? Social Mobility Commission.",
+      destination: "/",
+    },
+    {
+      id: "footnote-2",
+      text: "Social Mobility Commission. State of the Nation 2018-19: Social mobility in Great Britain, p. 74.",
+      destination: "/",
+    },
+    {
+      id: "footnote-3",
+      text: "Bridget Byrne et al (eds). (2020) Ethnicity, race and inequality in the UK: State of the nation. Policy Press.",
+      destination: "/",
+    },
+  ]
 ---
+import ResearchImage from "../../components/research/research-image";
+import ApprenticeshipsDesktop from "./svg/apprenticeships-desktop.svg"
+import ApprenticeshipsMobile from "./svg/apprenticeships-mobile.svg"
+import ApprenticeshipsTablet from "./svg/apprenticeships-tablet.svg"
+import ResizableGraph from "../../components/research/resizable-graph";
+
+<div>
+
+Although apprenticeships are widely regarded as a route to social mobility,
+individuals from lower socio-economic backgrounds are concentrated in
+apprenticeships at lower levels in contrast to their peers from higher social
+backgrounds who are more likely to secure opportunities at a higher level.
+This problem is compounded by the barriers to progression caused by the
+segmentation of apprenticeship by level.
+
+The benefits of successful apprenticeships for young people are widely
+acknowledged as being an effective way of increasing social mobility. However,
+some evidence indicates that apprenticeships are not being targeted at those
+most in need, reducing their positive impact.<FootnoteLink
+linkId="footnote-1">1</FootnoteLink> Worryingly, the most vulnerable
+groups have been identified as being excluded as a result of financial factors,
+such as transport costs. But evidence also indicates that young people’s
+attitudes towards apprenticeships are an important factor.
+
+</div>
+
+<ResearchImage imageName="apprenticeships.jpg" />
+
+<ResizableGraph
+  mobile={ApprenticeshipsMobile}
+  tablet={ApprenticeshipsTablet}
+  desktop={ApprenticeshipsDesktop}
+>
+  <p>
+    <strong>Overall proportion of each apprenticeship level held by a disadvantaged student</strong>
+  </p>
+</ResizableGraph>
+
+The young do not rate apprenticeships highly. Polling undertaken by YouGov with
+the Social Mobility Commission in 2018 found that those over 65 are much more
+likely than those aged 18-24 to think that apprenticeships offer the best
+opportunity for career progression. Younger people, in comparison, thought HE
+offered a better opportunity. This should be a wakeup call for the government
+and employers. Many of the people that apprenticeships are aimed at do not
+recognise their value, creating a wasted opportunity. Apprenticeships offer two
+to three times greater earnings returns for young people than for those over 25.
+Generally, employers too are not embracing the social mobility potential of
+apprenticeships, instead targeting them at older, skilled workers.<FootnoteLink
+linkId="footnote-2">2</FootnoteLink>
+
+There is a differential take up of apprenticeship opportunities by gender and
+ethnicity, with white Males being overrepresented in apprenticeship schemes
+across all levels. This may be a product of different levels of awareness of the
+apprenticeship route and also the higher proportion of ethnic minority groups
+that continues on to higher education. But in light of patterns of
+discrimination and exclusion in employment, it is likely that racial
+discrimination is a factor in the distribution of apprenticeships.<FootnoteLink
+linkId="footnote-3">3</FootnoteLink>
