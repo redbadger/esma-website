@@ -37,6 +37,26 @@ const layoutStyles = css`
 
   position: relative;
   color: var(--midnight);
+
+  .further-reading-container {
+    border-color: var(--highlight-colour);
+  }
+
+  .further-reading-bullet-point {
+    background: var(--highlight-colour);
+  }
+
+  .quote-mark {
+    color: var(--highlight-colour);
+  }
+
+  .footnote-link {
+    color: var(--highlight-colour);
+  }
+
+  ol li:before {
+    color: var(--highlight-colour);
+  }
 `;
 
 const contentContainerStyles = css`
@@ -224,8 +244,6 @@ const PageTemplate = ({
 
   const crumbs = getCrumbs(pageContext);
 
-  const activeColorStyles = getActiveColorStyles(colorActive);
-
   const pillsMap: PillData[] = getPills(allMdx, mdx);
 
   const currentPillIndex = pillsMap.findIndex(
@@ -238,7 +256,7 @@ const PageTemplate = ({
     <>
       <Layout includeResearchNavigation={true}>
         <SEO title={`${mdx.frontmatter.parent} - ${mdx.frontmatter.title}`} />
-        <section css={[layoutStyles, activeColorStyles]}>
+        <section css={[layoutStyles, highlightColorOverride(colorActive)]}>
           {bgImage && <ResearchImage imageName={bgImage} />}
           <div
             css={
@@ -292,27 +310,9 @@ const PageTemplate = ({
   );
 };
 
-const getActiveColorStyles = (colorActive: string) => {
+const highlightColorOverride = (colorActive: string) => {
   return css`
-    .further-reading-container {
-      border-color: ${colorActive};
-    }
-
-    .further-reading-bullet-point {
-      background: ${colorActive};
-    }
-
-    .quote-mark {
-      color: ${colorActive};
-    }
-
-    .footnote-link {
-      color: ${colorActive};
-    }
-
-    ol li:before {
-      color: ${colorActive};
-    }
+    --highlight-colour: ${colorActive};
   `;
 };
 
@@ -324,7 +324,7 @@ const getPills = (allMdx: AllMdxData, mdx: MdxData): PillData[] => {
     .groups.map(pill => {
       return { name: pill.frontmatter.title, href: pill.fields.slug };
     });
-}
+};
 
 const getCrumbs = (pageContext: PageContext) => {
   return pageContext.breadcrumb.crumbs.map(entry => {
@@ -333,11 +333,11 @@ const getCrumbs = (pageContext: PageContext) => {
       crumbLabel: capitalize(entry.crumbLabel.replace(/-/g, " ")),
     };
   });
-}
+};
 
 const capitalize = (input: string) => {
   return `${input.charAt(0).toUpperCase()}${input.slice(1)}`;
-}
+};
 
 export const pageQuery = graphql`
   query PageQuery($id: String) {

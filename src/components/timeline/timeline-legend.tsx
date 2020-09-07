@@ -53,6 +53,7 @@ const entryWrapperStyles = css`
   background-color: var(--white);
   position: relative;
   align-items: center;
+  border-color: var(--highlight-color);
 
   left: -1.125rem;
   
@@ -99,9 +100,9 @@ const entryWrapperStyles = css`
   }
 `;
 
-const borderColor = (color: string) =>
+const colorCss = (color: string) =>
   css`
-    border-color: var(--${color});
+    --highlight-color: var(--${color})
   `;
 
 type TimelineLegendProps = {
@@ -116,7 +117,7 @@ const TimelineLegend = ({ entries }: TimelineLegendProps) => {
           const Icon = entry.icon;
           return (
             <a key={i} href={`#${entry.anchor}`}>
-              <div key={i} css={[entryWrapperStyles, borderColor(entry.color)]}>
+              <div key={i} css={[entryWrapperStyles, colorCss(entry.color)]}>
                 <Icon />
                 <span>{entry.title}</span>
               </div>

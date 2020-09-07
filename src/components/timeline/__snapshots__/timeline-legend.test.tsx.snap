@@ -11,7 +11,7 @@ exports[`TimelineLegend renders correctly 1`] = `
       href="#early-years"
     >
       <div
-        className="css-15zjo8g-entryWrapperStyles-TimelineLegend"
+        className="css-awjpm8-entryWrapperStyles-TimelineLegend"
       >
         <test-file-stub />
         <span>
