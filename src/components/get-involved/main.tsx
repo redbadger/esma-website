@@ -22,7 +22,7 @@ const mainCss = css`
   h2 {
     font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 14px;
+    margin-bottom: 0.875rem;
   }
 
   p {
@@ -39,19 +39,19 @@ const mainCss = css`
     grid-row-gap: 1em;
     grid-column-gap: 2.25em;
     grid-auto-rows: minmax(100px, auto);
-    max-width: 1024px;
+    max-width: 64rem;
   }
 
   .contact-item {
-    margin-bottom: 36px;
+    margin-bottom: 2.25rem;
     p {
-      margin-bottom: 36px;
+      margin-bottom: 2.25rem;
     }
   }
 
   .more-contact {
     p {
-      padding: 24px 0;
+      padding: 1.5rem 0;
       text-align: center;
     }
   }
@@ -59,12 +59,12 @@ const mainCss = css`
   .more-contact-item {
     display: inline-block;
     vertical-align: top;
-    width: 445px;
-    margin: 0 95px;
+    width: 27.5rem;
+    margin: 0 6rem;
 
     h2 {
-      margin-top: 26px;
-      margin-bottom: 4px ;
+      margin-top: 1.625rem;
+      margin-bottom: 0.25rem ;
     }
 
     .linked-in {
@@ -75,11 +75,11 @@ const mainCss = css`
   }
 
   .contact-panel {
-    box-shadow: 0 0 4px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.2);
   }
 
   .heading {
-    margin-bottom: 95px;
+    margin-bottom: 6rem;
   }
 
 
