@@ -5,6 +5,7 @@ import Button from "../components/common/button";
 import { BreakPoint, mq } from "../util/mq";
 import { css } from "@emotion/core";
 import HeroBackgroundImage from "../components/operational-review/hero-background-image";
+import linkedInImage from "../images/LinkedIn-Logos/LI-In-Bug.png";
 
 const mainCss = css`
   display: flex;
@@ -67,6 +68,12 @@ const mainCss = css`
     h2 {
       margin-top: 26px;
       margin-bottom: 4px ;
+    }
+
+    .linked-in {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
     }
   }
 
@@ -190,12 +197,12 @@ const Main = () => (
         <div className="contact-panel">
           <div className="more-contact-item">
             <div className="image-placeholder" style={{backgroundColor: "pink", borderRadius: "9999px", width: "60px", height: "60px", float: "left", margin: "2.25em" }}></div>
-            <h2>Barry Matthews</h2>
+            <h2>Barry Matthews <a className="linked-in" href="https://www.linkedin.com/in/barry-matthews-0970704/"><img alt="linked-in" src={linkedInImage} /></a></h2>
             <a href="mailto:barrymatthews@esma.community">barrymatthews@esma.community</a>
           </div>
           <div className="more-contact-item">
             <div className="image-placeholder" style={{backgroundColor: "pink", borderRadius: "9999px", width: "60px", height: "60px", float: "left", margin: "2.25em" }}></div>
-            <h2>Barry Murphy</h2>
+            <h2>Barry Murphy <a className="linked-in" href="https://www.linkedin.com/in/barry-murphy-2240a115"><img alt="linked-in" src={linkedInImage} /></a></h2>
             <a href="mailto:barrymurphy@esma.community">barrymurphy@esma.community</a>
           </div>
         </div>
