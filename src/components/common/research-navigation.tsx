@@ -83,17 +83,20 @@ const researchNavigationCss = css`
   li {
     margin-left: 1rem;
     margin-right: 1rem;
-    border-bottom: 0.375rem solid transparent;
     border-top: 0.375rem solid transparent;
+    transition: 0.6s border-color ease;
+  }
+
+  a {
+    border-bottom: 0.375rem solid transparent;
     &:hover,
     &:focus,
     &:active {
       border-bottom-color: var(--highlight-colour);
     }
-    transition: 0.6s border-color ease;
   }
 
-  li.current-page {
+  a.current-page {
     border-bottom-color: var(--highlight-colour);
     font-weight: 800;
   }
@@ -114,7 +117,14 @@ const ResearchNavigationLink = ({
         --highlight-colour: ${highlightColour};
       `}
     >
-      <Link to={href}>
+      <Link
+        to={href}
+        getProps={({isCurrent}) => {
+          return {
+            className: isCurrent ? "current-page" : "",
+          };
+        }}
+      >
         <Icon />
         <span>{name}</span>
       </Link>
