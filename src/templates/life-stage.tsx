@@ -316,7 +316,7 @@ const getActiveColorStyles = (colorActive: string) => {
   `;
 };
 
-function getPills(allMdx: AllMdxData, mdx: MdxData): PillData[] {
+const getPills = (allMdx: AllMdxData, mdx: MdxData): PillData[] => {
   return allMdx.pillsMapping
     .find(pill => {
       return pill.parent === mdx.frontmatter.parent;
@@ -326,13 +326,17 @@ function getPills(allMdx: AllMdxData, mdx: MdxData): PillData[] {
     });
 }
 
-function getCrumbs(pageContext: PageContext) {
+const getCrumbs = (pageContext: PageContext) => {
   return pageContext.breadcrumb.crumbs.map(entry => {
     return {
       pathname: entry.pathname,
-      crumbLabel: entry.crumbLabel.replace(/-/g, " "),
+      crumbLabel: capitalize(entry.crumbLabel.replace(/-/g, " ")),
     };
   });
+}
+
+const capitalize = (input: string) => {
+  return `${input.charAt(0).toUpperCase()}${input.slice(1)}`;
 }
 
 export const pageQuery = graphql`
