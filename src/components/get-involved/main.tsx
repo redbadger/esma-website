@@ -33,6 +33,10 @@ const mainCss = css`
     text-align: center;
   }
 
+  ul.contact-items {
+    list-style: none;
+  }
+
   .contact-items {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -106,25 +110,25 @@ const Main = () => (
         Help us make the change. We have bold and ambitious plans and need help to execute them.
       </p>
     </div>
-    <div className="contact-items">
-      <div className="contact-item">
+    <ul className="contact-items">
+      <li className="contact-item">
         <h3>Newsletter</h3>
         <p>Sign up to our newsletter to stay up to date on the progress of our plans, events and research.</p>
         <Button label="Sign up" variant="light-grey" onClick={() => scroll.scrollToBottom() } />
-      </div>
-      <div className="contact-item">
+      </li>
+      <li className="contact-item">
         <h3>Connecting organisations</h3>
         <p>Connect ESMA to organisations that are tackling social mobility to include on our platform for others to collaborate with.</p>
-      </div>
-      <div className="contact-item">
+      </li>
+      <li className="contact-item">
         <h3>Funding community</h3>
         <p>Connect ESMA to organisations that are tackling social mobility to include on our platform for others to collaborate with.</p>
-      </div>
-      <div className="contact-item">
+      </li>
+      <li className="contact-item">
         <h3>Resources</h3>
         <p>Provide technology resources to continue to build out our platform services</p>
-      </div>
-    </div>
+      </li>
+    </ul>
     <div className="more-contact">
       <p>If you’d like to know more about the above you can email:</p>
       <div className="contact-panel">
