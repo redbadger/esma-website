@@ -83,12 +83,13 @@ const researchNavigationCss = css`
   li {
     margin-left: 1rem;
     margin-right: 1rem;
-    border-top: 0.375rem solid transparent;
-    transition: 0.6s border-color ease;
   }
 
   a {
+    border-top: 0.375rem solid transparent;
     border-bottom: 0.375rem solid transparent;
+    transition: 0.6s border-color ease;
+    
     &:hover,
     &:focus,
     &:active {
