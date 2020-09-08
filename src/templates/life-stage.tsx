@@ -39,23 +39,53 @@ const layoutStyles = css`
   color: var(--midnight);
 
   .further-reading-container {
-    border-color: var(--highlight-colour);
+    border-color: var(--highlight-color);
   }
 
   .further-reading-bullet-point {
-    background: var(--highlight-colour);
+    background: var(--highlight-color);
   }
 
   .quote-mark {
-    color: var(--highlight-colour);
+    color: var(--highlight-color);
   }
 
   .footnote-link {
-    color: var(--highlight-colour);
+    color: var(--highlight-color);
   }
 
-  ol li:before {
-    color: var(--highlight-colour);
+  ol li::before {
+    color: var(--highlight-color);
+  }
+
+  .early-years {
+    --highlight-color: var(--aqua);
+  }
+
+  .school-years {
+    --highlight-color: var(--yellow);
+  }
+
+  .further-education {
+    --highlight-color: var(--midnight);
+
+    .pill-list {
+      a.current-page {
+        color: var(--white);
+      }
+
+      li a:hover {
+        color: var(--white);
+      }
+    }
+  }
+
+  .higher-education {
+    --highlight-color: var(--cobalt);
+  }
+
+  .working-life {
+    --highlight-color: var(--copperfield);
   }
 `;
 
@@ -240,7 +270,6 @@ const PageTemplate = ({
   data: { mdx, allMdx },
   pageContext,
 }: PageTemplateProps) => {
-  const colorActive = `var(--${mdx.frontmatter.color})`;
 
   const crumbs = getCrumbs(pageContext);
 
@@ -256,51 +285,58 @@ const PageTemplate = ({
     <>
       <Layout includeResearchNavigation={true}>
         <SEO title={`${mdx.frontmatter.parent} - ${mdx.frontmatter.title}`} />
-        <section css={[layoutStyles, highlightColorOverride(colorActive)]}>
-          {bgImage && <ResearchImage imageName={bgImage} />}
+        <section css={[layoutStyles]}>
           <div
-            css={
-              bgImage ? contentContainerStyles : contentContainerNoImageStyles
-            }
+            aria-hidden="true"
+            className={mdx.frontmatter.parent.toLowerCase().replace(/ /g, "-")}
           >
-            <div css={breadcrumbStyles}>
-              <Breadcrumb crumbs={crumbs} crumbSeparator=">" />
-              <div className="clear" />
-            </div>
-            <Pills
-              pills={pillsMap}
-              colorActive={colorActive}
-              currentPillIndex={currentPillIndex}
-            />
-            <h2>{mdx.frontmatter.title}</h2>
-            <div css={contentBodyStyles}>
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{mdx.body}</MDXRenderer>
-              </MDXProvider>
-            </div>
-            <div css={footnoteStyles}>
-              {mdx.frontmatter.footnotes && (
-                <>
-                  <h3>Footnotes</h3>
-                  <ol>
-                    {mdx.frontmatter.footnotes.map(
-                      (entry: FootNoteData, index: number) => (
-                        <li key={index}>
-                          <a key={index} href={entry.destination} id={entry.id}>
-                            {entry.text}
-                          </a>
-                        </li>
-                      )
-                    )}
-                  </ol>
-                </>
-              )}
+            {bgImage && <ResearchImage imageName={bgImage} />}
+            <div
+              css={
+                bgImage ? contentContainerStyles : contentContainerNoImageStyles
+              }
+            >
+              <div css={breadcrumbStyles}>
+                <Breadcrumb crumbs={crumbs} crumbSeparator=">" />
+                <div className="clear" />
+              </div>
+              <Pills
+                pills={pillsMap}
+                currentPillIndex={currentPillIndex}
+              />
+              <h2>{mdx.frontmatter.title}</h2>
+              <div css={contentBodyStyles}>
+                <MDXProvider components={shortcodes}>
+                  <MDXRenderer>{mdx.body}</MDXRenderer>
+                </MDXProvider>
+              </div>
+              <div css={footnoteStyles}>
+                {mdx.frontmatter.footnotes && (
+                  <>
+                    <h3>Footnotes</h3>
+                    <ol>
+                      {mdx.frontmatter.footnotes.map(
+                        (entry: FootNoteData, index: number) => (
+                          <li key={index}>
+                            <a
+                              key={index}
+                              href={entry.destination}
+                              id={entry.id}
+                            >
+                              {entry.text}
+                            </a>
+                          </li>
+                        )
+                      )}
+                    </ol>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </section>
         <PrevNext
           pills={pillsMap}
-          colorActive={colorActive}
           currentPillIndex={currentPillIndex}
           icon={EarlyDevIcon}
         />
@@ -308,12 +344,6 @@ const PageTemplate = ({
       </Layout>
     </>
   );
-};
-
-const highlightColorOverride = (colorActive: string) => {
-  return css`
-    --highlight-colour: ${colorActive};
-  `;
 };
 
 const getPills = (allMdx: AllMdxData, mdx: MdxData): PillData[] => {
@@ -348,7 +378,6 @@ export const pageQuery = graphql`
         title
         parent
         bgImageName
-        color
         footnotes {
           id
           text

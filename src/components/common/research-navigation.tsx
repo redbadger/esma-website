@@ -36,7 +36,7 @@ const researchNavigationCss = css`
     display: flex;
     align-items: center;
     > svg {
-      color: var(--highlight-colour);
+      color: var(--highlight-color);
       display: inline-block;
       height: 1.5rem;
       vertical-align: bottom;
@@ -93,12 +93,12 @@ const researchNavigationCss = css`
     &:hover,
     &:focus,
     &:active {
-      border-bottom-color: var(--highlight-colour);
+      border-bottom-color: var(--highlight-color);
     }
   }
 
   a.current-page {
-    border-bottom-color: var(--highlight-colour);
+    border-bottom-color: var(--highlight-color);
     font-weight: 800;
   }
 `;
@@ -115,7 +115,7 @@ const ResearchNavigationLink = ({
     <li
       className={className}
       css={css`
-        --highlight-colour: ${highlightColour};
+        --highlight-color: ${highlightColour};
       `}
     >
       <Link

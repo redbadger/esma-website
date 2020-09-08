@@ -122,11 +122,10 @@ const cssPills = css`
   }
 `;
 
-const Pills = ({ pills, colorActive, currentPillIndex }: PillsProps) => {
+const Pills = ({ pills, currentPillIndex }: PillsProps) => {
   const [isOpen, setOpen] = useState(false);
 
   const highlightColorCss = css`
-    --highlight-color: ${colorActive};
   `;
 
   return (
