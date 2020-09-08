@@ -64,9 +64,9 @@ const Navigation = (): JSX.Element => {
             <Link
               key={i}
               to={entry.path}
-              getProps={({ isCurrent }) => {
+              getProps={({ isPartiallyCurrent }) => {
                 return {
-                  className: isCurrent ? "active" : "",
+                  className: isPartiallyCurrent ? "active" : "",
                 };
               }}
             >
