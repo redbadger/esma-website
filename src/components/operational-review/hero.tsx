@@ -1,9 +1,18 @@
 import React from "react";
 import HeroBackgroundImage from "./hero-background-image";
-import { filteredHeroStyles } from '../common/filtered-hero-styles';
+import { filteredHeroStyles } from "../common/filtered-hero-styles";
+import { css } from "@emotion/core";
+
+const customCss = css`
+  .header::after,
+  .header::before {
+    /* this aligns with the design which has the image flipped */
+    transform: scaleX(-1);
+  }
+`;
 
 const Hero = () => (
-  <header css={filteredHeroStyles}>
+  <header css={[filteredHeroStyles, customCss]}>
     <HeroBackgroundImage className="header">
       <div className="container">
         <p>Home &gt; Operational Review</p>

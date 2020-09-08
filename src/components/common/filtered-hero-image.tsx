@@ -1,6 +1,7 @@
 import React from "react";
 import BackgroundImage from "gatsby-background-image";
 import { css } from "@emotion/core";
+import { ImageNode } from "./types";
 
 const backgroundCss = css`
   .background-image-filter {
@@ -14,10 +15,20 @@ const backgroundCss = css`
   }
 `;
 
-const FilteredHeroImage = ({ data, children, className }) => {
+type FilteredHeroImageProps = {
+  data: ImageNode;
+  children: JSX.Element;
+  className: string;
+};
+
+const FilteredHeroImage = ({
+  data,
+  children,
+  className,
+}: FilteredHeroImageProps) => {
   return (
     <BackgroundImage
-      fluid={data.placeholderImage.childImageSharp.fluid}
+      fluid={data.node.childImageSharp.fluid}
       className={className}
       css={backgroundCss}
     >
