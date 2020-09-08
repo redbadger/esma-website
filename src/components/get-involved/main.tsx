@@ -143,8 +143,8 @@ const Main = () => (
         <p>Connect ESMA to organisations that are tackling social mobility to include on our platform for others to collaborate with.</p>
       </li>
       <li className="contact-item">
-        <h3>Resources</h3>
-        <p>Provide technology resources to continue to build out our platform services</p>
+        <h3>Provide Resources</h3>
+        <p>Provide design and technology resource to continue to build our digital platform</p>
       </li>
     </ul>
     <div className="more-contact">
