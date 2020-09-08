@@ -29,7 +29,7 @@ exports[`Research navigation renders correctly 1`] = `
   </div>
   <ul>
     <li
-      className="current-page early-years"
+      className="early-years"
     >
       <a
         getProps={[Function]}
@@ -42,7 +42,7 @@ exports[`Research navigation renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="null school-years"
+      className="school-years"
     >
       <a
         getProps={[Function]}
@@ -55,7 +55,7 @@ exports[`Research navigation renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="null further-education"
+      className="further-education"
     >
       <a
         getProps={[Function]}
@@ -68,7 +68,7 @@ exports[`Research navigation renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="null higher-education"
+      className="higher-education"
     >
       <a
         getProps={[Function]}
@@ -81,7 +81,7 @@ exports[`Research navigation renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="null working-life"
+      className="working-life"
     >
       <a
         getProps={[Function]}
