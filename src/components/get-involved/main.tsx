@@ -55,18 +55,17 @@ const mainCss = css`
     }
   }
 
-  .more-contact {
-    p {
-      padding-top: 0.5rem;
-      text-align: left;
-    }
-  }
 
   .more-contact-item {
     display: inline-block;
     vertical-align: top;
     width: 27.5rem;
     margin: 0 6rem;
+
+    p {
+      padding-top: 0.5rem;
+      text-align: left;
+    }
 
     p.contact-name {
       font-weight: 600;
@@ -82,8 +81,16 @@ const mainCss = css`
     }
   }
 
+  .contact-panel-intro {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.125rem;
+    margin: 1.5rem;
+  }
+
   .contact-panel {
     box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.2);
+    margin-bottom: 4.5rem;
   }
 
   .heading {
@@ -140,15 +147,15 @@ const Main = () => (
       </li>
       <li className="contact-item">
         <h3>Funding community</h3>
-        <p>Connect ESMA to organisations that are tackling social mobility to include on our platform for others to collaborate with.</p>
+        <p>Join our funding community who are committed to making change stick.</p>
       </li>
       <li className="contact-item">
         <h3>Provide Resources</h3>
-        <p>Provide design and technology resource to continue to build our digital platform</p>
+        <p>Provide design and technology resource to continue to build our digital platform.</p>
       </li>
     </ul>
     <div className="more-contact">
-      <p>If you’d like to know more about the above you can email:</p>
+      <p className="contact-panel-intro">If you’d like to know more about the above you can email:</p>
       <div className="contact-panel">
         <div className="more-contact-item">
           <div className="image-placeholder matthews"></div>

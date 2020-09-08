@@ -12,11 +12,6 @@ const backgroundCss = css`
     background: rgba(0, 0, 0, 0.6);
     z-index: -1;
   }
-
-  ::after,
-  ::before {
-    transform: scaleX(-1);
-  }
 `;
 
 const FilteredHeroImage = ({ data, children, className }) => {
