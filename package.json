@@ -37,6 +37,7 @@
     "react-helmet": "^6.0.0",
     "react-responsive-carousel": "^3.2.9",
     "react-scroll": "^1.8.1",
+    "slugify": "^1.4.5",
     "wait-on": "^5.2.0"
   },
   "devDependencies": {

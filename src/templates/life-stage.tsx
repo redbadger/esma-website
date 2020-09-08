@@ -16,6 +16,7 @@ import { FootNoteData } from "../components/research/types";
 import { ResearchPageMetaData, PillData } from "../components/research/types";
 import ResearchQuote from "../components/research/research-quote";
 import { Breadcrumb } from "gatsby-plugin-breadcrumb";
+import slugify from "slugify";
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -56,36 +57,6 @@ const layoutStyles = css`
 
   ol li::before {
     color: var(--highlight-color);
-  }
-
-  .early-years {
-    --highlight-color: var(--aqua);
-  }
-
-  .school-years {
-    --highlight-color: var(--yellow);
-  }
-
-  .further-education {
-    --highlight-color: var(--midnight);
-
-    .pill-list {
-      a.current-page {
-        color: var(--white);
-      }
-
-      li a:hover {
-        color: var(--white);
-      }
-    }
-  }
-
-  .higher-education {
-    --highlight-color: var(--cobalt);
-  }
-
-  .working-life {
-    --highlight-color: var(--copperfield);
   }
 `;
 
@@ -270,7 +241,6 @@ const PageTemplate = ({
   data: { mdx, allMdx },
   pageContext,
 }: PageTemplateProps) => {
-
   const crumbs = getCrumbs(pageContext);
 
   const pillsMap: PillData[] = getPills(allMdx, mdx);
@@ -288,7 +258,7 @@ const PageTemplate = ({
         <section css={[layoutStyles]}>
           <div
             aria-hidden="true"
-            className={mdx.frontmatter.parent.toLowerCase().replace(/ /g, "-")}
+            className={slugify(mdx.frontmatter.parent, {lower: true})}
           >
             {bgImage && <ResearchImage imageName={bgImage} />}
             <div
@@ -300,10 +270,7 @@ const PageTemplate = ({
                 <Breadcrumb crumbs={crumbs} crumbSeparator=">" />
                 <div className="clear" />
               </div>
-              <Pills
-                pills={pillsMap}
-                currentPillIndex={currentPillIndex}
-              />
+              <Pills pills={pillsMap} currentPillIndex={currentPillIndex} />
               <h2>{mdx.frontmatter.title}</h2>
               <div css={contentBodyStyles}>
                 <MDXProvider components={shortcodes}>

@@ -89,7 +89,7 @@ const researchNavigationCss = css`
     border-top: 0.375rem solid transparent;
     border-bottom: 0.375rem solid transparent;
     transition: 0.6s border-color ease;
-    
+
     &:hover,
     &:focus,
     &:active {
@@ -105,22 +105,16 @@ const researchNavigationCss = css`
 
 const ResearchNavigationLink = ({
   className,
-  highlightColour,
   href,
   name,
   icon,
 }: ResearchPage): JSX.Element => {
   const Icon = icon;
   return (
-    <li
-      className={className}
-      css={css`
-        --highlight-color: ${highlightColour};
-      `}
-    >
+    <li className={className}>
       <Link
         to={href}
-        getProps={({isPartiallyCurrent}) => {
+        getProps={({ isPartiallyCurrent }) => {
           return {
             className: isPartiallyCurrent ? "current-page" : "",
           };
