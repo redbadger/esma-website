@@ -9,7 +9,6 @@ import { mq, BreakPoint } from "../util/mq";
 import Pills from "../components/research/pills";
 import PrevNext from "../components/research/prev-next";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
-import EarlyDevIcon from "../svg/blocks.svg";
 import FurtherReading from "../components/research/further-reading";
 import ResearchImage from "../components/research/research-image";
 import { FootNoteData } from "../components/research/types";
@@ -17,6 +16,8 @@ import { ResearchPageMetaData, PillData } from "../components/research/types";
 import ResearchQuote from "../components/research/research-quote";
 import { Breadcrumb } from "gatsby-plugin-breadcrumb";
 import slugify from "slugify";
+import { pages } from "../components/common/research-pages";
+import { timelineIcons } from "../components/common/icons";
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -251,15 +252,14 @@ const PageTemplate = ({
 
   const bgImage = mdx.frontmatter.bgImageName;
 
+  const className = slugify(mdx.frontmatter.parent, { lower: true });
+
   return (
     <>
       <Layout includeResearchNavigation={true}>
         <SEO title={`${mdx.frontmatter.parent} - ${mdx.frontmatter.title}`} />
         <section css={[layoutStyles]}>
-          <div
-            aria-hidden="true"
-            className={slugify(mdx.frontmatter.parent, {lower: true})}
-          >
+          <div aria-hidden="true" className={className}>
             {bgImage && <ResearchImage imageName={bgImage} />}
             <div
               css={
@@ -305,7 +305,12 @@ const PageTemplate = ({
         <PrevNext
           pills={pillsMap}
           currentPillIndex={currentPillIndex}
-          icon={EarlyDevIcon}
+          icon={
+            // if for some reason a matching page can't be found, better 
+            // to default to some icon rather than break the page
+            pages.find(page => page.className === className)?.icon ||
+            timelineIcons.earlyYears
+          }
         />
         <NewsletterSignUp />
       </Layout>
