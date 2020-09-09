@@ -16,7 +16,7 @@ if (process.env.CONTENTFUL_HOST) {
 
 const { spaceId, accessToken } = contentfulConfig;
 module.exports = {
-  pathPrefix: "/esma-website",
+  pathPrefix: "/",
   siteMetadata: {
     title: `Employers Social Mobility Alliance`,
     description: ``,
@@ -86,7 +86,7 @@ module.exports = {
         useAutoGen: true,
         exclude: [`/404/`, `/404.html`],
         trailingSlashes: true,
-        usePathPrefix: "/esma-website",
+        usePathPrefix: "/",
       },
     },
     {
