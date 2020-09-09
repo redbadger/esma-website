@@ -9,7 +9,11 @@ const mainCss = css`
   font-weight: 300;
   font-size: 1.125rem;
 
-  .intro {
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  h3 {
     font-size: 1.25rem;
     font-weight: 600;
   }
@@ -23,7 +27,8 @@ const mainCss = css`
     width: 1rem;
     content: "";
   }
-  li,
+
+  h3,
   p {
     padding: 1rem 0;
   }

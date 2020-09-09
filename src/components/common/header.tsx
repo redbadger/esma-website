@@ -82,7 +82,7 @@ const headerStyles = css`
       li {
         padding: 0 0.75rem;
         flex-grow: 0;
-        flex-shrink: 1;
+        flex-shrink: 0;
         width: unset;
       }
       a {
@@ -107,7 +107,7 @@ const Header = ({
       <ul className="navigation">
         <li>
           <h1>
-            <Link to="/">{siteTitle}</Link>
+            <Link to="/">ESMA</Link>
           </h1>
           <NavToggle toggle={toggleNavBar} />
         </li>
