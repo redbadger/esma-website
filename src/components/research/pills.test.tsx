@@ -19,7 +19,6 @@ describe("Pills", () => {
   ];
 
   const colorActive = "yellow";
-  
 
   it("renders correctly", () => {
     const tree = renderer
