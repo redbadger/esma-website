@@ -125,11 +125,8 @@ const cssPills = css`
 const Pills = ({ pills, currentPillIndex }: PillsProps) => {
   const [isOpen, setOpen] = useState(false);
 
-  const highlightColorCss = css`
-  `;
-
   return (
-    <nav css={[cssPills, highlightColorCss]}>
+    <nav css={cssPills}>
       <div className="dropdown" onClick={() => setOpen(!isOpen)}>
         Contents
         <span className={["icon", isOpen ? "open" : ""].join(" ")}>
