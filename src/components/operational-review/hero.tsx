@@ -7,7 +7,7 @@ const customCss = css`
   .header::after,
   .header::before {
     /* this aligns with the design which has the image flipped */
-    transform: scaleX(-1);
+    background-position: center 55%;
   }
 `;
 
