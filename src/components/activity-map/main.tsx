@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { BreakPoint, mq } from "../../util/mq";
 import { Link } from "gatsby";
+import ActivityMapSvg from "../../svg/activity-map.svg";
 
 const mainCss = css`
   padding: 1.5rem 0.75rem;
@@ -33,29 +34,28 @@ const mainCss = css`
     padding: 1rem 0;
   }
 
+  aside {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  picture > svg {
+    max-width: 100%;
+    height: auto;
+  }
+
   ${mq(BreakPoint.md)} {
     padding: 2rem 2.5rem;
-
-    aside .hero-image-wrapper {
-      height: 15rem;
-
-      picture img {
-        object-position: center -5rem;
-      }
-    }
   }
   ${mq(BreakPoint.lg)} {
     display: flex;
     padding: 4.5rem 10rem 2rem;
     gap: 8rem;
 
-    aside .hero-image-wrapper {
-      width: 27.5rem;
-      height: 37.5rem;
-
-      picture img {
-        object-position: -7rem 0rem;
-      }
+    main {
+      flex-basis: 50%;
+      flex-shrink: 0;
     }
   }
 `;
@@ -88,7 +88,9 @@ const Main = () => (
       </ul>
     </main>
     <aside>
-      <p>A picture of the UK will go here.</p>
+      <picture>
+        <ActivityMapSvg />
+      </picture>
     </aside>
   </div>
 );

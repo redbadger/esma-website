@@ -19,7 +19,7 @@ const Hero = () => (
     <HeroBackgroundImage className="header">
       <div className="container">
         <p>Home &gt; Activity Map</p>
-        <h2>Activity Map</h2>
+        <h2>Social Mobility Activity Map</h2>
         <p className="highlight">Coming September 2021</p>
       </div>
     </HeroBackgroundImage>
