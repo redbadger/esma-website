@@ -1,13 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import FilteredHeroImage from '../common/filtered-hero-image';
+import FilteredHeroImage from "../common/filtered-hero-image";
 
 const HeroBackgroundImage = ({ children, className }) => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(
-        relativePath: { eq: "operational-review-hero.jpg" }
-      ) {
+      node: file(relativePath: { eq: "operational-review-hero.jpg" }) {
         childImageSharp {
           fluid(cropFocus: ATTENTION) {
             ...GatsbyImageSharpFluid
