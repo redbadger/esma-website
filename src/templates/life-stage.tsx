@@ -9,13 +9,15 @@ import { mq, BreakPoint } from "../util/mq";
 import Pills from "../components/research/pills";
 import PrevNext from "../components/research/prev-next";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
-import EarlyDevIcon from "../svg/blocks.svg";
 import FurtherReading from "../components/research/further-reading";
 import ResearchImage from "../components/research/research-image";
 import { FootNoteData } from "../components/research/types";
 import { ResearchPageMetaData, PillData } from "../components/research/types";
 import ResearchQuote from "../components/research/research-quote";
 import { Breadcrumb } from "gatsby-plugin-breadcrumb";
+import slugify from "slugify";
+import { pages } from "../components/common/research-pages";
+import { timelineIcons } from "../components/common/icons";
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -39,23 +41,23 @@ const layoutStyles = css`
   color: var(--midnight);
 
   .further-reading-container {
-    border-color: var(--highlight-colour);
+    border-color: var(--highlight-color);
   }
 
   .further-reading-bullet-point {
-    background: var(--highlight-colour);
+    background: var(--highlight-color);
   }
 
   .quote-mark {
-    color: var(--highlight-colour);
+    color: var(--highlight-color);
   }
 
   .footnote-link {
-    color: var(--highlight-colour);
+    color: var(--highlight-color);
   }
 
-  ol li:before {
-    color: var(--highlight-colour);
+  ol li::before {
+    color: var(--highlight-color);
   }
 `;
 
@@ -240,8 +242,6 @@ const PageTemplate = ({
   data: { mdx, allMdx },
   pageContext,
 }: PageTemplateProps) => {
-  const colorActive = `var(--${mdx.frontmatter.color})`;
-
   const crumbs = getCrumbs(pageContext);
 
   const pillsMap: PillData[] = getPills(allMdx, mdx);
@@ -252,68 +252,70 @@ const PageTemplate = ({
 
   const bgImage = mdx.frontmatter.bgImageName;
 
+  const className = slugify(mdx.frontmatter.parent, { lower: true });
+
   return (
     <>
       <Layout includeResearchNavigation={true}>
         <SEO title={`${mdx.frontmatter.parent} - ${mdx.frontmatter.title}`} />
-        <section css={[layoutStyles, highlightColorOverride(colorActive)]}>
-          {bgImage && <ResearchImage imageName={bgImage} />}
-          <div
-            css={
-              bgImage ? contentContainerStyles : contentContainerNoImageStyles
-            }
-          >
-            <div css={breadcrumbStyles}>
-              <Breadcrumb crumbs={crumbs} crumbSeparator=">" />
-              <div className="clear" />
-            </div>
-            <Pills
-              pills={pillsMap}
-              colorActive={colorActive}
-              currentPillIndex={currentPillIndex}
-            />
-            <h2>{mdx.frontmatter.title}</h2>
-            <div css={contentBodyStyles}>
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{mdx.body}</MDXRenderer>
-              </MDXProvider>
-            </div>
-            <div css={footnoteStyles}>
-              {mdx.frontmatter.footnotes && (
-                <>
-                  <h3>Footnotes</h3>
-                  <ol>
-                    {mdx.frontmatter.footnotes.map(
-                      (entry: FootNoteData, index: number) => (
-                        <li key={index}>
-                          <a key={index} href={entry.destination} id={entry.id}>
-                            {entry.text}
-                          </a>
-                        </li>
-                      )
-                    )}
-                  </ol>
-                </>
-              )}
+        <section css={[layoutStyles]}>
+          <div aria-hidden="true" className={className}>
+            {bgImage && <ResearchImage imageName={bgImage} />}
+            <div
+              css={
+                bgImage ? contentContainerStyles : contentContainerNoImageStyles
+              }
+            >
+              <div css={breadcrumbStyles}>
+                <Breadcrumb crumbs={crumbs} crumbSeparator=">" />
+                <div className="clear" />
+              </div>
+              <Pills pills={pillsMap} currentPillIndex={currentPillIndex} />
+              <h2>{mdx.frontmatter.title}</h2>
+              <div css={contentBodyStyles}>
+                <MDXProvider components={shortcodes}>
+                  <MDXRenderer>{mdx.body}</MDXRenderer>
+                </MDXProvider>
+              </div>
+              <div css={footnoteStyles}>
+                {mdx.frontmatter.footnotes && (
+                  <>
+                    <h3>Footnotes</h3>
+                    <ol>
+                      {mdx.frontmatter.footnotes.map(
+                        (entry: FootNoteData, index: number) => (
+                          <li key={index}>
+                            <a
+                              key={index}
+                              href={entry.destination}
+                              id={entry.id}
+                            >
+                              {entry.text}
+                            </a>
+                          </li>
+                        )
+                      )}
+                    </ol>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </section>
         <PrevNext
           pills={pillsMap}
-          colorActive={colorActive}
           currentPillIndex={currentPillIndex}
-          icon={EarlyDevIcon}
+          icon={
+            // if for some reason a matching page can't be found, better 
+            // to default to some icon rather than break the page
+            pages.find(page => page.className === className)?.icon ||
+            timelineIcons.earlyYears
+          }
         />
         <NewsletterSignUp />
       </Layout>
     </>
   );
-};
-
-const highlightColorOverride = (colorActive: string) => {
-  return css`
-    --highlight-colour: ${colorActive};
-  `;
 };
 
 const getPills = (allMdx: AllMdxData, mdx: MdxData): PillData[] => {
@@ -348,7 +350,6 @@ export const pageQuery = graphql`
         title
         parent
         bgImageName
-        color
         footnotes {
           id
           text

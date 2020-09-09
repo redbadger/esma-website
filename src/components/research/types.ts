@@ -5,7 +5,6 @@ export type PillData = {
 
 export type PillsProps = {
   pills: Array<PillData>;
-  colorActive: string;
   currentPillIndex: number;
 };
 
@@ -13,7 +12,6 @@ export type ResearchPageMetaData = {
   order: number;
   parent: string;
   title: string;
-  color: string;
   bgImageName: string;
   footnotes: FootNoteData[];
 };

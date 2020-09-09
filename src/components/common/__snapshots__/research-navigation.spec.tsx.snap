@@ -2,7 +2,7 @@
 
 exports[`Research navigation renders correctly 1`] = `
 <nav
-  className="css-k37u5-researchNavigationCss"
+  className="css-f47r1u-researchNavigationCss"
 >
   <div
     className="scroll-help left can-scroll"
@@ -29,7 +29,7 @@ exports[`Research navigation renders correctly 1`] = `
   </div>
   <ul>
     <li
-      className="current-page css-1j62vah-ResearchNavigationLink"
+      className="early-years"
     >
       <a
         getProps={[Function]}
@@ -42,7 +42,7 @@ exports[`Research navigation renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="css-11cayae-ResearchNavigationLink"
+      className="school-years"
     >
       <a
         getProps={[Function]}
@@ -55,7 +55,7 @@ exports[`Research navigation renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="css-f4i9ca-ResearchNavigationLink"
+      className="further-education"
     >
       <a
         getProps={[Function]}
@@ -68,7 +68,7 @@ exports[`Research navigation renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="css-kwj661-ResearchNavigationLink"
+      className="higher-education"
     >
       <a
         getProps={[Function]}
@@ -81,7 +81,7 @@ exports[`Research navigation renders correctly 1`] = `
       </a>
     </li>
     <li
-      className="css-xpwdr0-ResearchNavigationLink"
+      className="working-life"
     >
       <a
         getProps={[Function]}

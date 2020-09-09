@@ -163,12 +163,8 @@ type PrevNextProps = PillsProps & {
 };
 
 const PrevNext = (props: PrevNextProps) => {
-  const highlightColorCss = css`
-    --highlight-color: ${props.colorActive};
-  `;
-
   return (
-    <nav css={[prevNextCss, highlightColorCss]}>
+    <nav css={prevNextCss}>
       <PrevNextLink {...props} type={PrevNextType.Previous} />
       <div aria-hidden="true" className="spacer">
         {/* This is here as a spacer to force Next to the right-hand side, and Prev to the left-hand side */}

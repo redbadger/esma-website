@@ -35,6 +35,36 @@ const globalStyles = css`
     font-family: Montserrat, Helvetica, Arial;
     font-size: 100%;
     padding-top: var(--body-skip-height);
+
+    .early-years {
+      --highlight-color: var(--aqua);
+    }
+
+    .school-years {
+      --highlight-color: var(--yellow);
+    }
+
+    .further-education {
+      --highlight-color: var(--midnight);
+
+      .pill-list {
+        a.current-page {
+          color: var(--white);
+        }
+
+        li a:hover {
+          color: var(--white);
+        }
+      }
+    }
+
+    .higher-education {
+      --highlight-color: var(--cobalt);
+    }
+
+    .working-life {
+      --highlight-color: var(--copperfield);
+    }
   }
 `;
 

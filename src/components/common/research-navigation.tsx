@@ -36,7 +36,7 @@ const researchNavigationCss = css`
     display: flex;
     align-items: center;
     > svg {
-      color: var(--highlight-colour);
+      color: var(--highlight-color);
       display: inline-block;
       height: 1.5rem;
       vertical-align: bottom;
@@ -83,43 +83,38 @@ const researchNavigationCss = css`
   li {
     margin-left: 1rem;
     margin-right: 1rem;
-    border-top: 0.375rem solid transparent;
-    transition: 0.6s border-color ease;
   }
 
   a {
+    border-top: 0.375rem solid transparent;
     border-bottom: 0.375rem solid transparent;
+    transition: 0.6s border-color ease;
+
     &:hover,
     &:focus,
     &:active {
-      border-bottom-color: var(--highlight-colour);
+      border-bottom-color: var(--highlight-color);
     }
   }
 
   a.current-page {
-    border-bottom-color: var(--highlight-colour);
+    border-bottom-color: var(--highlight-color);
     font-weight: 800;
   }
 `;
 
 const ResearchNavigationLink = ({
   className,
-  highlightColour,
   href,
   name,
   icon,
 }: ResearchPage): JSX.Element => {
   const Icon = icon;
   return (
-    <li
-      className={className}
-      css={css`
-        --highlight-colour: ${highlightColour};
-      `}
-    >
+    <li className={className}>
       <Link
         to={href}
-        getProps={({isPartiallyCurrent}) => {
+        getProps={({ isPartiallyCurrent }) => {
           return {
             className: isPartiallyCurrent ? "current-page" : "",
           };

@@ -10,8 +10,6 @@ import { timelineIcons } from './icons';
 
 export type ResearchPage = {
   className: string;
-  highlightColour: string;
-  faIcon: IconProp;
   href: string;
   name: string;
   icon: React.ElementType;
@@ -19,41 +17,31 @@ export type ResearchPage = {
 
 export const pages: ResearchPage[] = [
   {
-    className: "current-page",
-    highlightColour: "var(--aqua)",
-    faIcon: faShapes,
+    className: "early-years",
     href: "/issues-chronology/early-years/",
     name: "Early years",
     icon: timelineIcons.earlyYears,
   },
   {
-    className: null,
-    highlightColour: "var(--yellow)",
-    faIcon: faPencilAlt,
+    className: "school-years",
     href: "/issues-chronology/school-years/",
     name: "School years",
     icon: timelineIcons.schoolYears,
   },
   {
-    className: null,
-    highlightColour: "var(--midnight)",
-    faIcon: faBookOpen,
+    className: "further-education",
     href: "/issues-chronology/further-education/",
     name: "Further education",
     icon: timelineIcons.furtherEducation,
   },
   {
-    className: null,
-    highlightColour: "var(--cobalt)",
-    faIcon: faGraduationCap,
+    className: "higher-education",
     href: "/issues-chronology/higher-education/",
     name: "Higher education",
     icon: timelineIcons.higherEducation,
   },
   {
-    className: null,
-    highlightColour: "var(--copperfield)",
-    faIcon: faBriefcase,
+    className: "working-life",
     href: "/issues-chronology/working-life/",
     name: "Working life",
     icon: timelineIcons.workingLife,

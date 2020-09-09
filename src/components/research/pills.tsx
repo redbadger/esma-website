@@ -122,15 +122,11 @@ const cssPills = css`
   }
 `;
 
-const Pills = ({ pills, colorActive, currentPillIndex }: PillsProps) => {
+const Pills = ({ pills, currentPillIndex }: PillsProps) => {
   const [isOpen, setOpen] = useState(false);
 
-  const highlightColorCss = css`
-    --highlight-color: ${colorActive};
-  `;
-
   return (
-    <nav css={[cssPills, highlightColorCss]}>
+    <nav css={cssPills}>
       <div className="dropdown" onClick={() => setOpen(!isOpen)}>
         Contents
         <span className={["icon", isOpen ? "open" : ""].join(" ")}>
