@@ -17,21 +17,21 @@ const dropdownCssMobile = css`
   cursor: pointer;
   .icon {
     float: right;
-    padding: 0 0.5em;
+    padding: 0 0.5rem;
     transition: 0.6s transform ease-in-out;
     transform: rotate(180deg);
   }
   .icon.open {
     transform: rotate(-360deg);
   }
-  font-size: 1.25em;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--midnight);
-  padding: 12px;
+  padding: 0.75rem;
 `;
 
 const cssListItem = css`
-  line-height: 2.5em;
+  line-height: 2.5rem;
   border-top: solid 1px var(--light-grey);
   display: block;
 
@@ -64,7 +64,7 @@ const cssList = css`
     ${cssListItem}
     a {
       ${withPrefixes`user-select: none;`}
-      padding: 0 12px;
+      padding: 0 0.75rem;
 
       ${mq(BreakPoint.md)} {
         border-radius: 9999px;
@@ -107,13 +107,16 @@ const cssPills = css`
     ${dropdownCssMobile}
   }
 
+  margin-bottom: 1.5rem;
+
   ${mq(BreakPoint.md)} {
     ${withPrefixes`box-shadow: none;`}
+    margin-bottom: 0;
 
     .dropdown {
       display: none;
       ${withPrefixes`user-select: none;`}
-      padding: 12px 0;
+      padding: 0.75rem 0;
     }
   }
 

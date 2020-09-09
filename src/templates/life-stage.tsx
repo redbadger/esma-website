@@ -62,7 +62,17 @@ const layoutStyles = css`
 `;
 
 const contentContainerStyles = css`
+  h2 {
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3.875rem;
+  }
+
   ${mq(BreakPoint.md)} {
+    h2 {
+      margin-bottom: 2.25rem;
+    }
     width: 96%;
     left: 2%;
     top: -11.5rem;
@@ -81,13 +91,6 @@ const contentContainerStyles = css`
   padding-top: 3.1rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-
-  h2 {
-    margin-bottom: 2.25rem;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 3.875rem;
-  }
 `;
 
 const contentContainerNoImageStyles = css`
@@ -162,6 +165,12 @@ const footnoteStyles = css`
 `;
 
 const breadcrumbStyles = css`
+  margin-bottom: 0.75rem;
+
+  ${mq(BreakPoint.md)} {
+    margin-bottom: 0;
+  }
+
   .clear {
     clear: both;
   }
