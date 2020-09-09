@@ -7,7 +7,7 @@ const HeroBackgroundImage = ({ children, className }) => {
     query {
       node: file(relativePath: { eq: "operational-review-hero.jpg" }) {
         childImageSharp {
-          fluid(cropFocus: ATTENTION) {
+          fluid(maxWidth: 2560, cropFocus: ATTENTION) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -7,7 +7,7 @@ const HeroBackgroundImage = ({ children, className }) => {
     query {
       node: file(relativePath: { eq: "activity-map-hero.jpg" }) {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 2560) {
             ...GatsbyImageSharpFluid
           }
         }

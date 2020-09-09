@@ -40,7 +40,7 @@ const ResearchImage = ({
         edges {
           node {
             childImageSharp {
-              fluid(maxWidth: 1440) {
+              fluid(maxWidth: 2560) {
                 ...GatsbyImageSharpFluid
                 originalName
               }
