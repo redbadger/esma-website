@@ -6,8 +6,9 @@ import { css } from "@emotion/core";
 const customCss = css`
   .header::after,
   .header::before {
-    /* this aligns with the design which has the image flipped */
-    background-position: center 55%;
+    /* moving background position requires !important
+    because Gatsby sets a default at a high specificity */
+    background-position: center 55% !important;
   }
 `;
 
