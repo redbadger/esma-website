@@ -43,7 +43,6 @@ const TimelineGrid = ({ entries }: TimelineGridProps) => {
           description={entry.description}
           icon={entry.icon}
           destination={entry.destination}
-          anchor={entry.anchor}
         />
       ))}
     </div>

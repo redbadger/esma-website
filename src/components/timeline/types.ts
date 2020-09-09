@@ -4,12 +4,10 @@ export type TimelineEntryData = {
   description: string;
   destination: string;
   icon: React.ElementType;
-  anchor: string;
 };
 
 export type TimelineLegendData = {
   title: string;
   icon: React.ElementType;
   color: string;
-  anchor: string;
 };

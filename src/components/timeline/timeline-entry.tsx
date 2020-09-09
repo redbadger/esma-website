@@ -8,8 +8,7 @@ import { TimelineEntryData } from "./types";
 
 const timelineEntryStyles = css`
   transition: all 0.333s ease-out 0s;
-  :hover,
-  :target {
+  :hover {
     transform: translate3d(0px, -1px, 0px);
     box-shadow: rgba(0, 0, 0, 0.15) 0rem 1rem 1rem;
     .arrow {
@@ -80,12 +79,11 @@ const TimelineEntry = ({
   description,
   icon,
   destination,
-  anchor,
 }: TimelineEntryProps) => {
   const Icon = icon;
   return (
     <Link to={destination}>
-      <div css={timelineEntryStyles} id={anchor}>
+      <div css={timelineEntryStyles}>
         <TimelineImage imageName={imageName} />
         <h2>{title}</h2>
         <Icon />

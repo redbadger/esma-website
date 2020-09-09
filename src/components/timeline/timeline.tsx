@@ -37,7 +37,6 @@ const lifeStages = [
     icon: timelineIcons.earlyYears,
     destination: "/issues-chronology/early-years/",
     color: "aqua",
-    anchor: "early-years",
   },
   {
     title: "School years",
@@ -47,7 +46,6 @@ const lifeStages = [
     icon: timelineIcons.schoolYears,
     destination: "/issues-chronology/school-years/",
     color: "yellow",
-    anchor: "school-years",
   },
   {
     title: "Further Education",
@@ -57,7 +55,6 @@ const lifeStages = [
     icon: timelineIcons.furtherEducation,
     destination: "/issues-chronology/further-education/",
     color: "midnight",
-    anchor: "further-life",
   },
   {
     title: "Higher Education",
@@ -67,7 +64,6 @@ const lifeStages = [
     icon: timelineIcons.higherEducation,
     destination: "/issues-chronology/higher-education/",
     color: "cobalt",
-    anchor: "higher-education",
   },
   {
     title: "Working Life",
@@ -76,7 +72,6 @@ const lifeStages = [
     icon: timelineIcons.workingLife,
     destination: "/issues-chronology/working-life/",
     color: "copperfield",
-    anchor: "working-life",
   },
 ];
 

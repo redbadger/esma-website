@@ -2,6 +2,8 @@ import React from "react";
 import { TimelineLegendData } from "./types";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
+import slugify from "slugify";
+import { Link } from "gatsby";
 
 const containerStyles = css`
   background-color: white;
@@ -9,10 +11,10 @@ const containerStyles = css`
   bottom: 12rem;
   position: relative;
   margin-bottom: 5rem;
-  
+
   padding-left: 2rem;
   padding-right: 2rem;
-  
+
   ${mq(BreakPoint.md)} {
     bottom: 9rem;
   }
@@ -23,17 +25,17 @@ const containerStyles = css`
 `;
 
 const timelineLegendStyles = css`
-  display: flex;  
+  display: flex;
   width: 1px;
   height: 14.5rem;
   color: var(--midnight);
-  border-left:1px solid var(--light-grey);
+  border-left: 1px solid var(--light-grey);
   bottom: -2.5rem;
   justify-content: space-between;
   position: relative;
-  
+
   flex-direction: column;
-  
+
   ${mq(BreakPoint.md)} {
     bottom: -3.5rem;
     border-top: 1px solid var(--light-grey);
@@ -56,7 +58,7 @@ const entryWrapperStyles = css`
   border-color: var(--highlight-color);
 
   left: -1.125rem;
-  
+
   ${mq(BreakPoint.md)} {
     left: 0;
     justify-content: center;
@@ -100,11 +102,6 @@ const entryWrapperStyles = css`
   }
 `;
 
-const colorCss = (color: string) =>
-  css`
-    --highlight-color: var(--${color})
-  `;
-
 type TimelineLegendProps = {
   entries: TimelineLegendData[];
 };
@@ -114,14 +111,16 @@ const TimelineLegend = ({ entries }: TimelineLegendProps) => {
     <div css={containerStyles}>
       <div css={timelineLegendStyles}>
         {entries.map((entry, i) => {
+          const titleSlug = slugify(entry.title, { lower: true });
+          const link = `/issues-chronology/${titleSlug}/`;
           const Icon = entry.icon;
           return (
-            <a key={i} href={`#${entry.anchor}`}>
-              <div key={i} css={[entryWrapperStyles, colorCss(entry.color)]}>
+            <Link key={i} to={link} className={titleSlug}>
+              <div key={i} css={entryWrapperStyles}>
                 <Icon />
                 <span>{entry.title}</span>
               </div>
-            </a>
+            </Link>
           );
         })}
       </div>
