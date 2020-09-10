@@ -50,7 +50,7 @@ const switcherCss = css`
   li:hover {
     background-color: var(--midnight);
     color: var(--white);
-    transition: all 0.75s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   ${mq(BreakPoint.md)} {
@@ -67,7 +67,7 @@ const switcherCss = css`
     li {
       margin: 1rem 0;
       border-radius: 100rem;
-      transition: all 0.75s 0.25s ease-in-out;
+      transition: all 0.5s 0.125s ease-in-out;
     }
   }
   ${mq(BreakPoint.lg)} {

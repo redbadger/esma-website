@@ -5,9 +5,49 @@ import { mq, BreakPoint } from "../../util/mq";
 import NewsletterInputField from "./newsletter-input-field";
 import { Link } from "gatsby";
 
+const inputStyles = css`
+  label {
+    display: block;
+    font-weight: 600;
+    color: var(--midnight);
+  }
+
+  .input-error {
+    color: var(--error);
+    line-height: 1.625rem;
+    margin-top: 0.75rem;
+    visibility: hidden;
+    display: none;
+  }
+
+  .input-error.error {
+    display: block;
+    visibility: visible;
+  }
+
+  input {
+    border: 1px solid var(--midnight);
+    border-radius: 0.1875rem;
+    width: 100%;
+    height: 3rem;
+    padding: 0.4375rem 1.125rem 0.4375rem 0.625rem;
+
+    &:focus {
+      outline: none;
+      border-color: var(--cobalt);
+    }
+  }
+
+  input.error {
+    border-color: var(--error);
+  }
+`;
+
 const newsletterSignUpStyles = css`
   padding: 4.5rem 0.75rem;
   background-color: var(--taupe);
+
+  ${inputStyles}
 
   header {
     margin-bottom: 2.25rem;
@@ -41,6 +81,7 @@ const newsletterSignUpStyles = css`
   input[type="submit"] {
     width: 100%;
     height: 3rem;
+    margin-top: 1rem;
     background-color: var(--midnight);
     color: var(--white);
     line-height: 2.125rem;
@@ -72,6 +113,8 @@ const newsletterSignUpStyles = css`
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 1.875rem;
+      row-gap: 1rem;
+      align-items: end;
     }
 
     input[type="text"],
@@ -80,6 +123,12 @@ const newsletterSignUpStyles = css`
     }
     input[type="submit"] {
       width: 100%;
+    }
+
+    .input-error {
+      display: block;
+      grid-row: 2 / span 1;
+      margin-top: 0;
     }
   }
 
@@ -107,12 +156,6 @@ const newsletterSignUpStyles = css`
   p.response.error {
     display: block;
     color: var(--error);
-  }
-
-  .submitSection {
-    label {
-      width: 1px;
-    }
   }
 `;
 
@@ -196,10 +239,7 @@ const NewsletterSignUp = () => {
                 errorSetter={setEmailError}
                 valueSetter={setEmail}
               />
-              <section className="submitSection">
-                <label htmlFor="submit">&nbsp;</label>
-                <input type="submit" value="Submit" id="submit" />
-              </section>
+              <input type="submit" value="Submit" id="submit" />
               <section className="full-span">
                 <p
                   className={`response ${
