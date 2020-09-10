@@ -8,13 +8,16 @@ const timelineHeadingStyles = css`
   color: var(--midnight);
   p {
     margin-top: 2.125rem;
+    font-size: 1.125rem;
+    font-weight: 300;
   }
 
   ${mq(BreakPoint.xl)} {
     padding-left: 4rem;
     padding-right: 4rem;
+    /* move into the space vacated by the TimelineLegend */
+    margin-top: -5rem;
   }
-
 `;
 
 const TimelineHeading = () => {

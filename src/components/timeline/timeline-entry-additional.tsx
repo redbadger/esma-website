@@ -4,7 +4,7 @@ import Button from "../common/button";
 import BulbIcon from "../../svg/lightbulb.svg";
 
 const timelineEntryAdditionalStyles = css`
-  height: 43.75rem;
+  height: 45.25rem;
   background: var(--taupe);
   border: 0.3125rem solid var(--white);
   padding-left: 1.5rem;

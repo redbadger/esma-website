@@ -117,6 +117,8 @@ const contentBodyStyles = css`
     line-height: 2.125rem;
     color: var(--midnight);
     margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 300;
   }
 
   svg {
@@ -306,7 +308,7 @@ const PageTemplate = ({
           pills={pillsMap}
           currentPillIndex={currentPillIndex}
           icon={
-            // if for some reason a matching page can't be found, better 
+            // if for some reason a matching page can't be found, better
             // to default to some icon rather than break the page
             pages.find(page => page.className === className)?.icon ||
             timelineIcons.earlyYears
