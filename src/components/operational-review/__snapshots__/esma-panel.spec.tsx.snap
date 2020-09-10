@@ -16,7 +16,7 @@ exports[`EsmaPanel renders correctly 1`] = `
     className="panel-members"
   >
     <div
-      className="css-z37yht-switcherCss"
+      className="css-1jk3mwe-switcherCss"
     >
       <div
         className="preview"
