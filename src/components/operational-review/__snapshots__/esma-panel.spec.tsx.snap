@@ -2,7 +2,7 @@
 
 exports[`EsmaPanel renders correctly 1`] = `
 <section
-  className="css-zj0dad-panelCss"
+  className="css-7ko312-panelCss"
 >
   <header>
     <h2>

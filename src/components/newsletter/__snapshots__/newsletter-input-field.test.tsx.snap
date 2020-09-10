@@ -1,49 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsletterInputField renders correctly with an error state 1`] = `
-<section
-  className="css-usoz6a-newsletterInputFieldStyles"
->
-  <label
-    htmlFor="testInput"
-  >
-    testLabel
-  </label>
-  <input
-    className="error"
-    id="testInput"
-    name="test"
-    onChange={[Function]}
-    type="text"
-  />
+Array [
+  <div>
+    <label
+      htmlFor="testInput"
+    >
+      testLabel
+    </label>
+    <input
+      className="error"
+      id="testInput"
+      name="test"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>,
   <p
-    className="input-error"
+    className="input-error error"
   >
     ERROR!
-  </p>
-</section>
+  </p>,
+]
 `;
 
 exports[`NewsletterInputField renders correctly with no error state 1`] = `
-<section
-  className="css-usoz6a-newsletterInputFieldStyles"
->
-  <label
-    htmlFor="testInput"
-  >
-    testLabel
-  </label>
-  <input
-    className=""
-    id="testInput"
-    name="test"
-    onChange={[Function]}
-    type="text"
-  />
+Array [
+  <div>
+    <label
+      htmlFor="testInput"
+    >
+      testLabel
+    </label>
+    <input
+      className=""
+      id="testInput"
+      name="test"
+      onChange={[Function]}
+      type="text"
+    />
+  </div>,
   <p
-    className="input-error"
+    className="input-error "
   >
     ERROR!
-  </p>
-</section>
+  </p>,
+]
 `;
