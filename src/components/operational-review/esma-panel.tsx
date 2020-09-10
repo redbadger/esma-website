@@ -7,6 +7,7 @@ import { Panel } from "./panel";
 const panelCss = css`
   color: var(--midnight);
   font-weight: 300;
+  margin-bottom: 2rem;
 
   a {
     text-decoration: underline;
@@ -19,7 +20,7 @@ const panelCss = css`
   }
   li::before {
     display: inline-block;
-    width: 1rem;
+    width: 0.75rem;
     content: "";
   }
   p {
@@ -44,12 +45,13 @@ const panelCss = css`
 
     header {
       display: block;
-      margin-top: 1.5rem;
+      margin: 1.5rem 0;
     }
 
     .panel-members {
       display: flex;
       align-items: flex-start;
+      margin-bottom: 4.5rem;
     }
 
     h2 {
