@@ -2,7 +2,7 @@
 
 exports[`TimelineEntryAdditional renders correctly 1`] = `
 <div
-  className="css-18iap6s-timelineEntryAdditionalStyles"
+  className="css-e54rso-timelineEntryAdditionalStyles"
 >
   <test-file-stub />
   <h2>
