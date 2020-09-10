@@ -5,7 +5,7 @@ import TimelineGrid from "./timeline-grid";
 import { mq, BreakPoint } from "../../util/mq";
 import TimelineLegend from "./timeline-legend";
 import TimelineHero from "./timeline-hero";
-import { timelineIcons } from '../common/icons';
+import { timelineIcons } from "../common/icons";
 
 const timelineStyles = css`
   padding-top: 9rem;

@@ -8,7 +8,8 @@ import { TimelineEntryData } from "./types";
 
 const timelineEntryStyles = css`
   transition: all 0.333s ease-out 0s;
-  :hover, :target {
+  :hover,
+  :target {
     transform: translate3d(0px, -1px, 0px);
     box-shadow: rgba(0, 0, 0, 0.15) 0rem 1rem 1rem;
     .arrow {
@@ -16,7 +17,7 @@ const timelineEntryStyles = css`
     }
   }
 
-  height: 43.75rem;
+  height: 45.25rem;
   background: var(--white);
   color: var(--midnight);
   margin-bottom: 1.875rem;
@@ -43,10 +44,11 @@ const timelineEntryStyles = css`
   }
 
   p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    font-weight: 300;
   }
 
   svg {
@@ -70,7 +72,7 @@ const timelineEntryStyles = css`
   }
 `;
 
-type TimelineEntryProps = TimelineEntryData
+type TimelineEntryProps = TimelineEntryData;
 
 const TimelineEntry = ({
   title,
@@ -78,7 +80,7 @@ const TimelineEntry = ({
   description,
   icon,
   destination,
-  anchor
+  anchor,
 }: TimelineEntryProps) => {
   const Icon = icon;
   return (
