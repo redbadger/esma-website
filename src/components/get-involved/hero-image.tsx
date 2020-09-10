@@ -8,7 +8,7 @@ const HeroImage = ({ children, className }) => {
     query {
       node: file(relativePath: { eq: "get-involved.jpg" }) {
         childImageSharp {
-          fluid(cropFocus: NORTH) {
+          fluid(maxWidth: 2560, cropFocus: NORTH) {
             ...GatsbyImageSharpFluid
           }
         }

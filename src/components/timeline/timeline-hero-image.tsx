@@ -7,7 +7,7 @@ const TimelineHeroImage = ({ children, className }) => {
     query {
       node: file(relativePath: { eq: "issues-chronology-hero.jpg" }) {
         childImageSharp {
-          fluid(cropFocus: ATTENTION) {
+          fluid(maxWidth: 2560, cropFocus: ATTENTION) {
             ...GatsbyImageSharpFluid
           }
         }
