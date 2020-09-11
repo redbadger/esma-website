@@ -24,6 +24,11 @@ const layoutStyles = css`
     display: none;
   }
 
+  p, span, a {
+    line-height: 2.125rem;
+    font-size: 1.125rem;
+  }
+
   ${mq(BreakPoint.md)} {
     .timeline-image-wrapper {
       display: block;
@@ -117,10 +122,8 @@ const contentBodyStyles = css`
   }
 
   p {
-    line-height: 2.125rem;
     color: var(--midnight);
     margin-bottom: 1.5rem;
-    font-size: 1.125rem;
     font-weight: 300;
   }
 
@@ -204,6 +207,29 @@ const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
     <a className="footnote-link" href={`#${linkId}`}>
       {children}
     </a>
+  );
+};
+
+type FootNoteProps = {
+  destination: string;
+  id: string;
+  text: string;
+};
+
+const FootNote = ({ destination, id, text }: FootNoteProps) => {
+  if (destination) {
+    return (
+      <li>
+        <a href={destination} id={id}>
+          {text}
+        </a>
+      </li>
+    );
+  }
+  return (
+    <li>
+      <span>{text}</span>
+    </li>
   );
 };
 
@@ -295,15 +321,12 @@ const PageTemplate = ({
                     <ol>
                       {mdx.frontmatter.footnotes.map(
                         (entry: FootNoteData, index: number) => (
-                          <li key={index}>
-                            <a
-                              key={index}
-                              href={entry.destination}
-                              id={entry.id}
-                            >
-                              {entry.text}
-                            </a>
-                          </li>
+                          <FootNote
+                            key={index}
+                            text={entry.text}
+                            id={entry.id}
+                            destination={entry.destination}
+                          />
                         )
                       )}
                     </ol>
