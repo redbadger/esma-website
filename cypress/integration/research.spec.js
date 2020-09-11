@@ -19,6 +19,13 @@ const thenWeSeeHousing = () => {
   cy.get("h2:first-of-type").contains("Housing and the neighbourhood");
 };
 
+const thenWeSeeEarlyYearsCovid19 = () => {
+  cy.contains(
+    "The responses to Covid-19 have been extensive and wide-ranging and will have many untold consequences."
+  );
+  cy.get("h2:first-of-type").contains("Impact of Covid-19");
+};
+
 const thenWeSeeSchoolYearsLifeStageOverview = () => {
   cy.contains(
     "The school system has been seen as a vital tool to support social mobility"
@@ -77,7 +84,7 @@ describe("Issues chronology research page", function () {
     cy.get("nav").contains("Housing and the neighbourhood").click();
     thenWeSeeHousing();
     cy.get("nav").contains("Impact of Covid-19").click();
-    cy.get("h2:first-of-type").contains("Impact of Covid-19");
+    thenWeSeeEarlyYearsCovid19();
   });
 
   it("can navigate to other chronology sections", function () {
