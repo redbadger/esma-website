@@ -62,7 +62,8 @@ const headerStyles = css`
         width: 100%;
       }
     }
-    a.active {
+    a.active,
+    a:hover {
       background-color: var(--cobalt);
     }
   }
