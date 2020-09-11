@@ -56,6 +56,7 @@ const entryWrapperStyles = css`
   position: relative;
   align-items: center;
   border-color: var(--highlight-color);
+  font-size: 1.125rem;
 
   left: -1.125rem;
 

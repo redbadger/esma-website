@@ -12,7 +12,7 @@ exports[`TimelineLegend renders correctly 1`] = `
       href="/issues-chronology/test/"
     >
       <div
-        className="css-1mgkzdd-entryWrapperStyles"
+        className="css-1zivnc-entryWrapperStyles"
       >
         <test-file-stub />
         <span>
