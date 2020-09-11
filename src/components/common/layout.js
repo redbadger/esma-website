@@ -28,6 +28,13 @@ const globalStyles = css`
     --gray: #cfd3da;
     --copperfield: #df886c;
 
+    --red-gradient-1: #c5532f;
+    --red-gradient-2: #db7656;
+    --red-gradient-3: #ff9308;
+    --red-gradient-4: var(--yellow);
+    --red-gradient-5: #ffda7c;
+    --red-gradient-6: #ece1c4;
+
     --fixed-header-height: 4.25rem;
     --body-skip-height: 4.25rem;
   }
