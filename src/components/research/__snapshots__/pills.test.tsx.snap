@@ -2,13 +2,13 @@
 
 exports[`Pills renders correctly 1`] = `
 <nav
-  className="css-in5ebi-dropdownCssMobile-cssListItem-cssList-cssPills"
+  className="css-1bemscp-dropdownCssMobile-cssListItem-cssList-cssPills"
 >
   <div
     className="dropdown"
     onClick={[Function]}
   >
-    Contents
+    Life stage issues
     <span
       className="icon "
     >

@@ -131,7 +131,7 @@ const Pills = ({ pills, currentPillIndex }: PillsProps) => {
   return (
     <nav css={cssPills}>
       <div className="dropdown" onClick={() => setOpen(!isOpen)}>
-        Contents
+        Life stage issues
         <span className={["icon", isOpen ? "open" : ""].join(" ")}>
           <FontAwesomeIcon icon={faChevronUp} />
         </span>
