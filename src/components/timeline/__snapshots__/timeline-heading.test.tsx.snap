@@ -2,7 +2,7 @@
 
 exports[`TimelineHeading renders correctly 1`] = `
 <div
-  className="css-g1afl1-timelineHeadingStyles"
+  className="css-55butb-timelineHeadingStyles"
 >
   <p>
     ESMA has commissioned Nik Miller and Sarah Dauncey of The Bridge Group to draw together all the academic research on issues which inhibit an individual’s employability/career progression and plot against an individual’s lifecycle from cradle to retirement. The research provides give a holistic understanding of the all issues which impact on a person’s employability and progression prospects caused by low income.
