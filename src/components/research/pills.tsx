@@ -42,7 +42,7 @@ const cssListItem = css`
 `;
 
 const Pill = ({ name, href, isActive }: PillData & { isActive: boolean }) => (
-  <li>
+  <li className={isActive ? "current-page" : null}>
     <Link className={isActive ? "current-page" : null} to={href}>
       {name}
     </Link>
@@ -94,6 +94,16 @@ const cssList = css`
     li a.current-page,
     li a:hover {
       background-color: var(--highlight-color);
+    }
+  }
+
+  li.current-page {
+    background-color: var(--midnight);
+    color: var(--white);
+
+    ${mq(BreakPoint.md)} {
+      background-color: unset;
+      color: unset;
     }
   }
 `;
