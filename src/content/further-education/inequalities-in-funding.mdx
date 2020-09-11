@@ -12,10 +12,11 @@ footnotes:
 ---
 
 import ResearchImage from "../../components/research/research-image";
-import InequalitiesSpendingDesktop from "./svg/further-educations-inequalities-in-funding-desktop.svg"
-import InequalitiesSpendingMobile from "./svg/further-educations-inequalities-in-funding-mobile.svg"
-import InequalitiesSpendingTablet from "./svg/further-educations-inequalities-in-funding-tablet.svg"
+import InequalitiesSpendingDesktop from "./svg/further-educations-inequalities-in-funding-desktop.svg";
+import InequalitiesSpendingMobile from "./svg/further-educations-inequalities-in-funding-mobile.svg";
+import InequalitiesSpendingTablet from "./svg/further-educations-inequalities-in-funding-tablet.svg";
 import ResizableGraph from "../../components/research/resizable-graph";
+import GraphLegend from "../../components/common/graph-legend";
 
 <div>
 
@@ -43,10 +44,17 @@ remained significant and persistent.
   tablet={InequalitiesSpendingTablet}
   desktop={InequalitiesSpendingDesktop}
 >
-  {/* FIXME graph missing legend */}
-  <p>
-    <strong>Spending per student per year at different stages of education</strong>
-  </p>
+  **Spending per student per year at different stages of education**
+
+    <GraphLegend
+    labels={[
+      { color: "aqua", label: "Early years" },
+      { color: "yellow", label: "Primary school" },
+      { color: "copperfield", label: "Secondary school" },
+      { color: "midnight", label: "Further education" },
+      { color: "cobalt", label: "Higher education resources" },
+    ]}
+  />
 </ResizableGraph>
 
 With the exception of apprenticeships (which have been well funded but not
@@ -63,4 +71,3 @@ social mobility and inclusion’, enabling sustainable career opportunities.
 Employers have a significant role to play in this process by integrating
 learning in the workplace to upskill and reskill employees to ensure the
 adaptability needed to withstand economic changes.
-

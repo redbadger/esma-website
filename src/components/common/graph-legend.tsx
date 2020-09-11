@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
+import { mq, BreakPoint } from "../../util/mq";
 
 type GraphLegendProps = {
   labels: { color: string; label: string }[];
@@ -24,7 +25,12 @@ const GraphLegendPill = ({ color }: GraphLegendPillProps) => {
 const graphLegendStyles = css`
   display: flex;
   margin: 1.5rem 0px;
-  
+  flex-direction: column;
+
+  ${mq(BreakPoint.lg)} {
+    flex-direction: row;
+  }
+
   .legend-wrapper {
     display: flex;
     align-items: center;
