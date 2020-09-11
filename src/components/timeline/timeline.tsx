@@ -12,6 +12,7 @@ const timelineStyles = css`
 
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 2.625rem;
 
   ${mq(BreakPoint.md)} {
     padding-left: 5rem;
