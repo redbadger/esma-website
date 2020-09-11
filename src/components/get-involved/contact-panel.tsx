@@ -108,7 +108,10 @@ const ContactPanel = () => {
           <picture className="image-placeholder matthews"></picture>
           <div>
             <p className="contact-name">
-              <a href="https://www.linkedin.com/in/barry-matthews-0970704/">
+              <a
+                href="https://www.linkedin.com/in/barry-matthews-0970704/"
+                title="Barry Matthews on LinkedIn"
+              >
                 Barry Matthews
                 <picture>
                   <img alt="linked-in" src={linkedInImage} />
@@ -124,7 +127,10 @@ const ContactPanel = () => {
           <picture className="image-placeholder murphy"></picture>
           <div>
             <p className="contact-name">
-              <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+              <a
+                href="https://www.linkedin.com/in/barry-murphy-2240a115"
+                title="Barry Murphy on LinkedIn"
+              >
                 Barry Murphy
                 <picture>
                   <img alt="linked-in" src={linkedInImage} />
