@@ -3,6 +3,7 @@ import { animateScroll as scroll } from "react-scroll";
 import Button from "../../components/common/button";
 import { css } from "@emotion/core";
 import ContactPanel from "./contact-panel";
+import { BreakPoint, mq } from "../../util/mq";
 
 const mainCss = css`
   display: flex;
@@ -51,6 +52,12 @@ const mainCss = css`
     margin-bottom: 2.25rem;
     p {
       margin-bottom: 1.25rem;
+    }
+  }
+
+  ${mq(BreakPoint.sm)} {
+    .contact-items {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 `;

@@ -6,16 +6,21 @@ import murphy from "../../images/barry/murphy.jpg";
 import matthews from "../../images/barry/matthews.jpg";
 
 const contactPanelCss = css`
-  .more-contact-item {
+  width: 100%;
+
+  .barry {
     display: block;
-    width: 100%;
 
     picture {
       display: block;
     }
 
+    picture img {
+      max-width: 100%;
+      height: auto;
+    }
+
     p {
-      padding-top: 0.5rem;
       text-align: left;
     }
 
@@ -26,8 +31,10 @@ const contactPanelCss = css`
 
     .linked-in {
       display: inline-block;
-      width: 1em;
-      height: 1em;
+      padding: 0 1rem;
+      picture {
+        width: 1.125rem;
+      }
     }
   }
 
@@ -39,9 +46,12 @@ const contactPanelCss = css`
   }
 
   .contact-panel {
-    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.2);
-    padding: 2.25rem 1.625rem;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 4.5rem;
+    gap: 2rem;
+    padding: 2.25rem 1.625rem;
+    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.2);
   }
 
   .heading {
@@ -51,20 +61,9 @@ const contactPanelCss = css`
   a {
     color: var(--midnight);
     text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: 300;
   }
-
-  /* .barry {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1.625rem;
-    margin-bottom: 0.25rem;
-    gap: 2.25rem;
-    picture,
-    p {
-    }
-  } */
 
   .image-placeholder {
     border-radius: 9999px;
@@ -81,12 +80,19 @@ const contactPanelCss = css`
     background-image: url(${matthews});
   }
 
-  ${mq(BreakPoint.sm)} {
-    .contact-items {
-      grid-template-columns: repeat(2, 1fr);
+  ${mq(BreakPoint.md)} {
+    .contact-panel {
+      flex-direction: row;
+      margin: 0 2.25rem;
+      justify-content: center;
     }
-    .more-contact-items {
-      padding: 0 6rem;
+  }
+  ${mq(BreakPoint.lg)} {
+    .barry {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.25rem;
     }
   }
 `;
@@ -98,35 +104,43 @@ const ContactPanel = () => {
         If you’d like to know more about the above you can email:
       </p>
       <div className="contact-panel">
-        <div className="more-contact-item">
+        <div className="barry">
           <picture className="image-placeholder matthews"></picture>
-          <p className="contact-name">
-            Barry Matthews{" "}
-            <a
-              className="linked-in"
-              href="https://www.linkedin.com/in/barry-matthews-0970704/"
-            >
-              <img alt="linked-in" src={linkedInImage} />
+          <div>
+            <p className="contact-name">
+              Barry Matthews{" "}
+              <a
+                className="linked-in"
+                href="https://www.linkedin.com/in/barry-matthews-0970704/"
+              >
+                <picture>
+                  <img alt="linked-in" src={linkedInImage} />
+                </picture>
+              </a>
+            </p>
+            <a href="mailto:barrymatthews@esma.community">
+              barrymatthews@esma.community
             </a>
-          </p>
-          <a href="mailto:barrymatthews@esma.community">
-            barrymatthews@esma.community
-          </a>
+          </div>
         </div>
-        <div className="more-contact-item">
+        <div className="barry">
           <picture className="image-placeholder murphy"></picture>
-          <p className="contact-name">
-            Barry Murphy{" "}
-            <a
-              className="linked-in"
-              href="https://www.linkedin.com/in/barry-murphy-2240a115"
-            >
-              <img alt="linked-in" src={linkedInImage} />
+          <div>
+            <p className="contact-name">
+              Barry Murphy{" "}
+              <a
+                className="linked-in"
+                href="https://www.linkedin.com/in/barry-murphy-2240a115"
+              >
+                <picture>
+                  <img alt="linked-in" src={linkedInImage} />
+                </picture>
+              </a>
+            </p>
+            <a href="mailto:barrymurphy@esma.community">
+              barrymurphy@esma.community
             </a>
-          </p>
-          <a href="mailto:barrymurphy@esma.community">
-            barrymurphy@esma.community
-          </a>
+          </div>
         </div>
       </div>
     </div>
