@@ -1,5 +1,5 @@
 import React from "react";
-import { animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from "react-scroll";
 import Button from "../../components/common/button";
 import { BreakPoint, mq } from "../../util/mq";
 import { css } from "@emotion/core";
@@ -28,7 +28,9 @@ const mainCss = css`
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+    font-weight: 300;
   }
 
   .heading {
@@ -55,7 +57,6 @@ const mainCss = css`
     }
   }
 
-
   .more-contact-item {
     display: inline-block;
     vertical-align: top;
@@ -71,7 +72,7 @@ const mainCss = css`
       font-weight: 600;
       font-size: 1.25rem;
       margin-top: 1.625rem;
-      margin-bottom: 0.25rem ;
+      margin-bottom: 0.25rem;
     }
 
     .linked-in {
@@ -89,7 +90,7 @@ const mainCss = css`
   }
 
   .contact-panel {
-    box-shadow: 0 0 0.25rem 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.2);
     margin-bottom: 4.5rem;
   }
 
@@ -123,7 +124,6 @@ const mainCss = css`
     .contact-items {
       grid-template-columns: repeat(2, 1fr);
     }
-
   }
 `;
 
@@ -132,40 +132,78 @@ const Main = () => (
     <div className="heading">
       <h2>Ways to get involved</h2>
       <p>
-        Help us make the change. We have bold and ambitious plans and need help to execute them.
+        Help us make the change. We have bold and ambitious plans and need help
+        to execute them.
       </p>
     </div>
     <ul className="contact-items">
       <li className="contact-item">
         <h3>Newsletter</h3>
-        <p>Sign up to our newsletter to stay up to date on the progress of our plans, events and research.</p>
-        <Button label="Sign up" variant="light-grey" onClick={() => scroll.scrollToBottom() } />
+        <p>
+          Sign up to our newsletter to stay up to date on the progress of our
+          plans, events and research.
+        </p>
+        <Button
+          label="Sign up"
+          variant="light-grey"
+          onClick={() => scroll.scrollToBottom()}
+        />
       </li>
       <li className="contact-item">
         <h3>Connecting organisations</h3>
-        <p>Connect ESMA to organisations that are tackling social mobility to include on our platform for others to collaborate with.</p>
+        <p>
+          Connect ESMA to organisations that are tackling social mobility to
+          include on our platform for others to collaborate with.
+        </p>
       </li>
       <li className="contact-item">
         <h3>Funding community</h3>
-        <p>Join our funding community who are committed to making change stick.</p>
+        <p>
+          Join our funding community who are committed to making change stick.
+        </p>
       </li>
       <li className="contact-item">
-        <h3>Provide Resources</h3>
-        <p>Provide design and technology resource to continue to build our digital platform.</p>
+        <h3>Provide resources</h3>
+        <p>
+          Provide design and technology resource to continue to build our
+          digital platform.
+        </p>
       </li>
     </ul>
     <div className="more-contact">
-      <p className="contact-panel-intro">If you’d like to know more about the above you can email:</p>
+      <p className="contact-panel-intro">
+        If you’d like to know more about the above you can email:
+      </p>
       <div className="contact-panel">
         <div className="more-contact-item">
           <div className="image-placeholder matthews"></div>
-          <p className="contact-name">Barry Matthews <a className="linked-in" href="https://www.linkedin.com/in/barry-matthews-0970704/"><img alt="linked-in" src={linkedInImage} /></a></p>
-          <a href="mailto:barrymatthews@esma.community">barrymatthews@esma.community</a>
+          <p className="contact-name">
+            Barry Matthews{" "}
+            <a
+              className="linked-in"
+              href="https://www.linkedin.com/in/barry-matthews-0970704/"
+            >
+              <img alt="linked-in" src={linkedInImage} />
+            </a>
+          </p>
+          <a href="mailto:barrymatthews@esma.community">
+            barrymatthews@esma.community
+          </a>
         </div>
         <div className="more-contact-item">
           <div className="image-placeholder murphy"></div>
-          <p className="contact-name">Barry Murphy <a className="linked-in" href="https://www.linkedin.com/in/barry-murphy-2240a115"><img alt="linked-in" src={linkedInImage} /></a></p>
-          <a href="mailto:barrymurphy@esma.community">barrymurphy@esma.community</a>
+          <p className="contact-name">
+            Barry Murphy{" "}
+            <a
+              className="linked-in"
+              href="https://www.linkedin.com/in/barry-murphy-2240a115"
+            >
+              <img alt="linked-in" src={linkedInImage} />
+            </a>
+          </p>
+          <a href="mailto:barrymurphy@esma.community">
+            barrymurphy@esma.community
+          </a>
         </div>
       </div>
     </div>
