@@ -16,7 +16,7 @@ const timelineEntryStyles = css`
     }
   }
 
-  height: 45.25rem;
+  height: 46.5rem;
   background: var(--white);
   color: var(--midnight);
   margin-bottom: 1.875rem;
