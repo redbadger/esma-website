@@ -23,6 +23,7 @@ const globalStyles = css`
     --yellow: #ffba08;
     --denim: #424b71;
     --error: #b5261d;
+    --separator: #efefef;
 
     --aqua: #7dcfb6;
     --gray: #cfd3da;
