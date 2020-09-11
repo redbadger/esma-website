@@ -4,6 +4,7 @@ import { mq, BreakPoint } from "../../util/mq";
 
 type GraphLegendProps = {
   labels: { color: string; label: string }[];
+  forceVertical: boolean;
 };
 
 type GraphLegendPillProps = {
@@ -38,7 +39,7 @@ const graphLegendStyles = css`
 
   span {
     margin-right: 1.25rem;
-  }
+}
 `;
 
 const GraphLegend = ({ labels }: GraphLegendProps) => {
@@ -54,6 +55,10 @@ const GraphLegend = ({ labels }: GraphLegendProps) => {
       })}
     </div>
   );
+};
+
+GraphLegend.defaultProps = {
+  forceVertical: false,
 };
 
 export default GraphLegend;
