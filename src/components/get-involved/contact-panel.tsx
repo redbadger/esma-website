@@ -24,15 +24,12 @@ const contactPanelCss = css`
       text-align: left;
     }
 
-    p.contact-name {
+    p.contact-name a {
       font-weight: 600;
       font-size: 1.25rem;
-    }
-
-    .linked-in {
-      display: inline-block;
-      padding: 0 1rem;
       picture {
+        display: inline-block;
+        margin: 0 1rem;
         width: 1.125rem;
       }
     }
@@ -63,6 +60,9 @@ const contactPanelCss = css`
     text-decoration: none;
     font-size: 1.125rem;
     font-weight: 300;
+    :hover {
+      text-decoration: underline;
+    }
   }
 
   .image-placeholder {
@@ -108,11 +108,8 @@ const ContactPanel = () => {
           <picture className="image-placeholder matthews"></picture>
           <div>
             <p className="contact-name">
-              Barry Matthews{" "}
-              <a
-                className="linked-in"
-                href="https://www.linkedin.com/in/barry-matthews-0970704/"
-              >
+              <a href="https://www.linkedin.com/in/barry-matthews-0970704/">
+                Barry Matthews
                 <picture>
                   <img alt="linked-in" src={linkedInImage} />
                 </picture>
@@ -127,11 +124,8 @@ const ContactPanel = () => {
           <picture className="image-placeholder murphy"></picture>
           <div>
             <p className="contact-name">
-              Barry Murphy{" "}
-              <a
-                className="linked-in"
-                href="https://www.linkedin.com/in/barry-murphy-2240a115"
-              >
+              <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+                Barry Murphy
                 <picture>
                   <img alt="linked-in" src={linkedInImage} />
                 </picture>
