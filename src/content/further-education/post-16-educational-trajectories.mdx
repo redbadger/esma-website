@@ -42,7 +42,10 @@ footnotes:
     },
   ]
 ---
+
 import ResearchImage from "../../components/research/research-image";
+import Post16TrajectoriesSVG from "./svg/further-education-post-16.svg";
+import GraphLegend from "../../components/common/graph-legend";
 
 The majority of school-leavers participate in further education rather than in
 higher education (70% versus 40%).<FootnoteLink
@@ -80,7 +83,16 @@ social and economic benefits of engaging in further training, substantial
 inequalities exist and some learners are excluded within the system itself.
 
 <div>
-  {/* FIXME missing graph */}
+
+  **Adult learner (19+) Participation and Achievement in Government-funded Further Education**
+
+  <GraphLegend
+    labels={[
+      { color: "yellow", label: "Participating" },
+      { color: "cobalt", label: "Achieving" },
+    ]}
+  />
+  <Post16TrajectoriesSVG />
 </div>
 
 <div>
@@ -90,7 +102,7 @@ education and in the availability of opportunities at level 3 and above.
 
 The majority of courses and qualifications offered to adults outside of
 universities are at very low levels, below level 3.<FootnoteLink
-linkId="footnote-5">5</FootnoteLink>There is huge variation across the further
+linkId="footnote-5">5</FootnoteLink> There is huge variation across the further
 education sector, only some colleges have the capacity to deliver higher-level
 and vocational courses.
 
@@ -99,10 +111,7 @@ further education undertake advanced study (level 4 and above).
 
 </div>
 
-
-<ResearchQuote
-  color="midnight"
->
+<ResearchQuote color="midnight">
   A grand total of 4,900 learners achieved level 4+ awards under the college
   budget in 2014/5. This was a fall of 36 per cent since the previous year. In
   that same year, higher education in the UK recorded 745,000 awards

@@ -24,6 +24,10 @@ const layoutStyles = css`
     display: none;
   }
 
+  strong {
+    font-weight: 600;
+  }
+
   p,
   span,
   a {
@@ -114,6 +118,12 @@ const contentContainerNoImageStyles = css`
 const contentBodyStyles = css`
   display: grid;
   grid-row-gap: 4.5rem;
+
+  ${mq(BreakPoint.lg)} {
+    .full-span {
+      grid-column: 1 / span 2;
+    }
+  }
 
   ${mq(BreakPoint.md)} {
     grid-column-gap: 13.75rem;
