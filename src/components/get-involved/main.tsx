@@ -16,7 +16,7 @@ const mainCss = css`
     font-size: 2rem;
     line-height: 2.75rem;
     font-weight: 600;
-    margin: 4.5rem 0 0.75rem;
+    margin-bottom: 0.75rem;
   }
 
   h3 {
@@ -32,6 +32,7 @@ const mainCss = css`
   }
 
   .heading {
+    margin: 2.25rem 0;
     text-align: center;
   }
 
@@ -56,6 +57,9 @@ const mainCss = css`
   }
 
   ${mq(BreakPoint.sm)} {
+    .heading {
+      margin: 4.5rem 0;
+    }
     .contact-items {
       grid-template-columns: repeat(2, 1fr);
     }
