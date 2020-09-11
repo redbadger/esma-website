@@ -24,7 +24,9 @@ const layoutStyles = css`
     display: none;
   }
 
-  p, span, a {
+  p,
+  span,
+  a {
     line-height: 2.125rem;
     font-size: 1.125rem;
   }
@@ -197,6 +199,12 @@ const breadcrumbStyles = css`
   }
 `;
 
+const prevNextWithBgImageStyles = css`
+  position: relative;
+  top: -13.5rem;
+  margin-bottom: -13.5rem;
+`;
+
 type FootnoteLinkProps = {
   children: React.ReactNode;
   linkId: string;
@@ -336,16 +344,18 @@ const PageTemplate = ({
             </div>
           </div>
         </section>
-        <PrevNext
-          pills={pillsMap}
-          currentPillIndex={currentPillIndex}
-          icon={
-            // if for some reason a matching page can't be found, better
-            // to default to some icon rather than break the page
-            pages.find(page => page.className === className)?.icon ||
-            timelineIcons.earlyYears
-          }
-        />
+        <div css={bgImage ? prevNextWithBgImageStyles : css``}>
+          <PrevNext
+            pills={pillsMap}
+            currentPillIndex={currentPillIndex}
+            icon={
+              // if for some reason a matching page can't be found, better
+              // to default to some icon rather than break the page
+              pages.find(page => page.className === className)?.icon ||
+              timelineIcons.earlyYears
+            }
+          />
+        </div>
         <NewsletterSignUp />
       </Layout>
     </>
