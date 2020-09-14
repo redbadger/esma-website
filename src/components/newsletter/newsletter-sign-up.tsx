@@ -128,7 +128,7 @@ const newsletterSignUpStyles = css`
     }
 
     .input-error {
-      display: block;
+      display: none;
       grid-row: 2 / span 1;
       margin-top: 0;
     }
@@ -137,7 +137,7 @@ const newsletterSignUpStyles = css`
   .full-span {
     grid-column: 1 / span 3;
     text-align: left;
-    margin-top: 1.375rem;
+    margin-top: 0.375rem;
   }
 
   a {

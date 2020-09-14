@@ -2,7 +2,7 @@
 
 exports[`NewsletterSignUp renders correctly 1`] = `
 <section
-  className="css-1w25c0j-inputStyles-newsletterSignUpStyles"
+  className="css-fnw9nb-inputStyles-newsletterSignUpStyles"
 >
   <header>
     <h2>
