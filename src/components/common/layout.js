@@ -8,7 +8,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Global, css } from "@emotion/core";
-import tw from "twin.macro";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
@@ -74,16 +73,6 @@ const globalStylesDoubleHeader = css`
   }
 `;
 
-const pageStyles = css`
-  h1 {
-    ${tw`text-2xl mb-8 mt-4`}
-  }
-
-  h2 {
-    ${tw`text-xl`}
-  }
-`;
-
 const Layout = ({ children, includeResearchNavigation }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -107,7 +96,7 @@ const Layout = ({ children, includeResearchNavigation }) => {
         siteTitle={data.site.siteMetadata.title}
         includeResearchNavigation={includeResearchNavigation}
       />
-      <main css={pageStyles}>{children}</main>
+      <main>{children}</main>
       <p>A future footer.</p>
     </>
   );
