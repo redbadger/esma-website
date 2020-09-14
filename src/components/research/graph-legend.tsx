@@ -19,9 +19,19 @@ type GraphLegendMarkerProps = {
 };
 
 const variantStyles = {
-  [LegendVariant.PILL] : {width: "1.5rem", height: "0.375rem", borderRadius: "3rem"},
-  [LegendVariant.BRICK] : {width: "0.75rem", height: "1.875rem", borderRadius: "0"},
-}
+  [LegendVariant.PILL]: {
+    width: "1.5rem",
+    height: "0.375rem",
+    borderRadius: "3rem",
+    alignItems: "center",
+  },
+  [LegendVariant.BRICK]: {
+    width: "0.75rem",
+    height: "1.875rem",
+    borderRadius: "0",
+    alignItems: "inherit",
+  },
+};
 
 const GraphLegendMarker = ({ color, variant }: GraphLegendMarkerProps) => {
   const legendMarkerStyles = css`
@@ -40,7 +50,7 @@ const GraphLegend = ({ labels, forceVertical, variant }: GraphLegendProps) => {
     display: flex;
     margin: 1.5rem 0px;
     flex-direction: column;
-    
+
     span {
       font-size: 1rem;
     }
@@ -51,6 +61,7 @@ const GraphLegend = ({ labels, forceVertical, variant }: GraphLegendProps) => {
 
     .legend-wrapper {
       display: flex;
+      align-items: ${variantStyles[variant].alignItems};
       ${mq(BreakPoint.md)} {
         align-items: center;
       }

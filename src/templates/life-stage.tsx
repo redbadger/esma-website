@@ -75,13 +75,15 @@ const layoutStyles = css`
 const contentContainerStyles = css`
   h2 {
     margin-bottom: 0.75rem;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    line-height: 3.875rem;
+    line-height: 1.625rem;
   }
 
   ${mq(BreakPoint.md)} {
     h2 {
+      font-size: 2rem;
+      line-height: 2.75rem;
       margin-bottom: 2.25rem;
     }
     width: 96%;
@@ -249,7 +251,7 @@ const FootNote = ({ destination, id, text }: FootNoteProps) => {
   }
   return (
     <li>
-      <span>{text}</span>
+      <span id={id}>{text}</span>
     </li>
   );
 };

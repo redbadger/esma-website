@@ -2,7 +2,7 @@
 
 exports[`FurtherReading renders correctly 1`] = `
 <div
-  className="further-reading-container css-h8ncal-furtherReadingStyles"
+  className="further-reading-container css-1wptxhh-furtherReadingStyles"
   role="list"
 >
   <ul>

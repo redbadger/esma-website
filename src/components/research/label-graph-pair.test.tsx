@@ -6,7 +6,14 @@ import EarlyDevIcon from "../../svg/blocks.svg";
 describe("LabelGraphPair", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<LabelGraphPair label="Test" graph={EarlyDevIcon} />)
+      .create(
+        <LabelGraphPair
+          label="Test"
+          mobileGraph={EarlyDevIcon}
+          tabletGraph={EarlyDevIcon}
+          desktopGraph={EarlyDevIcon}
+        />
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

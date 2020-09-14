@@ -2,7 +2,7 @@
 
 exports[`GraphLegend renders correctly 1`] = `
 <div
-  className="css-vzw3iu-graphLegendStyles"
+  className="css-1mjgarr-graphLegendStyles"
 >
   <div
     className="legend-wrapper"

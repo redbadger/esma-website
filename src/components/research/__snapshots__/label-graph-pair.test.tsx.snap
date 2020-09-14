@@ -2,7 +2,7 @@
 
 exports[`LabelGraphPair renders correctly 1`] = `
 <div
-  className="css-7hxiok-containerStyles"
+  className="css-16gt4mi-containerStyles"
 >
   <div
     className="label-wrapper"
@@ -11,6 +11,10 @@ exports[`LabelGraphPair renders correctly 1`] = `
       Test
     </span>
   </div>
-  <test-file-stub />
+  <div
+    className=" css-1pm5sbu-ResizableGraph"
+  >
+    <test-file-stub />
+  </div>
 </div>
 `;
