@@ -9,6 +9,7 @@ const mainCss = css`
   color: var(--midnight);
   font-weight: 300;
   font-size: 1.125rem;
+  line-height: 2.125rem;
 
   h2 {
     font-size: 2rem;

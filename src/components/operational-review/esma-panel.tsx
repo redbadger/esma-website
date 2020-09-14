@@ -26,6 +26,7 @@ const panelCss = css`
   p {
     padding: 0.75rem;
     font-size: 1.125rem;
+    line-height: 2.125rem;
     text-align: center;
   }
   strong {
