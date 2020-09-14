@@ -28,7 +28,7 @@ footnotes:
 ---
 
 import ResearchImage from "../../components/research/research-image";
-import GraphLegend, { LegendVariant } from "../../components/common/graph-legend";
+import GraphLegend, { LegendVariant } from "../../components/research/graph-legend";
 import LabelGraphPair from "../../components/research/label-graph-pair";
 import FamilyCircumstancesGraphPart1 from "./svg/family-circumstances-graph-1.svg"
 import FamilyCircumstancesGraphPart2 from "./svg/family-circumstances-graph-2.svg"
@@ -181,34 +181,33 @@ parents in the highest social group reporting they used this strategy, to just
 
   <LabelGraphPair
     label="Moved to live in an area which I thought had good schools"
-    icon={FamilyCircumstancesGraphPart1}
+    graph={FamilyCircumstancesGraphPart1}
   />
   <LabelGraphPair
     label="Appealed against a decision allocating my child(ren) to a specific school"
-    icon={FamilyCircumstancesGraphPart2}
+    graph={FamilyCircumstancesGraphPart2}
   />
 
-  {/* FIXME these two labels are the same in designs, is this right? */}
   <LabelGraphPair
-    label="Appealed against a decision allocating my child(ren) to a specific school"
-    icon={FamilyCircumstancesGraphPart3}
+    label="Moved to live in the catchment area of a specific school"
+    graph={FamilyCircumstancesGraphPart3}
   />
   <LabelGraphPair
     label="Attended religious services to that my child(ren) could enter a religious school"
-    icon={FamilyCircumstancesGraphPart4}
+    graph={FamilyCircumstancesGraphPart4}
   />
   <LabelGraphPair
     label="Employed a private tutor to help my child(ren) pass the entrance test for a particular school"
-    icon={FamilyCircumstancesGraphPart5}
+    graph={FamilyCircumstancesGraphPart5}
   />
   <LabelGraphPair
     label="Bought/rented a second home and used that address in order for my child(ren) to gain access to a particular school"
-    icon={FamilyCircumstancesGraphPart6}
+    graph={FamilyCircumstancesGraphPart6}
   />
 
   <LabelGraphPair
     label="Used a relative’s address in order for my child(ren) to gain access to a specific school"
-    icon={FamilyCircumstancesGraphPart7}
+    graph={FamilyCircumstancesGraphPart7}
   />
 </div>
 

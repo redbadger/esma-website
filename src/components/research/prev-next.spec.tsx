@@ -35,7 +35,6 @@ describe("PrevNext", () => {
       .create(
         <PrevNext
           pills={samplePills}
-          colorActive={colorActive}
           currentPillIndex={0}
           icon={EarlyDevIcon}
         />

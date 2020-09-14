@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelGraphPair renders correctly 1`] = `
+<div
+  className="css-7hxiok-containerStyles"
+>
+  <div
+    className="label-wrapper"
+  >
+    <span>
+      Test
+    </span>
+  </div>
+  <test-file-stub />
+</div>
+`;

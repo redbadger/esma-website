@@ -27,11 +27,11 @@ const containerStyles = css`
 
 type LabelGraphPairProps = {
   label: string;
-  icon: React.ElementType;
+  graph: React.ElementType;
 };
 
-const LabelGraphPair = ({ label, icon }: LabelGraphPairProps) => {
-  const Graph = icon;
+const LabelGraphPair = ({ label, graph }: LabelGraphPairProps) => {
+  const Graph = graph;
   return (
     <div css={containerStyles}>
       <div className="label-wrapper">
