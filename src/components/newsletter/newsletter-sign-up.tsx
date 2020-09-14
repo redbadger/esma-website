@@ -231,6 +231,9 @@ const NewsletterSignUp = () => {
                 errorMessage="Please enter your name."
                 errorSetter={setNameError}
                 valueSetter={setName}
+                errorMessageStyles={css`
+                  grid-column: 1 / span 1;
+                `}
               />
               <NewsletterInputField
                 label="Email address"
@@ -240,6 +243,9 @@ const NewsletterSignUp = () => {
                 errorMessage="Please enter your email."
                 errorSetter={setEmailError}
                 valueSetter={setEmail}
+                errorMessageStyles={css`
+                  grid-column: 2 / span 1;
+                `}
               />
               <input type="submit" value="Submit" id="submit" />
               <section className="full-span">

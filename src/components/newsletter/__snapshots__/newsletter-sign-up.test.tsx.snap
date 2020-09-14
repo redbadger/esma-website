@@ -2,7 +2,7 @@
 
 exports[`NewsletterSignUp renders correctly 1`] = `
 <section
-  className="css-gyv8pj-inputStyles-newsletterSignUpStyles"
+  className="css-1o2ssu2-inputStyles-newsletterSignUpStyles"
 >
   <header>
     <h2>
@@ -32,7 +32,7 @@ exports[`NewsletterSignUp renders correctly 1`] = `
           />
         </div>
         <p
-          className="input-error "
+          className="input-error  css-1cw06of-NewsletterSignUp"
         >
           Please enter your name.
         </p>
@@ -51,7 +51,7 @@ exports[`NewsletterSignUp renders correctly 1`] = `
           />
         </div>
         <p
-          className="input-error "
+          className="input-error  css-4f3202-NewsletterSignUp"
         >
           Please enter your email.
         </p>

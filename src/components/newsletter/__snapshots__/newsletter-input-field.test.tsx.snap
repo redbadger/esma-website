@@ -17,7 +17,7 @@ Array [
     />
   </div>,
   <p
-    className="input-error error"
+    className="input-error error css-19r9y0d-NewsletterInputField"
   >
     ERROR!
   </p>,
@@ -41,7 +41,7 @@ Array [
     />
   </div>,
   <p
-    className="input-error "
+    className="input-error  css-19r9y0d-NewsletterInputField"
   >
     ERROR!
   </p>,

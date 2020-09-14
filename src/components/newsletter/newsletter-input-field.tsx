@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { SerializedStyles } from "@emotion/serialize";
 
 type NewsletterInputFieldProps = {
   label: string;
@@ -9,6 +9,7 @@ type NewsletterInputFieldProps = {
   errorMessage: string;
   errorSetter: (isError: boolean) => void;
   valueSetter: (value: string) => void;
+  errorMessageStyles: SerializedStyles;
 };
 
 const NewsletterInputField = ({
@@ -19,6 +20,7 @@ const NewsletterInputField = ({
   errorMessage,
   errorSetter,
   valueSetter,
+  errorMessageStyles,
 }: NewsletterInputFieldProps) => {
   return (
     <>
@@ -35,7 +37,7 @@ const NewsletterInputField = ({
           }}
         />
       </div>
-      <p className={`input-error ${error ? "error" : ""}`}>{errorMessage}</p>
+      <p className={`input-error ${error ? "error" : ""}`} css={errorMessageStyles}>{errorMessage}</p>
     </>
   );
 };
