@@ -32,7 +32,8 @@ const backgroundCss = css`
       position: relative;
       height: 100%;
       width: 70rem;
-      left: calc(50vw - 35rem);
+      /* I want the 80% point to be the right edge */
+      right: calc(56rem - 80vw);
     }
   }
   .background-image-filter {
@@ -48,13 +49,21 @@ const backgroundCss = css`
   ${mq(BreakPoint.md)} {
     .background > .video-container {
       width: 92rem;
-      left: calc(50vw - 46rem);
+      /* I want the 80% point to be the right edge */
+      right: calc(74rem - 80vw);
+    }
+  }
+  ${mq(BreakPoint.lg)} {
+    .background > .video-container {
+      width: 92rem;
+      /* at this point, give me 50/50 */
+      right: calc(46rem - 50vw);
     }
   }
   @media screen and (min-width: 1440px) {
     .background > .video-container {
       width: 100vw;
-      left: 0;
+      right: 0;
     }
   }
 `;
