@@ -13,6 +13,10 @@ export const heroCss = css`
     height: 26.25rem;
     padding: 4.5rem 2rem;
   }
+
+  ${mq(BreakPoint.lg)} {
+    padding: 6.25rem 10rem;
+  }
 `;
 
 const backgroundCss = css`
@@ -59,6 +63,7 @@ const foregroundCss = css`
     p {
       margin-bottom: 2.125rem;
     }
+    max-width: 51rem;
   }
 
   .highlight {
