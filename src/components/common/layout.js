@@ -71,6 +71,16 @@ const globalStyles = css`
 
     .working-life {
       --highlight-color: var(--copperfield);
+
+      .pill-list {
+        a.current-page {
+          color: var(--white);
+        }
+
+        li a:hover {
+          color: var(--white);
+        }
+      }
     }
   }
 `;
