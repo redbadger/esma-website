@@ -51,6 +51,12 @@ const backgroundCss = css`
       left: calc(50vw - 46rem);
     }
   }
+  @media screen and (min-width: 1440px) {
+    .background > .video-container {
+      width: 100vw;
+      left: 0;
+    }
+  }
 `;
 
 const foregroundCss = css`
