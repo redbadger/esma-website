@@ -1,6 +1,6 @@
 import React from "react";
 import { animateScroll as scroll } from "react-scroll";
-import Button from "../../components/common/button";
+import Button from "./button";
 import { css } from "@emotion/core";
 import ContactPanel from "./contact-panel";
 import { BreakPoint, mq } from "../../util/mq";
@@ -82,11 +82,7 @@ const Main = () => (
           Sign up to our newsletter to stay up to date on the progress of our
           plans, events and research.
         </p>
-        <Button
-          label="Sign up"
-          variant="light-grey"
-          onClick={() => scroll.scrollToBottom()}
-        />
+        <Button label="Sign up" onClick={() => scroll.scrollToBottom()} />
       </li>
       <li className="contact-item">
         <h3>Connecting organisations</h3>

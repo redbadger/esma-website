@@ -6,7 +6,7 @@ The website is available to view at [https://esma.community/](https://esma.commu
 
 ## Proof-of-Concept
 
-Prior to Discovery, a PoC has been created in this repo using a static site generator - [Gatsby](https://www.gatsbyjs.org/) - integrated with a headless CMS - [Contentful](https://www.contentful.com/). It also uses [emotion](https://emotion.sh/) and [tailwind](https://tailwindcss.com/) macros for styling.
+Prior to Discovery, a PoC has been created in this repo using a static site generator - [Gatsby](https://www.gatsbyjs.org/) - integrated with a headless CMS - [Contentful](https://www.contentful.com/). It also uses [emotion](https://emotion.sh/) for styling.
 
 Through our ["deploy master"](./.github/workflows/deploy-master.yml) Github Action, the `master` branch is being built and deployed to Github pages, (everytime there's a merge or new content published (there's a webhook configured on the Contentful side that triggers a `repository_dispatch` event which then triggers the rebuild Github Action).
 The [CNAME record at `./static/CNAME`](./static/CNAME) is pushed to the Github pages built site.

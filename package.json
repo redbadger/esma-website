@@ -56,9 +56,7 @@
     "jest": "^26.4.2",
     "lorem-ipsum": "^2.0.3",
     "prettier": "2.0.5",
-    "react-test-renderer": "^16.13.1",
-    "tailwindcss": "^1.7.3",
-    "twin.macro": "^1.0.0-alpha.10"
+    "react-test-renderer": "^16.13.1"
   },
   "keywords": [
     "gatsby"
