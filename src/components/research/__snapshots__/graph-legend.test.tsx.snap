@@ -2,13 +2,13 @@
 
 exports[`GraphLegend renders correctly 1`] = `
 <div
-  className="css-1mjgarr-graphLegendStyles"
+  className="css-j6aeo5-graphLegendStyles"
 >
   <div
-    className="legend-wrapper"
+    className="legend-wrapper pill"
   >
     <div
-      className="css-1lwf0ie-legendMarkerStyles"
+      className="pill css-185pars-legendMarkerStyles"
     />
     <span>
       Test

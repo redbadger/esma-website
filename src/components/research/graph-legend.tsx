@@ -9,8 +9,8 @@ type GraphLegendProps = {
 };
 
 export enum LegendVariant {
-  PILL,
-  BRICK,
+  PILL = "pill",
+  BRICK = "brick",
 }
 
 type GraphLegendMarkerProps = {
@@ -18,31 +18,25 @@ type GraphLegendMarkerProps = {
   variant: LegendVariant;
 };
 
-const variantStyles = {
-  [LegendVariant.PILL]: {
-    width: "1.5rem",
-    height: "0.375rem",
-    borderRadius: "3rem",
-    alignItems: "center",
-  },
-  [LegendVariant.BRICK]: {
-    width: "0.75rem",
-    height: "1.875rem",
-    borderRadius: "0",
-    alignItems: "inherit",
-  },
-};
-
 const GraphLegendMarker = ({ color, variant }: GraphLegendMarkerProps) => {
   const legendMarkerStyles = css`
     background-color: var(--${color});
-    min-width: ${variantStyles[variant].width};
-    height: ${variantStyles[variant].height};
-    border-radius: ${variantStyles[variant].borderRadius};
     display: inline-block;
     margin-right: 0.75rem;
+
+    &.brick {
+      min-width: 0.75rem;
+      height: 1.875rem;
+      border-radius: 0;
+    }
+
+    &.pill {
+      min-width: 1.5rem;
+      height: 0.375rem;
+      border-radius: 3rem;
+    }
   `;
-  return <div css={legendMarkerStyles}></div>;
+  return <div css={legendMarkerStyles} className={variant}></div>;
 };
 
 const GraphLegend = ({ labels, forceVertical, variant }: GraphLegendProps) => {
@@ -61,7 +55,9 @@ const GraphLegend = ({ labels, forceVertical, variant }: GraphLegendProps) => {
 
     .legend-wrapper {
       display: flex;
-      align-items: ${variantStyles[variant].alignItems};
+      &.pill {
+        align-items: center;
+      }
       ${mq(BreakPoint.md)} {
         align-items: center;
       }
@@ -76,7 +72,7 @@ const GraphLegend = ({ labels, forceVertical, variant }: GraphLegendProps) => {
     <div css={graphLegendStyles}>
       {labels.map((label, index) => {
         return (
-          <div key={index} className="legend-wrapper">
+          <div key={index} className={`legend-wrapper ${variant}`}>
             <GraphLegendMarker color={label.color} variant={variant} />
             <span>{label.label}</span>
           </div>

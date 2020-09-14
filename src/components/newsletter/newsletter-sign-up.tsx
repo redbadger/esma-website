@@ -47,7 +47,7 @@ const newsletterSignUpStyles = css`
   padding: 4.5rem 0.75rem;
   background-color: var(--taupe);
 
-  font-size: 18px;
+  font-size: 1.125rem;
 
   ${inputStyles}
 
