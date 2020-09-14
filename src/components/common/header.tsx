@@ -8,7 +8,7 @@ import ResearchNavigation from "./research-navigation";
 const headerStyles = css`
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   background-color: var(--midnight);
   font-size: 1.125rem;
