@@ -23,6 +23,7 @@ module.exports = {
     author: ``,
   },
   plugins: [
+    `gatsby-transformer-ffmpeg`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
@@ -38,6 +39,13 @@ module.exports = {
       options: {
         name: `content`,
         path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `video`,
+        path: `${__dirname}/src/video`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -92,8 +100,8 @@ module.exports = {
     {
       resolve: `gatsby-redirect-from`,
       options: {
-        query: `allMdx`
-      }
+        query: `allMdx`,
+      },
     },
     `gatsby-plugin-meta-redirect`,
   ],

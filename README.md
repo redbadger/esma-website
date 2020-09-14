@@ -13,6 +13,22 @@ The [CNAME record at `./static/CNAME`](./static/CNAME) is pushed to the Github p
 
 Because we're temporarily deploying to Gibhub pages, which makes the site live in a sub-folder, there's a `pathPrefix` defined on [Gatsby's config](./gastby-config.js) that should be removed once we deploy the site to the root of a domain.
 
+## Prerequisites
+
+To build this site locally, you'll need to have [`ffmpeg`](https://www.ffmpeg.org/download.html). The site features videos which the `gatsby-video` plugin converts to web-friendly formats at build-time. The plugin relies on `ffmpeg` being installed.
+
+### Mac OS X
+
+On Mac, run the following to install `ffmpeg`:
+
+```sh
+brew install ffmpeg
+```
+
+### Other platforms
+
+Go to [the ffmpeg website](https://www.ffmpeg.org/download.html) for instructions. Update these instructions with successful steps if you can.
+
 ## Tests
 
 ### Unit tests
