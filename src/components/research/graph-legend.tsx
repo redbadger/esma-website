@@ -26,7 +26,7 @@ const variantStyles = {
 const GraphLegendMarker = ({ color, variant }: GraphLegendMarkerProps) => {
   const legendMarkerStyles = css`
     background-color: var(--${color});
-    width: ${variantStyles[variant].width};
+    min-width: ${variantStyles[variant].width};
     height: ${variantStyles[variant].height};
     border-radius: ${variantStyles[variant].borderRadius};
     display: inline-block;
@@ -51,7 +51,9 @@ const GraphLegend = ({ labels, forceVertical, variant }: GraphLegendProps) => {
 
     .legend-wrapper {
       display: flex;
-      align-items: center;
+      ${mq(BreakPoint.md)} {
+        align-items: center;
+      }
     }
 
     span {

@@ -141,7 +141,7 @@ const contentBodyStyles = css`
 
   svg {
     margin-bottom: 2.25rem;
-    width: 100%;
+    width: 90%;
   }
 
   .footnote-link {
@@ -211,8 +211,11 @@ const breadcrumbStyles = css`
 
 const prevNextWithBgImageStyles = css`
   position: relative;
-  top: -13.5rem;
-  margin-bottom: -13.5rem;
+
+  ${mq(BreakPoint.md)} {
+    top: -13.5rem;
+    margin-bottom: -13.5rem;
+  }
 `;
 
 type FootnoteLinkProps = {

@@ -15,6 +15,7 @@ interface ResizableGraphProps {
   desktop: React.ReactNode;
   children: any;
   fullSpan: boolean;
+  className: string;
 }
 
 const ResizableGraph = ({
@@ -22,7 +23,8 @@ const ResizableGraph = ({
   tablet,
   desktop,
   fullSpan,
-  children
+  children,
+  className
 }: ResizableGraphProps) => {
   const { width } = useWindowSize();
 
@@ -37,7 +39,7 @@ const ResizableGraph = ({
   }
 
   return (
-    <div css={graphContainerStyles(fullSpan)}>
+    <div className={className} css={graphContainerStyles(fullSpan)}>
         {children}
       <Graph />
     </div>
@@ -46,6 +48,7 @@ const ResizableGraph = ({
 
 ResizableGraph.defaultProps = {
   fullSpan: true,
+  className: ""
 };
 
 export default ResizableGraph;
