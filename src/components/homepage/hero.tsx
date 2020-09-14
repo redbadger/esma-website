@@ -1,12 +1,18 @@
 import React from "react";
 import HeroVideo from "./hero-video";
 import { css } from "@emotion/core";
+import { mq, BreakPoint } from "../../util/mq";
 
 export const heroCss = css`
   position: relative;
   font-weight: 500;
   height: 20rem;
   padding: 3rem 0.75rem;
+
+  ${mq(BreakPoint.md)} {
+    height: 26.25rem;
+    padding: 4.5rem 2rem;
+  }
 `;
 
 const backgroundCss = css`
@@ -34,6 +40,13 @@ const backgroundCss = css`
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
+
+  ${mq(BreakPoint.md)} {
+    .background > .video-container {
+      width: 92rem;
+      left: calc(50vw - 46rem);
+    }
+  }
 `;
 
 const foregroundCss = css`
@@ -51,6 +64,14 @@ const foregroundCss = css`
   .highlight {
     background-color: var(--yellow);
     color: var(--midnight);
+    padding: 0.25rem;
+  }
+
+  ${mq(BreakPoint.md)} {
+    .foreground {
+      font-size: 2rem;
+      line-height: 2.75rem;
+    }
   }
 `;
 
