@@ -12,6 +12,7 @@ const timelineStyles = css`
 
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 2.625rem;
 
   ${mq(BreakPoint.md)} {
     padding-left: 5rem;
@@ -35,9 +36,8 @@ const lifeStages = [
     description:
       "The time between birth and primary school is a critical time for a child’s social, emotional, cognitive and communication development.",
     icon: timelineIcons.earlyYears,
-    destination: "/issues-chronology/early-years/overview",
+    destination: "/issues-chronology/early-years/",
     color: "aqua",
-    anchor: "early-years",
   },
   {
     title: "School years",
@@ -45,9 +45,8 @@ const lifeStages = [
     description:
       "The school system has been seen as a vital tool to support social mobility, enabling equality of opportunity amongst children and young people from lower socio-economic backgrounds.",
     icon: timelineIcons.schoolYears,
-    destination: "/issues-chronology/school-years/overview",
+    destination: "/issues-chronology/school-years/",
     color: "yellow",
-    anchor: "school-years",
   },
   {
     title: "Further Education",
@@ -55,9 +54,8 @@ const lifeStages = [
     description:
       "There has been a significant decline in adult participation in further education over the last ten years.",
     icon: timelineIcons.furtherEducation,
-    destination: "/issues-chronology/further-education/overview",
+    destination: "/issues-chronology/further-education/",
     color: "midnight",
-    anchor: "further-life",
   },
   {
     title: "Higher Education",
@@ -65,18 +63,16 @@ const lifeStages = [
     description:
       "The higher education system has been perceived as an engine of social mobility, with graduates benefiting from higher salaries and career resilience.",
     icon: timelineIcons.higherEducation,
-    destination: "/issues-chronology/higher-education/overview",
+    destination: "/issues-chronology/higher-education/",
     color: "cobalt",
-    anchor: "higher-education",
   },
   {
     title: "Working Life",
     imageName: "timeline-working-life.jpg",
     description: "Waiting on copy from The Bridge Group",
     icon: timelineIcons.workingLife,
-    destination: "/issues-chronology/working-life/overview",
+    destination: "/issues-chronology/working-life/",
     color: "copperfield",
-    anchor: "working-life",
   },
 ];
 

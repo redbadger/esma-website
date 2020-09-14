@@ -39,6 +39,7 @@ import GapsInAttainmentHigherStandardMobile from "./svg/school-years-gaps-in-att
 import GapsInAttainmentMarginalReturnsDesktop from "./svg/school-years-gaps-in-attainment-graph-3-desktop.svg";
 import GapsInAttainmentMarginalReturnsMobile from "./svg/school-years-gaps-in-attainment-graph-3-mobile.svg";
 import ResizableGraph from "../../components/research/resizable-graph";
+import GraphLegend from "../../components/research/graph-legend";
 
 <div>
   The majority of 19 year-olds who have been eligible for Free School Meals
@@ -94,9 +95,16 @@ import ResizableGraph from "../../components/research/resizable-graph";
 
 </div>
 
-**Attainment by disadvantage status, England 2019, State-funded schools**
+<div className="full-span" style={{ marginBottom: "-5rem" }}>
+  **Attainment by disadvantage status, England 2019, State-funded schools**
 
-<div></div>
+  <GraphLegend
+    labels={[
+      { color: "yellow", label: "Participating" },
+      { color: "cobalt", label: "Achieving" },
+    ]}
+  />
+</div>
 
 <ResizableGraph
   mobile={GapsInAttainmentExpectedStandardMobile}
@@ -104,9 +112,8 @@ import ResizableGraph from "../../components/research/resizable-graph";
   desktop={GapsInAttainmentExpectedStandardDesktop}
   fullSpan={false}
 >
-  <p>
     Reaching the **expected standard** in reading, writing and math
-  </p>
+    
 </ResizableGraph>
 
 <ResizableGraph
@@ -115,9 +122,7 @@ import ResizableGraph from "../../components/research/resizable-graph";
   desktop={GapsInAttainmentHigherStandardDesktop}
   fullSpan={false}
 >
-  <p>
     Reaching the **higher standard** in reading, writing and math
-  </p>
 </ResizableGraph>
 
 <div>
@@ -218,9 +223,7 @@ import ResizableGraph from "../../components/research/resizable-graph";
   tablet={GapsInAttainmentMarginalReturnsDesktop}
   desktop={GapsInAttainmentMarginalReturnsDesktop}
 >
-  <p>
-    **Marginal returns by age to five or more good GCSEs including English and Maths (male)**
-  </p>
+  **Marginal returns by age to five or more good GCSEs including English and Maths (male)**
 </ResizableGraph>
 
 <div>

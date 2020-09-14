@@ -24,6 +24,17 @@ const layoutStyles = css`
     display: none;
   }
 
+  strong {
+    font-weight: 600;
+  }
+
+  p,
+  span,
+  a {
+    line-height: 2.125rem;
+    font-size: 1.125rem;
+  }
+
   ${mq(BreakPoint.md)} {
     .timeline-image-wrapper {
       display: block;
@@ -62,7 +73,19 @@ const layoutStyles = css`
 `;
 
 const contentContainerStyles = css`
+  h2 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.625rem;
+  }
+
   ${mq(BreakPoint.md)} {
+    h2 {
+      font-size: 2rem;
+      line-height: 2.75rem;
+      margin-bottom: 2.25rem;
+    }
     width: 96%;
     left: 2%;
     top: -11.5rem;
@@ -81,13 +104,6 @@ const contentContainerStyles = css`
   padding-top: 3.1rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-
-  h2 {
-    margin-bottom: 2.25rem;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 3.875rem;
-  }
 `;
 
 const contentContainerNoImageStyles = css`
@@ -105,6 +121,12 @@ const contentBodyStyles = css`
   display: grid;
   grid-row-gap: 4.5rem;
 
+  ${mq(BreakPoint.lg)} {
+    .full-span {
+      grid-column: 1 / span 2;
+    }
+  }
+
   ${mq(BreakPoint.md)} {
     grid-column-gap: 13.75rem;
   }
@@ -114,16 +136,14 @@ const contentBodyStyles = css`
   }
 
   p {
-    line-height: 2.125rem;
     color: var(--midnight);
     margin-bottom: 1.5rem;
-    font-size: 1.125rem;
     font-weight: 300;
   }
 
   svg {
     margin-bottom: 2.25rem;
-    width: 100%;
+    width: 90%;
   }
 
   .footnote-link {
@@ -162,6 +182,12 @@ const footnoteStyles = css`
 `;
 
 const breadcrumbStyles = css`
+  margin-bottom: 0.75rem;
+
+  ${mq(BreakPoint.md)} {
+    margin-bottom: 0;
+  }
+
   .clear {
     clear: both;
   }
@@ -185,6 +211,15 @@ const breadcrumbStyles = css`
   }
 `;
 
+const prevNextWithBgImageStyles = css`
+  position: relative;
+
+  ${mq(BreakPoint.md)} {
+    top: -13.5rem;
+    margin-bottom: -13.5rem;
+  }
+`;
+
 type FootnoteLinkProps = {
   children: React.ReactNode;
   linkId: string;
@@ -195,6 +230,29 @@ const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
     <a className="footnote-link" href={`#${linkId}`}>
       {children}
     </a>
+  );
+};
+
+type FootNoteProps = {
+  destination: string;
+  id: string;
+  text: string;
+};
+
+const FootNote = ({ destination, id, text }: FootNoteProps) => {
+  if (destination) {
+    return (
+      <li>
+        <a href={destination} id={id}>
+          {text}
+        </a>
+      </li>
+    );
+  }
+  return (
+    <li>
+      <span id={id}>{text}</span>
+    </li>
   );
 };
 
@@ -286,15 +344,12 @@ const PageTemplate = ({
                     <ol>
                       {mdx.frontmatter.footnotes.map(
                         (entry: FootNoteData, index: number) => (
-                          <li key={index}>
-                            <a
-                              key={index}
-                              href={entry.destination}
-                              id={entry.id}
-                            >
-                              {entry.text}
-                            </a>
-                          </li>
+                          <FootNote
+                            key={index}
+                            text={entry.text}
+                            id={entry.id}
+                            destination={entry.destination}
+                          />
                         )
                       )}
                     </ol>
@@ -304,16 +359,18 @@ const PageTemplate = ({
             </div>
           </div>
         </section>
-        <PrevNext
-          pills={pillsMap}
-          currentPillIndex={currentPillIndex}
-          icon={
-            // if for some reason a matching page can't be found, better
-            // to default to some icon rather than break the page
-            pages.find(page => page.className === className)?.icon ||
-            timelineIcons.earlyYears
-          }
-        />
+        <div css={bgImage ? prevNextWithBgImageStyles : css``}>
+          <PrevNext
+            pills={pillsMap}
+            currentPillIndex={currentPillIndex}
+            icon={
+              // if for some reason a matching page can't be found, better
+              // to default to some icon rather than break the page
+              pages.find(page => page.className === className)?.icon ||
+              timelineIcons.earlyYears
+            }
+          />
+        </div>
         <NewsletterSignUp />
       </Layout>
     </>

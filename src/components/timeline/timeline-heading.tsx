@@ -11,12 +11,21 @@ const timelineHeadingStyles = css`
     font-size: 1.125rem;
     font-weight: 300;
   }
+  
+  margin-top: -2.8rem;
+
+  ${mq(BreakPoint.md)} {
+    /* move into the space vacated by the TimelineLegend */
+    margin-top: -6.5rem;
+  }
+
+  ${mq(BreakPoint.lg)} {
+    margin-top: -8rem;
+  }
 
   ${mq(BreakPoint.xl)} {
     padding-left: 4rem;
     padding-right: 4rem;
-    /* move into the space vacated by the TimelineLegend */
-    margin-top: -5rem;
   }
 `;
 

@@ -3,7 +3,7 @@
 exports[`TimelineEntry renders correctly 1`] = `
 <a>
   <div
-    className="css-10jjt3c-arrowHoverCss-timelineEntryStyles"
+    className="css-1i1oj1c-arrowHoverCss-timelineEntryStyles"
   >
     <div
       className="timeline-image-wrapper gatsby-image-wrapper"

@@ -30,7 +30,7 @@ const researchQuoteStyles = css`
   }
 
   .quote-content {
-    margin-top: -3.45rem;
+    margin-top: -3.1rem;
   }
 
   p {

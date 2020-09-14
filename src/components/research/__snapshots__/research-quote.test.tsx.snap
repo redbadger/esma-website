@@ -5,7 +5,7 @@ exports[`ResearchQuote renders correctly 1`] = `
   className="css-1ku0n93-containerStyles"
 >
   <div
-    className="css-seia3h-researchQuoteStyles"
+    className="css-1fjfpf6-researchQuoteStyles"
   >
     <span
       className="opening-quote quote-mark"

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GraphLegend renders correctly 1`] = `
+<div
+  className="css-j6aeo5-graphLegendStyles"
+>
+  <div
+    className="legend-wrapper pill"
+  >
+    <div
+      className="pill css-185pars-legendMarkerStyles"
+    />
+    <span>
+      Test
+    </span>
+  </div>
+</div>
+`;

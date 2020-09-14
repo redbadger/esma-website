@@ -2,13 +2,13 @@
 
 exports[`Pills renders correctly 1`] = `
 <nav
-  className="css-31avq0-dropdownCssMobile-cssListItem-cssList-cssPills"
+  className="css-1dv6h5i-dropdownCssMobile-cssListItem-cssList-cssPills"
 >
   <div
     className="dropdown"
     onClick={[Function]}
   >
-    Contents
+    Life stage issues
     <span
       className="icon "
     >
@@ -34,7 +34,9 @@ exports[`Pills renders correctly 1`] = `
   <ol
     className="pill-list"
   >
-    <li>
+    <li
+      className="current-page"
+    >
       <a
         className="current-page"
         href="/"
@@ -42,7 +44,9 @@ exports[`Pills renders correctly 1`] = `
         Life stage overview
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -50,7 +54,9 @@ exports[`Pills renders correctly 1`] = `
         Early Years Foundation Stage
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -58,7 +64,9 @@ exports[`Pills renders correctly 1`] = `
         Family Circumstances
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -66,7 +74,9 @@ exports[`Pills renders correctly 1`] = `
         Social class and underachievement
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -74,7 +84,9 @@ exports[`Pills renders correctly 1`] = `
         School cultures
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -82,7 +94,9 @@ exports[`Pills renders correctly 1`] = `
         Geographical educational inequality
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -90,7 +104,9 @@ exports[`Pills renders correctly 1`] = `
         Type and quality of schooling
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -98,7 +114,9 @@ exports[`Pills renders correctly 1`] = `
         Low aspirations
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -106,7 +124,9 @@ exports[`Pills renders correctly 1`] = `
         Access to career advice
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"
@@ -114,7 +134,9 @@ exports[`Pills renders correctly 1`] = `
         Gaps in attainment
       </a>
     </li>
-    <li>
+    <li
+      className={null}
+    >
       <a
         className={null}
         href="/"

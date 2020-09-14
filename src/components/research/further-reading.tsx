@@ -1,14 +1,18 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { MDXProvider } from "@mdx-js/react";
+import { mq, BreakPoint } from "../../util/mq";
 
 const furtherReadingStyles = css`
   border: 1px solid;
   border-radius: 0.625rem;
-  padding: 1.5rem 6rem;
+  padding: 1.5rem 0.75rem;
   grid-column: 1 / span 2;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  ${mq(BreakPoint.md)} {
+    grid-template-columns: 1fr 1fr;
+    padding: 1.5rem 6rem;
+  }
   column-gap: 13.75rem;
 `;
 

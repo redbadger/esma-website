@@ -47,6 +47,8 @@ const newsletterSignUpStyles = css`
   padding: 4.5rem 0.75rem;
   background-color: var(--taupe);
 
+  font-size: 1.125rem;
+
   ${inputStyles}
 
   header {
@@ -126,7 +128,7 @@ const newsletterSignUpStyles = css`
     }
 
     .input-error {
-      display: block;
+      display: none;
       grid-row: 2 / span 1;
       margin-top: 0;
     }
@@ -135,7 +137,7 @@ const newsletterSignUpStyles = css`
   .full-span {
     grid-column: 1 / span 3;
     text-align: left;
-    margin-top: 1.375rem;
+    margin-top: 0.375rem;
   }
 
   a {
@@ -229,6 +231,9 @@ const NewsletterSignUp = () => {
                 errorMessage="Please enter your name."
                 errorSetter={setNameError}
                 valueSetter={setName}
+                errorMessageStyles={css`
+                  grid-column: 1 / span 1;
+                `}
               />
               <NewsletterInputField
                 label="Email address"
@@ -238,6 +243,9 @@ const NewsletterSignUp = () => {
                 errorMessage="Please enter your email."
                 errorSetter={setEmailError}
                 valueSetter={setEmail}
+                errorMessageStyles={css`
+                  grid-column: 2 / span 1;
+                `}
               />
               <input type="submit" value="Submit" id="submit" />
               <section className="full-span">

@@ -2,7 +2,7 @@
 
 exports[`ResizableGraph renders correctly 1`] = `
 <div
-  className="css-i5zxf-ResizableGraph"
+  className=" css-i5zxf-ResizableGraph"
 >
   <p>
     Sample heading
