@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { MDXProvider } from "@mdx-js/react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "../components/common/layout";
@@ -22,6 +22,11 @@ import { timelineIcons } from "../components/common/icons";
 const layoutStyles = css`
   .timeline-image-wrapper {
     display: none;
+  }
+
+  .internal-link {
+    font-weight: 600;
+    text-decoration: underline;
   }
 
   strong {
@@ -260,7 +265,7 @@ const FootNote = ({ destination, id, text }: FootNoteProps) => {
   );
 };
 
-const shortcodes = { FootnoteLink, FurtherReading, ResearchQuote };
+const shortcodes = { Link, FootnoteLink, FurtherReading, ResearchQuote };
 
 export type MdxData = {
   frontmatter: ResearchPageMetaData;
