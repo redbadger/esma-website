@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Global, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
+import { mq, BreakPoint } from "../../util/mq";
 
 import Header from "./header";
 
@@ -60,7 +61,9 @@ const globalStyles = css`
         }
 
         li a:hover {
-          color: var(--white);
+          ${mq(BreakPoint.md)} {
+            color: var(--white);
+          }
         }
       }
     }
@@ -74,7 +77,9 @@ const globalStyles = css`
         }
 
         li a:hover {
-          color: var(--white);
+          ${mq(BreakPoint.md)} {
+            color: var(--white);
+          }
         }
       }
     }
@@ -88,7 +93,9 @@ const globalStyles = css`
         }
 
         li a:hover {
-          color: var(--white);
+          ${mq(BreakPoint.md)} {
+            color: var(--white);
+          }
         }
       }
     }
