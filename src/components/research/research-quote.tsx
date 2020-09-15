@@ -48,6 +48,10 @@ const containerStyles = css`
   .quote-source {
     margin-top: 0.75rem;
     margin-bottom: 0;
+    span, a {
+      font-size: 1rem;
+      line-height: 1.875rem;
+    }
   }
 `;
 
