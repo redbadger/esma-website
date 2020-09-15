@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="319px" height="266px" viewBox="0 0 319 266" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 10</title>
+    <g id="Home-&gt;-Issues-Chronology-&gt;-Timeline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop/Timeline/Higher-education/Life-Stage-Overview" transform="translate(-830.000000, -857.000000)">
+            <g id="Group-10" transform="translate(830.000000, 857.000000)">
+                <g id="Group-7">
+                    <g id="Group-12" transform="translate(13.000000, 0.000000)">
+                        <rect id="Rectangle-Copy-5" fill-opacity="0.1" fill="#3772FF" x="53" y="15" width="114" height="175"></rect>
+                        <rect id="Rectangle-Copy-4" fill-opacity="0.1" fill="#FFBA08" x="179" y="15" width="114" height="175"></rect>
+                        <rect id="Rectangle" fill="#3772FF" x="53" y="102" width="114" height="88"></rect>
+                        <rect id="Rectangle-Copy" fill="#FFBA08" x="179" y="46" width="114" height="144"></rect>
+                        <text id="0%" font-family="Montserrat-Regular, Montserrat" font-size="16" font-weight="normal" line-spacing="30" fill="#2D3142">
+                            <tspan x="20.46" y="184">0</tspan>
+                            <tspan x="31.052" y="184" font-size="12">%</tspan>
+                        </text>
+                        <text id="50%" font-family="Montserrat-Regular, Montserrat" font-size="16" font-weight="normal" line-spacing="30" fill="#2D3142">
+                            <tspan x="10.404" y="99.5">50</tspan>
+                            <tspan x="30.052" y="99.5" font-size="12">%</tspan>
+                        </text>
+                        <text id="100%" font-family="Montserrat-Regular, Montserrat" font-size="16" font-weight="normal" line-spacing="30" fill="#2D3142">
+                            <tspan x="3.092" y="15">100</tspan>
+                            <tspan x="30.052" y="15" font-size="12">%</tspan>
+                        </text>
+                    </g>
+                    <text id="60%-of-black-student" font-family="Montserrat-SemiBold, Montserrat" font-size="16" font-weight="500" line-spacing="26">
+                        <tspan x="3.5" y="229" fill="#3772FF">60% of black students</tspan>
+                        <tspan x="185.164" y="229" fill="#2D3142"> attain a first/2:1 </tspan>
+                        <tspan x="39.22" y="255" fill="#2D3142">versus </tspan>
+                        <tspan x="96.932" y="255" fill="#FFBA08">82% of white students </tspan>
+                    </text>
+                </g>
+                <text id="82%" font-family="Montserrat-SemiBold, Montserrat" font-size="16" font-weight="500" line-spacing="30" fill="#2D3142">
+                    <tspan x="232.248" y="65">82%</tspan>
+                </text>
+                <text id="60%" font-family="Montserrat-SemiBold, Montserrat" font-size="16" font-weight="500" line-spacing="30" fill="#FFFFFF">
+                    <tspan x="105.72" y="121">60%</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

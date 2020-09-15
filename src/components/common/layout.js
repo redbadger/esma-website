@@ -67,6 +67,16 @@ const globalStyles = css`
 
     .higher-education {
       --highlight-color: var(--cobalt);
+
+      .pill-list {
+        a.current-page {
+          color: var(--white);
+        }
+
+        li a:hover {
+          color: var(--white);
+        }
+      }
     }
 
     .working-life {
