@@ -179,6 +179,10 @@ const footnoteStyles = css`
     content: counter(custom-counter);
     margin-right: 1.5rem;
   }
+
+  span {
+    font-size: 1rem;
+  }
 `;
 
 const breadcrumbStyles = css`
