@@ -1,6 +1,5 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import TimelineEntry from "./timeline-entry";
 import { PureTimelineImage as TimelineImage } from "./timeline-image";
 
 describe("TimelineImage", () => {
