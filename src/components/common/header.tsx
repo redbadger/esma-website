@@ -104,10 +104,7 @@ const headerStyles = css`
   }
 `;
 
-const Header = ({
-  siteTitle,
-  includeResearchNavigation,
-}: HeaderProps): JSX.Element => {
+const Header = ({ includeResearchNavigation }: HeaderProps): JSX.Element => {
   const [navOpen, setNavOpen] = React.useState(false);
 
   const toggleNavBar = () => {
@@ -164,12 +161,7 @@ const Header = ({
 };
 
 type HeaderProps = {
-  siteTitle: string;
   includeResearchNavigation: boolean;
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
 };
 
 export default Header;

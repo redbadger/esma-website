@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { mq, BreakPoint } from "../../util/mq";
 
 import Header from "./header";
+import Footer from "./footer";
 
 const globalStyles = css`
   :root {
@@ -132,7 +133,7 @@ const Layout = ({ children, includeResearchNavigation }) => {
         includeResearchNavigation={includeResearchNavigation}
       />
       <main>{children}</main>
-      <p>A future footer.</p>
+      <Footer />
     </>
   );
 };
