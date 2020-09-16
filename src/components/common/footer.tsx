@@ -1,9 +1,7 @@
 import { Link, useStaticQuery, graphql } from "gatsby";
 import React from "react";
 import { css } from "@emotion/core";
-import Navigation, { NavToggle } from "./navigation";
-import { BreakPoint, mq, maxWidth, minWidth } from "../../util/mq";
-import ResearchNavigation from "./research-navigation";
+import { BreakPoint, maxWidth, minWidth } from "../../util/mq";
 
 const footerStyles = css`
   width: 100%;
@@ -12,12 +10,6 @@ const footerStyles = css`
 `;
 
 const Footer = ({}: FooterProps): JSX.Element => {
-  const [navOpen, setNavOpen] = React.useState(false);
-
-  const toggleNavBar = () => {
-    setNavOpen(!navOpen);
-  };
-
   const logos = useStaticQuery(graphql`
     {
       short: file(relativePath: { eq: "logo/short.svg" }) {
