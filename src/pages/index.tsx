@@ -4,8 +4,8 @@ import SEO from "../components/common/seo";
 
 import Hero from "../components/homepage/hero";
 import OurMission from "../components/homepage/our-mission";
-import KeyStats from "../components/key-stats/key-stats";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
+import Commitments from '../components/homepage/commitments';
 
 const IndexPage = () => {
   return (
@@ -13,7 +13,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Hero />
       <OurMission />
-      <KeyStats />
+      <Commitments />
       <NewsletterSignUp />
     </Layout>
   );
