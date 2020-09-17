@@ -24,6 +24,20 @@ const layoutStyles = css`
     display: none;
   }
 
+  font-size: 1.125rem;
+  line-height: 2.125rem;
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  ul {
+    list-style: circle;
+    font-weight: 300;
+  }
+
   .internal-link {
     font-weight: 600;
     text-decoration: underline;
@@ -31,13 +45,6 @@ const layoutStyles = css`
 
   strong {
     font-weight: 600;
-  }
-
-  p,
-  span,
-  a {
-    line-height: 2.125rem;
-    font-size: 1.125rem;
   }
 
   ${mq(BreakPoint.md)} {
@@ -161,9 +168,6 @@ const contentBodyStyles = css`
 const footnoteStyles = css`
   h3 {
     margin-top: 4.5rem;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
   }
 
   a {
@@ -174,6 +178,7 @@ const footnoteStyles = css`
 
   ol {
     counter-reset: custom-counter;
+    list-style: none;
   }
 
   ol li {
