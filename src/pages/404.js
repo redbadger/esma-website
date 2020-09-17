@@ -42,7 +42,7 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
     <section css={notFoundPageStyles}>
-      <h1>404</h1>
+      <h2>404</h2>
       <p>
         Sorry, we couldn’t find the page you were looking for. The link you
         followed may be broken, or the page may have been removed.
