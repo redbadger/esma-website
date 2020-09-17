@@ -59,35 +59,31 @@ const mainCss = css`
 const Main = () => (
   <div css={mainCss}>
     <main>
-      <p className="intro">
-        Following the construction of the Social Mobility Activity Map the Study
-        Segment teams will:
+      <p>
+        The information in Life Stages tells us that social mobility remains a
+        problem, and it's getting worse. The work we are doing on the Activity
+        Map tells us there is a huge amount of work being done to tackle the
+        problem. You're here reading this, and we know many more like you want
+        to make a difference. But what works?
+      </p>
+
+      <p>
+        We've commissioned a panel to review each organisation and programme
+        focused on the different Life Stages. The panel will look at
+        opportunities for better collaboration within and across Life Stages.
+        The work will result in:
       </p>
 
       <ul>
         <li>
-          In respect of each initiative and organisation mapped, make
-          recommendations on how the programmes focused on the Study Segment
-          could better collaborate e.g. formation of “Issue Communities” to
-          avoid duplication of provision/administration (e.g. student
-          on-boarding), merger of initiatives and/or adoption of a ‘baton pass’
-          measures between adjoining age group focussed schemes;
+          a summary of gaps in provision for any Life Stage or specific
+          geographic areas
         </li>
         <li>
-          Create a summary of gaps in provision e.g. issues in the SM Chronology
-          of Issues not addressed or lack of activity in specific geographic
-          areas;
+          a spotlight on best in class providers measured on outcomes achieved
         </li>
-        <li>
-          Highlight best in class providers measured on reach and collaboration;
-          and
-        </li>
-        <li>Highlight additional areas flagged for innovation focus.</li>
+        <li>recommendations for new innovation</li>
       </ul>
-      <p>
-        The Study Segment teams will then present their findings to the ESMA
-        panel in September 2021
-      </p>
     </main>
     <aside>
       <ReliefImage />

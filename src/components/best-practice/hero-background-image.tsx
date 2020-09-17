@@ -5,7 +5,7 @@ import FilteredHeroImage from "../common/filtered-hero-image";
 const HeroBackgroundImage = ({ children, className }) => {
   const data = useStaticQuery(graphql`
     query {
-      node: file(relativePath: { eq: "operational-review-hero.jpg" }) {
+      node: file(relativePath: { eq: "best-practice-hero.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2560, cropFocus: ATTENTION) {
             ...GatsbyImageSharpFluid

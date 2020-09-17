@@ -31,7 +31,7 @@ const ReliefImage = () => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(
-        relativePath: { eq: "operational-review-relief.jpg" }
+        relativePath: { eq: "best-practice-relief.jpg" }
       ) {
         default: childImageSharp {
           fluid(cropFocus: CENTER) {

@@ -33,7 +33,7 @@ exports[`Research navigation renders correctly 1`] = `
     >
       <a
         getProps={[Function]}
-        href="/issues-chronology/early-years/"
+        href="/life-stage-research/early-years/"
       >
         <test-file-stub />
         <span>
@@ -46,7 +46,7 @@ exports[`Research navigation renders correctly 1`] = `
     >
       <a
         getProps={[Function]}
-        href="/issues-chronology/school-years/"
+        href="/life-stage-research/school-years/"
       >
         <test-file-stub />
         <span>
@@ -59,7 +59,7 @@ exports[`Research navigation renders correctly 1`] = `
     >
       <a
         getProps={[Function]}
-        href="/issues-chronology/further-education/"
+        href="/life-stage-research/further-education/"
       >
         <test-file-stub />
         <span>
@@ -72,7 +72,7 @@ exports[`Research navigation renders correctly 1`] = `
     >
       <a
         getProps={[Function]}
-        href="/issues-chronology/higher-education/"
+        href="/life-stage-research/higher-education/"
       >
         <test-file-stub />
         <span>
@@ -85,7 +85,7 @@ exports[`Research navigation renders correctly 1`] = `
     >
       <a
         getProps={[Function]}
-        href="/issues-chronology/working-life/"
+        href="/life-stage-research/working-life/"
       >
         <test-file-stub />
         <span>

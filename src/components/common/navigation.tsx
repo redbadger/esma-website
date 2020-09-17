@@ -7,16 +7,16 @@ import { mq, BreakPoint } from "../../util/mq";
 
 const destinations = [
   {
-    label: "Issues Chronology",
-    path: "/issues-chronology",
+    label: "Life Stages Research",
+    path: "/life-stage-research",
   },
   {
     label: "Activity Map",
     path: "/activity-map",
   },
   {
-    label: "Operational review",
-    path: "/operational-review",
+    label: "Best Practice",
+    path: "/best-practice",
   },
   {
     label: "Get involved",

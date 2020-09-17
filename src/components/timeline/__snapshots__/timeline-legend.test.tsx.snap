@@ -9,7 +9,7 @@ exports[`TimelineLegend renders correctly 1`] = `
   >
     <a
       className="test"
-      href="/issues-chronology/test/"
+      href="/life-stage-research/test/"
     >
       <div
         className="css-1zivnc-entryWrapperStyles"

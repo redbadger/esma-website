@@ -214,9 +214,10 @@ const NewsletterSignUp = () => {
         <header>
           <h2>Join our mission</h2>
           <p>
-            We’ve got bold ambitions and what you see today is just the
-            beginning. Sign up to our newsletter to be the first to hear about
-            our new features and stay up to date on everything ESMA.
+            We've got bold ambitions to connect the whole social mobility
+            community in one place. Sign up to our newsletter to be the first to
+            hear news on events, exciting new ideas and connect to others who
+            want to make a difference.
           </p>
         </header>
 
@@ -261,7 +262,7 @@ const NewsletterSignUp = () => {
                   {mcResponse?.msg}
                 </p>
                 <p>
-                  By clicking Subscribe you accept the{" "}
+                  By clicking Submit you accept the{" "}
                   <Link to="/privacy">Privacy Policy</Link>. This will allow us
                   to send you newsletter and event updates. Our Privacy Policy
                   covers how we protect data. You can unsubscribe from this at

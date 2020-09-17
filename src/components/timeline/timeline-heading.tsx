@@ -11,7 +11,7 @@ const timelineHeadingStyles = css`
     font-size: 1.125rem;
     font-weight: 300;
   }
-  
+
   margin-top: -2.8rem;
 
   ${mq(BreakPoint.md)} {
@@ -33,17 +33,12 @@ const TimelineHeading = () => {
   return (
     <div css={timelineHeadingStyles}>
       <p>
-        ESMA has commissioned Nik Miller and Sarah Dauncey of The Bridge Group
-        to draw together all the academic research on issues which inhibit an
-        individual’s employability/career progression and plot against an
-        individual’s lifecycle from cradle to retirement. The research provides
-        give a holistic understanding of the all issues which impact on a
-        person’s employability and progression prospects caused by low income.
-      </p>
-      <p>
-        ESMA recognises that not every person follows the same path to and
-        through the world of work hence the Issues Chronology can be navigated
-        sequentially or by reference to a person’s stage in life.
+        Here you can find out what the critical issues are across a persons
+        lifetime; how disadvantage can build from early years if we don't do
+        something different. The Bridge Group have sifted through a huge volume
+        of research on social mobility to bring you an easy to read summary for
+        each life stage. The first step to solving a problem is understanding
+        it. Dive in, explore and join our newsletter.
       </p>
     </div>
   );

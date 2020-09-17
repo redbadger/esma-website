@@ -48,10 +48,10 @@ const whenWeClickPrevious = () => {
   cy.contains("Previous").click();
 };
 
-describe("Issues chronology research page", function () {
+describe("Life Stages Research research page", function () {
   it("has hidden elements in navigation which can be found by clicking the scroller", function () {
     cy.server();
-    cy.visit("/issues-chronology/early-years/");
+    cy.visit("/life-stage-research/early-years/");
     cy.contains("Working life").then(el => Cypress.dom.isHidden(el));
     cy.get(".scroll-help.right").click();
     cy.contains("Working life").then(el => !Cypress.dom.isHidden(el));
@@ -59,7 +59,7 @@ describe("Issues chronology research page", function () {
 
   it("has Next Up button which takes the user to the next page", function () {
     cy.server();
-    cy.visit("/issues-chronology/early-years/");
+    cy.visit("/life-stage-research/early-years/");
     thenWeSeeEarlyYearsLifeStageOverview();
     whenWeClickNextUp();
     thenWeSeeFamilyEnvironment();
@@ -69,7 +69,7 @@ describe("Issues chronology research page", function () {
 
   it("has Previous button which takes the user to the previous page", function () {
     cy.server();
-    cy.visit("/issues-chronology/early-years/housing-and-neighbourhood");
+    cy.visit("/life-stage-research/early-years/housing-and-neighbourhood");
     thenWeSeeHousing();
     whenWeClickPrevious();
     thenWeSeeFamilyEnvironment();
@@ -79,7 +79,7 @@ describe("Issues chronology research page", function () {
 
   it("has pills which takes the user to those pages", function () {
     cy.server();
-    cy.visit("/issues-chronology/early-years/");
+    cy.visit("/life-stage-research/early-years/");
     thenWeSeeEarlyYearsLifeStageOverview();
     cy.get("nav").contains("Housing and the neighbourhood").click();
     thenWeSeeHousing();
@@ -89,7 +89,7 @@ describe("Issues chronology research page", function () {
 
   it("can navigate to other chronology sections", function () {
     cy.server();
-    cy.visit("/issues-chronology/early-years/");
+    cy.visit("/life-stage-research/early-years/");
     thenWeSeeEarlyYearsLifeStageOverview();
     cy.get("nav").contains("Housing and the neighbourhood").click();
     thenWeSeeHousing();

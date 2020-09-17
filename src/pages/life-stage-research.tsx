@@ -5,15 +5,15 @@ import SEO from "../components/common/seo";
 import Timeline from "../components/timeline/timeline";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 
-const IssuesChronologyPage = () => {
+const LifeStageResearchPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Life Stages Research" />
       <Timeline />
       <NewsletterSignUp />
     </Layout>
   );
 };
 
-export default IssuesChronologyPage;
+export default LifeStageResearchPage;
 
