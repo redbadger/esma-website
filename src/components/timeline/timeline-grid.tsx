@@ -18,7 +18,7 @@ const timelineGridStyles = css`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  ${mq(BreakPoint.lg)} {
+  ${mq(BreakPoint.xl)} {
     grid-template-columns: repeat(3, 1fr);
   }
 

@@ -34,7 +34,7 @@ const lifeStages = [
     title: "Early years",
     imageName: "timeline-early-development.jpg",
     description:
-      "The time between birth and primary school is a critical time for a child’s social, emotional, cognitive and communication development.",
+      "Children from low socio-economic status families perform 11 months behind their peers from middle-income families in terms of their readiness for school at age 5.",
     icon: timelineIcons.earlyYears,
     destination: "/life-stage-research/early-years/",
     color: "aqua",
@@ -43,7 +43,7 @@ const lifeStages = [
     title: "School years",
     imageName: "timeline-school-years.jpg",
     description:
-      "The school system has been seen as a vital tool to support social mobility, enabling equality of opportunity amongst children and young people from lower socio-economic backgrounds.",
+      "Educational inequality is persistent and widespread. Pupils’ attainment is closely associated with their parents’ class background and is a factor of where they happen to live.",
     icon: timelineIcons.schoolYears,
     destination: "/life-stage-research/school-years/",
     color: "yellow",
@@ -52,7 +52,7 @@ const lifeStages = [
     title: "Further Education",
     imageName: "timeline-further-education.jpg",
     description:
-      "There has been a significant decline in adult participation in further education over the last ten years.",
+      "Successive governments have invested heavily in graduates and have largely overlooked the importance of vocational routes for social equality.",
     icon: timelineIcons.furtherEducation,
     destination: "/life-stage-research/further-education/",
     color: "midnight",
@@ -61,7 +61,7 @@ const lifeStages = [
     title: "Higher Education",
     imageName: "timeline-higher-education.jpg",
     description:
-      "The higher education system has been perceived as an engine of social mobility, with graduates benefiting from higher salaries and career resilience.",
+      "Far from narrowing the gaps, higher education can reinforce inequalities and entrench both class and White racial privilege.",
     icon: timelineIcons.higherEducation,
     destination: "/life-stage-research/higher-education/",
     color: "cobalt",
@@ -69,7 +69,7 @@ const lifeStages = [
   {
     title: "Working Life",
     imageName: "timeline-working-life.jpg",
-    description: "Waiting on copy from The Bridge Group",
+    description: "There are inequalities across the labour market based on socio-economic background, ethnicity and gender (and complex intersections that can intensify the experience of deprivation).",
     icon: timelineIcons.workingLife,
     destination: "/life-stage-research/working-life/",
     color: "copperfield",

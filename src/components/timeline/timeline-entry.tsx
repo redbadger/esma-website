@@ -39,6 +39,7 @@ const timelineEntryStyles = css`
     font-weight: 600;
     margin: 1.5rem;
     margin-right: 0;
+    margin-bottom: 0.75rem;
     float: left;
   }
 
@@ -53,6 +54,7 @@ const timelineEntryStyles = css`
   svg {
     float: right;
     margin: 1.5rem;
+    margin-bottom: 0;
   }
 
   .separator {
