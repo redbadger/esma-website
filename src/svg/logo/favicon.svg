@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #2D3142;">
-    <title>Atom/Logo/Favicon</title>
-    <g id="Atom/Logo/Favicon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <rect fill="#2D3142" x="0" y="0" width="16" height="16"></rect>
-        <g id="Group-2" transform="translate(1.000000, 1.000000)" fill="#FFBA08">
-            <polygon id="Fill-2" points="10.5 0 10.5 3.50004758 7 3.50004758 7 6.99990484 3.5 6.99990484 3.5 10.5001427 0 10.5001427 0 14 3.5 14 7 14 10.5 14 14 14 14 10.5001427 14 6.99990484 14 3.50004758 14 0"></polygon>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Fill 2</title>
+    <g id="Foundations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" fill="#FFBA08">
+            <polygon id="Fill-2" points="336 0 336 112.00152256 224 112.00152256 224 223.99695488 112 223.99695488 112 336.0045664 0 336.0045664 0 448 112 448 224 448 336 448 448 448 448 336.0045664 448 223.99695488 448 112.00152256 448 0"></polygon>
         </g>
     </g>
 </svg>
