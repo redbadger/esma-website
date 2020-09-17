@@ -92,10 +92,7 @@ exports[`EsmaPanel renders correctly 1`] = `
     </ul>
   </div>
   <p>
-    Authored by Dr Catherine McGregor, the ESMA panel will also oversee the production of a report which summarises the key thematic recommendations identified by the Study Segment teams. Subject to funding, the ESMA Panel will distribute the Incubator Fund to licence (on a commercial basis) best practice materials from organisations identified by the SM Operational Appraisal.
-  </p>
-  <p>
-    These materials will be provided to other Social Mobility focussed organisations on a Creative Commons basis, in turn, cross fertilising best practice across the UK and enabling exemplar initiatives/organisations to grow and increase impact.
+    Authored by Dr Catherine McGregor, the ESMA panel will produce a guide which summarises key recommendations identified by the Life Stages teams. ESMA also hopes to raise an incubator fund to enable the sharing of best practice materials, and support creative and radical innovation that has the promise to improve people's lives across the UK.
   </p>
 </section>
 `;
