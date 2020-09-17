@@ -1,7 +1,7 @@
 import { Link, useStaticQuery, graphql } from "gatsby";
 import React from "react";
 import { css } from "@emotion/core";
-import { BreakPoint, maxWidth, minWidth } from "../../util/mq";
+import { BreakPoint, mq } from "../../util/mq";
 import Navigation from "./navigation";
 
 const footerStyles = css`
@@ -10,18 +10,24 @@ const footerStyles = css`
   font-size: 1.125rem;
   line-height: 2.125rem;
   padding: 0.75rem;
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "navigation"
+    "contact";
+  align-items: start;
 
   color: var(--white);
 
-  ul {
-    list-style: none;
-
-    li {
-      padding: 0.25rem 0;
-    }
+  .logo {
+    grid-area: logo;
+    margin-bottom: 0.75rem;
   }
+
   ul.inner-navigation {
+    grid-area: navigation;
     font-weight: 500;
+    list-style: none;
     a {
       width: 100%;
     }
@@ -29,15 +35,27 @@ const footerStyles = css`
     a:hover {
       text-decoration: underline;
     }
+    margin-bottom: 1.5rem;
   }
+
   .contact-us {
-    margin-top: 1.5rem;
+    grid-area: contact;
     h3 {
       font-weight: 500;
     }
     ul {
       font-weight: 300;
+      list-style: none;
     }
+  }
+  ${mq(BreakPoint.md)} {
+    grid-template-areas:
+      "logo logo"
+      "navigation contact";
+    grid-template-columns: 4fr 8fr;
+  }
+  ${mq(BreakPoint.lg)} {
+    padding: 2.5rem 10rem;
   }
 `;
 
@@ -48,41 +66,25 @@ const Footer = ({}: FooterProps): JSX.Element => {
         absolutePath
         publicURL
       }
-      long: file(relativePath: { eq: "logo/long.svg" }) {
-        absolutePath
-        publicURL
-      }
     }
   `);
 
   return (
     <footer css={footerStyles}>
-      <ul>
-        <li>
-          <Link to="/">
-            <picture>
-              <source
-                srcSet={logos.short.publicURL}
-                media={maxWidth(BreakPoint.xs)}
-              />
-              <source
-                srcSet={logos.long.publicURL}
-                media={minWidth(BreakPoint.xs)}
-              />
-              <img
-                src={logos.short.publicURL}
-                alt="Employer's Social Mobility Alliance"
-              />
-            </picture>
-            <span className="screenreader">
-              Employer's Social Mobility Alliance
-            </span>
-          </Link>
-        </li>
-        <li>
-          <Navigation />
-        </li>
-      </ul>
+      <div className="logo">
+        <Link to="/">
+          <picture>
+            <img
+              src={logos.short.publicURL}
+              alt="Employer's Social Mobility Alliance"
+            />
+          </picture>
+          <span className="screenreader">
+            Employer's Social Mobility Alliance
+          </span>
+        </Link>
+      </div>
+      <Navigation />
       <section className="contact-us">
         <h3>Contact us</h3>
         <ul>

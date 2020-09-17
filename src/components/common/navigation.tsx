@@ -19,7 +19,7 @@ const destinations = [
     path: "/best-practice",
   },
   {
-    label: "Get involved",
+    label: "Get Involved",
     path: "/get-involved",
   },
 ];
