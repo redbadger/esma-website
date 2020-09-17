@@ -84,10 +84,6 @@ const Main = () => (
         </li>
         <li>recommendations for new innovation</li>
       </ul>
-      <p>
-        The Study Segment teams will then present their findings to the ESMA
-        panel in September 2021
-      </p>
     </main>
     <aside>
       <ReliefImage />

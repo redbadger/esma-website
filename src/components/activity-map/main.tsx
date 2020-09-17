@@ -69,20 +69,17 @@ const Main = () => (
         So you want to find what's happening where you are, at the touch of a
         button; our Activity Map will do just that. Our volunteer group are
         working right now on mapping organisations, programmes and individuals
-        all over the country taking action to improve social mobility. The
-        Activity Map will mean that you can easily connect to others for locally
-        relevant guidance and help, whether you are working in a school,
+        all over the country taking action to improve social mobility.
+      </p>
+      <p>
+        The Activity Map will mean that you can easily connect to others for
+        locally relevant guidance and help, whether you are working in a school,
         business, government or just an individual who wants to get involved.
+      </p>
+      <p>
         Sign up to our newsletter to be the first to hear news on events,
         exciting new ideas and connect to others who want to make a difference.
       </p>
-      <h3>Subdivided and capable of filtering by reference to:</h3>
-      <ul>
-        <li>Local Enterprise Partnership map in respect of England;</li>
-        <li>MSP constituency in Scotland;</li>
-        <li>Welsh Assembly Member constituency in Wales; and</li>
-        <li>NI Assembly Member constituency in Northern Ireland. </li>
-      </ul>
     </main>
     <aside>
       <picture>

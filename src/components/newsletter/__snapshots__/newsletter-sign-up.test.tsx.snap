@@ -2,7 +2,7 @@
 
 exports[`NewsletterSignUp renders correctly 1`] = `
 <section
-  className="css-1lgowgk-inputStyles-newsletterSignUpStyles"
+  className="css-drji15-inputStyles-newsletterSignUpStyles"
 >
   <header>
     <h2>
@@ -68,6 +68,7 @@ exports[`NewsletterSignUp renders correctly 1`] = `
           />
           <p>
             By clicking Submit you accept the
+             
             <a
               href="/privacy"
             >
