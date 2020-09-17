@@ -15,8 +15,8 @@ const destinations = [
     path: "/activity-map",
   },
   {
-    label: "Operational review",
-    path: "/operational-review",
+    label: "Best Practice",
+    path: "/best-practice",
   },
   {
     label: "Get involved",

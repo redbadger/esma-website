@@ -16,8 +16,8 @@ const Hero = () => (
   <header css={[filteredHeroStyles, customCss]}>
     <HeroBackgroundImage className="header">
       <div className="container">
-        <p>Home &gt; Operational Review</p>
-        <h2>Operational Review</h2>
+        <p>Home &gt; Best Practice</p>
+        <h2>Best Practice</h2>
         <p className="highlight">Coming September 2021</p>
       </div>
     </HeroBackgroundImage>

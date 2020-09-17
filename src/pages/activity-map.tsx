@@ -9,7 +9,7 @@ import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 const ActivityMap = () => {
   return (
     <Layout>
-      <SEO title="Operational Review" />
+      <SEO title="Best Practice" />
       <ActivityMapHero />
       <ActivityMapMain />
       <NewsletterSignUp />

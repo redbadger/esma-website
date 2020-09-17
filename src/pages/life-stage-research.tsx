@@ -8,7 +8,7 @@ import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 const LifeStageResearchPage = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Life Stages Research" />
       <Timeline />
       <NewsletterSignUp />
     </Layout>
