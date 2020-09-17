@@ -10,7 +10,8 @@ const footerStyles = css`
   font-size: 1.125rem;
   line-height: 2.125rem;
   padding: 0.75rem;
-  font-weight: 500;
+
+  color: var(--white);
 
   ul {
     list-style: none;
@@ -20,13 +21,22 @@ const footerStyles = css`
     }
   }
   ul.inner-navigation {
+    font-weight: 500;
     a {
       width: 100%;
-      color: var(--white);
     }
     a:focus,
     a:hover {
       text-decoration: underline;
+    }
+  }
+  .contact-us {
+    margin-top: 1.5rem;
+    h3 {
+      font-weight: 500;
+    }
+    ul {
+      font-weight: 300;
     }
   }
 `;
@@ -73,6 +83,22 @@ const Footer = ({}: FooterProps): JSX.Element => {
           <Navigation />
         </li>
       </ul>
+      <section className="contact-us">
+        <h3>Contact us</h3>
+        <ul>
+          <li>
+            <a href="mailto:barrymatthews@esma.community">
+              barrymatthews@esma.community
+            </a>
+          </li>
+          <li>
+            {" "}
+            <a href="mailto:barrymurphy@esma.community">
+              barrymurphy@esma.community
+            </a>
+          </li>
+        </ul>
+      </section>
     </footer>
   );
 };
