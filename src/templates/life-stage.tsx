@@ -146,6 +146,26 @@ const contentBodyStyles = css`
     }
   }
 
+  .full-span.wide-graph {
+    svg {
+      max-height: 13.75rem;
+
+      ${mq(BreakPoint.md)} {
+        max-height: unset;
+      }
+    }
+  }
+
+  .full-span.tall-graph {
+    svg {
+      max-height: 23.25rem;
+
+      ${mq(BreakPoint.md)} {
+        max-height: unset;
+      }
+    }
+  }
+
   .common-legend {
     ${mq(BreakPoint.md)} {
       margin-bottom: -4rem;
