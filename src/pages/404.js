@@ -14,7 +14,7 @@ const notFoundPageStyles = css`
   align-items: center;
   height: 70vh;
 
-  h1 {
+  h2 {
     font-size: 3rem;
     line-height: 3.875rem;
     margin-top: 6.25rem;
