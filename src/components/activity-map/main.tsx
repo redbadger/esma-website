@@ -66,19 +66,15 @@ const Main = () => (
     <main>
       <h2>Activity Map</h2>
       <p>
-        ESMA has recruited over 200 volunteer business professionals to date to
-        map the social mobility activity of Business, State and Third Sector
-        across the UK. Volunteers have been divided into ‘Study Segment’ teams –
-        one for each Life Stage set out in the{" "}
-        <Link to="/life-stage-research">Social Mobility Issues Chronology</Link>.
-      </p>
-      <p>
-        The Study Segment teams first task will be to map and summarise the
-        activity of all material agencies and initiatives in the public, private
-        and third sector in each region seeking to address issues identified in
-        the Issues Chronology. The interactive map will be capable of filtering
-        by Study Segment, Sector (Business, State and Third Sector) and industry
-        (Business) and will also be:
+        So you want to find what's happening where you are, at the touch of a
+        button; our Activity Map will do just that. Our volunteer group are
+        working right now on mapping organisations, programmes and individuals
+        all over the country taking action to improve social mobility. The
+        Activity Map will mean that you can easily connect to others for locally
+        relevant guidance and help, whether you are working in a school,
+        business, government or just an individual who wants to get involved.
+        Sign up to our newsletter to be the first to hear news on events,
+        exciting new ideas and connect to others who want to make a difference.
       </p>
       <h3>Subdivided and capable of filtering by reference to:</h3>
       <ul>
