@@ -36,7 +36,7 @@ const lifeStages = [
     description:
       "The time between birth and primary school is a critical time for a child’s social, emotional, cognitive and communication development.",
     icon: timelineIcons.earlyYears,
-    destination: "/issues-chronology/early-years/",
+    destination: "/life-stage-research/early-years/",
     color: "aqua",
   },
   {
@@ -45,7 +45,7 @@ const lifeStages = [
     description:
       "The school system has been seen as a vital tool to support social mobility, enabling equality of opportunity amongst children and young people from lower socio-economic backgrounds.",
     icon: timelineIcons.schoolYears,
-    destination: "/issues-chronology/school-years/",
+    destination: "/life-stage-research/school-years/",
     color: "yellow",
   },
   {
@@ -54,7 +54,7 @@ const lifeStages = [
     description:
       "There has been a significant decline in adult participation in further education over the last ten years.",
     icon: timelineIcons.furtherEducation,
-    destination: "/issues-chronology/further-education/",
+    destination: "/life-stage-research/further-education/",
     color: "midnight",
   },
   {
@@ -63,7 +63,7 @@ const lifeStages = [
     description:
       "The higher education system has been perceived as an engine of social mobility, with graduates benefiting from higher salaries and career resilience.",
     icon: timelineIcons.higherEducation,
-    destination: "/issues-chronology/higher-education/",
+    destination: "/life-stage-research/higher-education/",
     color: "cobalt",
   },
   {
@@ -71,7 +71,7 @@ const lifeStages = [
     imageName: "timeline-working-life.jpg",
     description: "Waiting on copy from The Bridge Group",
     icon: timelineIcons.workingLife,
-    destination: "/issues-chronology/working-life/",
+    destination: "/life-stage-research/working-life/",
     color: "copperfield",
   },
 ];

@@ -5,7 +5,7 @@ import SEO from "../components/common/seo";
 import Timeline from "../components/timeline/timeline";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 
-const IssuesChronologyPage = () => {
+const LifeStageResearchPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
@@ -15,5 +15,5 @@ const IssuesChronologyPage = () => {
   );
 };
 
-export default IssuesChronologyPage;
+export default LifeStageResearchPage;
 

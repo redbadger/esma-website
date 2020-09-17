@@ -70,7 +70,7 @@ const Main = () => (
         map the social mobility activity of Business, State and Third Sector
         across the UK. Volunteers have been divided into ‘Study Segment’ teams –
         one for each Life Stage set out in the{" "}
-        <Link to="/issues-chronology">Social Mobility Issues Chronology</Link>.
+        <Link to="/life-stage-research">Social Mobility Issues Chronology</Link>.
       </p>
       <p>
         The Study Segment teams first task will be to map and summarise the

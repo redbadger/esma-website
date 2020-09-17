@@ -5,7 +5,7 @@ import FilteredHeroImage from "../common/filtered-hero-image";
 const TimelineHeroImage = ({ children, className }) => {
   const data = useStaticQuery(graphql`
     query {
-      node: file(relativePath: { eq: "issues-chronology-hero.jpg" }) {
+      node: file(relativePath: { eq: "life-stage-research-hero.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2560, cropFocus: ATTENTION) {
             ...GatsbyImageSharpFluid

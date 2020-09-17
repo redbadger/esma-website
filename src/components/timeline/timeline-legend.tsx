@@ -113,7 +113,7 @@ const TimelineLegend = ({ entries }: TimelineLegendProps) => {
       <div css={timelineLegendStyles}>
         {entries.map((entry, i) => {
           const titleSlug = slugify(entry.title, { lower: true });
-          const link = `/issues-chronology/${titleSlug}/`;
+          const link = `/life-stage-research/${titleSlug}/`;
           const Icon = entry.icon;
           return (
             <Link key={i} to={link} className={titleSlug}>
