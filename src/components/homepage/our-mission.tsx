@@ -83,7 +83,15 @@ const VideoSection = () => {
         <source src={IntroVideo} type="video/mp4" />
       </video>
       <ul>
-        <li className="share">Share on Twitter</li>
+        <li className="share">
+          <a
+            href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+            className="twitter-share-button"
+            data-show-count="false"
+          >
+            Tweet
+          </a>
+        </li>
         <li className="share">Share on LinkedIn</li>
         <li className="credit">
           Music: <a href="www.bensound.com">www.bensound.com</a>
