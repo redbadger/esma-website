@@ -41,10 +41,15 @@ const mainCss = css`
     .share {
       font-weight: 500;
       text-decoration: underline;
+      margin-right: 1.5rem;
+      iframe {
+        display: inline-block;
+      }
     }
 
     .credit {
       font-size: 0.875rem;
+      margin-left: auto;
     }
 
     p {
