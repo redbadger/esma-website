@@ -5,6 +5,11 @@ import { mq, BreakPoint } from "../../util/mq";
 import NewsletterInputField from "./newsletter-input-field";
 import { Link } from "gatsby";
 
+// remove this or set to true when newsletter functionality is ready
+// i.e. a mailchimp account has been set up and configured through 
+// MAILCHIMP_ENDPOINT env var
+const showNewsLetterSection = false;
+
 const inputStyles = css`
   label {
     display: block;
@@ -217,69 +222,71 @@ const NewsletterSignUp = (props: { color: string }) => {
 
   return (
     <>
-      <section css={[newsletterSignUpStyles, bgColor]}>
-        <header>
-          <h2>Join our mission</h2>
-          <p>
-            We've got bold ambitions to connect the whole social mobility
-            community in one place. Sign up to our newsletter to be the first to
-            hear news on events, exciting new ideas and connect to others who
-            want to make a difference.
-          </p>
-        </header>
+      {showNewsLetterSection && (
+        <section css={[newsletterSignUpStyles, bgColor]}>
+          <header>
+            <h2>Join our mission</h2>
+            <p>
+              We've got bold ambitions to connect the whole social mobility
+              community in one place. Sign up to our newsletter to be the first
+              to hear news on events, exciting new ideas and connect to others
+              who want to make a difference.
+            </p>
+          </header>
 
-        <article>
-          <form onSubmit={handleSubmit}>
-            <fieldset>
-              <NewsletterInputField
-                label="Full name"
-                type="text"
-                name="fullName"
-                error={nameError}
-                errorMessage="Please enter your name."
-                errorSetter={setNameError}
-                valueSetter={setName}
-                errorMessageStyles={css`
-                  grid-column: 1 / span 1;
-                `}
-              />
-              <NewsletterInputField
-                label="Email address"
-                type="email"
-                name="email"
-                error={emailError}
-                errorMessage="Please enter your email."
-                errorSetter={setEmailError}
-                valueSetter={setEmail}
-                errorMessageStyles={css`
-                  grid-column: 2 / span 1;
-                `}
-              />
-              <input type="submit" value="Submit" id="submit" />
-              <section className="full-span">
-                <p
-                  className={`response ${
-                    mcResponse
-                      ? mcResponse?.success
-                        ? "success"
-                        : "error"
-                      : ""
-                  }`}
-                >
-                  {mcResponse?.msg}
-                </p>
-                <p>
-                  By clicking Submit you accept the{" "}
-                  <Link to="/privacy">Privacy Policy</Link>. This will allow us
-                  to send you newsletter and event updates. Our Privacy Policy
-                  covers how we protect data. You can unsubscribe from this at
-                  any point.
-                </p>
-              </section>
-            </fieldset>
-          </form>
-        </article>
-      </section>
+          <article>
+            <form onSubmit={handleSubmit}>
+              <fieldset>
+                <NewsletterInputField
+                  label="Full name"
+                  type="text"
+                  name="fullName"
+                  error={nameError}
+                  errorMessage="Please enter your name."
+                  errorSetter={setNameError}
+                  valueSetter={setName}
+                  errorMessageStyles={css`
+                    grid-column: 1 / span 1;
+                  `}
+                />
+                <NewsletterInputField
+                  label="Email address"
+                  type="email"
+                  name="email"
+                  error={emailError}
+                  errorMessage="Please enter your email."
+                  errorSetter={setEmailError}
+                  valueSetter={setEmail}
+                  errorMessageStyles={css`
+                    grid-column: 2 / span 1;
+                  `}
+                />
+                <input type="submit" value="Submit" id="submit" />
+                <section className="full-span">
+                  <p
+                    className={`response ${
+                      mcResponse
+                        ? mcResponse?.success
+                          ? "success"
+                          : "error"
+                        : ""
+                    }`}
+                  >
+                    {mcResponse?.msg}
+                  </p>
+                  <p>
+                    By clicking Submit you accept the{" "}
+                    <Link to="/privacy">Privacy Policy</Link>. This will allow
+                    us to send you newsletter and event updates. Our Privacy
+                    Policy covers how we protect data. You can unsubscribe from
+                    this at any point.
+                  </p>
+                </section>
+              </fieldset>
+            </form>
+          </article>
+        </section>
+      )}
     </>
   );
 };
