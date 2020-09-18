@@ -2,6 +2,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { BreakPoint, mq } from "../../util/mq";
 import IntroVideo from "../../video/intro-olisa-mahy.mp4";
+import linkedInImage from "../../images/linkedin/blue-sq.png";
 
 const mainCss = css`
   padding: 1.5rem 0.75rem;
@@ -51,6 +52,18 @@ const mainCss = css`
     }
   }
 
+  picture {
+    display: inline-block;
+    width: 1.25rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  picture img {
+    max-width: 100%;
+    height: auto;
+  }
+
   ${mq(BreakPoint.md)} {
     padding: 4.5rem 2.5rem 2rem;
 
@@ -94,6 +107,9 @@ const VideoSection = () => {
         </li>
         <li className="share">
           <a href={`http://www.linkedin.com/shareArticle?url=esma.community`}>
+            <picture>
+              <img alt="linked-in" src={linkedInImage} />
+            </picture>
             Share on LinkedIn
           </a>
         </li>
