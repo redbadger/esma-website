@@ -10,13 +10,38 @@ const mainCss = css`
   line-height: 2.125rem;
   text-align: center;
 
+  h2,
+  h3 {
+    font-weight: 600;
+  }
   h2 {
     font-size: 2rem;
-    font-weight: 600;
+  }
+  h3 {
+    font-size: 1.25rem;
   }
 
   p {
     padding: 1rem 0;
+  }
+
+  .trailer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    video {
+      order: -1;
+    }
+
+    .share {
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .credit {
+      font-size: 0.875rem;
+    }
   }
 
   ${mq(BreakPoint.md)} {
@@ -26,6 +51,25 @@ const mainCss = css`
     padding: 4.5rem 10rem 2rem;
   }
 `;
+
+const VideoSection = () => {
+  return (
+    <section className="trailer">
+      <h3>Sir Kenneth Olisa and Helen Mahy</h3>
+      <p>Employer's Social Mobility Alliance Co-Chairs</p>
+      <video>
+        <source src="" />
+      </video>
+      <ul>
+        <li className="share">Share on Twitter</li>
+        <li className="share">Share on LinkedIn</li>
+        <li className="credit">
+          Music: <a href="www.bensound.com">www.bensound.com</a>
+        </li>
+      </ul>
+    </section>
+  );
+};
 
 const Main = () => (
   <div css={mainCss}>
@@ -42,6 +86,7 @@ const Main = () => (
         involved no matter who you are or where you are in the UK.
       </p>
     </main>
+    <VideoSection />
   </div>
 );
 
