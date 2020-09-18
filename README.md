@@ -15,19 +15,26 @@ Because we're temporarily deploying to Gibhub pages, which makes the site live i
 
 ## Prerequisites
 
-To build this site locally, you'll need to have [`ffmpeg`](https://www.ffmpeg.org/download.html). The site features videos which the `gatsby-video` plugin converts to web-friendly formats at build-time. The plugin relies on `ffmpeg` being installed.
+To build this site locally, you'll need to have [`ffmpeg`][ffmpeg]. The site features videos which the `gatsby-video` plugin converts to web-friendly formats at build-time. The plugin relies on `ffmpeg` being installed.
+
+You'll also need [Git Large File Storage (`git-lfs`)][git-lfs] installed.
 
 ### Mac OS X
 
-On Mac, run the following to install `ffmpeg`:
+On Mac, run the following to install `ffmpeg` and `git-lfs`:
 
 ```sh
-brew install ffmpeg
+brew install ffmpeg git-lfs
 ```
 
 ### Other platforms
 
-Go to [the ffmpeg website](https://www.ffmpeg.org/download.html) for instructions. Update these instructions with successful steps if you can.
+Find instructions for your platform at the official websites:
+
+- [`ffmpeg`][ffmpeg]
+- [`git-lfs`][git-lfs]
+
+Update this README with successful steps if you can.
 
 ## Tests
 
@@ -55,3 +62,6 @@ npx cypress run
 
 If you want to run against a local optimised build, run `npm run build` then `npm run test-e2e`.
 This mirrors what our Continuous Integration does.
+
+[ffmpeg]: https://www.ffmpeg.org/download.html "ffmpeg"
+[git-lfs]: https://git-lfs.github.com/ "Git Large File Storage"
