@@ -70,7 +70,7 @@ const mainCss = css`
   }
 
   ${mq(BreakPoint.md)} {
-    padding: 4.5rem 2.5rem 2rem;
+    padding: 4.5rem 2.5rem;
 
     .trailer {
       padding: 4.5rem 0 0 0;
@@ -88,7 +88,7 @@ const mainCss = css`
     }
   }
   ${mq(BreakPoint.lg)} {
-    padding: 4.5rem 10rem 2rem;
+    padding: 4.5rem 10rem;
   }
 `;
 
