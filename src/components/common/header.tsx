@@ -20,17 +20,6 @@ const headerStyles = css`
     font-weight: 600;
   }
 
-  .screenreader {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-
   ul {
     list-style: none;
     display: flex;
@@ -104,10 +93,7 @@ const headerStyles = css`
   }
 `;
 
-const Header = ({
-  siteTitle,
-  includeResearchNavigation,
-}: HeaderProps): JSX.Element => {
+const Header = ({ includeResearchNavigation }: HeaderProps): JSX.Element => {
   const [navOpen, setNavOpen] = React.useState(false);
 
   const toggleNavBar = () => {
@@ -164,12 +150,7 @@ const Header = ({
 };
 
 type HeaderProps = {
-  siteTitle: string;
   includeResearchNavigation: boolean;
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
 };
 
 export default Header;

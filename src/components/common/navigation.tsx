@@ -19,7 +19,7 @@ const destinations = [
     path: "/best-practice",
   },
   {
-    label: "Get involved",
+    label: "Get Involved",
     path: "/get-involved",
   },
 ];
@@ -29,9 +29,6 @@ const menuIconStyles = css`
     display: none;
   }
 
-  &:focus {
-    outline: 0;
-  }
   margin-left: 0.75rem;
   margin-right: 0.75rem;
   font-size: 1.875rem;

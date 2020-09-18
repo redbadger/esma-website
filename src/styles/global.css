@@ -1,0 +1,40 @@
+:root {
+  --midnight: #2d3142;
+  --white: #ffffff;
+  --taupe: #f7f5f4;
+  --cobalt: #3772ff;
+  --light-grey: #d3d3d3;
+  --yellow: #ffba08;
+  --denim: #424b71;
+  --error: #b5261d;
+  --separator: #efefef;
+
+  --aqua: #7dcfb6;
+  --gray: #cfd3da;
+  --copperfield: #df886c;
+
+  --red-gradient-1: #c5532f;
+  --red-gradient-2: #db7656;
+  --red-gradient-3: #ff9308;
+  --red-gradient-4: var(--yellow);
+  --red-gradient-5: #ffda7c;
+  --red-gradient-6: #ece1c4;
+
+  --fixed-header-height: 4.25rem;
+  --body-skip-height: 4.25rem;
+}
+body {
+  font-family: Montserrat, Helvetica, Arial;
+  font-size: 100%;
+  padding-top: var(--body-skip-height);
+}
+.screenreader {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
