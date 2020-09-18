@@ -27,8 +27,11 @@ const headerStyles = css`
     width: 100%;
     justify-content: space-between;
     align-items: stretch;
-    padding: 0 0.75rem;
+    padding: 0;
 
+    li.page-title {
+      padding: 0 0.75rem;
+    }
     li {
       min-height: var(--fixed-header-height);
       display: flex;
@@ -63,6 +66,7 @@ const headerStyles = css`
       }
     }
     a.active,
+    a:focus,
     a:hover {
       background-color: var(--cobalt);
     }
@@ -81,12 +85,12 @@ const headerStyles = css`
       justify-content: flex-end;
       justify-items: center;
       li {
-        padding: 0 0.75rem;
         flex-grow: 0;
         flex-shrink: 0;
         width: unset;
       }
       a {
+        padding: 0 1.5rem;
         width: unset;
       }
     }
@@ -116,7 +120,7 @@ const Header = ({ includeResearchNavigation }: HeaderProps): JSX.Element => {
   return (
     <header css={headerStyles}>
       <ul className="navigation">
-        <li>
+        <li className="page-title">
           <h1>
             <Link to="/">
               <picture>
