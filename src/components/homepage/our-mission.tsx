@@ -30,6 +30,8 @@ const mainCss = css`
     display: flex;
     flex-direction: column;
     text-align: left;
+    max-width: 45rem;
+    margin: 0 auto;
 
     video {
       order: -1;
@@ -43,10 +45,29 @@ const mainCss = css`
     .credit {
       font-size: 0.875rem;
     }
+
+    p {
+      padding: 0;
+    }
   }
 
   ${mq(BreakPoint.md)} {
     padding: 4.5rem 2.5rem 2rem;
+
+    .trailer {
+      padding: 4.5rem 0 0 0;
+      gap: 0.5rem;
+
+      h3 {
+        font-size: 1.5rem;
+        padding-top: 1rem;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
   }
   ${mq(BreakPoint.lg)} {
     padding: 4.5rem 10rem 2rem;
