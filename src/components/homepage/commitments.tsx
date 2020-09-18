@@ -10,6 +10,8 @@ const commitmentsStyles = css`
   background-color: var(--taupe);
   text-align: center;
   padding: 2.25rem 0.75rem;
+  padding-bottom: 0;
+  height: fit-content;
 
   ${mq(BreakPoint.md)} {
     padding: 4.5rem 2.4375rem;

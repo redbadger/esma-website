@@ -75,7 +75,7 @@ const commonStyles = css`
 `;
 
 const mobileStyles = css`
-  margin-bottom: 3.875rem;
+  margin-bottom: 2.25rem;
   h3 {
     font-size: 1.125rem;
     line-height: 2.125rem;

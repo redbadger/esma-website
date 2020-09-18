@@ -44,8 +44,11 @@ const inputStyles = css`
 `;
 
 const newsletterSignUpStyles = css`
-  padding: 4.5rem 0.75rem;
-  background-color: var(--taupe);
+  padding: 2.25rem 0.75rem;
+  ${mq(BreakPoint.md)} {
+    padding: 4.5rem 0.75rem;
+  }
+  background-color: var(--highlight-color);
 
   font-size: 1.125rem;
 
@@ -166,7 +169,7 @@ type SignUpStatus = {
   msg: string;
 };
 
-const NewsletterSignUp = () => {
+const NewsletterSignUp = (props: { color: string }) => {
   const [email, setEmail] = useState(undefined);
   const [emailError, setEmailError] = useState(false);
   const [name, setName] = useState(undefined);
@@ -208,9 +211,13 @@ const NewsletterSignUp = () => {
     }
   };
 
+  const bgColor = css`
+    --highlight-color: var(--${props.color});
+  `;
+
   return (
     <>
-      <section css={newsletterSignUpStyles}>
+      <section css={[newsletterSignUpStyles, bgColor]}>
         <header>
           <h2>Join our mission</h2>
           <p>
@@ -275,6 +282,10 @@ const NewsletterSignUp = () => {
       </section>
     </>
   );
+};
+
+NewsletterSignUp.defaultProps = {
+  color: "taupe",
 };
 
 export default NewsletterSignUp;

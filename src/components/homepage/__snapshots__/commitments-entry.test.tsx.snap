@@ -2,7 +2,7 @@
 
 exports[`CommitmentsEntry renders correctly 1`] = `
 <div
-  className="css-5c99pg-commonStyles-commitmentsEntryStyles-CommitmentsEntry"
+  className="css-q2a813-commonStyles-commitmentsEntryStyles-CommitmentsEntry"
 >
   <div
     className="left-shift"
