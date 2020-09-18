@@ -2,19 +2,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const contentfulConfig = {
-  spaceId: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-};
-
-// if you want to use the preview API please define
-// CONTENTFUL_HOST in your environment config
-// the `host` property should map to `preview.contentful.com`
-if (process.env.CONTENTFUL_HOST) {
-  contentfulConfig.host = process.env.CONTENTFUL_HOST;
-}
-
-const { spaceId, accessToken } = contentfulConfig;
 module.exports = {
   pathPrefix: "/",
   siteMetadata: {
@@ -68,10 +55,6 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/svg/logo/favicon.svg`,
       },
-    },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: contentfulConfig,
     },
     {
       resolve: `gatsby-plugin-web-font-loader`,
