@@ -41,10 +41,15 @@ const mainCss = css`
     .share {
       font-weight: 500;
       text-decoration: underline;
+      margin-right: 1.5rem;
+      iframe {
+        display: inline-block;
+      }
     }
 
     .credit {
       font-size: 0.875rem;
+      margin-left: auto;
     }
 
     p {
@@ -65,7 +70,7 @@ const mainCss = css`
   }
 
   ${mq(BreakPoint.md)} {
-    padding: 4.5rem 2.5rem 2rem;
+    padding: 4.5rem 2.5rem;
 
     .trailer {
       padding: 4.5rem 0 0 0;
@@ -83,7 +88,7 @@ const mainCss = css`
     }
   }
   ${mq(BreakPoint.lg)} {
-    padding: 4.5rem 10rem 2rem;
+    padding: 4.5rem 10rem;
   }
 `;
 
