@@ -92,7 +92,11 @@ const VideoSection = () => {
             Tweet
           </a>
         </li>
-        <li className="share">Share on LinkedIn</li>
+        <li className="share">
+          <a href={`http://www.linkedin.com/shareArticle?url=esma.community`}>
+            Share on LinkedIn
+          </a>
+        </li>
         <li className="credit">
           Music: <a href="www.bensound.com">www.bensound.com</a>
         </li>
