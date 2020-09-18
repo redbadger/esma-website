@@ -15,6 +15,7 @@ describe("TimelineEntry", () => {
           title="test"
           description="test"
           icon={Icon}
+          destination="/"
         />
       )
       .toJSON();
