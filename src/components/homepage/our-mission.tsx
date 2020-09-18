@@ -1,6 +1,7 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { BreakPoint, mq } from "../../util/mq";
+import IntroVideo from "../../video/intro-olisa-mahy.mp4";
 
 const mainCss = css`
   padding: 1.5rem 0.75rem;
@@ -57,8 +58,8 @@ const VideoSection = () => {
     <section className="trailer">
       <h3>Sir Kenneth Olisa and Helen Mahy</h3>
       <p>Employer's Social Mobility Alliance Co-Chairs</p>
-      <video>
-        <source src="" />
+      <video controls>
+        <source src={IntroVideo} type="video/mp4" />
       </video>
       <ul>
         <li className="share">Share on Twitter</li>
