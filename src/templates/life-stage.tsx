@@ -24,6 +24,10 @@ const layoutStyles = css`
     display: none;
   }
 
+  .research-image-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
   font-size: 1.125rem;
   line-height: 2.125rem;
 
@@ -131,11 +135,40 @@ const contentContainerNoImageStyles = css`
 
 const contentBodyStyles = css`
   display: grid;
-  grid-row-gap: 4.5rem;
+  grid-row-gap: 0.75rem;
+  ${mq(BreakPoint.md)} {
+    grid-row-gap: 3rem;
+  }
 
   ${mq(BreakPoint.lg)} {
     .full-span {
       grid-column: 1 / span 2;
+    }
+  }
+
+  .full-span.wide-graph {
+    svg {
+      max-height: 13.75rem;
+
+      ${mq(BreakPoint.md)} {
+        max-height: unset;
+      }
+    }
+  }
+
+  .full-span.tall-graph {
+    svg {
+      max-height: 23.25rem;
+
+      ${mq(BreakPoint.md)} {
+        max-height: unset;
+      }
+    }
+  }
+
+  .common-legend {
+    ${mq(BreakPoint.md)} {
+      margin-bottom: -4rem;
     }
   }
 
@@ -154,8 +187,12 @@ const contentBodyStyles = css`
   }
 
   svg {
-    margin-bottom: 2.25rem;
-    width: 90%;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    ${mq(BreakPoint.md)} {
+      margin-bottom: 2.25rem;
+      width: 90%;
+    }
   }
 
   .footnote-link {
