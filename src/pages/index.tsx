@@ -14,7 +14,7 @@ const IndexPage = () => {
       <Hero />
       <OurMission />
       <Commitments />
-      <NewsletterSignUp />
+      <NewsletterSignUp color="white" />
     </Layout>
   );
 };
