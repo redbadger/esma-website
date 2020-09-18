@@ -6,7 +6,7 @@ import HomepageImage from "./homepage-image";
 const commitmentsData = [
   {
     content: (
-      <div>
+      <>
         <h3>Life stages research</h3>
         <p>
           Create a consolidated and easily accessible appraisal of the existing
@@ -14,14 +14,13 @@ const commitmentsData = [
           social mobility from cradle to retirement.
         </p>
         <Link to="/life-stage-research">Read research</Link>
-      </div>
+      </>
     ),
     image: <HomepageImage imageName="life-stage-research.png" />,
-    shiftRight: false,
   },
   {
     content: (
-      <div>
+      <>
         <h3>Activity Heat Map</h3>
         <p>
           Conduct a review of Business, State and Third Sector efforts across
@@ -32,14 +31,13 @@ const commitmentsData = [
         </p>
         <span className="coming-soon">Coming September 2021</span>
         <Link to="/activity-map">Find out more</Link>
-      </div>
+      </>
     ),
     image: <ActivityMapSVG />,
-    shiftRight: true,
   },
   {
     content: (
-      <div>
+      <>
         <h3>Best Practice</h3>
         <p>
           Conduct an operational appraisal of the organisations and initiatives
@@ -48,14 +46,13 @@ const commitmentsData = [
         </p>
         <span className="coming-soon">Coming September 2021</span>
         <Link to="/operational-review">Find out more</Link>
-      </div>
+      </>
     ),
     image: <HomepageImage imageName="best-practice.jpg" />,
-    shiftRight: false,
   },
   {
     content: (
-      <div>
+      <>
         <h3>Incubator Fund</h3>
         <p>
           Subject to funding, create a Social Mobility Incubator Fund, 100% of
@@ -70,10 +67,9 @@ const commitmentsData = [
           initiatives/organisations to grow and increase impact.
         </p>
         <span className="coming-soon">Coming soon</span>
-      </div>
+      </>
     ),
     image: <HomepageImage imageName="incubator-fund.jpg" />,
-    shiftRight: true,
   },
 ];
 

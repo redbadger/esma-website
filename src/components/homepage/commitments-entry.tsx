@@ -1,34 +1,58 @@
 import React from "react";
 import { css } from "@emotion/core";
-import { mq, BreakPoint, screenSizes } from "../../util/mq";
-import useWindowSize from "../../util/useWindowSize";
+import { mq, BreakPoint } from "../../util/mq";
 
 const commitmentsEntryStyles = css`
-  margin-top: 5.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
   font-size: 1.125rem;
   line-height: 1.875rem;
+  margin-top: 5.25rem;
   text-align: left;
 
-  > div {
-    column-gap: 1rem;
-    display: grid;
+  margin-bottom: 2.25rem;
+  h3 {
+    font-size: 1.125rem;
+    line-height: 2.125rem;
   }
 
-  .right-shift {
-    grid-template-columns: 6fr 5fr;
+  svg {
+    max-width: 100%;
+  }
 
-    .homepage-image-wrapper,
-    svg {
-      justify-self: end;
+  ${mq(BreakPoint.md)} {
+    grid-template-columns: 5fr 1fr 5fr;
+
+    .image {
+      width: 100%;
+      &:nth-of-type(2n + 1) {
+        justify-self: end;
+      }
+      &:nth-of-type(2n + 3) {
+        justify-self: start;
+      }
+      ${[0, 1, 2, 3].map(
+        n => `
+        &:nth-of-type(${2 * n + 1}) {
+          grid-row: ${n + 1};
+        }`
+      )}
     }
-  }
 
-  .left-shift {
-    grid-template-columns: 5fr 6fr;
-
-    .homepage-image-wrapper,
-    svg {
-      justify-self: start;
+    .content {
+      &:nth-of-type(4n) {
+        grid-column: 2 / span 2;
+      }
+      &:nth-of-type(4n + 2) {
+        grid-column: 1 / span 2;
+      }
+      ${[1, 2, 3, 4].map(
+        n => `
+        &:nth-of-type(${2 * n}) {
+          grid-row: ${n};
+        }`
+      )}
     }
   }
 
@@ -54,9 +78,7 @@ const commitmentsEntryStyles = css`
     max-height: 19.5rem;
     max-width: 19.5rem;
   }
-`;
 
-const commonStyles = css`
   .coming-soon {
     font-weight: 600;
     margin-top: -1.5rem;
@@ -74,59 +96,34 @@ const commonStyles = css`
   }
 `;
 
-const mobileStyles = css`
-  margin-bottom: 2.25rem;
-  h3 {
-    font-size: 1.125rem;
-    line-height: 2.125rem;
-  }
-
-  svg {
-    max-width: 100%;
-  }
-`;
-
 type CommitmentsEntryProps = {
   image: React.ReactElement;
   content: React.ReactElement;
-  shiftRight: boolean;
 };
 
-const CommitmentsEntry = ({
-  image,
-  content,
-  shiftRight,
-}: CommitmentsEntryProps) => {
-  const { width } = useWindowSize();
-
-  if (width < screenSizes[BreakPoint.md]) {
-    return (
-      <div css={[commonStyles, mobileStyles]}>
-        {content}
-        {image}
-      </div>
-    );
-  }
-
+const CommitmentsEntry = ({ image, content }: CommitmentsEntryProps) => {
   return (
-    <div css={[commonStyles, commitmentsEntryStyles]}>
-      <div className={shiftRight ? "right-shift" : "left-shift"}>
-        {!shiftRight && (
-          <>
-            {image}
-            {content}
-          </>
-        )}
+    <>
+      <div className="image">{image}</div>
+      <div className="content">{content}</div>
+    </>
+  );
+};
 
-        {shiftRight && (
-          <>
-            {content}
-            {image}
-          </>
-        )}
-      </div>
+const CommitmentsGrid = ({ commitmentsData }) => {
+  return (
+    <div css={commitmentsEntryStyles}>
+      {commitmentsData.map((entry, index) => {
+        return (
+          <CommitmentsEntry
+            key={index}
+            content={entry.content}
+            image={entry.image}
+          />
+        );
+      })}
     </div>
   );
 };
 
-export default CommitmentsEntry;
+export default CommitmentsGrid;
