@@ -5,6 +5,11 @@ import { mq, BreakPoint } from "../../util/mq";
 import NewsletterInputField from "./newsletter-input-field";
 import { Link } from "gatsby";
 
+// remove this or set to true when newsletter functionality is ready
+// i.e. a mailchimp account has been set up and configured through
+// MAILCHIMP_ENDPOINT env var
+const showNewsLetterSection = false;
+
 const inputStyles = css`
   label {
     display: block;
@@ -170,6 +175,10 @@ type SignUpStatus = {
 };
 
 const NewsletterSignUp = (props: { color: string }) => {
+  if (!showNewsLetterSection) {
+    return <></>;
+  }
+
   const [email, setEmail] = useState(undefined);
   const [emailError, setEmailError] = useState(false);
   const [name, setName] = useState(undefined);

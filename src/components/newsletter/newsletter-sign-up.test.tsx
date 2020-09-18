@@ -7,7 +7,8 @@ import { render, act, fireEvent, waitFor } from "@testing-library/react";
 
 jest.mock("gatsby-plugin-mailchimp");
 
-describe("NewsletterSignUp", () => {
+// TODO: enable these tests once NewsletterSignUp component is no longer hidden 
+describe.skip("NewsletterSignUp", () => {
   it("renders correctly", () => {
     const component = create(<NewsletterSignUp />).toJSON();
     expect(component).toMatchSnapshot();
