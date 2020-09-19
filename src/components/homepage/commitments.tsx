@@ -36,7 +36,7 @@ const commitmentsStyles = css`
     display: block;
 
     ${mq(BreakPoint.md)} {
-      display: inline;
+      display: inline-block;
     }
 
     border: 1px solid var(--midnight);

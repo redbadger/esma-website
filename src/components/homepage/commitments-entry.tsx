@@ -5,6 +5,7 @@ import { mq, BreakPoint } from "../../util/mq";
 const commitmentsEntryStyles = css`
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fill, max-content);
 
   font-size: 1.125rem;
   line-height: 1.875rem;
@@ -23,36 +24,25 @@ const commitmentsEntryStyles = css`
 
   ${mq(BreakPoint.md)} {
     grid-template-columns: 5fr 1fr 5fr;
+    grid-auto-flow: dense;
 
     .image {
       width: 100%;
-      &:nth-of-type(2n + 1) {
-        justify-self: end;
+      display: flex;
+      align-items: center;
+
+      &:nth-of-type(4n + 1) {
+        grid-column: 3;
+        justify-content: end;
       }
-      &:nth-of-type(2n + 3) {
-        justify-self: start;
+      &:nth-of-type(4n + 3) {
+        grid-column: 1;
+        justify-content: start;
       }
-      ${[0, 1, 2, 3].map(
-        n => `
-        &:nth-of-type(${2 * n + 1}) {
-          grid-row: ${n + 1};
-        }`
-      )}
     }
 
     .content {
-      &:nth-of-type(4n) {
-        grid-column: 2 / span 2;
-      }
-      &:nth-of-type(4n + 2) {
-        grid-column: 1 / span 2;
-      }
-      ${[1, 2, 3, 4].map(
-        n => `
-        &:nth-of-type(${2 * n}) {
-          grid-row: ${n};
-        }`
-      )}
+      grid-column-end: span 2;
     }
   }
 
