@@ -1,5 +1,5 @@
 import React from "react";
-import CommitmentsEntry from "./commitments-entry";
+import CommitmentsGrid from "./commitments-entry";
 import { css } from "@emotion/core";
 
 import { mq, BreakPoint } from "../../util/mq";
@@ -30,14 +30,13 @@ const commitmentsStyles = css`
     line-height: 2.75rem;
     font-weight: 600;
     margin-bottom: 2.25rem;
-
   }
 
   a {
     display: block;
 
     ${mq(BreakPoint.md)} {
-      display: inline;
+      display: inline-block;
     }
 
     border: 1px solid var(--midnight);
@@ -53,16 +52,7 @@ const Commitments = () => {
   return (
     <section css={commitmentsStyles}>
       <h2>Our Commitments</h2>
-      {commitmentsData.map((entry, index) => {
-        return (
-          <CommitmentsEntry
-            key={index}
-            content={entry.content}
-            image={entry.image}
-            shiftRight={entry.shiftRight}
-          />
-        );
-      })}
+      <CommitmentsGrid commitmentsData={commitmentsData} />
     </section>
   );
 };

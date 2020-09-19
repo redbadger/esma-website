@@ -1,18 +1,24 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import CommitmentsEntry from './commitments-entry';
+import CommitmentsGrid from "./commitments-entry";
+import { CommitmentsEntryProps } from "./commitments-data";
 
-describe("CommitmentsEntry", () => {
+const dummyCommitmentsData: CommitmentsEntryProps[] = [
+  {
+    content: <p>I'm some test data.</p>,
+    image: (
+      <svg>
+        <text>Hi, I'm an SVG</text>
+      </svg>
+    ),
+  },
+];
+
+describe("CommitmentsGrid", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(
-        <CommitmentsEntry content={<div>test</div>} image={<Icon/>} shiftRight={false} />
-      )
+      .create(<CommitmentsGrid commitmentsData={dummyCommitmentsData} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
-
-const Icon = () => {
-  return <img />;
-};
