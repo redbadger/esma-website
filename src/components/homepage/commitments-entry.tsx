@@ -1,6 +1,10 @@
 import React from "react";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
+import {
+  CommitmentsEntryProps,
+  CommitmentsGridProps,
+} from "./commitments-data";
 
 const commitmentsEntryStyles = css`
   display: grid;
@@ -86,11 +90,6 @@ const commitmentsEntryStyles = css`
   }
 `;
 
-type CommitmentsEntryProps = {
-  image: React.ReactElement;
-  content: React.ReactElement;
-};
-
 const CommitmentsEntry = ({ image, content }: CommitmentsEntryProps) => {
   return (
     <>
@@ -100,7 +99,7 @@ const CommitmentsEntry = ({ image, content }: CommitmentsEntryProps) => {
   );
 };
 
-const CommitmentsGrid = ({ commitmentsData }) => {
+const CommitmentsGrid = ({ commitmentsData }: CommitmentsGridProps) => {
   return (
     <div css={commitmentsEntryStyles}>
       {commitmentsData.map((entry, index) => {

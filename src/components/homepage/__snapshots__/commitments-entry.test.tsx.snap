@@ -1,16 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CommitmentsEntry renders correctly 1`] = `
+exports[`CommitmentsGrid renders correctly 1`] = `
 <div
-  className="css-q2a813-commonStyles-commitmentsEntryStyles-CommitmentsEntry"
+  className="css-1bm2xok-commitmentsEntryStyles"
 >
   <div
-    className="left-shift"
+    className="image"
   >
-    <img />
-    <div>
-      test
-    </div>
+    <svg>
+      <text>
+        Hi, I'm an SVG
+      </text>
+    </svg>
+  </div>
+  <div
+    className="content"
+  >
+    <p>
+      I'm some test data.
+    </p>
   </div>
 </div>
 `;

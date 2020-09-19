@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import ActivityMapSVG from "../../svg/activity-map.svg";
 import HomepageImage from "./homepage-image";
 
-const commitmentsData = [
+const commitmentsData: CommitmentsGridProps = [
   {
     content: (
       <>
@@ -72,5 +72,14 @@ const commitmentsData = [
     image: <HomepageImage imageName="incubator-fund.jpg" />,
   },
 ];
+
+export type CommitmentsEntryProps = {
+  image: React.ReactElement;
+  content: React.ReactElement;
+};
+
+export type CommitmentsGridProps = {
+  commitmentsData: CommitmentsEntryProps[];
+};
 
 export default commitmentsData;

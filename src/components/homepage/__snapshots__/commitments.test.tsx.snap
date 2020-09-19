@@ -2,13 +2,13 @@
 
 exports[`Commitments renders correctly 1`] = `
 <section
-  className="css-8zpf3h-commitmentsStyles"
+  className="css-1sbpvtb-commitmentsStyles"
 >
   <h2>
     Our Commitments
   </h2>
   <div
-    className="css-1yl0v2p-commitmentsEntryStyles"
+    className="css-1bm2xok-commitmentsEntryStyles"
   >
     <div
       className="image"
