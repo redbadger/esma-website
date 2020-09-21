@@ -66,15 +66,7 @@ const Main = () => (
     <main>
       <h2>Activity Map</h2>
       <p>
-        So you want to find what's happening where you are, at the touch of a
-        button; our Activity Map will do just that. Our volunteer group are
-        working right now on mapping organisations, programmes and individuals
-        all over the country taking action to improve social mobility.
-      </p>
-      <p>
-        The Activity Map will mean that you can easily connect to others for
-        locally relevant guidance and help, whether you are working in a school,
-        business, government or just an individual who wants to get involved.
+        We are building an open access heat map that means anyone, at the touch of a button, can find out the social mobility issues, activities of most interest to them and connect to others who can help them make change happen
       </p>
       <p>
         Sign up to our newsletter to be the first to hear news on events,
