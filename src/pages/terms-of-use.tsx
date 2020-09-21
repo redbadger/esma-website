@@ -6,7 +6,7 @@ import { legalsStyles } from "../components/common/legals-styles";
 const TermsOfUse = () => {
   return (
     <Layout>
-      <SEO title="Privacy Policy" />
+      <SEO title="Terms of use" />
       <div css={legalsStyles}>
         <h3>ESMA Platform Terms of Use</h3>
         <ol start={1}>

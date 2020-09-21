@@ -111,10 +111,10 @@ const Footer = ({}: FooterProps): JSX.Element => {
       <section className="legals">
         <ul>
           <li>
-            <a target="blank" href="/privacy-policy.pdf">Privacy Policy</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
           </li>
           <li>
-            <a target="blank" href="/terms-of-use.pdf">Terms of Use</a>
+            <Link to="/terms-of-use">Terms of Use</Link>
           </li>
         </ul>
       </section>
