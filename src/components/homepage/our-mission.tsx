@@ -3,6 +3,7 @@ import { css } from "@emotion/core";
 import { BreakPoint, mq } from "../../util/mq";
 import IntroVideo from "../../video/intro-olisa-mahy.mp4";
 import linkedInImage from "../../images/linkedin/blue-sq.png";
+import twitterLogoImage from "../../images/twitter/white.png";
 
 const mainCss = css`
   padding: 1.5rem 0.75rem;
@@ -107,6 +108,9 @@ const VideoSection = () => {
             className="twitter-share-button"
             data-show-count="false"
           >
+            <picture>
+              <img alt="tweet" src={twitterLogoImage} />
+            </picture>
             Tweet
           </a>
         </li>
