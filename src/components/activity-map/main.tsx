@@ -66,7 +66,10 @@ const Main = () => (
     <main>
       <h2>Activity Map</h2>
       <p>
-        We are building an open access heat map that means anyone, at the touch of a button, can find out the social mobility issues, activities of most interest to them and connect to others who can help them make change happen
+        We are building an open access heat map that means anyone, at the touch
+        of a button, can find out the social mobility issues, activities of most
+        interest to them and connect to others who can help them make change
+        happen
       </p>
       <p>
         Sign up to our newsletter to be the first to hear news on events,

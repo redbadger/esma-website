@@ -33,7 +33,10 @@ const TimelineHeading = () => {
   return (
     <div css={timelineHeadingStyles}>
       <p>
-       We develop a quick to navigate, up to date, research base of the social mobility issues across a persons lifetime.  Everyone can use this to guide impactful action based on common understandings of the problem we are trying to solve.
+        We develop a quick to navigate, up to date, research base of the social
+        mobility issues across a persons lifetime. Everyone can use this to
+        guide impactful action based on common understandings of the problem we
+        are trying to solve.
       </p>
     </div>
   );

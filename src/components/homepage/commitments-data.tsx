@@ -58,7 +58,10 @@ const commitmentsData = [
       <div>
         <h3>Incubator Fund</h3>
         <p>
-          We are creating a Social Mobility Incubator fund, to allow radical and impactful ideas to scale quickly across the UK. This can happen through licensing of best practice materials or enabling exemplar initiatives to grow their impact.
+          We are creating a Social Mobility Incubator fund, to allow radical and
+          impactful ideas to scale quickly across the UK. This can happen
+          through licensing of best practice materials or enabling exemplar
+          initiatives to grow their impact.
         </p>
         <span className="coming-soon">Coming soon</span>
       </div>
