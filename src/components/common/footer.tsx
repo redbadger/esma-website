@@ -57,6 +57,13 @@ const footerStyles = css`
   ${mq(BreakPoint.lg)} {
     padding: 2.5rem 10rem;
   }
+
+  .legals {
+    margin-top: 1.25rem;
+    ${mq(BreakPoint.md)} {
+      margin-top: 1rem;
+    }
+  }
 `;
 
 const Footer = ({}: FooterProps): JSX.Element => {
@@ -98,6 +105,16 @@ const Footer = ({}: FooterProps): JSX.Element => {
             <a href="mailto:barrymurphy@esma.community">
               barrymurphy@esma.community
             </a>
+          </li>
+        </ul>
+      </section>
+      <section className="legals">
+        <ul>
+          <li>
+            <a target="blank" href="/privacy-policy.pdf">Privacy Policy</a>
+          </li>
+          <li>
+            <a target="blank" href="/terms-of-use.pdf">Terms of Use</a>
           </li>
         </ul>
       </section>
