@@ -89,8 +89,8 @@ const Footer = ({}: FooterProps): JSX.Element => {
         <h3>Contact us</h3>
         <ul>
           <li>
-            <a href="mailto:barrymatthews@esma.community">
-              barrymatthews@esma.community
+            <a href="mailto:barry.matthews@smbp.org.uk">
+            barry.matthews@smbp.org.uk
             </a>
           </li>
           <li>
