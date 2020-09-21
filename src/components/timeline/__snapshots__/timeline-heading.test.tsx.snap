@@ -5,7 +5,7 @@ exports[`TimelineHeading renders correctly 1`] = `
   className="css-55butb-timelineHeadingStyles"
 >
   <p>
-    Here you can find out what the critical issues are across a persons lifetime; how disadvantage can build from early years if we don't do something different. The Bridge Group have sifted through a huge volume of research on social mobility to bring you an easy to read summary for each life stage. The first step to solving a problem is understanding it. Dive in, explore and join our newsletter.
+    We develop a quick to navigate, up to date, research base of the social mobility issues across a persons lifetime. Everyone can use this to guide impactful action based on common understandings of the problem we are trying to solve.
   </p>
 </div>
 `;

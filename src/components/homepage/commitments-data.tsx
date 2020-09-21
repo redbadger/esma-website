@@ -58,16 +58,10 @@ const commitmentsData = [
       <div>
         <h3>Incubator Fund</h3>
         <p>
-          Subject to funding, create a Social Mobility Incubator Fund, 100% of
-          which will be used to licence (on a commercial basis) best practice
-          materials from organisations identified by the Social Mobility
-          Operational Appraisal.
-        </p>
-        <p>
-          These materials will be provided to other Social Mobility focussed
-          organisations on a Creative Commons basis, in turn, cross fertilising
-          best practice across the UK and enabling exemplar
-          initiatives/organisations to grow and increase impact.
+          We are creating a Social Mobility Incubator fund, to allow radical and
+          impactful ideas to scale quickly across the UK. This can happen
+          through licensing of best practice materials or enabling exemplar
+          initiatives to grow their impact.
         </p>
         <span className="coming-soon">Coming soon</span>
       </div>

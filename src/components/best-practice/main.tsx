@@ -71,19 +71,8 @@ const Main = () => (
         We've commissioned a panel to review each organisation and programme
         focused on the different Life Stages. The panel will look at
         opportunities for better collaboration within and across Life Stages.
-        The work will result in:
+        Best practice highlights and case studies will be included on this site.
       </p>
-
-      <ul>
-        <li>
-          a summary of gaps in provision for any Life Stage or specific
-          geographic areas
-        </li>
-        <li>
-          a spotlight on best in class providers measured on outcomes achieved
-        </li>
-        <li>recommendations for new innovation</li>
-      </ul>
     </main>
     <aside>
       <ReliefImage />
