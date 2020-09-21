@@ -6,6 +6,12 @@ const timelineHeadingStyles = css`
   text-align: center;
   line-height: 2.125rem;
   color: var(--midnight);
+
+  a {
+    text-decoration: underline;
+    font-weight: 600;
+  }
+
   p {
     margin-top: 2.125rem;
     font-size: 1.125rem;
@@ -33,10 +39,11 @@ const TimelineHeading = () => {
   return (
     <div css={timelineHeadingStyles}>
       <p>
-        We develop a quick to navigate, up to date, research base of the social
-        mobility issues across a persons lifetime. Everyone can use this to
-        guide impactful action based on common understandings of the problem we
-        are trying to solve.
+        <a href="https://www.thebridgegroup.org.uk/">The Bridge Group</a>{" "}
+        developed for us a quick to navigate, up to date, research base of the
+        social mobility issues across a persons lifetime. Everyone can use this
+        to guide impactful action based on common understandings of the problem
+        we are trying to solve.
       </p>
     </div>
   );
