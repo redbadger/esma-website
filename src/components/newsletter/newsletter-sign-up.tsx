@@ -279,10 +279,10 @@ const NewsletterSignUp = (props: { color: string }) => {
                 </p>
                 <p>
                   By clicking Submit you accept the{" "}
-                  <Link to="/privacy">Privacy Policy</Link>. This will allow us
-                  to send you newsletter and event updates. Our Privacy Policy
-                  covers how we protect data. You can unsubscribe from this at
-                  any point.
+                  <Link to="/privacy-policy">Privacy Policy</Link>. This will
+                  allow us to send you newsletter and event updates. Our Privacy
+                  Policy covers how we protect data. You can unsubscribe from
+                  this at any point.
                 </p>
               </section>
             </fieldset>
