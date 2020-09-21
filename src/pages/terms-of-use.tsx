@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
 import { legalsStyles } from "../components/common/legals-styles";
+import { Link } from "gatsby";
 
 const TermsOfUse = () => {
   return (
@@ -28,7 +29,7 @@ const TermsOfUse = () => {
         <p>
           These terms tell you the rules you accept to comply with when using
           services on our platform{" "}
-          <a href="https://esma.community">esma.community</a> (the “Platform”).
+          <Link to="/">esma.community</Link> (the “Platform”).
           Please read these terms of use carefully before using this Platform.
         </p>
 
@@ -48,9 +49,9 @@ const TermsOfUse = () => {
           </li>
         </ol>
         <p>
-          <a href="https://esma.community/privacy-policy">
+          <Link to="/privacy-policy">
             Our Privacy and Cookie Policy
-          </a>
+          </Link>
           , sets out the terms on which we process any personal data we collect
           from you, or that you provide to us. By using our Platform, you
           consent to such processing and you warrant that all data provided by

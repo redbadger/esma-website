@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
 import { legalsStyles } from "../components/common/legals-styles";
+import { Link } from "gatsby";
 
 const PrivacyPolicy = () => {
   return (
@@ -28,7 +29,7 @@ const PrivacyPolicy = () => {
         <p>
           We may update this privacy and cookie policy from time to time and
           will post any changes on our platform{" "}
-          <a href="https://esma.community">esma.community</a> (the{" "}
+          <Link to="/">esma.community</Link> (the{" "}
           <strong>“Platform”</strong>) so it’s a good idea to come back and read
           through them again, from time to time. This privacy and cookie policy
           was last updated on 23 September 2020.
@@ -100,9 +101,10 @@ const PrivacyPolicy = () => {
             and
           </li>
           <li>
-            other data to ensure and check compliance with the Platform terms of
-            use [insert link] (<strong>“Terms of Use”</strong>) and/or otherwise
-            as required by law.
+            other data to ensure and check compliance with the Platform{" "}
+            <Link to="/terms-of-use">terms of use</Link> (
+            <strong>“Terms of Use”</strong>) and/or otherwise as required by
+            law.
           </li>
           <p>
             The Data Protection Legislation gives you the right to access
@@ -501,7 +503,7 @@ const PrivacyPolicy = () => {
           acting as contact for individuals whose data is processed by us.
         </p>
 
-        <ol start={21}>
+        <ol start={22}>
           <li>Contact ESMA</li>
         </ol>
         <p>
