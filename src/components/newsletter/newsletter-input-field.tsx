@@ -6,6 +6,7 @@ type NewsletterInputFieldProps = {
   type: string;
   name: string;
   error: boolean;
+  disabled: boolean;
   errorMessage: string;
   errorSetter: (isError: boolean) => void;
   valueSetter: (value: string) => void;
@@ -16,6 +17,7 @@ const NewsletterInputField = ({
   label,
   type,
   name,
+  disabled,
   error,
   errorMessage,
   errorSetter,
@@ -30,6 +32,7 @@ const NewsletterInputField = ({
           type={type}
           name={name}
           id={`${name}Input`}
+          disabled={disabled}
           className={error ? "error" : ""}
           onChange={e => {
             errorSetter(false);
