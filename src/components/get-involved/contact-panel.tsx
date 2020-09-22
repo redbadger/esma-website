@@ -118,8 +118,8 @@ const ContactPanel = () => {
                 </picture>
               </a>
             </p>
-            <a href="mailto:barry.matthews@smbp.org.uk">
-              barry.matthews@smbp.org.uk
+            <a href="mailto:barrymatthews@esma.community">
+              barrymatthews@esma.community
             </a>
           </div>
         </div>
