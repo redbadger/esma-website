@@ -66,7 +66,7 @@ const footerStyles = css`
   }
 `;
 
-const Footer = ({}: FooterProps): JSX.Element => {
+const Footer = ({ }: FooterProps): JSX.Element => {
   const logos = useStaticQuery(graphql`
     {
       short: file(relativePath: { eq: "logo/short.svg" }) {
@@ -96,8 +96,8 @@ const Footer = ({}: FooterProps): JSX.Element => {
         <h3>Contact us</h3>
         <ul>
           <li>
-            <a href="mailto:barry.matthews@smbp.org.uk">
-            barry.matthews@smbp.org.uk
+            <a href="mailto:barrymatthews@esma.community">
+              barrymatthews@esma.community
             </a>
           </li>
           <li>
@@ -111,7 +111,7 @@ const Footer = ({}: FooterProps): JSX.Element => {
       <section className="legals">
         <ul>
           <li>
-            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/privacy-policy">Privacy and Cookie Policy</Link>
           </li>
           <li>
             <Link to="/terms-of-use">Terms of Use</Link>

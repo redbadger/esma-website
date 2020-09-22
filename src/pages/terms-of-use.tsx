@@ -14,14 +14,13 @@ const TermsOfUse = () => {
           <li>Introduction</li>
         </ol>
         <p>
+          The employers social mobility alliance is an unincorporated association
+          which is dedicated to promoting a coordinated and collaborative response
+          across State, Business and Third Sector to address the issues faced by
+          individuals from low income backgrounds when pursuing their career goals.
           This Platform (defined below) is operated on behalf of the employers
-          social mobility alliance by{" "}
-          <a href="https://red-badger.com">Red Badger Consulting Ltd</a>. The
-          employers social mobility alliance (“ESMA”) is an unincorporated
-          association which is dedicated to promoting a coordinated and
-          collaborative response across State, Business and Third Sector to
-          address the issues faced by individuals from low income backgrounds
-          when pursuing their career goals.
+          social mobility alliance by Red Badger Consulting Ltd
+          (https://red-badger.com) (“ESMA”).
         </p>
         <ol start={2}>
           <li>What’s in these terms</li>
