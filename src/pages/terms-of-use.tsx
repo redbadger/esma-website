@@ -43,21 +43,6 @@ const TermsOfUse = () => {
         </p>
 
         <ol start={4}>
-          <li>
-            These terms of use incorporate the ESMA Privacy and Cookie Policy
-          </li>
-        </ol>
-        <p>
-          <Link to="/privacy-policy">
-            Our Privacy and Cookie Policy
-          </Link>
-          , sets out the terms on which we process any personal data we collect
-          from you, or that you provide to us. By using our Platform, you
-          consent to such processing and you warrant that all data provided by
-          you is accurate.
-        </p>
-
-        <ol start={5}>
           <li>We may make changes to these terms</li>
         </ol>
 
@@ -70,7 +55,7 @@ const TermsOfUse = () => {
           2020.
         </p>
 
-        <ol start={6}>
+        <ol start={5}>
           <li>We may suspend or withdraw your use of this Platform</li>
         </ol>
         <p>
@@ -95,7 +80,7 @@ const TermsOfUse = () => {
           with them.
         </p>
 
-        <ol start={7}>
+        <ol start={6}>
           <li>How you may use material on our Platform</li>
         </ol>
         <p>
@@ -139,7 +124,7 @@ const TermsOfUse = () => {
           person.
         </p>
 
-        <ol start={8}>
+        <ol start={7}>
           <li>Do not rely on information on this Platform</li>
         </ol>
         <p>
@@ -159,7 +144,7 @@ const TermsOfUse = () => {
           accurate, complete or up to date.
         </p>
 
-        <ol start={9}>
+        <ol start={8}>
           <li>
             We are not responsible for the websites or third party platforms we
             link to
@@ -174,7 +159,7 @@ const TermsOfUse = () => {
           websites, platforms or resources.
         </p>
 
-        <ol start={10}>
+        <ol start={9}>
           <li>Our responsibility for loss or damage suffered by you</li>
         </ol>
         <p>
@@ -260,7 +245,7 @@ const TermsOfUse = () => {
           right to use our Platform will cease immediately.
         </p>
 
-        <ol start={11}>
+        <ol start={10}>
           <li>Rules about linking to our Platform</li>
         </ol>
         <p>
@@ -288,7 +273,7 @@ const TermsOfUse = () => {
             barrymurphy@esma.community
           </a>
         </p>
-        <ol start={12}>
+        <ol start={11}>
           <li>Prohibited uses</li>
         </ol>
         <p>
@@ -340,7 +325,7 @@ const TermsOfUse = () => {
           </ul>
         </ul>
 
-        <ol start={13}>
+        <ol start={12}>
           <li>Contribution standards</li>
         </ol>
         <p>
@@ -403,7 +388,7 @@ const TermsOfUse = () => {
           </li>
         </ul>
 
-        <ol start={14}>
+        <ol start={13}>
           <li>
             What happens if we do not enforce a right under these terms of use
             against you?
@@ -414,7 +399,7 @@ const TermsOfUse = () => {
           you (e.g. as a result of you breaching these terms), this does not
           prevent us from doing so at a later date.
         </p>
-        <ol start={15}>
+        <ol start={14}>
           <li>What happens if part of these terms is not enforceable?</li>
         </ol>
         <p>
@@ -426,7 +411,7 @@ const TermsOfUse = () => {
           full force and effect.
         </p>
 
-        <ol start={16}>
+        <ol start={15}>
           <li>Rules about linking to our Platform</li>
         </ol>
         <p>
@@ -434,7 +419,7 @@ const TermsOfUse = () => {
           any person who is not a party to these terms.
         </p>
 
-        <ol start={17}>
+        <ol start={16}>
           <li>Which country’s laws apply to any disputes?</li>
         </ol>
         <p>
