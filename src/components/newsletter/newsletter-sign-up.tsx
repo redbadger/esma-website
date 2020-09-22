@@ -235,6 +235,7 @@ const NewsletterSignUp = (props: { color: string }) => {
                 label="Full name"
                 type="text"
                 name="fullName"
+                disabled={true}
                 error={nameError}
                 errorMessage="Please enter your name."
                 errorSetter={setNameError}
@@ -247,6 +248,7 @@ const NewsletterSignUp = (props: { color: string }) => {
                 label="Email address"
                 type="email"
                 name="email"
+                disabled={true}
                 error={emailError}
                 errorMessage="Please enter your email."
                 errorSetter={setEmailError}
@@ -255,27 +257,9 @@ const NewsletterSignUp = (props: { color: string }) => {
                   grid-column: 2 / span 1;
                 `}
               />
-              <input type="submit" value="Submit" id="submit" />
-              <section className="full-span">
-                <p
-                  className={`response ${
-                    mcResponse
-                      ? mcResponse?.success
-                        ? "success"
-                        : "error"
-                      : ""
-                  }`}
-                >
-                  {mcResponse?.msg}
-                </p>
-                <p>
-                  By clicking Submit you accept the{" "}
-                  <Link to="/privacy-policy">Privacy Policy</Link>. This will
-                  allow us to send you newsletter and event updates. Our Privacy
-                  Policy covers how we protect data. You can unsubscribe from
-                  this at any point.
-                </p>
-              </section>
+              <div>
+                <em>Newsletter Coming Soon!</em>
+              </div>
             </fieldset>
           </form>
         </article>
