@@ -63,3 +63,7 @@ This mirrors what our Continuous Integration does.
 
 [ffmpeg]: https://www.ffmpeg.org/download.html "ffmpeg"
 [git-lfs]: https://git-lfs.github.com/ "Git Large File Storage"
+
+### Contributing
+
+Please see [Contribution guidelines](CONTRIBUTING.md)
