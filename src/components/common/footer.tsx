@@ -111,6 +111,9 @@ const Footer = ({ }: FooterProps): JSX.Element => {
       <section className="legals">
         <ul>
           <li>
+            <Link to="/privacy-policy">Privacy and Cookie Policy</Link>
+          </li>
+          <li>
             <Link to="/terms-of-use">Terms of Use</Link>
           </li>
         </ul>
