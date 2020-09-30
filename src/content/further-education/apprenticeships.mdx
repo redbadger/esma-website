@@ -16,12 +16,17 @@ footnotes:
       id: "footnote-3",
       text: "Bridget Byrne et al (eds). (2020) Ethnicity, race and inequality in the UK: State of the nation. Policy Press.",
     },
+    {
+      id: "footnote-4",
+      text: "Social Mobility Commission. State of the Nation 2018-19: Social mobility in Great Britain, p. 76.",
+    },
   ]
 ---
+
 import ResearchImage from "../../components/research/research-image";
-import ApprenticeshipsDesktop from "./svg/apprenticeships-desktop.svg"
-import ApprenticeshipsMobile from "./svg/apprenticeships-mobile.svg"
-import ApprenticeshipsTablet from "./svg/apprenticeships-tablet.svg"
+import ApprenticeshipsDesktop from "./svg/apprenticeships-desktop.svg";
+import ApprenticeshipsMobile from "./svg/apprenticeships-mobile.svg";
+import ApprenticeshipsTablet from "./svg/apprenticeships-tablet.svg";
 import ResizableGraph from "../../components/research/resizable-graph";
 
 <div>
@@ -51,7 +56,10 @@ attitudes towards apprenticeships are an important factor.
   tablet={ApprenticeshipsTablet}
   desktop={ApprenticeshipsDesktop}
 >
-    ### Overall proportion of each apprenticeship level held by a disadvantaged student
+  ### Overall proportion of each apprenticeship level held by a disadvantaged student
+
+Source: State of the Nation 2019<FootnoteLink linkId="footnote-4">4</FootnoteLink>
+
 </ResizableGraph>
 
 The young do not rate apprenticeships highly. Polling undertaken by YouGov with
