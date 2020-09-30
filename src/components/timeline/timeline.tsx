@@ -69,7 +69,8 @@ const lifeStages = [
   {
     title: "Working Life",
     imageName: "timeline-working-life.jpg",
-    description: "There are inequalities across the labour market based on socio-economic background, ethnicity and gender (and complex intersections that can intensify the experience of deprivation).",
+    description:
+      "The practices of employers can reinforce and perpetuate educational and social inequalities.",
     icon: timelineIcons.workingLife,
     destination: "/life-stage-research/working-life/",
     color: "copperfield",
