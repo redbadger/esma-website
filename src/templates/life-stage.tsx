@@ -11,13 +11,13 @@ import PrevNext from "../components/research/prev-next";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 import FurtherReading from "../components/research/further-reading";
 import ResearchImage from "../components/research/research-image";
-import { FootNoteData } from "../components/research/types";
 import { ResearchPageMetaData, PillData } from "../components/research/types";
 import ResearchQuote from "../components/research/research-quote";
 import { Breadcrumb } from "gatsby-plugin-breadcrumb";
 import slugify from "slugify";
 import { pages } from "../components/common/research-pages";
 import { timelineIcons } from "../components/common/icons";
+import Footnotes from '../components/research/footnotes';
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -202,36 +202,6 @@ const contentBodyStyles = css`
   }
 `;
 
-const footnoteStyles = css`
-  a {
-    text-decoration: underline;
-    line-height: 1.875rem;
-    margin-bottom: 0.75rem;
-  }
-
-  h3 {
-    margin-top: 4.5rem;
-  }
-
-  ol {
-    counter-reset: custom-counter;
-    list-style: none;
-  }
-
-  ol li {
-    counter-increment: custom-counter;
-  }
-
-  ol li:before {
-    content: counter(custom-counter);
-    margin-right: 1.5rem;
-  }
-
-  span {
-    font-size: 1rem;
-  }
-`;
-
 const breadcrumbStyles = css`
   margin-bottom: 0.75rem;
 
@@ -284,30 +254,7 @@ const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
   );
 };
 
-type FootNoteProps = {
-  destination: string;
-  id: string;
-  text: string;
-};
-
-const FootNote = ({ destination, id, text }: FootNoteProps) => {
-  if (destination) {
-    return (
-      <li>
-        <a href={destination} id={id}>
-          {text}
-        </a>
-      </li>
-    );
-  }
-  return (
-    <li>
-      <span id={id}>{text}</span>
-    </li>
-  );
-};
-
-const shortcodes = { Link, FootnoteLink, FurtherReading, ResearchQuote };
+const shortcodes = { Link, FootnoteLink, FurtherReading, ResearchQuote, Footnotes };
 
 export type MdxData = {
   frontmatter: ResearchPageMetaData;
@@ -387,25 +334,6 @@ const PageTemplate = ({
                 <MDXProvider components={shortcodes}>
                   <MDXRenderer>{mdx.body}</MDXRenderer>
                 </MDXProvider>
-              </div>
-              <div css={footnoteStyles}>
-                {mdx.frontmatter.footnotes && (
-                  <>
-                    <h3>Footnotes</h3>
-                    <ol>
-                      {mdx.frontmatter.footnotes.map(
-                        (entry: FootNoteData, index: number) => (
-                          <FootNote
-                            key={index}
-                            text={entry.text}
-                            id={entry.id}
-                            destination={entry.destination}
-                          />
-                        )
-                      )}
-                    </ol>
-                  </>
-                )}
               </div>
             </div>
           </div>
