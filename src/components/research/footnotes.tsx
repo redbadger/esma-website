@@ -35,8 +35,6 @@ const footnoteStyles = css`
   }
 `;
 
-interface Props {}
-
 const Footnotes = ({ children }) => {
   return (
     <div css={footnoteStyles} id="footnotes">
