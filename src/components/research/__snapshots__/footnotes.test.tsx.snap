@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footnotes renders correctly 1`] = `
+<div
+  className="css-1cbn00o-footnoteStyles"
+  id="footnotes"
+>
+  <h3>
+    Footnotes
+  </h3>
+  <ol>
+    <li>
+      Sample entry
+    </li>
+  </ol>
+</div>
+`;
