@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 
@@ -40,10 +41,9 @@ const TimelineHeading = () => {
     <div css={timelineHeadingStyles}>
       <p>
         <a href="https://www.thebridgegroup.org.uk/">The Bridge Group</a>{" "}
-        developed for us a quick to navigate, up to date, research base of the
-        social mobility issues across a persons lifetime. Everyone can use this
-        to guide impactful action based on common understandings of the problem
-        we are trying to solve.
+        has developed an up-to-date summary of social inequality across the life course which is easy to explore via the links below.
+        This will help you to understand the barriers to social mobility and the nature of the problem we are trying to solve.
+        The <Link to="exec-summary">Exec Summary</Link> also gives a high level overview and tips for using this site.
       </p>
     </div>
   );
