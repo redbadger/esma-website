@@ -242,14 +242,13 @@ const prevNextWithBgImageStyles = css`
 `;
 
 type FootnoteLinkProps = {
-  children: React.ReactNode;
-  linkId: string;
+  text: string;
 };
 
-const FootnoteLink = ({ children, linkId }: FootnoteLinkProps) => {
+const FootnoteLink = ({ text }: FootnoteLinkProps) => {
   return (
-    <a className="footnote-link" href={`#${linkId}`}>
-      {children}
+    <a className="footnote-link" href="#footnotes">
+      {text}
     </a>
   );
 };
