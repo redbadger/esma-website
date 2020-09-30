@@ -203,14 +203,14 @@ const contentBodyStyles = css`
 `;
 
 const footnoteStyles = css`
-  h3 {
-    margin-top: 4.5rem;
-  }
-
   a {
     text-decoration: underline;
     line-height: 1.875rem;
     margin-bottom: 0.75rem;
+  }
+
+  h3 {
+    margin-top: 4.5rem;
   }
 
   ol {
