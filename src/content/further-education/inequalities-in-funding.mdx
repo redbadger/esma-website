@@ -2,18 +2,6 @@
 order: 3
 parent: Further education
 title: Inequalities in funding
-footnotes:
-  [
-    {
-      id: "footnote-1",
-      text: "Jack Britton et al. 2019 annual report on education spending in England. Institute for Fiscal Studies.",
-    },
-    {
-      id: "footnote-2",
-      text: "https://www.ifs.org.uk/uploads/R162-Education-spending-in-England-2019.pdf",
-      destination: "https://www.ifs.org.uk/uploads/R162-Education-spending-in-England-2019.pdf",
-    },
-  ]
 ---
 
 import ResearchImage from "../../components/research/research-image";
@@ -27,7 +15,7 @@ import GraphLegend from "../../components/research/graph-legend";
 
 According to the Institute for Fiscal Studies, available funding for further
 education is heavily restricted and compares badly with the higher education
-sector.<FootnoteLink linkId="footnote-1">1</FootnoteLink> School sixth forms have
+sector.<FootnoteLink text="1"/> School sixth forms have
 had to deal with budget cuts of 23% per
 student since 2010-11, and further education and sixth from college funding
 per student has fallen by about 12% over the same time period. Despite a
@@ -51,7 +39,7 @@ remained significant and persistent.
 >
   ### Spending per student per year at different stages of education
 
-Source: 2019 annual report on education spending in England<FootnoteLink linkId="footnote-2">2</FootnoteLink>
+Source: 2019 annual report on education spending in England<FootnoteLink text="2" />
 
     <GraphLegend
     labels={[
@@ -80,3 +68,10 @@ social mobility and inclusion’, enabling sustainable career opportunities.
 Employers have a significant role to play in this process by integrating
 learning in the workplace to upskill and reskill employees to ensure the
 adaptability needed to withstand economic changes.
+
+<Footnotes>
+  1. Jack Britton et al. 2019 annual report on education spending in England.
+  2. IFS: <Link to="https://www.ifs.org.uk/uploads/R162-Education-spending-in-England-2019.pdf">
+    Eductation Spending in England 2019
+  </Link>
+</Footnotes>

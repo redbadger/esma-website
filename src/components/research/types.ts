@@ -13,12 +13,6 @@ export type ResearchPageMetaData = {
   parent: string;
   title: string;
   bgImageName: string;
-  footnotes: FootNoteData[];
 };
 
-export type FootNoteData = {
-  id: string;
-  text: string;
-  destination: string;
-};
 
