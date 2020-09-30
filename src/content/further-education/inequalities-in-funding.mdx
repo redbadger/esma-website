@@ -8,6 +8,11 @@ footnotes:
       id: "footnote-1",
       text: "Jack Britton et al. 2019 annual report on education spending in England. Institute for Fiscal Studies.",
     },
+    {
+      id: "footnote-2",
+      text: "https://www.ifs.org.uk/uploads/R162-Education-spending-in-England-2019.pdf",
+      destination: "https://www.ifs.org.uk/uploads/R162-Education-spending-in-England-2019.pdf",
+    },
   ]
 ---
 
@@ -46,6 +51,8 @@ remained significant and persistent.
 >
   ### Spending per student per year at different stages of education
 
+Source: 2019 annual report on education spending in England<FootnoteLink linkId="footnote-2">2</FootnoteLink>
+
     <GraphLegend
     labels={[
       { color: "aqua", label: "Early years" },
@@ -54,7 +61,9 @@ remained significant and persistent.
       { color: "midnight", label: "Further education" },
       { color: "cobalt", label: "Higher education resources" },
     ]}
-  />
+
+/>
+
 </ResizableGraph>
 
 With the exception of apprenticeships (which have been well funded but not
