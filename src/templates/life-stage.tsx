@@ -387,11 +387,6 @@ export const pageQuery = graphql`
         title
         parent
         bgImageName
-        footnotes {
-          id
-          text
-          destination
-        }
       }
     }
 
