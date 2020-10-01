@@ -47,6 +47,11 @@ const layoutStyles = css`
     text-decoration: underline;
   }
 
+  .external-link {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
   strong {
     font-weight: 600;
   }
