@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="446px" height="228px" viewBox="0 0 446 228" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 7</title>
+    <g id="Home-&gt;-Chronology-&gt;-Timeline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop/Timeline/School-years/Gaps-in-attainment" transform="translate(-164.000000, -2286.000000)">
+            <g id="Group-7" transform="translate(164.000000, 2286.000000)">
+                <text id="39%" font-family="Montserrat-Bold, Montserrat" font-size="16" font-weight="bold" line-spacing="24" fill="#FFBA08">
+                    <tspan x="334" y="15">24.9</tspan>
+                    <tspan x="353.664" y="15" font-size="14">%</tspan>
+                </text>
+                <text id="2018" font-family="Montserrat-Regular, Montserrat" font-size="16" font-weight="normal" line-spacing="24" fill="#2D3142">
+                    <tspan x="0.8" y="27">2018</tspan>
+                </text>
+                <text id="2019" font-family="Montserrat-Regular, Montserrat" font-size="16" font-weight="normal" line-spacing="24" fill="#2D3142">
+                    <tspan x="1.12" y="87">2019</tspan>
+                </text>
+                <text id="47%" font-family="Montserrat-Bold, Montserrat" font-size="16" font-weight="bold" line-spacing="24" fill="#FFBA08">
+                    <tspan x="334" y="75">24.7</tspan>
+                    <tspan x="354.944" y="75" font-size="14">%</tspan>
+                </text>
+                <text id="67%" font-family="Montserrat-Bold, Montserrat" font-size="16" font-weight="bold" line-spacing="24" fill="#3772FF">
+                    <tspan x="334" y="99">49.9</tspan>
+                    <tspan x="354.112" y="99" font-size="14">%</tspan>
+                </text>
+                <g id="Group-25" transform="translate(392.000000, 12.000000)">
+                    <text id="+21pp" font-family="Montserrat-Regular, Montserrat" font-size="14" font-weight="normal" line-spacing="24" fill="#2D3142">
+                        <tspan x="4.48" y="14">+25.2pp</tspan>
+                    </text>
+                    <rect id="Rectangle" stroke="#F3F3F3" x="0" y="0" width="53" height="24" rx="3"></rect>
+                </g>
+                <g id="Group-25-Copy" transform="translate(392.000000, 73.000000)">
+                    <text id="+20pp" font-family="Montserrat-Regular, Montserrat" font-size="14" font-weight="normal" line-spacing="24" fill="#2D3142">
+                        <tspan x="4.373" y="14">+25.2pp</tspan>
+                    </text>
+                    <rect id="Rectangle" stroke="#F3F3F3" x="0" y="0" width="53" height="24" rx="3"></rect>
+                </g>
+                <text id="60%" font-family="Montserrat-Bold, Montserrat" font-size="16" font-weight="bold" line-spacing="24" fill="#3772FF">
+                    <tspan x="334" y="39">50.1</tspan>
+                    <tspan x="355.056" y="39" font-size="14">%</tspan>
+                </text>
+                <rect id="Rectangle" fill="#F3F3F3" x="48" y="1.42108547e-14" width="274" height="114"></rect>
+                <g id="Group-26" transform="translate(48.000000, 0.000000)">
+                    <rect id="Rectangle-Copy-50" fill="#FFBA08" x="0" y="0" width="68.3" height="24"></rect>
+                    <rect id="Rectangle-Copy-51" fill="#3772FF" x="0" y="24" width="137.2" height="24"></rect>
+                </g>
+                <g id="Group-28" transform="translate(48.000000, 60.000000)">
+                    <rect id="Rectangle-Copy-52" fill="#FFBA08" x="0" y="0" width="67.7" height="24"></rect>
+                    <rect id="Rectangle-Copy-53" fill="#3772FF" x="0" y="24" width="136.7" height="24"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
