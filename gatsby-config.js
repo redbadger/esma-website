@@ -57,9 +57,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        trackingId: "UA-179380345-1",
+        googleAnalytics: {
+          trackingId: 'UA-179380345-1',
+          // Setting this parameter is optional
+          anonymize: true
+        },
+        // Defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
       },
     },
     {

@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Global, css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
+import CookieConsent from "react-cookie-consent";
+import { Link } from "gatsby";
 
 import Header from "./header";
 import Footer from "./footer";
@@ -79,6 +81,12 @@ const Layout = ({ children, includeResearchNavigation }) => {
           includeResearchNavigation ? globalStylesDoubleHeader : "",
         ]}
       />
+      <CookieConsent
+                location="bottom"
+                buttonText="Accept"
+                cookieName="gatsby-gdpr-google-analytics">
+      <p>This website uses cookies to give you the best possible experience. By continuing to browse the site you are agreeing to our use of cookies. For more details about cookies and how to manage them see our <Link to="/privacy-policy">Cookie and Privacy Policy</Link>.</p>
+      </CookieConsent>
       <Header includeResearchNavigation={includeResearchNavigation} />
       <main>{children}</main>
       <Footer />
