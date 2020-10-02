@@ -27,6 +27,7 @@ const footnoteStyles = css`
 
   ol li {
     counter-increment: custom-counter;
+    overflow-wrap: anywhere;
   }
 
   ol li:before {
