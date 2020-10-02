@@ -61,7 +61,7 @@ const lifeStages = [
     title: "Higher Education",
     imageName: "timeline-higher-education.jpg",
     description:
-      "Far from narrowing the gaps, higher education can reinforce inequalities and entrench both class and White racial privilege.",
+      "The higher education sector has made progress in widening participation, but inequalities persist relating to age, class, ethnicity and place.",
     icon: timelineIcons.higherEducation,
     destination: "/life-stage-research/higher-education/",
     color: "cobalt",
