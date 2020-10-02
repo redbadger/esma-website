@@ -15,6 +15,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-179380345-1",
+        head: true,
+        anonymize: true
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
