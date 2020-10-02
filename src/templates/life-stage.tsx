@@ -86,6 +86,8 @@ const layoutStyles = css`
 
   .footnote-link {
     color: var(--highlight-color);
+    font-size: 1rem;
+    line-height: 1rem;
   }
 
   ol li::before {
