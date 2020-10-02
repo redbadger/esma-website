@@ -83,7 +83,7 @@ const Layout = ({ children, includeResearchNavigation }) => {
       />
       <CookieConsent
                 location="bottom"
-                buttonText="Accept"
+                buttonText="Accept and Close"
                 cookieName="gatsby-gdpr-google-analytics">
       <p>This website uses cookies to give you the best possible experience. By continuing to browse the site you are agreeing to our use of cookies. For more details about cookies and how to manage them see our <Link to="/privacy-policy">Cookie and Privacy Policy</Link>.</p>
       </CookieConsent>
