@@ -15,9 +15,10 @@ const panelCss = css`
 
   ul {
     padding: 0.75rem;
-    list-style: circle;
+    list-style: none;
     list-style-position: inside;
   }
+
   li::before {
     display: inline-block;
     width: 0.75rem;
@@ -67,6 +68,12 @@ const panelCss = css`
   }
 `;
 
+const memberCss = {
+  container: { display: "flex" },
+  name: { flexGrow: 0, flexShrink: 0 },
+  title: { flexGrow: 1 }
+};
+
 const EsmaPanel = ({ panel }: { panel: Panel }) => {
   const [panelSection, setPanelSection] = React.useState(Object.keys(panel)[0]);
 
@@ -88,10 +95,12 @@ const EsmaPanel = ({ panel }: { panel: Panel }) => {
         <ul>
           {panel[panelSection].members.map((panelMember, idx) => (
             <li key={idx}>
-              <strong>{panelMember.name}</strong>
-              <span
-                dangerouslySetInnerHTML={{ __html: panelMember.role }}
-              ></span>
+              <div style={memberCss.container}>
+                <strong style={memberCss.name}>{panelMember.name}</strong>
+                <span style={memberCss.title}
+                  dangerouslySetInnerHTML={{ __html: panelMember.role }}
+                ></span>
+              </div>
             </li>
           ))}
         </ul>

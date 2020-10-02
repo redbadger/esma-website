@@ -2,7 +2,7 @@
 
 exports[`EsmaPanel renders correctly 1`] = `
 <section
-  className="css-1qztg0y-panelCss"
+  className="css-1c7sk15-panelCss"
 >
   <header>
     <h2>
@@ -78,16 +78,36 @@ exports[`EsmaPanel renders correctly 1`] = `
     </div>
     <ul>
       <li>
-        <strong>
-          Derek Trotter
-        </strong>
-        <span
-          dangerouslySetInnerHTML={
+        <div
+          style={
             Object {
-              "__html": "CEO of Trotters Independent Traders Ltd",
+              "display": "flex",
             }
           }
-        />
+        >
+          <strong
+            style={
+              Object {
+                "flexGrow": 0,
+                "flexShrink": 0,
+              }
+            }
+          >
+            Derek Trotter
+          </strong>
+          <span
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "CEO of Trotters Independent Traders Ltd",
+              }
+            }
+            style={
+              Object {
+                "flexGrow": 1,
+              }
+            }
+          />
+        </div>
       </li>
     </ul>
   </div>

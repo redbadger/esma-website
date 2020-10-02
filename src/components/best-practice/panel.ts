@@ -19,6 +19,16 @@ const business: PanelSection = {
   name: "Business",
   members: [
     {
+      name: "Helen Mahy CBE",
+      role:
+        "Non Executive Director at SSE plc",
+    },
+    {
+      name: "Sir Kenneth Olisa OBE",
+      role:
+        "Chairman Of The Board at Alitam plc",
+    },
+    {
       name: "Andrew Garard",
       role:
         "Group General Counsel and Director of Corporate Affairs, Meggitt plc",
