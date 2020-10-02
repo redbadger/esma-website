@@ -15,6 +15,19 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
     {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: 'UA-179380345-1',
+          cookieName: 'gatsby-gdpr-google-analytics',
+          // Setting this parameter is optional
+          anonymize: true
+        },
+        // Defines the environments where the tracking should be available  - default is ["production"]
+        environments: ['production', 'development']
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -54,18 +67,6 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/svg/logo/favicon.svg`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-gdpr-cookies`,
-      options: {
-        googleAnalytics: {
-          trackingId: 'UA-179380345-1',
-          // Setting this parameter is optional
-          anonymize: true
-        },
-        // Defines the environments where the tracking should be available  - default is ["production"]
-        environments: ['production', 'development']
       },
     },
     {
