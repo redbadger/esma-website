@@ -14,6 +14,9 @@ const furtherReadingStyles = css`
     padding: 1.5rem 6rem;
   }
   column-gap: 13.75rem;
+  a {
+    text-decoration: underline;
+  }
 `;
 
 const Flattened = ({ children }) => children;
