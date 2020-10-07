@@ -2,18 +2,30 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const googleAnalyticsTrackingId = "UA-179380345-1";
+
 module.exports = {
   pathPrefix: "/",
   siteMetadata: {
     title: `Employers Social Mobility Alliance`,
     description: ``,
     author: ``,
+    gaTrackingId: googleAnalyticsTrackingId,
   },
   plugins: [
     `gatsby-transformer-ffmpeg`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-mdx`,
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: googleAnalyticsTrackingId,
+        },
+        environments: ['production']
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
