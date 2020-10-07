@@ -4,6 +4,8 @@ import { Global, css } from "@emotion/core";
 import { mq, BreakPoint } from "../../util/mq";
 import CookieConsent from "react-cookie-consent";
 import { Link } from "gatsby";
+import ReactGA from "react-ga";
+import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
 import Footer from "./footer";
@@ -73,6 +75,22 @@ const globalStylesDoubleHeader = css`
 `;
 
 const Layout = ({ children, includeResearchNavigation }) => {
+  const {
+    site: {
+      siteMetadata: { gaTrackingId },
+    },
+  } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            gaTrackingId
+          }
+        }
+      }
+    `
+  );
+
   return (
     <>
       <Global
@@ -82,10 +100,22 @@ const Layout = ({ children, includeResearchNavigation }) => {
         ]}
       />
       <CookieConsent
-                location="bottom"
-                buttonText="Accept and Close"
-                cookieName="gatsby-gdpr-google-analytics">
-      <p>This website uses cookies to give you the best possible experience. By continuing to browse the site you are agreeing to our use of cookies. For more details about cookies and how to manage them see our <Link to="/privacy-policy">Cookie and Privacy Policy</Link>.</p>
+        location="bottom"
+        buttonText="Accept and Close"
+        cookieName="gatsby-gdpr-google-analytics"
+        // we need to do this, otherwise there won't be any tracking after user clicks 'accept'
+        // until they refresh/visit the site second time. 
+        // see https://github.com/andrezimpel/gatsby-plugin-gdpr-cookies/issues/4
+        onAccept={() => {
+          ReactGA.initialize(gaTrackingId);
+        }}
+      >
+        <p>
+          This website uses cookies to give you the best possible experience. By
+          continuing to browse the site you are agreeing to our use of cookies.
+          For more details about cookies and how to manage them see our{" "}
+          <Link to="/privacy-policy">Cookie and Privacy Policy</Link>.
+        </p>
       </CookieConsent>
       <Header includeResearchNavigation={includeResearchNavigation} />
       <main>{children}</main>
