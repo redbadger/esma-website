@@ -1,17 +1,16 @@
 import React from "react";
 import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
-
-import ActivityMapHero from "../components/activity-map/hero";
-import ActivityMapMain from "../components/activity-map/main";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
+import Hero from "../components/get-involved/hero";
+import Main from "../components/get-involved/main";
 import { graphql, useStaticQuery } from "gatsby";
 
-const ActivityMap = () => {
+const GetInvolvedPage = () => {
   const { allImageSharp } = useStaticQuery(graphql`
     query {
       allImageSharp(
-        filter: { fixed: { originalName: { eq: "activity-map-hero.jpg" } } }
+        filter: { fixed: { originalName: { eq: "get-involved.jpg" } } }
       ) {
         edges {
           node {
@@ -26,17 +25,17 @@ const ActivityMap = () => {
 
   const image = {
     src: allImageSharp.edges[0].node.fixed.src,
-    alt: "Activity map",
+    alt: "Get involved",
   };
 
   return (
     <Layout>
-      <SEO title="Best Practice" image={image} />
-      <ActivityMapHero />
-      <ActivityMapMain />
+      <SEO title="Get Involved" image={image} />
+      <Hero />
+      <Main />
       <NewsletterSignUp />
     </Layout>
   );
 };
 
-export default ActivityMap;
+export default GetInvolvedPage;

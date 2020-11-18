@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 const PrivacyPolicy = () => {
   return (
     <Layout>
-      <SEO title="Privacy and Cookie Policy" />
+      <SEO title="Privacy and Cookie Policy" image={{ src: null, alt: null }} />
       <div css={legalsStyles}>
         <h3>ESMA Privacy and Cookie Policy</h3>
         <ol start={1}>

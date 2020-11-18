@@ -7,29 +7,29 @@ import { Link } from "gatsby";
 const TermsOfUse = () => {
   return (
     <Layout>
-      <SEO title="Terms of use" />
+      <SEO title="Terms of use" image={{ src: null, alt: null }} />
       <div css={legalsStyles}>
         <h3>ESMA Platform Terms of Use</h3>
         <ol start={1}>
           <li>Introduction</li>
         </ol>
         <p>
-          The employers social mobility alliance is an unincorporated association
-          which is dedicated to promoting a coordinated and collaborative response
-          across State, Business and Third Sector to address the issues faced by
-          individuals from low income backgrounds when pursuing their career goals.
-          This Platform (defined below) is operated on behalf of the employers
-          social mobility alliance by Red Badger Consulting Ltd
-          (https://red-badger.com) (“ESMA”).
+          The employers social mobility alliance is an unincorporated
+          association which is dedicated to promoting a coordinated and
+          collaborative response across State, Business and Third Sector to
+          address the issues faced by individuals from low income backgrounds
+          when pursuing their career goals. This Platform (defined below) is
+          operated on behalf of the employers social mobility alliance by Red
+          Badger Consulting Ltd (https://red-badger.com) (“ESMA”).
         </p>
         <ol start={2}>
           <li>What’s in these terms</li>
         </ol>
         <p>
           These terms tell you the rules you accept to comply with when using
-          services on our platform{" "}
-          <Link to="/">esma.community</Link> (the “Platform”).
-          Please read these terms of use carefully before using this Platform.
+          services on our platform <Link to="/">esma.community</Link> (the
+          “Platform”). Please read these terms of use carefully before using
+          this Platform.
         </p>
 
         <ol start={3}>
@@ -48,13 +48,11 @@ const TermsOfUse = () => {
           </li>
         </ol>
         <p>
-          <Link to="/privacy-policy">
-            Our Privacy and Cookie Policy
-          </Link>
-          , sets out the terms on which we process any personal data we collect
-          from you, or that you provide to us. By using our Platform, you
-          consent to such processing and you warrant that all data provided by
-          you is accurate.
+          <Link to="/privacy-policy">Our Privacy and Cookie Policy</Link>, sets
+          out the terms on which we process any personal data we collect from
+          you, or that you provide to us. By using our Platform, you consent to
+          such processing and you warrant that all data provided by you is
+          accurate.
         </p>
 
         <ol start={5}>

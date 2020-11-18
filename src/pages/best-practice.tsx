@@ -8,11 +8,33 @@ import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
 import EsmaPanel from "../components/best-practice/esma-panel";
 
 import panel from "../components/best-practice/panel";
+import { useStaticQuery, graphql } from "gatsby";
 
 const BestPractice = () => {
+  const { allImageSharp } = useStaticQuery(graphql`
+    query {
+      allImageSharp(
+        filter: { fixed: { originalName: { eq: "best-practice-hero.jpg" } } }
+      ) {
+        edges {
+          node {
+            fixed {
+              src
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const image = {
+    src: allImageSharp.edges[0].node.fixed.src,
+    alt: "Best practice",
+  };
+
   return (
     <Layout>
-      <SEO title="Best Practice" />
+      <SEO title="Best Practice" image={image} />
       <BestPracticeHero />
       <BestPracticeMain />
       <EsmaPanel panel={panel} />
