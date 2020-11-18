@@ -2,8 +2,16 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
+const getSocialImageSrc = (image: { src; alt }, site) => {
+  const port = site.port ? ":" + site.port : "";
+  const relativeImagePath = image.src;
+  const protocol = site.host === "localhost" ? "http" : "https";
+
+  return `${protocol}://${site.host}${port}${relativeImagePath}`;
+};
+
 function SEO({ description, lang, meta, title, image }: SeoProperties) {
-  const { site } = useStaticQuery(
+  const { site, allFile } = useStaticQuery(
     graphql`
       query {
         site {
@@ -12,12 +20,23 @@ function SEO({ description, lang, meta, title, image }: SeoProperties) {
             description
             author
           }
+          host
+          port
+        }
+        allFile(filter: { relativePath: { eq: "logo/short.svg" } }) {
+          nodes {
+            publicURL
+          }
         }
       }
     `
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  if (!image || !image.src) {
+    image = { src: allFile.nodes.publicURL, alt: "ESMA logo" };
+  }
+  const imageSrc = getSocialImageSrc(image, site);
 
   return (
     <Helmet
@@ -45,7 +64,7 @@ function SEO({ description, lang, meta, title, image }: SeoProperties) {
         },
         {
           property: `og:image`,
-          content: image.src,
+          content: imageSrc,
         },
         {
           property: `og:image:alt`,
@@ -69,7 +88,7 @@ function SEO({ description, lang, meta, title, image }: SeoProperties) {
         },
         {
           name: "twitter:image",
-          content: image.src,
+          content: imageSrc,
         },
         {
           name: "twitter:image:alt",
