@@ -422,6 +422,7 @@ export const pageQuery = graphql`
         title
         parent
         bgImageName
+        description
       }
     }
 
