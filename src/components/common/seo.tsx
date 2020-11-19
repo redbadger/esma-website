@@ -3,11 +3,8 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
 const getSocialImageSrc = (image: { src; alt }, site) => {
-  const port = site.port ? ":" + site.port : "";
   const relativeImagePath = image.src;
-  const protocol = site.host === "localhost" ? "http" : "https";
-
-  return `${protocol}://${site.host}${port}${relativeImagePath}`;
+  return `https://${site.siteMetadata.hostName}${relativeImagePath}`;
 };
 
 function SEO({ description, lang, meta, title, image }: SeoProperties) {
@@ -19,9 +16,8 @@ function SEO({ description, lang, meta, title, image }: SeoProperties) {
             title
             description
             author
+            hostName
           }
-          host
-          port
         }
         allFile(filter: { relativePath: { eq: "logo/short.svg" } }) {
           nodes {

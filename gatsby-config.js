@@ -11,6 +11,7 @@ module.exports = {
     description: ``,
     author: ``,
     gaTrackingId: googleAnalyticsTrackingId,
+    hostName: `esma.community`,
   },
   plugins: [
     `gatsby-transformer-ffmpeg`,
