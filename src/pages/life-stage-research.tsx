@@ -34,7 +34,12 @@ const LifeStageResearchPage = () => {
 
   return (
     <Layout>
-      <SEO title="Life Stages Research" image={image} />
+      <SEO
+        title="Life Stages Research"
+        image={image}
+        description={`The Bridge Group has developed an up-to-date summary of social inequality across the life course.
+        This will help to understand the barriers to social mobility and the nature of the problem we are trying to solve.`}
+      />
       <Timeline />
       <NewsletterSignUp />
     </Layout>
