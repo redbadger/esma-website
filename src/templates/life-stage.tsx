@@ -348,6 +348,7 @@ const PageTemplate = ({
                 }
               : { src: null, alt: null }
           }
+          description={mdx.frontmatter.description}
         />
         <section css={[layoutStyles]}>
           <div aria-hidden="true" className={className}>
