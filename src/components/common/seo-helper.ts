@@ -20,7 +20,7 @@ export const buildMetadata = (
   { description, title, imageUrl, imageAlt, author }: MetadataProps,
   customMetadata: Metadatum[]
 ): Metadatum[] => {
-  return [
+  const metadata = [
     {
       name: `description`,
       content: description,
@@ -69,7 +69,9 @@ export const buildMetadata = (
       name: "twitter:image:alt",
       content: imageAlt,
     },
-  ].concat(customMetadata);
+  ];
+  metadata.concat(customMetadata);
+  return metadata;
 };
 
 export const getSocialImageUrl = (

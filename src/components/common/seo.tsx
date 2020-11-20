@@ -3,13 +3,7 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { buildMetadata, getSocialImageUrl } from "./seo-helper";
 
-export const Seo = ({
-  description,
-  lang,
-  meta,
-  title,
-  image,
-}: SeoProperties) => {
+const Seo = ({ description, lang, meta, title, image }: SeoProperties) => {
   const { site, allFile } = useStaticQuery(
     graphql`
       query {
