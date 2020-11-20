@@ -18,4 +18,5 @@ module.exports = {
     __PATH_PREFIX__: ``,
   },
   setupFiles: [`<rootDir>/loadershim.js`],
+  snapshotSerializers: ["jest-serializer-react-helmet"],
 };

@@ -8,9 +8,10 @@ module.exports = {
   pathPrefix: "/",
   siteMetadata: {
     title: `Employers Social Mobility Alliance`,
-    description: ``,
+    description: `Social inequality is persistent and systematic. Often where you start in life is where you’ll end up. Together we can change this.`,
     author: ``,
     gaTrackingId: googleAnalyticsTrackingId,
+    hostName: `esma.community`,
   },
   plugins: [
     `gatsby-transformer-ffmpeg`,

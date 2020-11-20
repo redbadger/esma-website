@@ -1,67 +1,41 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import { ImageNode } from "../common/types";
+import { Fluid, ImageNode } from "../common/types";
 
 interface ResearchImageProps {
-  imageName: string;
+  fluid: Fluid;
   objectPosition: string;
   classNames: Array<string>;
 }
 
 interface PureResearchImageProps {
-  data: ImageNode;
+  fluid: Fluid;
   objectPosition: string;
   classNames: string[];
 }
 
 export const PureResearchImage = ({
-  data,
+  fluid,
   objectPosition,
   classNames,
 }: PureResearchImageProps) => {
   return (
     <Img
       imgStyle={{ objectPosition }}
-      fluid={data.node.childImageSharp.fluid}
+      fluid={fluid}
       className={`research-image-wrapper ${classNames.join(" ")}`}
     />
   );
 };
 
 const ResearchImage = ({
-  imageName,
+  fluid,
   objectPosition,
   classNames,
 }: ResearchImageProps) => {
-  const data = useStaticQuery(graphql`
-    query {
-      images: allFile(filter: {relativePath: {regex: "/research/.*\\.jpg/"}}) {
-        edges {
-          node {
-            childImageSharp {
-              fluid(maxWidth: 2560) {
-                ...GatsbyImageSharpFluid
-                originalName
-              }
-            }
-          }
-        }
-      }
-    }
-    
-  `);
-
-  const img: ImageNode = data.images.edges.find((image: ImageNode) => {
-    if (image.node.childImageSharp.fluid) {
-      return image.node.childImageSharp.fluid.originalName === imageName;
-    }
-    return false;
-  });
-
   return (
     <PureResearchImage
-      data={img}
+      fluid={fluid}
       objectPosition={objectPosition}
       classNames={classNames}
     ></PureResearchImage>

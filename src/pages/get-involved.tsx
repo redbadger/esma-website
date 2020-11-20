@@ -1,18 +1,16 @@
 import React from "react";
 import Layout from "../components/common/layout";
 import SEO from "../components/common/seo";
-
-import Hero from "../components/homepage/hero";
-import OurMission from "../components/homepage/our-mission";
 import NewsletterSignUp from "../components/newsletter/newsletter-sign-up";
-import Commitments from "../components/homepage/commitments";
+import Hero from "../components/get-involved/hero";
+import Main from "../components/get-involved/main";
 import { graphql, useStaticQuery } from "gatsby";
 
-const IndexPage = () => {
+const GetInvolvedPage = () => {
   const { allImageSharp } = useStaticQuery(graphql`
     query {
       allImageSharp(
-        filter: { fixed: { originalName: { eq: "life-stage-research.png" } } }
+        filter: { fixed: { originalName: { eq: "get-involved.jpg" } } }
       ) {
         edges {
           node {
@@ -27,18 +25,20 @@ const IndexPage = () => {
 
   const image = {
     src: allImageSharp.edges[0].node.fixed.src,
-    alt: "Employers Social Mobility Alliance",
+    alt: "Get involved",
   };
+
+  const description =
+    "Help us make the change. We have bold and ambitious plans and need help to execute them.";
 
   return (
     <Layout>
-      <SEO title="Home" image={image} />
+      <SEO title="Get Involved" image={image} description={description} />
       <Hero />
-      <OurMission />
-      <Commitments />
-      <NewsletterSignUp color="white" />
+      <Main />
+      <NewsletterSignUp />
     </Layout>
   );
 };
 
-export default IndexPage;
+export default GetInvolvedPage;

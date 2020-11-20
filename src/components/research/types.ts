@@ -13,6 +13,5 @@ export type ResearchPageMetaData = {
   parent: string;
   title: string;
   bgImageName: string;
+  description: string;
 };
-
-

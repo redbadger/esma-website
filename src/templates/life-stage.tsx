@@ -17,7 +17,8 @@ import { Breadcrumb } from "gatsby-plugin-breadcrumb";
 import slugify from "slugify";
 import { pages } from "../components/common/research-pages";
 import { timelineIcons } from "../components/common/icons";
-import Footnotes from '../components/research/footnotes';
+import Footnotes from "../components/research/footnotes";
+import { Fluid, ImageNode } from "../components/common/types";
 
 const layoutStyles = css`
   .timeline-image-wrapper {
@@ -260,7 +261,13 @@ const FootnoteLink = ({ text }: FootnoteLinkProps) => {
   );
 };
 
-const shortcodes = { Link, FootnoteLink, FurtherReading, ResearchQuote, Footnotes };
+const shortcodes = {
+  Link,
+  FootnoteLink,
+  FurtherReading,
+  ResearchQuote,
+  Footnotes,
+};
 
 export type MdxData = {
   frontmatter: ResearchPageMetaData;
@@ -289,6 +296,7 @@ type PageTemplateProps = {
   data: {
     mdx: MdxData;
     allMdx: AllMdxData;
+    images: { edges: ImageNode[] };
   };
   pageContext: PageContext;
 };
@@ -303,7 +311,7 @@ type PageContext = {
 };
 
 const PageTemplate = ({
-  data: { mdx, allMdx },
+  data: { mdx, allMdx, images },
   pageContext,
 }: PageTemplateProps) => {
   const crumbs = getCrumbs(pageContext);
@@ -318,13 +326,33 @@ const PageTemplate = ({
 
   const className = slugify(mdx.frontmatter.parent, { lower: true });
 
+  const fluid: Fluid | undefined = bgImage
+    ? images.edges.find((image: ImageNode) => {
+        if (image.node.childImageSharp.fluid) {
+          return image.node.childImageSharp.fluid.originalName === bgImage;
+        }
+        return false;
+      }).node.childImageSharp.fluid
+    : undefined;
+
   return (
     <>
       <Layout includeResearchNavigation={true}>
-        <SEO title={`${mdx.frontmatter.parent} - ${mdx.frontmatter.title}`} />
+        <SEO
+          title={`${mdx.frontmatter.parent} - ${mdx.frontmatter.title}`}
+          image={
+            fluid
+              ? {
+                  src: fluid.src,
+                  alt: `${mdx.frontmatter.parent} - ${mdx.frontmatter.title} header image`,
+                }
+              : { src: null, alt: null }
+          }
+          description={mdx.frontmatter.description}
+        />
         <section css={[layoutStyles]}>
           <div aria-hidden="true" className={className}>
-            {bgImage && <ResearchImage imageName={bgImage} />}
+            {fluid ? <ResearchImage fluid={fluid} /> : null}
             <div
               css={
                 bgImage ? contentContainerStyles : contentContainerNoImageStyles
@@ -394,6 +422,7 @@ export const pageQuery = graphql`
         title
         parent
         bgImageName
+        description
       }
     }
 
@@ -406,6 +435,19 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+          }
+        }
+      }
+    }
+
+    images: allFile(filter: {relativePath: {regex: "/research/.*\\.jpg/"}}) {
+      edges {
+        node {
+          childImageSharp {
+            fluid(maxWidth: 2560) {
+              ...GatsbyImageSharpFluid
+              originalName
+            }
           }
         }
       }

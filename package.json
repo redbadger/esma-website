@@ -8,6 +8,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "@mdx-js/react": "^1.6.21",
     "@types/react": "^16.9.47",
     "@types/react-dom": "^16.9.8",
     "cypress": "^4.12.1",
@@ -56,6 +57,7 @@
     "gatsby-plugin-emotion": "^4.3.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.4.2",
+    "jest-serializer-react-helmet": "^1.0.6",
     "lorem-ipsum": "^2.0.3",
     "prettier": "2.0.5",
     "react-test-renderer": "^16.13.1"
