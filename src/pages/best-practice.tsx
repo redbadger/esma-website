@@ -32,9 +32,12 @@ const BestPractice = () => {
     alt: "Best practice",
   };
 
+  const description =
+    "We've commissioned a panel to review each organisation and programme focused on the different Life Stages.";
+
   return (
     <Layout>
-      <SEO title="Best Practice" image={image} />
+      <SEO title="Best Practice" image={image} description={description} />
       <BestPracticeHero />
       <BestPracticeMain />
       <EsmaPanel panel={panel} />

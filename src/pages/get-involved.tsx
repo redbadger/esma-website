@@ -28,9 +28,12 @@ const GetInvolvedPage = () => {
     alt: "Get involved",
   };
 
+  const description =
+    "Help us make the change. We have bold and ambitious plans and need help to execute them.";
+
   return (
     <Layout>
-      <SEO title="Get Involved" image={image} />
+      <SEO title="Get Involved" image={image} description={description} />
       <Hero />
       <Main />
       <NewsletterSignUp />

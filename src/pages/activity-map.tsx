@@ -29,9 +29,12 @@ const ActivityMap = () => {
     alt: "Activity map",
   };
 
+  const description =
+    "We are building an open access heat map that means anyone, at the touch of a button, can find out the social mobility issues in their area.";
+
   return (
     <Layout>
-      <SEO title="Best Practice" image={image} />
+      <SEO title="Best Practice" image={image} description={description} />
       <ActivityMapHero />
       <ActivityMapMain />
       <NewsletterSignUp />
