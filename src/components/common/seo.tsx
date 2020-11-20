@@ -3,7 +3,13 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { buildMetadata, getSocialImageUrl } from "./seo-helper";
 
-function SEO({ description, lang, meta, title, image }: SeoProperties) {
+export const Seo = ({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+}: SeoProperties) => {
   const { site, allFile } = useStaticQuery(
     graphql`
       query {
@@ -24,9 +30,31 @@ function SEO({ description, lang, meta, title, image }: SeoProperties) {
     `
   );
 
+  return (
+    <PureSeo
+      description={description}
+      lang={lang}
+      meta={meta}
+      title={title}
+      image={image}
+      site={site}
+      allFile={allFile}
+    />
+  );
+};
+
+export const PureSeo = ({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+  site,
+  allFile,
+}: PureSeoProperties) => {
   const metaDescription = description || site.siteMetadata.description;
   if (!image || !image.src) {
-    image = { src: allFile.nodes.publicURL, alt: "ESMA logo" };
+    image = { src: allFile.nodes[0].publicURL, alt: "ESMA logo" };
   }
   const imageUrl = getSocialImageUrl(image.src, site.siteMetadata.hostName);
   const metadata = buildMetadata(
@@ -50,9 +78,9 @@ function SEO({ description, lang, meta, title, image }: SeoProperties) {
       meta={metadata}
     />
   );
-}
+};
 
-SEO.defaultProps = {
+Seo.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
@@ -69,4 +97,16 @@ interface SeoProperties {
   };
 }
 
-export default SEO;
+type PureSeoProperties = SeoProperties & {
+  site: {
+    siteMetadata: {
+      title: string;
+      author: string;
+      hostName: string;
+      description: string;
+    };
+  };
+  allFile: { nodes: [{ publicURL: string }] };
+};
+
+export default Seo;
