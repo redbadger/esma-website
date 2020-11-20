@@ -19,11 +19,11 @@ const expectedMetadata: Metadatum[] = [
   },
   {
     property: `og:image`,
-    content: "/barry.png",
+    content: "/path/to/logo.svg",
   },
   {
     property: `og:image:alt`,
-    content: "A Barry",
+    content: "ESMA Logo",
   },
   {
     name: `twitter:card`,
@@ -31,7 +31,7 @@ const expectedMetadata: Metadatum[] = [
   },
   {
     name: `twitter:creator`,
-    content: "Barry Author",
+    content: "Employers Social Mobility Alliance",
   },
   {
     name: `twitter:title`,
@@ -43,11 +43,11 @@ const expectedMetadata: Metadatum[] = [
   },
   {
     name: "twitter:image",
-    content: "/barry.png",
+    content: "/path/to/logo.svg",
   },
   {
     name: "twitter:image:alt",
-    content: "A Barry",
+    content: "ESMA Logo",
   },
 ];
 
@@ -57,9 +57,9 @@ describe("buildMetadata", () => {
       {
         description: "some kind of description",
         title: "ESMA title",
-        author: "Barry Author",
-        imageUrl: "/barry.png",
-        imageAlt: "A Barry",
+        author: "Employers Social Mobility Alliance",
+        imageUrl: "/path/to/logo.svg",
+        imageAlt: "ESMA Logo",
       },
       [
         { property: "og:custom", content: "test content" },

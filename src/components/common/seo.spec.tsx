@@ -4,12 +4,15 @@ import { PureSeo } from "./seo";
 
 describe("PureSeo", () => {
   it("renders correctly", () => {
+    // TODO: currently, this test generates `null` as its snapshot
+    // despite the fact that `jest-serializer-react-helmet` is loaded as a serializer
+    // we will leave this test here as-is for that issue to be corrected later
     const tree = renderer
       .create(
         <PureSeo
           description={"Tests for ESMA"}
           title={"Welcome to ESMA Test"}
-          image={{ src: "/barry.png", alt: "A Barry" }}
+          image={{ src: "/path/to/logo.svg", alt: "ESMA Logo" }}
           meta={[
             { property: "og:custom", content: "test content" },
             { name: "twitter:other", content: "some twitter metadatum" },
