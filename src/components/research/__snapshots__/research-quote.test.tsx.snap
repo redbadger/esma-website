@@ -2,7 +2,7 @@
 
 exports[`ResearchQuote renders correctly 1`] = `
 <div
-  className="css-18a8le6-containerStyles"
+  className="css-soql84-containerStyles"
 >
   <div
     className="css-1fjfpf6-researchQuoteStyles"

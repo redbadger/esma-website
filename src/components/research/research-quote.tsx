@@ -41,14 +41,15 @@ const researchQuoteStyles = css`
 
 const containerStyles = css`
   ${mq(BreakPoint.lg)} {
-    grid-column: 1 / span 2;
+    grid-column: 1 / -1;
   }
   color: var(--midnight);
 
   .quote-source {
     margin-top: 0.75rem;
     margin-bottom: 0;
-    span, a {
+    span,
+    a {
       font-size: 1rem;
       line-height: 1.875rem;
     }

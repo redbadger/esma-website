@@ -5,7 +5,7 @@ import { css } from "@emotion/core";
 
 const graphContainerStyles = (fullSpan: boolean) => css`
   ${mq(BreakPoint.lg)} {
-    ${fullSpan ? "grid-column: 1 / span  2" : ""};
+    ${fullSpan ? "grid-column: 1 / -1" : ""};
   }
 `;
 
@@ -24,7 +24,7 @@ const ResizableGraph = ({
   desktop,
   fullSpan,
   children,
-  className
+  className,
 }: ResizableGraphProps) => {
   const { width } = useWindowSize();
 
@@ -40,7 +40,7 @@ const ResizableGraph = ({
 
   return (
     <div className={className} css={graphContainerStyles(fullSpan)}>
-        {children}
+      {children}
       <Graph />
     </div>
   );
@@ -48,7 +48,7 @@ const ResizableGraph = ({
 
 ResizableGraph.defaultProps = {
   fullSpan: true,
-  className: ""
+  className: "",
 };
 
 export default ResizableGraph;
