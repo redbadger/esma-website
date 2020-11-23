@@ -4,7 +4,7 @@ import { mq, BreakPoint } from "../../util/mq";
 
 const footnoteStyles = css`
   ${mq(BreakPoint.lg)} {
-    grid-column: 1 / span 2;
+    grid-column: 1 / -1;
   }
 
   font-size: 1rem;

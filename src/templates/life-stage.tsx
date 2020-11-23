@@ -150,7 +150,7 @@ const contentBodyStyles = css`
 
   ${mq(BreakPoint.lg)} {
     .full-span {
-      grid-column: 1 / span 2;
+      grid-column: 1 / -1;
     }
   }
 
@@ -185,7 +185,7 @@ const contentBodyStyles = css`
   }
 
   ${mq(BreakPoint.lg)} {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(75rem, 1fr);
   }
 
   p {
