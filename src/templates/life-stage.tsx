@@ -185,7 +185,7 @@ const contentBodyStyles = css`
   }
 
   ${mq(BreakPoint.lg)} {
-    grid-template-columns: minmax(75rem, 1fr);
+    grid-template-columns: minmax(auto, 75rem);
   }
 
   p {
