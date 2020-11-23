@@ -2,7 +2,7 @@
 
 exports[`Footnotes renders correctly 1`] = `
 <div
-  className="css-1v40p0u-footnoteStyles"
+  className="css-1d04iqu-footnoteStyles"
   id="footnotes"
 >
   <h3>
