@@ -4,6 +4,7 @@ import { css } from "@emotion/core";
 import linkedInImage from "../../images/linkedin/blue-sq.png";
 import murphy from "../../images/barry/murphy.jpg";
 import matthews from "../../images/barry/matthews.jpg";
+import { MatthewsLinkedIn, MurphyLinkedIn } from "../common/linkedin";
 
 const contactPanelCss = css`
   width: 100%;
@@ -107,39 +108,13 @@ const ContactPanel = () => {
         <div className="barry">
           <picture className="image-placeholder matthews"></picture>
           <div>
-            <p className="contact-name">
-              <a
-                href="https://www.linkedin.com/in/barry-matthews-0970704/"
-                title="Barry Matthews on LinkedIn"
-              >
-                Barry Matthews
-                <picture>
-                  <img alt="linked-in" src={linkedInImage} />
-                </picture>
-              </a>
-            </p>
-            <a href="mailto:barrymatthews@esma.community">
-              barrymatthews@esma.community
-            </a>
+            <MatthewsLinkedIn />
           </div>
         </div>
         <div className="barry">
           <picture className="image-placeholder murphy"></picture>
           <div>
-            <p className="contact-name">
-              <a
-                href="https://www.linkedin.com/in/barry-murphy-2240a115"
-                title="Barry Murphy on LinkedIn"
-              >
-                Barry Murphy
-                <picture>
-                  <img alt="linked-in" src={linkedInImage} />
-                </picture>
-              </a>
-            </p>
-            <a href="mailto:barrymurphy@esma.community">
-              barrymurphy@esma.community
-            </a>
+            <MurphyLinkedIn />
           </div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import React from "react";
 import { css } from "@emotion/core";
 import { BreakPoint, mq } from "../../util/mq";
 import Navigation from "./navigation";
+import { MatthewsLinkedIn, MurphyLinkedIn } from "../common/linkedin";
 
 const footerStyles = css`
   width: 100%;
@@ -66,7 +67,7 @@ const footerStyles = css`
   }
 `;
 
-const Footer = ({ }: FooterProps): JSX.Element => {
+const Footer = ({}: FooterProps): JSX.Element => {
   const logos = useStaticQuery(graphql`
     {
       short: file(relativePath: { eq: "logo/short.svg" }) {
@@ -96,15 +97,10 @@ const Footer = ({ }: FooterProps): JSX.Element => {
         <h3>Contact us</h3>
         <ul>
           <li>
-            <a href="mailto:barrymatthews@esma.community">
-              barrymatthews@esma.community
-            </a>
+            <MatthewsLinkedIn />
           </li>
           <li>
-            {" "}
-            <a href="mailto:barrymurphy@esma.community">
-              barrymurphy@esma.community
-            </a>
+            <MurphyLinkedIn />
           </li>
         </ul>
       </section>
