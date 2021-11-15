@@ -7,8 +7,12 @@ const linkedInCard = css`
   font-size: 0.8em;
   picture {
     display: inline-block;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
     width: 1.125rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 `;
 
