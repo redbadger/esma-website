@@ -236,9 +236,9 @@ const PrivacyPolicy = () => {
             you have given consent for the processing. When we rely on consent
             to process your personal information, you will always have the right
             to withdraw this consent either by clicking the ‘unsubscribe’ button
-            if there is one or by emailing us at: {" "}
-            <a href="mailto:barrymurphy@esma.community">
-              barrymurphy@esma.community
+            if there is one or by{" "}
+            <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+              contacting us
             </a>
             ; or
           </li>
@@ -262,9 +262,9 @@ const PrivacyPolicy = () => {
         <p>
           To stop receiving marketing communications from us, you can use the
           ‘unsubscribe’, ‘stop’ or similar facility contained in any such
-          communication or you can email us at:{" "}
-          <a href="mailto:barrymurphy@esma.community">
-            barrymurphy@esma.community
+          communication or you can{" "}
+          <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+            contact us
           </a>
           , stating that you do not wish to receive further communications from
           us.
@@ -412,9 +412,9 @@ const PrivacyPolicy = () => {
         <ul>
           <li>
             the right to request a copy of the personal information we hold
-            about you. To do this, please contact us at: {" "}
-            <a href="mailto:barrymurphy@esma.community">
-              barrymurphy@esma.community
+            about you. To do this, please{" "}
+            <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+              contact us
             </a>
             , making clear that you are requesting a copy of your personal data
             and including full details of what you require. You may also be
@@ -481,10 +481,10 @@ const PrivacyPolicy = () => {
           account with us, you can then use that to access and log on to use
           those Services. You may change or update some of your details at any
           time via your account. If you are not registered for these Services
-          but wish to update your details then please contact us at:{" "}
-          <a href="mailto:barrymurphy@esma.community">
-            barrymurphy@esma.community
-          </a>{" "}
+          but wish to update your details then please{" "}
+          <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+            contact us
+          </a>
           You should please make sure that you update your details as soon as
           possible with all relevant changes.
         </p>
@@ -496,9 +496,9 @@ const PrivacyPolicy = () => {
           Data Controller: LEXJAM CONSULTING LIMITED (11861318), James House, 70
           Chipstead Park, Sevenoaks, Kent, England, TN13 2SH. Our Data
           Compliance Manager is Barry Murphy. You can contact our Data
-          Compliance Manager in writing using the following contact details:{" "}
-          <a href="mailto:barrymurphy@esma.community">
-            barrymurphy@esma.community
+          Compliance Manager in writing using the following{" "}
+          <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+            contact details
           </a>
           . The tasks of our Data Compliance Manager include (for example)
           monitoring our compliance with applicable data protection laws and
@@ -510,10 +510,11 @@ const PrivacyPolicy = () => {
         </ol>
         <p>
           If you would like to discuss any aspect of this policy or the way ESMA
-          processes your information please contact:{" "}
-          <a href="mailto:barrymurphy@esma.community">
-            barrymurphy@esma.community
+          processes your information please{" "}
+          <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+            contact us
           </a>
+          .
         </p>
       </div>
     </Layout>

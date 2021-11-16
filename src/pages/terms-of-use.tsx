@@ -281,9 +281,9 @@ const TermsOfUse = () => {
         </p>
         <p>
           If you wish to link to or make any use of content on our Platform
-          other than that set out above, please email us at{" "}
-          <a href="mailto:barrymurphy@esma.community">
-            barrymurphy@esma.community
+          other than that set out above, please{" "}
+          <a href="https://www.linkedin.com/in/barry-murphy-2240a115">
+            contact us.
           </a>
         </p>
         <ol start={12}>
