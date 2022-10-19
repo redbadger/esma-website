@@ -27,7 +27,7 @@ const TermsOfUse = () => {
         </ol>
         <p>
           These terms tell you the rules you accept to comply with when using
-          services on our platform <Link to="/">esma.community</Link> (the
+          services on our platform <Link to="/">esma.network</Link> (the
           “Platform”). Please read these terms of use carefully before using
           this Platform.
         </p>

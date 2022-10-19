@@ -111,7 +111,7 @@ const VideoSection = () => {
           </a>
         </li>
         <li className="share">
-          <a href={`http://www.linkedin.com/shareArticle?url=esma.community`}>
+          <a href={`http://www.linkedin.com/shareArticle?url=esma.network`}>
             <picture>
               <img alt="linked-in" src={linkedInImage} />
             </picture>

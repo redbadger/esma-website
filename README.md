@@ -2,7 +2,7 @@
 
 The repository that hosts the ESMA website and [project board](https://github.com/redbadger/esma-website/projects).
 
-The website is available to view at [https://esma.community/](https://esma.community/).
+The website is available to view at [https://esma.network/](https://esma.network/).
 
 ## Proof-of-Concept
 

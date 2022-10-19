@@ -28,8 +28,8 @@ const PrivacyPolicy = () => {
         </p>
         <p>
           We may update this privacy and cookie policy from time to time and
-          will post any changes on our platform{" "}
-          <Link to="/">esma.community</Link> (the <strong>“Platform”</strong>
+          will post any changes on our platform <Link to="/">esma.network</Link>{" "}
+          (the <strong>“Platform”</strong>
           ) so it’s a good idea to come back and read through them again, from
           time to time. This privacy and cookie policy was last updated on 23
           September 2020.
